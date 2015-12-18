@@ -128,6 +128,7 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/blog","Blog")
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
@@ -166,8 +167,7 @@ THEME_COLOR = '#5670d4'
 # just independent HTML pages.
 #
 
-
-POSTS = []
+POSTS = [("posts/*.txt", "blog", "post.tmpl", True)]
 PAGES = [("pages/*.txt", "", "story.tmpl")]
 
 
