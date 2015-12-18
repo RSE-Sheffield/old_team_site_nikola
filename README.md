@@ -1,2 +1,2 @@
 # RSE-Sheffield.github.io
-Resaerch Software Engineering @ Sheffield website
+Source code for the Research Software Engineering @ Sheffield website. Built using Nikola https://getnikola.com/
