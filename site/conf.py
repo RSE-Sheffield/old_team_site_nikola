@@ -17,8 +17,8 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Mike Croucher"  # (translatable)
-BLOG_TITLE = "Research Software Engineering at Sheffield"  # (translatable)
+BLOG_AUTHOR = "Mike Croucher and Paul Richmond"  # (translatable)
+BLOG_TITLE = "RSE at Sheffield"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "http://rse-sheffield.github.io/"
@@ -128,9 +128,13 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/consultancy","Consultancy"),
+        ("/training","Training"),
         ("/blog","Blog"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        ("/community","Community"),
+        ("/resources","Resources"),
+        ("/forged","Forged in Sheffield"),
+        ("/contact","Contact Us")
     ),
 }
 
@@ -944,7 +948,7 @@ MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite', 'extra']
 
 # Show link to source for the posts?
 # Formerly known as HIDE_SOURCELINK (inverse)
-# SHOW_SOURCELINK = True
+SHOW_SOURCELINK = False
 # Copy the source files for your pages?
 # Setting it to False implies SHOW_SOURCELINK = False
 # COPY_SOURCES = True
