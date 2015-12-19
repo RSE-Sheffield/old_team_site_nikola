@@ -166,8 +166,15 @@ THEME_COLOR = '#5670d4'
 # just independent HTML pages.
 #
 
-POSTS = [("posts/*.txt", "blog", "post.tmpl")]
-PAGES = [("pages/*.txt", "", "story.tmpl")]
+POSTS = [("posts/*.txt", "blog", "post.tmpl"),
+         ("pages/*.md", "", "story.tmpl"),
+         ("posts/*.rst", "blog", "post.tmpl")
+]
+
+PAGES = [("pages/*.rst", "", "story.tmpl"),
+         ("pages/*.md", "", "story.tmpl"),
+         ("pages/*.txt", "", "story.tmpl")
+]
 
 
 # Below this point, everything is optional
