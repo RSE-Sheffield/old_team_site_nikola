@@ -1,4 +1,4 @@
-.. title: Forged in Sheffield
+.. title: Research Software Forged in Sheffield
 .. slug: index
 .. date: 2015-12-19 18:38:07 UTC
 .. tags:
