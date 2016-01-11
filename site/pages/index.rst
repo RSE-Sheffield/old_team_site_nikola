@@ -7,13 +7,4 @@
 .. description:
 .. type: text
 
-There is nothing to see here. I'm figuring out how to use Nikola. Come back another time
-
-.. math::
-
-   \int \frac{dx}{1+ax}=\frac{1}{a}\ln(1+ax)+C
-
-.. class:: jumbotron
-
-    EPSRC Research Software Engineering Fellows
-    <p>Lorem ipsum</p>
+Research Software Engineers (RSEs) are the people behind research software. This website is designed as a hub for both Sheffield academics seeking help with research software and skills development and as a community for self identifying research software engineers.
