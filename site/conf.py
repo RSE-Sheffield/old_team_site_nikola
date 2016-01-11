@@ -25,7 +25,7 @@ SITE_URL = "http://rse.shef.ac.uk"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
-BLOG_EMAIL = "Michael.P.Croucher@googlemail.com"
+BLOG_EMAIL = "rse@sheffield.ac.uk"
 BLOG_DESCRIPTION = "RSE at Sheffield"  # (translatable)
 
 # Nikola is multilingual!
