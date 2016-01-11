@@ -7,4 +7,4 @@
 .. description:
 .. type: text
 
-Research Software Engineers (RSEs) are the people behind research software. This website is designed as a hub for both Sheffield academics seeking help with research software and skills development and as a community for self identifying research software engineers.
+Research Software Engineers (RSEs) are the people behind research software. This website is designed as a hub for both Sheffield academics seeking help with research software and as a community for research software engineers.
