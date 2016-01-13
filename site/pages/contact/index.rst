@@ -22,3 +22,7 @@ Mike has 10+ years experience supporting scientific software, high performance c
 Paul Richmond
 -------------
 Paul's career as an academic researcher has always been focused on the development of software to support research, predominantly through the application of emerging hardware architectures to complex systems simulation. His technical expertise in GPU computing has led him to work more broadly, engaging with researchers in a wide range of domains to embed accelerated and GPU computing into their research ecosystems. His background in independent research means that he self-identifies as a research software engineer with a strong emphasis on research relating to the application of GPUs.
+
+* Email: P.Richmond (at) Sheffield.ac.uk
+* Web: `http://paulrichmond.shef.ac.uk/ <http://paulrichmond.shef.ac.uk/>`_
+* GPUComputing: `http://gpucomputing.sites.sheffield.ac.uk/ <http://gpucomputing.sites.sheffield.ac.uk/>`_

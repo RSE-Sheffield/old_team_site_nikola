@@ -21,7 +21,7 @@ BLOG_AUTHOR = "Mike Croucher and Paul Richmond"  # (translatable)
 BLOG_TITLE = "RSE at Sheffield"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "http://rse.shef.ac.uk"
+SITE_URL = "http://rse.shef.ac.uk/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
