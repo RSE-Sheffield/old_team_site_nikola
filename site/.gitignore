@@ -1,4 +1,7 @@
 .doit.db.db
+.doit.db.dat
+.doit.db.bak
+.doit.db.dir
 __pycache__/
 cache/
 output/
