@@ -543,7 +543,7 @@ GITHUB_SOURCE_BRANCH = 'devel'
 GITHUB_DEPLOY_BRANCH = 'master'
 
 # The name of the remote where you wish to push to, using github_deploy.
-# GITHUB_REMOTE_NAME = 'origin'
+GITHUB_REMOTE_NAME = 'origin'
 
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
