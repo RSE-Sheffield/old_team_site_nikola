@@ -171,14 +171,14 @@ THEME_COLOR = '#5670d4'
 #
 
 POSTS = [("posts/*.txt", "blog", "post.tmpl"),
-         ("pages/*.md", "", "story.tmpl"),
+         ("posts/*.md", "blog", "post.tmpl"),
          ("posts/*.rst", "blog", "post.tmpl")
-]
+        ]
 
 PAGES = [("pages/*.rst", "", "story.tmpl"),
          ("pages/*.md", "", "story.tmpl"),
          ("pages/*.txt", "", "story.tmpl")
-]
+        ]
 
 
 # Below this point, everything is optional
