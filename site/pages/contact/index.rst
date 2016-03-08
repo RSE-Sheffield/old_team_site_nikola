@@ -9,7 +9,10 @@
 
 `Mike Croucher <http://www.walkingrandomly.com/>`_ and `Paul Richmond <http://paulrichmond.shef.ac.uk/>`_ are both EPSRC Early Career Research Software Engineering (RSE) Fellows.
 
-Contact us: `rse@sheffield.ac.uk <mailto:rse@sheffield.ac.uk>`_
+Contact us:
+
+* `rse@sheffield.ac.uk <mailto:rse@sheffield.ac.uk>`_
+* Twitter: `@RSE_Sheffield <https://twitter.com/RSE_Sheffield>`_
 
 Mike Croucher
 -------------
