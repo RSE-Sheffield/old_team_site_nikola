@@ -8,4 +8,4 @@
 .. description:
 .. type: text
 
-I'll be starting my 5 year EPSRC Research Software Engineering fellowship in March 2015. For more details of the program of work, head over to my blog, http://www.walkingrandomly.com/?p=5948
+I'll be starting my 5 year EPSRC Research Software Engineering fellowship in March 2016. For more details of the program of work, head over to my blog, http://www.walkingrandomly.com/?p=5948
