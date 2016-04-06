@@ -1,6 +1,6 @@
 <!--
 .. title: Windows 10 to support Linux binaries
-.. author: Mike Croucher
+.. author: Ian Cottam
 .. slug: linux-in-windows10-announce
 .. date: 2016-04-06 10:25:37 UTC
 .. tags:
@@ -46,5 +46,5 @@ I'm sure you can think of others.
 
 The devil is always in the details, but from reports to-date this is good news for researchers.
 
-* I wrote more about his on my personal blog: [http://www.walkingrandomly.com/?p=6011](http://www.walkingrandomly.com/?p=6011)
+* Mike Croucher, one of Sheffield's RSE Fellows, writes about the announcement on his blog: [http://www.walkingrandomly.com/?p=6011](http://www.walkingrandomly.com/?p=6011)
 * Lots more detail from Microsoft's Scott Hanselman [http://www.hanselman.com/blog/DevelopersCanRunBashShellAndUsermodeUbuntuLinuxBinariesOnWindows10.aspx](http://www.hanselman.com/blog/DevelopersCanRunBashShellAndUsermodeUbuntuLinuxBinariesOnWindows10.aspx)
