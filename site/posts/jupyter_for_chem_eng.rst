@@ -1,5 +1,5 @@
 <!--
-.. title: Sheffield RSE team supports lecturers in developing innovative undergraduate course material
+.. title: Sheffield RSE team collaborates with lecturers to teach computation
 .. author: Mike Croucher
 .. slug: jupyter-for-chem-eng
 .. date: 2016-04-11 07:26:37 UTC
