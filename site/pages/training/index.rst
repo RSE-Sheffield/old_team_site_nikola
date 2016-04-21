@@ -7,6 +7,8 @@
 .. description:
 .. type: text
 
+**April 25th 2016** Paul Richmond will be giving a two hour lecture on Performance Optimisation for GPU computing in CUDA. The lecture is part of `COM4521 <http://paulrichmond.shef.ac.uk/teaching/COM4521/>`_ on GPU computing but any CUDA developers who are keep on optimising their code are welcome to attend.
+
 **April 8th 2016** Mike Croucher gave a presentation at the University of Sheffield Chemical Engineering teaching away day on the use of `Project Jupyter and SageMathCloud <http://mikecroucher.github.io/ChemEng_Jupyter_talk2016/>`_ for teaching computational subjects.
 
 **March 9th 2016** We ran our first Code Cafe which including a gentle introduction to R. Details and class materials are at http://www.walkingrandomly.com/?p=5981
