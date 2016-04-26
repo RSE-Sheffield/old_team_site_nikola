@@ -13,6 +13,7 @@ Language and technology specific resources
 ------------------------------------------
 * `Fortran <languages/fortran>`_: Details on site licensed compilers, training, numerical libraries and high performance computing in Fortran.
 * `MATLAB <languages/MATLAB>`_: High performance computing, training, tips and how to get MATLAB at Sheffield.
+* `R <languages/rstats>`_: Training and high performance computing.
 
 Site licensed Software at Sheffield
 -----------------------------------
