@@ -119,7 +119,9 @@ Then, eventually, near the bottom, we see bash opening `/home/md1xdrj/.bash_prof
 And this is the culprit.
 I'm like "wait, WAT!?", "I have a `.bash_profile`?"
 
-And so I do. Not created by me. A quick perusal of `man bash`[\*1] reveals that
+It turns out that, yes, I do have a `.bash_profile`.
+I wasn't expecting that (it wasn't created by me).
+A quick perusal of `man bash`[\*1] reveals that
 if `~/.bash_profile` exists then it will be sourced and `.profile` will not.
 
 So I remove my `~/.bash_profile` and life is good again.
