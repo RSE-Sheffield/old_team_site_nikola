@@ -156,5 +156,6 @@ something about `strace` and system calls (I did!).
 
 ## Footnotes
 
-[\*1] This is what I call "a joke". Everyone should read `man bash`, but it is like Joyce's Ulysses: better read the Cliffs Notes[\*2].
-[\*2] There are no Cliffs Notes for `bash`.
+1. This is what I call "a joke". Everyone should read `man bash`, but it is like Joyce's Ulysses: better read the Cliffs Notes[\*2].
+
+2. There are no Cliffs Notes for `bash`.
