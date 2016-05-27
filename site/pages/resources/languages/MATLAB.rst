@@ -1,5 +1,5 @@
 .. title: MATLAB
-.. slug: matlab
+.. slug: MATLAB
 .. date: 2016-03-28 12:01:00 UTC
 .. tags:
 .. category:
