@@ -94,12 +94,56 @@ The job number will differ from the one above. It is automatically allocated by 
 
 ```
 [fe1mpc@testnode02 maple_example]$ ls
+
 run_maple_job.sh  run_maple_job.sh.e1734126  run_maple_job.sh.o1734126  series_example.maple  series_example.mpl
 ```
 
 There are two new files:
 
 * run_maple_job.sh.e1734126 - contains any error messages. Hopefully empty here
-* run_maple_job.sh.o1734126 - Contains the output of your job
+* run_maple_job.sh.o1734126 - Contains the results of your job
 
 The numbers at the end refer to the job number.
+
+This completes your first batch submission using Maple.
+
+## Issues with graphs in Maple batch mode
+
+The Maple worksheet we used in this example includes a plot command. This looks great in a Maple worksheet but looks very retro when performed in batch mode!
+
+```
+> plot(poly, x = -2*Pi .. 2*Pi, y = -3 .. 3);
+
+                                      3+                                 H     
+                                       +                                 H     
+                                       +                                HH     
+                                      2+                                H      
+                                       +                                H      
+                                       +                               HH      
+                                       +                               H       
+                                      1+    HHHHHHHHHH                 H       
+           HHHHHHHH                    +  HHH         HHH             H        
+          HH      HHH                  +HHH             HH           HH        
+  --+-+-+-*+-+--+-+-**-+-+--+-+-+--+-+-**-+-+--+-+-+--+-+-**-+-+--+-+*-+-+-+--
+   -6    H     -4     HH   -2        H0*           2       HHH 4    HH     6   
+         H             HHH         HHH +                     HHHHHHHH          
+        H                 HHHHHHHHHH -1+                                       
+        H                              +                                       
+       HH                              +                                       
+       H                               +                                       
+       H                             -2+                                       
+       H                               +                                       
+      H                                +                                       
+      H                              -3+                                       
+
+```
+
+You probably want to have something that looks a little nicer. The way to do this is to modify the Maple plot command so that it specifies an output file. For example, if we want to create a .gif file, our Maple Language File becomes
+
+```
+myseries := series(sin(x), x = 0, 10);
+poly := convert(myseries, polynom);
+
+plotsetup(gif,plotoutput="plot.gif"):
+plot(poly, x = -2*Pi .. 2*Pi, y = -3 .. 3);
+```
