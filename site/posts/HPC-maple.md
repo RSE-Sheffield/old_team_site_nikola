@@ -160,6 +160,10 @@ The results of transferring these files to the system and submitting with **qsub
 
 ![Maple plot](/maple/hpc2/plot.gif)
 
+## Future articles
+
+In future articles, we'll be looking at how to make use of Maple's parallel computing constructs long with more advanced scheduling tricks that allow us to run 100s of jobs simultaneously. 
+
 ## Further reading
 
 * [General introduction to batch processing](http://docs.iceberg.shef.ac.uk/en/latest/using-iceberg/sge.html) - From the Iceberg documentation
