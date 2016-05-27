@@ -1,3 +1,4 @@
+ls
 <!--
 .. title: High Performance Computing with Maple
 .. author: Mike Croucher
@@ -147,3 +148,19 @@ poly := convert(myseries, polynom);
 plotsetup(gif,plotoutput="plot.gif"):
 plot(poly, x = -2*Pi .. 2*Pi, y = -3 .. 3);
 ```
+
+The **plotsetup** command can output a number of file types.  See Maple's [plotsetup documentation](http://www.maplesoft.com/support/help/maple/view.aspx?path=plotsetup) for details.
+
+A full batch example for you to try is available below
+
+* [series_example_fixedplot.mpl](/maple/hpc2/series_example_fixedplot.mpl) - Maple Language File
+* [run_maple_job_2.sh](/maple/hpc2/run_maple_job_2.sh) - Job submission script
+
+The results of transferring these files to the system and submitting with **qsub run_maple_job_2.sh** should include a file called **plot.gif** that looks like this
+
+![Maple plot](/maple/hpc2/plot.gif)
+
+## Further reading
+
+* [General introduction to batch processing](http://docs.iceberg.shef.ac.uk/en/latest/using-iceberg/sge.html) - From the Iceberg documentation
+* [A list of scheduler commands](http://docs.iceberg.shef.ac.uk/en/latest/software/scheduler/index.html) - **qsub** is just one example of a scheduler command. Here are a few more.
