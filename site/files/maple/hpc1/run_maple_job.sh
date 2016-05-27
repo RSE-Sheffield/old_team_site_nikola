@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # Request 4 gigabytes of real memory (mem)
 # and 4 gigabytes of virtual memory (mem)
 #$ -l mem=4G -l rmem=4G
