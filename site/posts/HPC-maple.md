@@ -1,8 +1,8 @@
 ls
 <!--
-.. title: High Performance Computing with Maple
+.. title: High Performance Computing with Maple, Part 1
 .. author: Mike Croucher
-.. slug: HPC-Maple
+.. slug: HPC-Maple-1
 .. date: 2016-05-26 12:40:19 UTC+01:00
 .. tags:
 .. category:
@@ -11,7 +11,7 @@ ls
 .. type: text
 -->
 
-Many people who use [Maple](http://www.maplesoft.com/) on Sheffield's High Performance Computing (HPC) cluster do so interactively. They connect to the system, start a graphical X-Windows session and use Maple in exactly the same way as they would use it on their laptop. Such usage does have some benefits: giving access to more CPU cores and memory than you'd get on even the most highly specified of laptops.
+Many people who use [Maple](http://www.maplesoft.com/) on Sheffield's High Performance Computing (HPC) cluster do so interactively. They connect to the system, start a graphical X-Windows session and use Maple in exactly the same way as they would use it on their laptop. Such usage does have some benefits: giving access to more CPU cores and memory than you'd get on even the most highly specified of laptops, for example.
 
 Interactive usage on the HPC system also has problems. Thanks to [network latency](https://en.wikipedia.org/wiki/Latency_(engineering)), using a Graphical User Interface over an X-Windows connection can be a painful experience. Additionally, long calculations can tie up your computer for hours or days and if anything happens to the network connection during that time, you risk losing it all!
 
@@ -41,7 +41,7 @@ Here is an example **.maple** worksheet and the corresponding **.mpl** Maple Lan
 * [series_example.mpl](/maple/hpc1/series_example.mpl) - Maple Language File
 * [run_maple_job.sh](/maple/hpc1/run_maple_job.sh) - Job submission script
 
-If you look at the **.mpl** file in a text editor, you will see that it contains plain text versions of all the Maple input commands.
+If you look at the **.mpl** file in a text editor, you will see that it contains plain text versions of all the Maple input commands that were present in the original worksheet.
 ```
 myseries := series(sin(x), x = 0, 10);
 poly := convert(myseries, polynom);
