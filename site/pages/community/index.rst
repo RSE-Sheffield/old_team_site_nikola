@@ -11,10 +11,18 @@ A number of communities have emerged around the discussion and practice of Resea
 
 Local RSE Communities
 ---------------------
+Research Software Engineering groups and activities at Sheffield.
 
 * The University of Sheffield has a `local RSE google group <https://groups.google.com/a/sheffield.ac.uk/forum/#!forum/rse-group>`_, intended for staff and students of the University, for RSE-related discussion. It also includes announcements about training and hardware and software resources available.
 * The University of Sheffield's `Open Data Science Initiative <http://opendsi.cc/>`_
 * The city of Sheffield has an `active R-user's group <http://sheffieldr.github.io/>`_
+
+National RSE Websites
+---------------------
+RSE communities and websites from around the UK.
+
+* Oxford University `Research Software Developers Network <https://rsdn.oerc.ox.ac.uk/>`_
+
 
 National RSE Community
 ----------------------
