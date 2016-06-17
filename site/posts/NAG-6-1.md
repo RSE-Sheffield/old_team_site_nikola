@@ -14,6 +14,7 @@ All members of the University are entitled to download and use the NAG Fortran C
 
 Version 6.1 has just been released:
 
+![NAG Fortran Compiler Screenshot](/images/macFB2a.PNG)
 
  * Details at [http://www.nag.co.uk/nag-compiler](http://www.nag.co.uk/nag-compiler)
  * Download at [http://www.nag.co.uk/content/downloads-nag-fortran-compiler-versions](http://www.nag.co.uk/content/downloads-nag-fortran-compiler-versions)
