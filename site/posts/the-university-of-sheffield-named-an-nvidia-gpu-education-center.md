@@ -8,11 +8,11 @@
 .. description: 
 .. type: text
 
+<img src="/images/NVIDIA_education.jpg" alt="Sheffield NVIDIA Education Centre" align="right" width="20%">
+
 This week I am very pleased to announce that the University of Sheffield has been awarded the status of an NVIDIA CUDA Education Centre.
 
 The faculty of Engineering has featured this in its latest [faculty newsletter](http://www.sheffield.ac.uk/faculty/engineering/news/nvidia-1.587003) and the Department of Computer Science has published more details in a [news feature](http://www.sheffield.ac.uk/dcs/latest-news/nvidia-1.587214).
-
-<img src="/images/NVIDIA_teaching.jpg" alt="Sheffield NVIDIA Education Centre" align="right" width="40%">
 
 
 ## But what does this mean to the RSE community at Sheffield and beyond?
