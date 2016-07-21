@@ -25,12 +25,8 @@ Research Software Engineering
 
 High Performance Computing
 --------------------------
+"I am a third-year PhD student of the Chemoinformatics Group in the Information School Department at the University of Sheffield. My research project involved iterations of nearest neighbour searches using high dimensional chemical representation. The intensive calculations and limitations of computational resources have been my biggest problem in completing the task using the KNIME software. Dr Mike Croucher has been helping me to setup the KNIME software on the Iceberg and managed to help me run some samples of application. I am so excited that I am able to run my experiments on the Iceberg with his help. I would to thanks Dr Mike for the work he have put in over the last few months on the configuration of my software on the Iceberg. I have already shared my experience and recommended him to my other colleagues" **Lucyantie Mazalan, (Chemoinformatics Group, University of Sheffield)**
+
 "Mike was instrumental in providing the bcl2fastq software package on Iceberg. This is an essential tool which enables the conversion of the image files (bcl) which are produced by the Illumina next generation sequencing machines into a more manageable fastq, text-like, format. Whilst it was described as a relatively trivial process there were a number of support prerequisite packages that needed to be incorporated which meant it required a skilled approach to achieve a successful implementation. Without Mike’s support we would not have been able to continue our analysis." **Dr Paul R. Heath (Senior Scientific Officer, SITraN, University of Sheffield)**
 
 'Mike Croucher installed MITgcm http://mitgcm.org/ on Iceberg for me, after I had tried and failed several times. I use MITgcm to model the circulation of ocean water in Greenlandic fjords, and to assess the impacts in variations of ice sheet runoff on submarine ice melt and biological productivity. The model can output global Netcdf files rather than individual binary files of which there can be thousands when running a parallel simulation, but this requires specific compilers and an up-to-date Netcdf library. Installing MTgcm was complicated as there were a whole host of dependencies on different libraries built with specific compilers. In the end it required installation of new versions of various pieces of software - but nothing was too much trouble for Mike. He even ran some of the model test cases to make sure it was all working properly.  **Dr Andrew Sole, Faculty Research Fellow, Department of Geography, University of Sheffield**
-
-Teaching Support
-----------------
-
-Training
---------
