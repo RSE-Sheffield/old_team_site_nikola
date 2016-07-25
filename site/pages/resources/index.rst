@@ -25,5 +25,4 @@ High Performance Computing at Sheffield
 ---------------------------------------
 The University of Sheffield provides staff and students with access to a High Performance Computing (HPC) system called Iceberg.
 
-* https://www.shef.ac.uk/wrgrid/iceberg - Official Iceberg website
-* http://rcg.group.shef.ac.uk/iceberg/software/index.html - Iceberg user's manual
+* http://docs.iceberg.shef.ac.uk/en/latest/index.html - Iceberg documenation
