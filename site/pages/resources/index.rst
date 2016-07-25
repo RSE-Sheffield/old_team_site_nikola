@@ -12,8 +12,9 @@ Here you'll find details of hardware and software resources that will be of inte
 Language and technology specific resources
 ------------------------------------------
 * `Fortran <languages/fortran>`_: Details on site licensed compilers, training, numerical libraries and high performance computing in Fortran.
-* `Maple <languages/maple>`_: How to get Maple on your machine at Sheffield. High Performance computing tutorials. 
+* `Maple <languages/maple>`_: How to get Maple on your machine at Sheffield. High Performance computing tutorials.
 * `MATLAB <languages/matlab>`_: High performance computing, training, tips and how to get MATLAB at Sheffield.
+* `NAG <languages/NAG>`_: Numerical Algorithms Group (NAG) software at Sheffield
 * `R <languages/rstats>`_: Training and high performance computing.
 
 Site licensed Software at Sheffield
