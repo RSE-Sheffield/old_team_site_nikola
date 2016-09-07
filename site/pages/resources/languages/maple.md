@@ -9,7 +9,7 @@
 
 ![](/images/Maplesoft_logo.svg)
 
-Maple is a commercial computer algebra system developed and sold commercially by Maplesoft, a software company based in Waterloo, Ontario, Canada.
+Maple is a computer algebra system developed and sold commercially by Maplesoft, a software company based in Waterloo, Ontario, Canada.
 The University of Sheffield has a site license that allows all staff and students to use it on University and personal machines.
 
 * [Download Maple](https://cics.dept.shef.ac.uk/software/) - Maple is available for Sheffield University staff and students from the CiCS download site
