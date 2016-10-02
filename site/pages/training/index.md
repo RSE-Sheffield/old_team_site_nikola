@@ -11,7 +11,8 @@
 
 All of these events are free to members of the University of Sheffield.
 
-* **October 2016 11th October** An introduction to Mathematica. This is a 2 hour session delivered by Wolfram Research. Register at [https://www.eventbrite.co.uk/e/sheffield-rse-an-introduction-to-mathematica-tickets-27930739594](https://www.eventbrite.co.uk/e/sheffield-rse-an-introduction-to-mathematica-tickets-27930739594)
+* **October 11th 2016 5:50pm** Code Cafe: An introduction to Mathematica. Self-paced in an informal session at Coffee Revolution. Register at [https://www.eventbrite.co.uk/e/code-cafe-take-your-first-steps-with-mathematica-tickets-28314315881](https://www.eventbrite.co.uk/e/code-cafe-take-your-first-steps-with-mathematica-tickets-28314315881)
+* **October 11th 2016 10am-12** An introduction to Mathematica. This is a 2 hour session delivered by Wolfram Research. Register at [https://www.eventbrite.co.uk/e/sheffield-rse-an-introduction-to-mathematica-tickets-27930739594](https://www.eventbrite.co.uk/e/sheffield-rse-an-introduction-to-mathematica-tickets-27930739594)
 * **November 21-22 2016 ** Multicore programming with OpenMP in collaboration with [NAG](http://www.nag.co.uk/). Register at [https://www.eventbrite.co.uk/e/parallel-programming-in-c-c-and-fortran-using-openmp-tickets-27567846170](https://www.eventbrite.co.uk/e/parallel-programming-in-c-c-and-fortran-using-openmp-tickets-27567846170)
 
 # Past Training
