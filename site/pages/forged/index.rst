@@ -17,3 +17,7 @@ Computer Science
 * `FLAME GPU <http://www.flamegpu.com/home>`_ FLAME GPU is a high performance Graphics Processing Unit (GPU) extension to the FLAME framework. It provides a mapping between a formal agent specifications with C based scripting and optimised CUDA code.
 * `General Architecture for Text Engineering (GATE) <https://gate.ac.uk/>`_ GATE is a popular suite of open source language processing tools, used in a wide range of research and commercial areas, with 30 - 40 000 downloads a year.
 * `GPy <http://sheffieldml.github.io/GPy/>`_ GPy is a Gaussian Process (GP) framework written in Python. Gaussian processes underpin range of modern machine learning algorithms. In GPy, we've used Python to implement a range of machine learning algorithms based on GPs.
+
+Physics
+-------
+* `GP_emu <https://github.com/samcoveney/GP_emu>`_ GP_emu is designed for building, training, and validating a Gaussian Process Emulator via a series of simple routines.
