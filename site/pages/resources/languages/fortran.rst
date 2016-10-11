@@ -21,7 +21,7 @@ According to the 2015 Fortran UK compiler comparisons, the NAG compiler was one 
 The Windows version of the NAG compiler has a graphical user interface and contains full documentation for the Fortran language. Combined with the fact that students can install it on their personal machines, this makes it an ideal compiler for teaching and learning Fortran. Unfortunately, the Linux and Mac versions are command line only and so are not as easy to use.
 
 * Suitable for Teaching and Learning
-* Installed on the Iceberg High Performance Computing facility: http://docs.iceberg.shef.ac.uk/en/latest/software/compilers/nag.html
+* Installed on the Iceberg High Performance Computing facility: http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/compilers/nag.html
 * Unlimited number of licenses for members of the University
 * Network access not required at compile time
 * Download (University staff and students only): https://cics.dept.shef.ac.uk/software/
@@ -33,7 +33,7 @@ On average, programs generated using the Intel Fortran Compiler run faster than 
 
 * Best for compute intensive research.
 * Small number of network licenses. Need to be connected to the network at compile time
-* Installed on the Iceberg High Performance Computing facility: http://docs.iceberg.shef.ac.uk/en/latest/software/compilers/intel.html
+* Installed on the Iceberg High Performance Computing facility: http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/compilers/intel.html
 * Can be used as a mex compiler for MATLAB (Windows only)
 * Download (University staff and students only): https://cics.dept.shef.ac.uk/software/
 * Vendor Website: http://software.intel.com/en-us/intel-compilers
@@ -44,7 +44,7 @@ The PGI Compiler is a useful alternative to the Intel Compiler but its real stre
 
 * Best for GPU development
 * Small number of network licenses. Need to be connected to the network at compile time
-* Installed on the Iceberg High Performance Computing facility: http://docs.iceberg.shef.ac.uk/en/latest/software/compilers/pgi.html
+* Installed on the Iceberg High Performance Computing facility: http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/compilers/pgi.html
 * Vendor Website: http://www.pgroup.com/
 
 Silverfrost Fortran Compiler (Windows only)
@@ -68,7 +68,7 @@ The University of Sheffield has site licenses for the following Fortran numerica
 * `NAG Fortran Library <http://www.nag.co.uk/numeric/fl/FLdescription.asp>`_. Contains 1844 user-callable routines covering a huge variety of mathematical and statistical areas.
 
   * Obtain the NAG Fortran Library from CiCS' software download site. (University staff and students only). https://cics.dept.shef.ac.uk/software/
-  * NAG Fortran Library documentation on Sheffield's High Performance Computing cluster: http://docs.iceberg.shef.ac.uk/en/latest/software/libs/nagfortran.html
+  * NAG Fortran Library documentation on Sheffield's High Performance Computing cluster: http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/libs/nagfortran.html
   * Complete list of functions provided by the NAG Fortran library: http://www.nag.co.uk/numeric/fl/nagdoc_fl25/html/FRONTMATTER/manconts.html
 
 * `Intel Math kernel Library (MKL) <https://software.intel.com/en-us/intel-mkl>`_. Contains extremely fast functions for linear algebra, fourier transforms, data fitting and statistics.

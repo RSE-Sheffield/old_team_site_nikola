@@ -13,5 +13,5 @@ Maple is a computer algebra system developed and sold commercially by Maplesoft,
 The University of Sheffield has a site license that allows all staff and students to use it on University and personal machines.
 
 * [Download Maple](https://cics.dept.shef.ac.uk/software/) - Maple is available for Sheffield University staff and students from the CiCS download site
-* The documentation for [Maple on Sheffield's High Performance Computing System](http://docs.iceberg.shef.ac.uk/en/latest/software/apps/maple.html), Iceberg.
+* The documentation for [Maple on Sheffield's High Performance Computing System](http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/maple.html), Iceberg.
 * [High Performance Computing with Maple, Part 1](http://rse.shef.ac.uk/blog/HPC-Maple-1/) - A detailed tutorial on how to use Maple with Sheffield's HPC cluster

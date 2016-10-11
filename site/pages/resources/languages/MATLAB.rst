@@ -13,7 +13,7 @@ MATLAB
 MATLAB is a high-level technical computing language and interactive environment for algorithm development, data visualization, data analysis, and numerical computing. The University of Sheffield has a Total Academic Headcount license for MATLAB which allows both staff and students to use it, both on University and personally owned machines.
 
 * Download MATLAB from CiCS' `software download site <https://cics.dept.shef.ac.uk/software/>`_
-* MATLAB documentation for Sheffield's High Performance Computing System http://docs.iceberg.shef.ac.uk/en/latest/software/apps/matlab.html
+* MATLAB documentation for Sheffield's High Performance Computing System http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/matlab.html
 
 NAG Toolbox for MATLAB
 ----------------------
