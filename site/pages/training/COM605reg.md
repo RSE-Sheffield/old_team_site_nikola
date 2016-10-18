@@ -7,7 +7,7 @@
 .. description:
 .. type: text
 
-The course is open to all members of the University but there are two ways of registering, depending on  your status.
+The [COM605 course](/training/COM605) is open to all members of the University but there are two ways of registering, depending on  your status.
 
 # Dates
 
