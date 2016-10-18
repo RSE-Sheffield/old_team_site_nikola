@@ -19,7 +19,7 @@ All members of the University are free to sign up for this course as a non-credi
 
 # Register as a DDP module
 
-If you are a PhD student and would like to have this course count towards your DDP credits, you need to register using the [DDP Registration page](https://www.shef.ac.uk/DdpModules/selectUnits.html). It is not possible to give a direct link for the course! Instead, you need to search for it.
+If you are a PhD student and would like to have this course count towards your DDP credits, you need to register using the [DDP Registration page](https://www.shef.ac.uk/DdpModules/dspReg.html). It is not possible to give a direct link for the course! Instead, you need to search for it.
 
 On the registration page, select your faculty and tick the **A1 - Knowledge base** box before clicking **Apply Filter**. COM605 will be one of the modules that appear.
 
