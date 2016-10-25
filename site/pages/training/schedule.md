@@ -11,6 +11,8 @@
 
 All of these events are free to members of the University of Sheffield.
 
+* **January 26-27 ** Two day "GPU" training course held at the University of Sheffield on January 26-27th 2017 (from 10:00-17:00 on both days). The aim of the course is to provide a basic understanding of principles of CUDA GPU programming and GPU programming. Prior knowledge of CUDA or Parallel programming is not required. The course will be delivered by Dr. Paul Richmond (Comp Sci) with assistance from Mozhgan Kabiri Chimeh from the Research Software Engineering Sheffield group. Register at [https://www.eventbrite.co.uk/e/gpu-training-course-tickets-28581891206](https://www.eventbrite.co.uk/e/gpu-training-course-tickets-28581891206)
+
 * **November 21-22 2016 ** Multicore programming with OpenMP in collaboration with [NAG](http://www.nag.co.uk/). Register at [https://www.eventbrite.co.uk/e/parallel-programming-in-c-c-and-fortran-using-openmp-tickets-27567846170](https://www.eventbrite.co.uk/e/parallel-programming-in-c-c-and-fortran-using-openmp-tickets-27567846170)
 
 # Previous training events

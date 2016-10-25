@@ -11,3 +11,4 @@ We offer a range of training courses in topics such as Programming, High Perform
 
 * [Schedule of events](schedule) Upcoming and past training events. Includes links to course material and registration pages.
 * [COM605: Good Practice for Research Software ](COM605) - Information on this Doctoral Development Program (DDP) Module.
+* [COM4521: Parallel Computing with GPUs](http://www.dcs.shef.ac.uk/intranet/teaching/public/modules/level4/com4521.html) - Available to undergraduates, postgraduates, research staff and Phds (As a DDP).
