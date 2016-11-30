@@ -42,7 +42,7 @@ This indicates that you are on Node 119.
 
 Each of the course content links below provide a downloadable link containing the starting code. You can either download this on your desktop and upload it to iceberg using SFTP (port 22) or fetch it directly from  the web using wget. E.g. From your interactive session type:
 
-    wget https://github.com/chryswoods/siremol.org/raw/master/chryswoods.com/vector_c%2B%2B/workshop.tgz
+    wget http:/somelocation.com/a_file.tgz
 
 # Modules Required
 
@@ -72,7 +72,9 @@ Course Material is available at [http://chryswoods.com/vector_c++/](http://chrys
 
 Lunch is not provided. Refreshments are available throughout the day from  Bartolomé Café on the basement level.
 
+# Feedback
 
+Please take the time to complete the [feedback form](https://docs.google.com/forms/d/e/1FAIpQLSey-EBMgr99kO4Za7FxOb7VuG4L_9w27_3TTxgexBVlGbpoFA/viewform?edit_requested=true) for this workshop.
 
 
 
