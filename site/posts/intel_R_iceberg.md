@@ -12,13 +12,13 @@
 
 **To Long; Didn't Read -- Summary**
 
-I've built a version of R on Iceberg that is faster than the standard version for various operations. Documentation is at [http://docs.iceberg.shef.ac.uk/en/latest/software/apps/intel_r.html](http://docs.iceberg.shef.ac.uk/en/latest/software/apps/intel_r.html).
+I've built a version of R on Iceberg that is faster than the standard version for various operations. Documentation is at [http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html](http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html).
 
 If it works more quickly for you, or if you have problems, please let us know by emailing [rse@sheffield.ac.uk](mailto:rse@sheffield.ac.uk)
 
 **Background**
 
-I took over building [R for Iceberg](http://docs.iceberg.shef.ac.uk/en/latest/software/apps/r.html), Sheffield's High Performance Computing System, around a year ago and have been incrementally improving both the install and the documentation with every release. Something that's been bothering me for a while is the lack of optimisation. The standard Iceberg build uses an ancient version of the gcc compiler and (probably) unoptimised versions of [BLAS](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms) and [LAPCK](https://en.wikipedia.org/wiki/LAPACK).
+I took over building [R for Iceberg](http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html), Sheffield's High Performance Computing System, around a year ago and have been incrementally improving both the install and the documentation with every release. Something that's been bothering me for a while is the lack of optimisation. The standard Iceberg build uses an ancient version of the gcc compiler and (probably) unoptimised versions of [BLAS](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms) and [LAPCK](https://en.wikipedia.org/wiki/LAPACK).
 
 BLAS and LAPACK are extremely important libraries -- they provide the code that programs such as R use for linear algebra: Matrix-Matrix multiplication, Cholesky decomposition, principle component analysis and so on. It's important to note that there are lots of implementations of BLAS and LAPACK: [ATLAS](http://math-atlas.sourceforge.net/), [OpenBLAS](http://www.openblas.net/) and the [Intel MKL](https://software.intel.com/en-us/intel-mkl) are three well-known examples. Written in Fortran, the interfaces of all of these versions are identical, which means you can use them interchangeably, but the speed of the implementation can vary considerably.
 
@@ -220,7 +220,7 @@ If matrix-matrix multiply dominates your runtime, on the other hand, it may well
 **Using this version of R for your own work**
 
 As a user, there are a few things you need to be aware of with the Intel builds of R so I've created a separate documentation page for them.  This is currently at
-[http://docs.iceberg.shef.ac.uk/en/latest/software/apps/intel_r.html](http://docs.iceberg.shef.ac.uk/en/latest/software/apps/intel_r.html)
+[http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/intel_r.html](http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/intel_r.html)
 
 My recommendation for using these builds is to work through the following procedure
 

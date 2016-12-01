@@ -166,5 +166,5 @@ In future articles, we'll be looking at how to make use of Maple's parallel comp
 
 ## Further reading
 
-* [General introduction to batch processing](http://docs.iceberg.shef.ac.uk/en/latest/using-iceberg/sge.html) - From the Iceberg documentation
-* [A list of scheduler commands](http://docs.iceberg.shef.ac.uk/en/latest/software/scheduler/index.html) - **qsub** is just one example of a scheduler command. Here are a few more.
+* [General introduction to batch processing](http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html) - From the Iceberg documentation
+* [A list of scheduler commands](http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/index.html) - **qsub** is just one example of a scheduler command. Here are a few more.
