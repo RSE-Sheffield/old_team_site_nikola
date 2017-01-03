@@ -2,7 +2,7 @@
 .. title: £1 million grant to shed light on how we learn languages
 .. author: Mike Croucher
 .. slug: linuistics_grant_2016
-.. date: 2016-01-03 15:22:11 UTC
+.. date: 2017-01-03 15:22:11 UTC
 .. tags:
 .. category:
 .. link:
