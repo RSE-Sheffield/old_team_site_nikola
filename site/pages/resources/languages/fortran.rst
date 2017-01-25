@@ -18,7 +18,7 @@ NAG Fortran Compiler (Windows, MacOS X and Linux)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 According to the 2015 Fortran UK compiler comparisons, the NAG compiler was one of the best diagnostic compilers available: http://www.fortran.uk/fortran-compiler-comparisons-2015/intellinux-fortran-compiler-diagnostic-capabilities/
 
-The Windows version of the NAG compiler has a graphical user interface and contains full documentation for the Fortran language. Combined with the fact that students can install it on their personal machines, this makes it an ideal compiler for teaching and learning Fortran. Unfortunately, the Linux and Mac versions are command line only and so are not as easy to use.
+The Windows and Mac versions of the NAG compiler have graphical user interfaces containing full documentation for the Fortran language. Combined with the fact that students can install it on their personal machines, this makes it an ideal compiler for teaching and learning Fortran. Unfortunately, the Linux version is command line only and so is not as easy to use.
 
 * Suitable for Teaching and Learning
 * Installed on the Iceberg High Performance Computing facility: http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/compilers/nag.html
