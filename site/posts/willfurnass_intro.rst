@@ -86,7 +86,15 @@ I will be working on:
 
 I'm rather excited about this new role.  One nice aspect to it is that I am now according to my contract officially a `Research Software Engineer`_:
 
-.. image:: /images/willfurnass_contract.jpg
+    Dear Dr Furnass
+
+    Further to recent discussions, I am pleased to confirm the change in your appointment with the University of Sheffield.  
+    The details of your offer are provided below:
+
+    Appointment Details:
+    You, Dr William Furnass, shall be employed by the University of Sheffield as a Research Software Engineer 
+    in the Department of Computer Science with effect from 1 January 2017.  
+    This position is offered on a fixed term basis.
 
 This demonstrates that research institutions have started recognising `Research Software Engineering`_ as an alternative career path in academia 
 (something the `Software Sustainability Institute`_ have been pushing for for some time) and 
