@@ -82,7 +82,7 @@ I will be working on:
 * Setting up JupyterHub on our new cluster (ShARC_);
 * Developing a mechanism for easily requesting resources (more RAM / CPU cores / GPUs) from the Grid Engine scheduler;
 * Making the JupyterHub and Grid Engine integration more robust.
-* Looking at how JupyterHub could be set on for HPC clusters at other institutions (possibly using different schedulers).
+* Looking at how JupyterHub could be set up on HPC clusters at other institutions (possibly using different schedulers) for research/teaching.
 
 I'm rather excited about this new role.  One nice aspect to it is that I am now according to my contract officially a `Research Software Engineer`_:
 
