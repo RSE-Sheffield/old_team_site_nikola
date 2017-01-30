@@ -14,12 +14,12 @@
    :align: right
    :alt: Will Furnass
 
-The Research Software Engineering team at the University of Sheffield has gained **a new member**!
+The Research Software Engineering team at the University of Sheffield has gained a new member!
 I joined at the start of the month and 
 will primarily be working on OpenDreamKit_ 
 which is a `Horizon 2020`_
 European `Research Infrastructure`_ project
-with the aim of **furthering the open-source computational mathematics ecosystem**.
+with the aim of furthering the open-source computational mathematics ecosystem.
 
 My contribution to this project is to extend work previously started at the University of Sheffield
 to allow researchers to more easily run interactive workflows on `High-Performance Computing`_ clusters, 
