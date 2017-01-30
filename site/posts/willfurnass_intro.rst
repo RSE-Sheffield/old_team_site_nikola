@@ -15,7 +15,7 @@
    :alt: Will Furnass
 
 The Research Software Engineering team at the University of Sheffield has gained a new member!
-I joined at the start of the month and 
+I joined at the start of January and 
 will primarily be working on OpenDreamKit_ 
 which is a `Horizon 2020`_
 European `Research Infrastructure`_ project
