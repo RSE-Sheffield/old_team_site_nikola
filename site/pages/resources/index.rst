@@ -24,7 +24,7 @@ The University of Sheffield provides a range of site licensed software to its st
 
 High Performance Computing at Sheffield
 ---------------------------------------
-The University of Sheffield provides staff and students with access to a High Performance Computing (HPC) system called Iceberg.
+The University of Sheffield provides staff and students with access to two High Performance Computing (HPC) systems called ShARC and Iceberg.
 
-* http://docs.hpc.shef.ac.uk/en/latest/index.html - Iceberg documentation
+* http://docs.hpc.shef.ac.uk/en/latest/index.html - ShARC and Iceberg documentation
 * http://shef.ac.uk/cics/research-storage - Information on applying for research storage at Sheffield
