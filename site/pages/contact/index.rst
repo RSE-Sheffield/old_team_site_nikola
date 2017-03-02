@@ -37,3 +37,21 @@ Mozhgan is a `Research Associate/Research Software Engineer <http://www.rse.ac.u
 
 * Email: m.kabiri-chimeh (at) sheffield.ac.uk
 * LinkedIn: `https://uk.linkedin.com/in/mozhgankch <https://uk.linkedin.com/in/mozhgankch>`_
+
+Will Furnass
+------------
+Will is also a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>`_.  
+The path to this point has not been particularly direct: 
+he has a computer scence degree, 
+has worked as a IT systems engineer in the film industry, 
+has a PhD plus post-doc experience in water engineering 
+(where he developed semi-physical and data-driven models of water quality in water distribution networks) and 
+has provided support to the users of the University of Sheffield's high-performance computing clusters.  
+In addition he has taught or helped run RSE, water engineering and study skills workshops.  
+His interests include 
+helping researchers optimise data analysis workflows (primarily using higher-level languages), 
+providing training in RSE best practices and 
+systems administration.
+
+* Email: w.furnass (at) sheffield.ac.uk
+* Twitter: `@willfurnass <https://twitter.com/willfurnass>`_
