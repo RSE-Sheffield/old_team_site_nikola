@@ -89,9 +89,13 @@ When you are happy, submit a Pull Request.
 
 ## For site admins
 
-To publish a post, accept the PR and do
+To publish a post, accept the PR then from the `site` directory you can run a single command to:
+
+* commit a rendered version of the site to the `master` branch then 
+* push this to the `origin` (_not_ `upstream`) branch on GitHub
+
+this command being:
 
 ```bash
 nikola github_deploy
 ```
-
