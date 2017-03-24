@@ -207,7 +207,7 @@ Looking forward to meeting up with the OpenDreamKit gang again!
 
 .. _binder: http://mybinder.org/ 
 .. _Christian Lawson-Perfect: http://somethingorotherwhatever.com/
-.. _code sprints: https://www.drupal.org/sprints
+.. _code sprints: https://www.software.ac.uk/blog/2017-02-23-computational-mathematics-jupyter-sprint
 .. _Computational Mathematics with Jupyter workshop: http://opendreamkit.org/meetings/2017-01-16-ICMS/
 .. _Docker: http://www.docker.com/ 
 .. _full programme: http://opendreamkit.org/meetings/2017-01-16-ICMS/programme/
