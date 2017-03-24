@@ -91,7 +91,7 @@ qalter -l h_rt=96:00:00 -l rmem=4G 217834
 
 ## Job validation at submission time
 
-You can also perform the same type of job validation **at job submission time** using:
+You can also perform the same type of job validation **at job submission time** using ``-w v`` e.g.
 
 ```bash
 qsub -w v -l 1000:00:00 -l rmem=4G myjobscript.sge
@@ -114,7 +114,7 @@ you ask for 100 GPUs, 9999GB of RAM or 10000 cores
 you'll observe the same behaviour: jobs that make requests unsatisfiable under the current cluster configuration can be submitted but will never run.
 
 Again, job validation can help here but depending on the type of resource the validation error messages can be more or less cryptic.  
-For example, if you try to validate a 100000-'slot' (core) MPI job you get the following:
+For example, if you try to validate a 100000-'slot' (core) MPI job using ``-w v`` you get the following:
 
 ```
 qsub -pe mpi 100000 -w v somejob.sge
@@ -130,4 +130,5 @@ This is rather misleading but the mention of 'slots' should prompt you to check 
 Another type of validation is *poke* validation, 
 which checks if a job could be run under the current cluster *load* 
 i.e. with many of the cluster's resources already in use.  
-See ``man qsub`` for more information on the different types of validation.
+See ``man qsub`` and search for ``-w`` 
+for more information on the different types of validation.
