@@ -24,13 +24,13 @@ to submit a job where we ask for 1000 hours of run time and 4 GiB of RAM:
 ```bash
 [will@mysofa ~]$ ssh sharc
 ...
-[cs1wf@sharc-login1 ~]$ qsub -l h_rt=1000:00:00 -l rmem=4G -m bea -M w.furnass@sheffield.ac.uk -N longtask myjobscript.sge
+[te1st@sharc-login1 ~]$ qsub -l h_rt=1000:00:00 -l rmem=4G -m bea -M w.furnass@sheffield.ac.uk -N longtask myjobscript.sge
 
 Your job 236268 ("STDIN") has been submitted
-[cs1wf@sharc-login1 ~]$ qstat -u $USER
+[te1st@sharc-login1 ~]$ qstat -u $USER
 job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
 -----------------------------------------------------------------------------------------------------------------
- 217834 0.00000 longtask   cs1wf        qw    03/20/2017 10:48:39                                    1        
+ 217834 0.00000 longtask   te1st        qw    03/20/2017 10:48:39                                    1        
 ```
 
 Job 217834 will now sit queuing forever.  
@@ -43,7 +43,7 @@ if say you think that a job has now been queueing for longer
 than previously-submitted jobs of a similar nature:
 
 ```
-[cs1wf@sharc-login1 ~]$ qalter -w v 217834
+[te1st@sharc-login1 ~]$ qalter -w v 217834
 Job 217834 (-l h_rt=3600000) cannot run in queue "flybrain.q" because of cluster queue
 Job 217834 (-l h_rt=3600000) cannot run in queue "gpu.q" because of cluster queue
 Job 217834 (-l h_rt=3600000) cannot run in queue "gen2reg.q" because of cluster queue
@@ -75,8 +75,8 @@ We can therefore deduce that our run-time resource request wasn't satisfiable.
 Once we know that our job can't run we could then delete our job...
 
 ```bash
-[cs1wf@sharc-login1 ~]$ qdel 217834 
-cs1wf has deleted job 217834 
+[te1st@sharc-login1 ~]$ qdel 217834 
+te1st has deleted job 217834 
 ```
 
 ...then consult the cluster's documentation to discover the maximum possible run-time and resubmit using more sensible resource requests.  
