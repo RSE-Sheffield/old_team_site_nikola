@@ -10,7 +10,7 @@
 .. type: text
 -->
 
-In February, the Research Software Engineering group hosted an ‘Introduction to Modern Fortran Course’ taught by EPSRC Research Software Engineering Fellow, [Ian Bush](http://www.walkingrandomly.com/?p=6006). The course material is available at https://www.oerc.ox.ac.uk/introduction-modern-fortran-course-materials).
+In February, the Research Software Engineering group hosted an ‘Introduction to Modern Fortran Course’ taught by EPSRC Research Software Engineering Fellow, [Ian Bush](http://www.walkingrandomly.com/?p=6006). The course material is available at [https://www.oerc.ox.ac.uk/introduction-modern-fortran-course-materials](https://www.oerc.ox.ac.uk/introduction-modern-fortran-course-materials).
 
 During the day, Ian recommended a bunch of books (below)
 
