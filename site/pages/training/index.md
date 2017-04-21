@@ -13,7 +13,7 @@ We offer a range of training courses in topics such as Programming, High Perform
 
 All of these events are free to members of the University of Sheffield.
 
-* 2017-02-20: **Amazon AWS immersion day**.  Information for researchers on how get going and make the most of Amazon's cloud infrastructure. Further information to follow.
+* 2017-08-24 - 2017-08-25: **Introduction to parallel programming with MPI**.  If you want your code to scale to 100s or even 1000s of CPU cores then [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) is the traditional way to do it and is the dominant programming model used in High Performance Computing.  To be delivered by Jon Gibson of the [Numerical Algorithms Group](https://www.nag.co.uk/) (NAG).  Further details and registration info [here](https://www.eventbrite.co.uk/e/introduction-to-parallel-programming-with-mpi-tickets-33848678308).
 
 ## University modules
 
@@ -24,6 +24,7 @@ All of these events are free to members of the University of Sheffield.
 
 Here are details of previous training events we've run. If you'd like us to rerun any of them, please get in touch and we'll see what we can do.
 
+* 2017-02-20: **Amazon AWS immersion day**.  Information for researchers on [how get going and make the most of Amazon's cloud infrastructure](https://aws.amazon.com/events/immersion-sheffield/).
 * 2017-02-16, 2017-02-23: **An Introduction to Deep Learning** on the [ShARC](http://www.sheffield.ac.uk/cics/research/hpc/sharc) cluster's [DGX-1](http://www.nvidia.com/object/deep-learning-system.html) node.  Two afternoons of running [Caffe](http://caffe.berkeleyvision.org/) on the DGX-1's P100 GPUs to train and run various [Deep Learning](https://en.wikipedia.org/wiki/Deep_learning) models.  An overview can be found [here](https://www.eventbrite.co.uk/e/introduction-to-deep-learning-on-sharcs-dgx-1-tickets-31359086873) and the course material [here](http://gpucomputing.shef.ac.uk/education/intro_dl_sharc_dgx1/).
 * 2017-02-22 - 2017-02-23: An **Introduction to Modern Fortran**.  Concentrated on its use in solving scientific problems and modern best practice. Introduced the basic data type system and control structures in the language, covered Fortran's extensive array handling facilities and covered modern practices for program organisation, focusing on the use of modules.  Delivered by EPSRC Research Software Engineering Fellow, [Ian Bush](http://www.walkingrandomly.com/?p=6006).
 * 2017-01-26 - 2017-01-27: Two-day **GPU training course** held at the University of Sheffield. The aim of the course was to provide a basic understanding of principles of CUDA GPU programming and GPU programming for people without prior knowledge of CUDA or parallel programming.  Delivered by Dr. Paul Richmond (Comp Sci) with assistance from Mozhgan Kabiri Chimeh from the Research Software Engineering Sheffield group. Material can be found [here](http://gpucomputing.shef.ac.uk/education/cuda/>).
