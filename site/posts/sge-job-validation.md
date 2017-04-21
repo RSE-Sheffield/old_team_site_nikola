@@ -10,6 +10,8 @@
 .. type: text
 -->
 
+(**Edit**: caveats are listed in a [more recent post](link://slug/sge-job-validation-2))
+
 Computer cluster job scheduling software is fantastic at managing resources 
 and permitting many jobs to run efficiently and simultaneously.  
 However, schedulers aren't always great at giving end-users feedback 
@@ -104,7 +106,8 @@ This won't actually submit your job; it just performs validation.
 You may ask why such validation is not enabled by default for all jobs; 
 one reason for this is that it is believed it would place undue burden on the scheduler.
 
-Another is that sometimes a validation attempt results in a false negative that can be difficult to automatically identify.
+Another is that sometimes a validation attempt results in a false negative that can be difficult to automatically identify
+(**edit**: see this [more recent post](link://slug/sge-job-validation-2) for details).
 
 ## Other types of resources
 
