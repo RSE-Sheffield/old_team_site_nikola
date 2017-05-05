@@ -32,4 +32,10 @@ make an informed career choice
 
 The above ideas are by not means *the only* ways to overcome these issues as the gender imbalance and  skill gap issues are rather complex problems.
 
-I do believe, however, that the most fruitful approach would be to work with the upcoming generations and provide them with useful technical and personal skills early on. This would not only make them better qualified for their future but would enable them to make informed decisions with regards to their professional future.
+I do believe, however, that the most fruitful approach is to work with the upcoming generations and provide them with useful technical and personal skills early on. This would not only make them better qualified for their future but would enable them to make informed decisions with regards to their professional future.
+
+[Code First: girls](http://www.codefirstgirls.org.uk) is an organizaion that aims to tackle the gender imbalance in three main ways: training women, building a strong and supportive community, and helping companies to train, recruit, and retain their female force.
+
+Belonging to a minority within STEM has lead me to take an active role as an equality and diversity ambassador, which eventually lead me to volunteer as a Python instructor for the Code First courses.
+
+Over the course of 8 weeks we provide
