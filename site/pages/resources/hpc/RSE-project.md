@@ -27,13 +27,13 @@ A similar model is in use at [The University of Manchester](http://ri.itservices
 We believe that part of their success is due to the fact that academics and central IT are *co-investing* in a system rather than IT simply providing a service.
 This is our attempt to replicate the same success here at Sheffield.
 
-Traditonally, HPC at Sheffied has always been 'Free At Point of Use' and although this allows everyone to have *some* HPC access for 'free' (It really comes out of overheads), it usually leaves most people wanting more. You'll know what we mean if you've ever waited in the queues for longer than it takes your job to run! 
+Traditionally, HPC at Sheffield has always been 'Free At Point of Use' and although this allows everyone to have *some* HPC access for 'free' (It really comes out of overheads), it usually leaves most people wanting more. You'll know what we mean if you've ever waited in the queues for longer than it takes your job to run! 
 
 Free at Point of Use is great and we don't expect this to change but we want to offer our collaborators something more.
 
 # Can you guarantee me access to *my* hardware exactly when I need it?
 
-No (with caveats). The idea of this particular model is that you give up the convenience of guaranteed access at all times in exchange for access to much more hardware than you could otherwise afford. We can occasonally give our collaborators guaranteed access to certain nodes for short periods for mission critical work but we strongly discourage it. If you really must have guaranteed access to your nodes at all times, this may not be the model for you.
+No (with caveats). The idea of this particular model is that you give up the convenience of guaranteed access at all times in exchange for access to much more hardware than you could otherwise afford. We can occasionally give our collaborators guaranteed access to certain nodes for short periods for mission critical work but we strongly discourage it. If you really must have guaranteed access to your nodes at all times, this may not be the model for you.
 
 # What if I join the pool but find it doesn't work for me?
 
@@ -58,7 +58,7 @@ We will, however, collaborate with the user community in modifying this policy i
 
 # What Hardware is currently available in the premium pool?
 
-The pool consists of the following nodes. Of course, this is in addition to all of the publically accessible nodes available on ShARC.
+The pool consists of the following nodes. Of course, this is in addition to all of the publicly accessible nodes available on ShARC.
 
 ## NVIDIA DGX-1
 
@@ -98,9 +98,9 @@ If you have money to spend on HPC equipment and don't want to be part of our exp
 
 * **Buy your own hardware and shove it under your desk. Admin it yourself and have fun.**  This has a lot of advantages. You can see and touch your tin. You can do whatever you like with it and have access to it whenever you want. The disadvantages are that you'll not be integrated with the rest of our HPC system, you won't have access to all of our additional hardware and you won't have access to our support community.
 
-* **Buy you own nodes on ShARC directly from CiCS**. The main advantage of this is that you'll have guarenteed access to your nodes whenever you want them. Possibly the best route for people who are going to have long, sustained workloads and who know exactly how much compute they need. The disadvantages are that you'll only have access to 'your nodes + general pool'. With us you'll have 'your nodes + general pool + our nodes'. Another disadvantage is that when you are not using your nodes, they'll be lying idle and will effectively be a waste of money
+* **Buy you own nodes on ShARC directly from CiCS**. The main advantage of this is that you'll have guaranteed access to your nodes whenever you want them. Possibly the best route for people who are going to have long, sustained workloads and who know exactly how much compute they need. The disadvantages are that you'll only have access to 'your nodes + general pool'. With us you'll have 'your nodes + general pool + our nodes'. Another disadvantage is that when you are not using your nodes, they'll be lying idle and will effectively be a waste of money
 
-* **Buy a lease on nodes from CiCS**. CiCS let you lease nodes by the hour but you usually have to buy several months worth to make this worthwhile. You get guarenteed access to your leased nodes which is great but when your lease runs out you are left with nothing. The hourly rate is much cheaper than cloud computing but, unlike the cloud, you have to pay for your nodes even when you are not using them. We've found that some research groups who lease a node for a year only end up using it about ~10% of the time. This is such a huge waste of money that they may as well have used the cloud instead.
+* **Buy a lease on nodes from CiCS**. CiCS let you lease nodes by the hour but you usually have to buy several months worth to make this worthwhile. You get guaranteed access to your leased nodes which is great but when your lease runs out you are left with nothing. The hourly rate is much cheaper than cloud computing but, unlike the cloud, you have to pay for your nodes even when you are not using them. We've found that some research groups who lease a node for a year only end up using it about ~10% of the time. This is such a huge waste of money that they may as well have used the cloud instead.
 
 * **Buy time on the cloud**. The most flexible option available. It's currently more expensive than buying on-premise hardware and requires a different set of skills to use. We do a lot of cloud based work though and will be happy to talk to you about options.
 
