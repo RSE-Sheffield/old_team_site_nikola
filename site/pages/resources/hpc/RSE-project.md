@@ -8,7 +8,7 @@
 .. type: text
 
 The Sheffield RSE group, along with a few other research groups around the University, have purchased some additional hardware and integrated it into ShARC. 
-Only those who have contributed to this hardware can access it.
+Only those who have financially contributed to this hardware can access it.
 This is part of an experiment to try to make better use of computational resources at Sheffield and also an attempt to build more of a community around the HPC systems here.
 
 Sheffield RSE is an academically-led group. We, and our collaborators, had computational needs that weren't addressed by Sheffield's HPC systems. Rather than build our own, separate system, we teamed up with the guys at CiCS to make Sheffield's HPC better for everyone.
@@ -40,7 +40,7 @@ No (with caveats). The idea of this particular model is that you give up the con
 We'll generally recommend that people contribute to the pool such that they buy at least an entire node. 
 That way, if it turns out that our model really doesn't work for you, we can remove you from the pool and put your hardware within its own project -- just as if you had purchased a node directly from CiCS.
 
-# Once I join the pool. How do I access the hardware?
+# Once I join the pool, how do I access the hardware?
 
 Add the line 
 
@@ -56,7 +56,7 @@ We currently use the standard fair-use policy operated by Sun Grid Engine.  In s
 This is identical to the policy used on the rest of ShARC and is currently working fine for our users. 
 We will, however, collaborate with the user community in modifying this policy if it proves to be necessary.
 
-# What Hardware is currently available in the premium pool?
+# What hardware is currently available in the premium pool?
 
 The pool consists of the following nodes. Of course, this is in addition to all of the publicly accessible nodes available on ShARC.
 
@@ -64,8 +64,8 @@ The pool consists of the following nodes. Of course, this is in addition to all 
 
 The NVIDIA DGX-1 is a specialised node that has been configured and optimised for deep learning workloads using GPUs.
 
-* 8x Tesla GPU100 GPUs with 16GB RAM and 3840 CUDA Cores per GPU
-* 2x 20 core Intel Xeon E5-2698 v4 2.2GHz
+* 8x Tesla GP100GL GPUs with 16GB RAM and 3840 CUDA cores per GPU
+* 2x 20-core Intel Xeon E5-2698 v4 2.2GHz
 * 512GB RAM
 
 Full details concerning its specification can be found at [https://images.nvidia.com/content/techn
@@ -84,9 +84,9 @@ These nodes have the same number of CPUs as standard ShARC nodes but they have m
 ## Dense core nodes (coming soon)
 
 These nodes have twice the number of CPUs as standard ShARC nodes with the same amount of RAM per core. 
-This makes them ideal for shared-memory parallel workloads that can scale beyond what is currently available on ShARC
+This makes them ideal for shared-memory parallel workloads that can scale beyond what is currently available on ShARC.
 
-We are in the process of buying these right now so they are not available just yet. We currently propose to buy
+We are in the process of buying these right now so they are not available just yet. We currently propose to buy:
 
 * 3 nodes
 * Each node has 32 CPU cores
@@ -94,14 +94,45 @@ We are in the process of buying these right now so they are not available just y
 
 # What are the alternatives to this premium queue?
 
-If you have money to spend on HPC equipment and don't want to be part of our experiment, here are some alternatives.
+If you have money to spend on HPC equipment and don't want to be part of our experiment, here are some alternatives:
 
-* **Buy your own hardware and shove it under your desk. Admin it yourself and have fun.**  This has a lot of advantages. You can see and touch your tin. You can do whatever you like with it and have access to it whenever you want. The disadvantages are that you'll not be integrated with the rest of our HPC system, you won't have access to all of our additional hardware and you won't have access to our support community.
+* **Buy your own hardware and shove it under your desk. 
+  Admin it yourself and have fun.** 
+  This has a lot of advantages. 
+  You can see and touch your tin. 
+  You can do whatever you like with it and have access to it whenever you want. 
+  The disadvantages are that you'll not be integrated with the rest of our HPC system 
+  (job scheduler, backups, permissions management/authentication, monitoring, resiliency mechanisms, security vulnerability management), 
+  you won't have access to all of our additional hardware and 
+  you won't have access to our support community.
 
-* **Buy you own nodes on ShARC directly from CiCS**. The main advantage of this is that you'll have guaranteed access to your nodes whenever you want them. Possibly the best route for people who are going to have long, sustained workloads and who know exactly how much compute they need. The disadvantages are that you'll only have access to 'your nodes + general pool'. With us you'll have 'your nodes + general pool + our nodes'. Another disadvantage is that when you are not using your nodes, they'll be lying idle and will effectively be a waste of money
+* **Buy you own nodes on ShARC directly from CiCS**. 
+  The main advantage of this is that you'll have guaranteed access to your nodes whenever you want them. 
+  Possibly the best route for people who are going to have long, sustained workloads and 
+  who know exactly how much compute they need. 
+  The disadvantages are that you'll only have access to 'your nodes + general pool'. 
+  With us you'll have 'your nodes + general pool + our nodes'. 
+  Another disadvantage is that when you are not using your nodes, 
+  they'll be lying idle and will effectively be a waste of money
 
-* **Buy a lease on nodes from CiCS**. CiCS let you lease nodes by the hour but you usually have to buy several months worth to make this worthwhile. You get guaranteed access to your leased nodes which is great but when your lease runs out you are left with nothing. The hourly rate is much cheaper than cloud computing but, unlike the cloud, you have to pay for your nodes even when you are not using them. We've found that some research groups who lease a node for a year only end up using it about ~10% of the time. This is such a huge waste of money that they may as well have used the cloud instead.
+* **Buy a lease on nodes from CiCS**. 
+  CiCS let you lease nodes by the hour but 
+  you usually have to buy several months worth to make this worthwhile. 
+  You get guaranteed access to your leased nodes which is great but 
+  when your lease runs out you are left with nothing. 
+  The hourly rate is much cheaper than cloud computing but, 
+  unlike the cloud, you have to pay for your nodes even when you are not using them. 
+  We've found that some research groups who lease a node for a year 
+  only end up using it about ~10% of the time. 
+  This is such a huge waste of money that 
+  they may as well have used the cloud instead.
 
-* **Buy time on the cloud**. The most flexible option available. It's currently more expensive than buying on-premise hardware and requires a different set of skills to use. We do a lot of cloud based work though and will be happy to talk to you about options.
-
-
+* **Buy time on the cloud**. 
+  The most flexible option available. 
+  Operational costs may be more expensive per unit time than on-premise options but 
+  there are few if any capital costs and 
+  total operational costs may be less if the cloud is only used when needed. 
+  On-demand scaling is an attractive quality too. 
+  However, cloud computing services require a different set of skills to use. 
+  We do a lot of cloud based work though and 
+  will be happy to talk to you about options.
