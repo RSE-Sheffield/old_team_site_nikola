@@ -11,7 +11,9 @@ The Sheffield RSE group, along with a few other research groups around the Unive
 Only those who have financially contributed to this hardware can access it.
 This is part of an experiment to try to make better use of computational resources at Sheffield and also an attempt to build more of a community around the HPC systems here.
 
-Sheffield RSE is an academically-led group. We, and our collaborators, had computational needs that weren't addressed by Sheffield's HPC systems. Rather than build our own, separate system, we teamed up with the guys at CiCS to make Sheffield's HPC better for everyone.
+# How are you related to CiCS?
+
+Sheffield RSE is an academically-led group in the department of computer science. We collaborate closely with CiCS but are a separate entity. We, and our collaborators, had computational needs that weren't addressed by Sheffield's HPC systems. Rather than build our own, separate system, we teamed up with the guys at CiCS to make Sheffield's HPC better for everyone.
 
 # How does it work?
 
@@ -21,7 +23,7 @@ We've seeded the process with ~£100,000 and already have nodes that provide cap
 
 # What's the advantage of doing it this way?
 
-We find that the workloads of most research groups is 'spiky'. That is, much of the time you might not need any compute at all but when you *do* need it, you need a **lot** -- a lot more than you can afford to actually buy! By pooling resources in this way, it's more likely that you'll have the resource you need when you need it.
+We find that the workloads of most research groups are 'spiky'. That is, much of the time you might not need any compute at all but when you *do* need it, you need a **lot** -- a lot more than you can afford to actually buy! By pooling resources in this way, it's more likely that you'll have the resource you need when you need it.
 
 A similar model is in use at [The University of Manchester](http://ri.itservices.manchester.ac.uk/csf/) and has helped them build a system much bigger than the one at Sheffield. 
 We believe that part of their success is due to the fact that academics and central IT are *co-investing* in a system rather than IT simply providing a service.
@@ -30,6 +32,16 @@ This is our attempt to replicate the same success here at Sheffield.
 Traditionally, HPC at Sheffield has always been 'Free At Point of Use' and although this allows everyone to have *some* HPC access for 'free' (It really comes out of overheads), it usually leaves most people wanting more. You'll know what we mean if you've ever waited in the queues for longer than it takes your job to run! 
 
 Free at Point of Use is great and we don't expect this to change but we want to offer our collaborators something more.
+
+# Support
+
+We are Research Software Engineers who work with a diverse group of researchers. Their needs are driving what can be done on Sheffield's HPC systems and we are helping them do it. Some of the support we've given to HPC users over the last couple of years includes:-
+
+* **Improved documentation** We moved the documentation to [GitHub](https://github.com/rcgsheffield/sheffield_hpc) and opened up the install process. Now, users can see exactly how every application was installed and can also contribute to improving the documentation in a way that ensures that they get credit for their work.
+* **New compute models** HPC is changing. It's no longer confined to OpenMP and MPI for Fortran and C users. We've worked to allow [Apache Spark workloads](https://github.com/mikecroucher/Intro_to_HPC) run on the cluster, [compiled optimised versions of R](https://github.com/mikecroucher/Intro_to_HPC), [developed access via Jupyter notebook](http://rse.shef.ac.uk/blog/willfurnass_intro/), improved GPU support and installed dozens of applications.
+* **Made your code faster** You use HPC because you need your results more quickly. We have helped [dozens of researchers](http://rse.shef.ac.uk/testimonials/) make their code **hundreds** of times faster. 
+
+Some of our support services are Free At Point of Use but we also offer paid-for support. [Contact us](http://rse.shef.ac.uk/contact/) to start discussing this.
 
 # Can you guarantee me access to *my* hardware exactly when I need it?
 
@@ -88,8 +100,8 @@ This makes them ideal for shared-memory parallel workloads that can scale beyond
 
 We are in the process of buying these right now so they are not available just yet. We currently propose to buy:
 
-* 3 nodes
-* Each node has 32 CPU cores
+* 4 nodes
+* Each node has 32 CPU cores (so 128 cores in total in this part of the pool)
 * Each node has 128GB RAM
 
 # What are the alternatives to this premium queue?
