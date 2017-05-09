@@ -5,6 +5,8 @@ sudo: false
 python:
     - 3.6
 
+cache: pip
+
 virtualenv:
      system_site_packages: false
 
