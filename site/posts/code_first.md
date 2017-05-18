@@ -2,7 +2,7 @@
 .. title: Mentoring the upcoming generation of female coders
 .. author: Tania Allard
 .. slug: tania_allard
-.. date:
+.. date: 2015-12-19 18:38:15 UTC
 .. tags:
 .. category:
 .. link:
