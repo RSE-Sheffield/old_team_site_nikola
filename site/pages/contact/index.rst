@@ -65,7 +65,7 @@ Twin is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>
 * Twitter: `@twin_karma <https://twitter.com/twin_karma>`_
 
 Tania Allard
----------------
+------------
 Tania is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>`_.
 She recently completed a PhD in computational nanomechanics at the University of Manchester
 where she focused on the multi-scale modelling of biological and biocompatible materials.
@@ -84,13 +84,14 @@ the University of Sheffield.
 Anna Krystalli
 --------------
 Anna fell in love with statistical programming and R in particular, during her PhD in Macroecology at the department Of Animal & Plant Sciences, University of Sheffield.
- This was followed by two years of freelancing as a Research Data Scientist.
- These and previous experiences as a quality assurance auditor have led her to focus on efforts to promote more transparent, robust, reproducible research through better scientific software development and research data management.
+This was followed by two years of freelancing as a Research Data Scientist.
+These and previous experiences as a quality assurance auditor have led her to focus on efforts to promote more transparent, robust, reproducible research through better scientific software development and research data management.
 
 She’s also passionate about community and capacity building.
 She has extensive teaching experience,  was part of the inaugural Mozilla Science Lab Open Leadership Training cohort, has been a veteran mentor on following rounds and a member of the organising committee for the Sheffield R users group.
 
 Key interests include:
+
 *	All things R!
 *	Reproducible research
 *	Open source research technologies and culture to enable next generation open science
