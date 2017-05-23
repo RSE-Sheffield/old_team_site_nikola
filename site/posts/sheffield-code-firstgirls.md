@@ -19,8 +19,7 @@ On top of this, many technical areas suffer a diversity deficit (cultural and ge
 With the UK being among the European countries with the smaller number of female
 professionals in STEM areas.
 
-If you ask some people (me included), there are some ways to potentially
-solve this issues:
+Being this a rather complex problem, many people and organisations work hard to provide a solution to this issue.  Some approaches adopted by such individuals and organisations are:
 
 * Encourage the hiring of highly skilled immigrants
 * Provide wider support for underrepresented minorities
@@ -42,6 +41,9 @@ Over the course of 8 weeks we teach and guide groups of around 30 women with var
 
 ![python1](/images/CF_python3.jpg)
 
-The idea behind these workshops is rather simple: train people and provide them with practical use of the skills they are learning. But the whole CF:girls thing goes way beyond that. Over those 8 weeks the girls form a strong, motivating, and supportive community, in which they can acquire new skills, meet like-minded people, learn from other women working in STEM areas, and even attend external women in tech events!
+The idea behind these workshops is rather simple: train people and provide them with practical use of the skills they are learning. Having as a final objective to develop a fully deployed RESTful app. But the whole CF:girls thing goes way beyond that. Over those 8 weeks the girls form a strong, motivating, and supportive community, in which they can acquire new skills, meet like-minded people, learn from other women working in STEM areas, and even attend external women in tech events!
 
 ![python1](/images/CF_python2.jpg)
+
+
+ I find rather interesting the mixture of apps and projects pursued, as well as the high quality of the presented final products. But beyond that, I find this to be an excellent opportunity to give back to the amazing community that has adopted and welcome me as a professional in a STEM area. Thus I can say for sure I will be getting involved in more Code First events/workshops.
