@@ -63,3 +63,19 @@ Twin is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>
 
 * Email: t.karmakharm (at) sheffield.ac.uk
 * Twitter: `@twin_karma <https://twitter.com/twin_karma>`_
+
+Tania Allard
+---------------
+Tania is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>`_.
+She recently completed a PhD in computational nanomechanics at the University of Manchester
+where she focused on the multi-scale modelling of biological and biocompatible materials.
+She is part of `Open Dream Kit <http://opendreamkit.org>`_
+(a `Horizon2020 project <https://ec.europa.eu/programmes/horizon2020/>`_),
+which focuses on the set up of Virtual research environments.
+Her interests include data science/engineering, reproducible research and supporting
+research teams to develop and optimise complex data analysis workflows. Also, she is actively involved
+in community building, mentoring, and scientific outreach activities within and outside
+the University of Sheffield.
+
+* Email: t.allard (at) sheffield.ac.uk
+* Twitter: `@ixek <https://twitter.com/ixek>`_
