@@ -42,7 +42,7 @@ Will Furnass
 ------------
 Will is also a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>`_.
 The path to this point has not been particularly direct:
-he has a computer scence degree,
+he has a computer science degree,
 has worked as a IT systems engineer in the film industry,
 has a PhD plus post-doc experience in water engineering
 (where he developed semi-physical and data-driven models of water quality in water distribution networks) and
@@ -79,3 +79,18 @@ the University of Sheffield.
 
 * Email: t.allard (at) sheffield.ac.uk
 * Twitter: `@ixek <https://twitter.com/ixek>`_
+
+
+Anna Krystalli
+--------------
+Anna fell in love with statistical programming and R in particular, during her PhD in Macroecology at the department Of Animal & Plant Sciences, University of Sheffield.
+ This was followed by two years of freelancing as a Research Data Scientist.
+ These and previous experiences as a quality assurance auditor have led her to focus on efforts to promote more transparent, robust, reproducible research through better scientific software development and research data management.
+
+She’s also passionate about community and capacity building.
+She has extensive teaching experience,  was part of the inaugural Mozilla Science Lab Open Leadership Training cohort, has been a veteran mentor on following rounds and a member of the organising committee for the Sheffield R users group.
+
+Key interests include:
+*	All things R!
+*	Reproducible research
+*	Open source research technologies and culture to enable next generation open science
