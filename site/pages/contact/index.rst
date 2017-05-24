@@ -83,15 +83,16 @@ the University of Sheffield.
 
 Anna Krystalli
 --------------
-Anna fell in love with statistical programming and R in particular, during her PhD in Macroecology at the department Of Animal & Plant Sciences, University of Sheffield.
-This was followed by two years of freelancing as a Research Data Scientist.
-These and previous experiences as a quality assurance auditor have led her to focus on efforts to promote more transparent, robust, reproducible research through better scientific software development and research data management.
+Anna is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>`_.
+She fell in love with statistical programming and R in particular, during her PhD in Macroecology at the University of Sheffield. This was followed by two years of freelancing as a Research Data Scientist. These and previous experiences as a quality assurance auditor have led her to focus on efforts to promote more transparent, robust, reproducible research through better scientific software development and research data management.
 
-She’s also passionate about community and capacity building.
-She has extensive teaching experience,  was part of the inaugural Mozilla Science Lab Open Leadership Training cohort, has been a veteran mentor on following rounds and a member of the organising committee for the Sheffield R users group.
+She’s also passionate about community and capacity building. She has extensive teaching experience, was part of the inaugural Mozilla Science Lab `Open Leadership Training <https://mozilla.github.io/leadership-training/readme/>`_ cohort, has been a veteran mentor on following rounds and a member of the organising committee for the `Sheffield R users group <http://sheffieldr.github.io/>`_.
 
 Key interests include:
 
-*	All things R!
+*	All things `#rstats <https://twitter.com/search?q=%23rstats&src=typd>`_!
 *	Reproducible research
-*	Open source research technologies and culture to enable next generation open science
+*	Open source research technologies and culture enabling next generation open science.
+
+* Email: a.krystalli (at) sheffield.ac.uk
+* Twitter: `@annakrystalli <https://twitter.com/annakrystalli>`_
