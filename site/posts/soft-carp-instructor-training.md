@@ -1,23 +1,31 @@
 <!--
-.. title: Software Carpentry Instructor Training
+.. title: Software Carpentry and Data Carpentry at the University of Sheffield!
 .. author: Will Furnass
-.. slug: soft-carp-instructor-training
-.. date: 2017-03-20 15:13:00 UTC+00:00
-.. tags: 
+.. slug: soft-carp-at-tuos
+.. date: 2017-06-08 12:00:00 UTC+00:00
+.. tags: software carpentry, data carpentry, training
 .. category: 
 .. link: 
 .. description: 
 .. type: text
 -->
 
-## Software Carpentry and Data Carpentry at the University of Sheffield!
+The University of Sheffield's Research Software Engineering and Library teams 
+are start running *Software Carpentry* and *Data Carpentry* workshops.  These are designed
+to help researchers develop the programming, automation and data management skills
+needed to support their research.
+
+![Software Carpentry and Data Carpentry logos](/images/sc-dc-logos.png)
+
+
+## Addressing the training needs of researchers with regards to programming
 
 As more researchers realise they can produce better quality research more quickly if 
 they have some coding and data management skills under their belts 
 universities will need to ensure that training in these areas is accessible to those that need it.
 
 Academic institutions will most likely already have courses for teaching highly-specialist subjects 
-(such as how to use the local [HPC cluster](http://docs.hpc.shef.ac.uk/en/latest/))
+(such as how to use the local [HPC cluster][uos-hpc-docs])
 but for the more generic aspects of research software development and data management 
 there are several obvious choices:
 
@@ -26,36 +34,74 @@ there are several obvious choices:
   * Point researchers towards free online resources;
 
 However, there is also a fourth option: 
-team up with the [Software Carpentry](https://software-carpentry.org/) (SC) and 
-[Data Carpentry REF](http://www.datacarpentry.org/) (DC) not-for-profit organisations 
+team up with the [Software Carpentry][sc] (SC) and 
+[Data Carpentry][dc] (DC) not-for-profit organisations 
 to deliver on-site, interative workshops based on open-source materials that have been 
 refined by a large community of SC and DC instructors. 
 
-**Software Carpentry** has developed discipline-agnostic lessons on:
-  * programming with Python, R or MATLAB;
-  * using databases and [SQL](https://en.wikipedia.org/wiki/SQL);
-  * the [UNIX shell](https://en.wikipedia.org/wiki/Unix_shell);
-  * [version control](https://en.wikipedia.org/wiki/Version_control) with git or mercurial;
-  * automation using [Make](https://en.wikipedia.org/wiki/Make_(software)).
+## Software whatywhaty?
 
-**Data Carpentry** lessons look at data management and processing within the context of a specific domain (such as ecology or genomics), focussing on areas such as:
+**Software Carpentry** has developed [discipline-agnostic workshop material][sc-lessons] on:
+
+  * programming with Python, R or MATLAB;
+  * using databases and [SQL][sql];
+  * the [UNIX shell][unix-shell];
+  * [version control][vcs] with git or mercurial;
+  * automation using [Make][make].
+
+[**Data Carpentry** lessons][dc-lessons] look at data management and processing within the context of a specific domain (such as ecology or genomics), focussing on areas such as:
+
   * the command line;
-  * data cleaning and filtering using [OpenRefine](http://openrefine.org/);
+  * data cleaning and filtering using [OpenRefine][openrefine];
   * data processing and visualisation with Python or R;
   * cloud computing
-  * [GIS](https://en.wikipedia.org/wiki/Geographic_information_system)
+  * [GIS][gis]
 
-We should be able to run both Software Carpentry and Data Carpentry workshops at the University of Sheffield soon 
-as last week four of us from the University participated in [instructor training in Oxford](https://steve-crouch.github.io/2017-03-16-oxford-ttt/).  
-[Tania Allard](http://rse.shef.ac.uk/blog/tania_allard/) and I from the [RSE](http://rse.shef.ac.uk/) team plus [Jez Cope and Beth Hellen](https://www.sheffield.ac.uk/library/libstaff/researchservices) from the Library's Research Services Unit spent two days learning about the SC/DC teaching style and got to practise several aspects of workshop development and delivery.
+The material for these workshops is all hosted on GitHub.
 
-![](/images/soft-carp-instructor-training.jpg)
+
+## What form do the workshops take?
+
+The Software and Data Carpentry organisations ask that acredited instructors delivering 'branded' workshops adopt a fairly progressive teaching style:
+
+  * Workshops typically last two days and include four lessons (e.g. the unix shell, Python, version control and databases).
+  * There's lots of *live coding*: the instructor and students gather together in a room with laptops and a projector and all present go through a number of examples interactively.  Students use their own laptops to ensure that they're able to continue where they left off at the end of a workshop.  Instructors can and do make mistakes when doing live coding; students can then learn from these mistakes and may grow in confidence on learning that pros make mistakes too.
+  * Instructors try to elicit responses from students and use quizes to gauge comprehension and keep students focussed. 
+  * Software Carpentry has a [code of conduct][sc-coc] and tries to ensure that all lessons delivered under its banner are as [inclusive as possible][sc-inclusive].
+
+## Are Software Carpentry and Data Carpentry coming to the University of Sheffield?
+
+Yes!  We should be able to run both Software Carpentry and Data Carpentry workshops here soon 
+as in March last week four of us from the University participated in [instructor training in Oxford][sc-training-oxford].  Tania Allard and I from the [RSE team](link://slug/contact) plus [Jez Cope and Beth Hellen][library-team] from the Library's Research Services Unit spent two days learning about the SC/DC teaching style and got to practise several aspects of workshop development and delivery.
+
+![Software Carpentry Instructor Training session](/images/soft-carp-instructor-training.jpg)
+
+
+
 
 **TODO**: list some key and/or exciting/interesting aspects of the training course (mention post-it notes, total immersion);
 
 **TODO**: mention benefits to the University (branding / CVs, quality of materials, engaging teaching style, RSE and Library teams meet/connect with researchers)
 
-Once we've completed the [final few tasks](https://swcarpentry.github.io/instructor-training/checkout/) required for us to become accredited SC and/or DC instructors 
+Once we've completed the [final few tasks][sc-dc-checkout] required for us to become accredited SC and/or DC instructors 
 we'll start organising workshops at the University.  
 
-I must thank the instructors on the training course (Mateuz Kuzak and Steve Crouch) plus [Reproducible Research Oxford](https://rroxford.github.io/) for hosting and organising the event.
+I must thank the instructors on the training course (Mateuz Kuzak and Steve Crouch) plus [Reproducible Research Oxford][rroxford] for hosting and organising the event.
+
+[dc-lessons]: http://www.datacarpentry.org/lessons/
+[dc]: http://www.datacarpentry.org/
+[gis]: https://en.wikipedia.org/wiki/Geographic_information_system
+[library-team]: https://www.sheffield.ac.uk/library/libstaff/researchservices
+[make]: https://en.wikipedia.org/wiki/Make_(software)
+[openrefine]: http://openrefine.org/
+[rroxford]: https://rroxford.github.io/
+[sc-dc-checkout]: https://swcarpentry.github.io/instructor-training/checkout/
+[sc-lessons]: https://software-carpentry.org/lessons/
+[sc-training-oxford]: https://steve-crouch.github.io/2017-03-16-oxford-ttt/
+[sc]: https://software-carpentry.org/
+[sql]: https://en.wikipedia.org/wiki/SQL
+[unix-shell]: https://en.wikipedia.org/wiki/Unix_shell
+[uos-hpc-docs]: http://docs.hpc.shef.ac.uk/en/latest/
+[vcs]: https://en.wikipedia.org/wiki/Version_control
+[sc-inclusive]: https://software-carpentry.org/blog/2017/02/inclusion.html
+[sc-coc]: https://software-carpentry.org/conduct/
