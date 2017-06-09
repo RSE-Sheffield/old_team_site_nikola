@@ -94,7 +94,7 @@ The job number will differ from the one above. It is automatically allocated by 
 * Run the **ls** command again to see the results files.
 
 ```
-[fe1mpc@testnode02 maple_example]$ ls
+[te1st@testnode02 maple_example]$ ls
 
 run_maple_job.sh  run_maple_job.sh.e1734126  run_maple_job.sh.o1734126  series_example.maple  series_example.mpl
 ```
