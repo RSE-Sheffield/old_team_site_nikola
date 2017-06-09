@@ -10,10 +10,7 @@
 .. type: text
 -->
 
-The University of Sheffield's Research Software Engineering and Library teams 
-are start running *Software Carpentry* and *Data Carpentry* workshops.  These are designed
-to help researchers develop the programming, automation and data management skills
-needed to support their research.
+The University of Sheffield is now a Software Carpentry Partner Organisation, allowing the Research Software Engineering and Library teams to start organising *Software Carpentry* and *Data Carpentry* workshops.  These are designed to help researchers develop the programming, automation and data management skills needed to support their research.  **Workshop dates are to be announced shortly.**
 
 ![Software Carpentry and Data Carpentry logos](/images/sc-dc-logos.png)
 
@@ -57,9 +54,6 @@ refined by a large community of SC and DC instructors.
   * cloud computing
   * [GIS][gis]
 
-The material for these workshops is all hosted on GitHub.
-
-
 ## What form do the workshops take?
 
 The Software and Data Carpentry organisations ask that acredited instructors delivering 'branded' workshops adopt a fairly progressive teaching style:
@@ -69,24 +63,19 @@ The Software and Data Carpentry organisations ask that acredited instructors del
   * Instructors try to elicit responses from students and use quizes to gauge comprehension and keep students focussed. 
   * Software Carpentry has a [code of conduct][sc-coc] and tries to ensure that all lessons delivered under its banner are as [inclusive as possible][sc-inclusive].
 
-## Are Software Carpentry and Data Carpentry coming to the University of Sheffield?
+## What's happening at the University?
 
-Yes!  We should be able to run both Software Carpentry and Data Carpentry workshops here soon 
-as in March last week four of us from the University participated in [instructor training in Oxford][sc-training-oxford].  Tania Allard and I from the [RSE team](link://slug/contact) plus [Jez Cope and Beth Hellen][library-team] from the Library's Research Services Unit spent two days learning about the SC/DC teaching style and got to practise several aspects of workshop development and delivery.
+The University is now a Software Carpentry Partner Organisation so can run many workshops per year using the Software Carpentry and Data Carpentry branding.  We could run workshops without the branding but Software and Data Carpentry are now familiar names to researchers (and potentially employers) and by working closely with those two organisations we become part of a global network of instructors with which we can share ideas and materials.
+
+The RSE team and Library collectively now have five accredited Software and Data Carpentry instructors: Mike Croucher received training some time ago and in March Tania Allard and I from the [RSE team](link://slug/contact) plus [Jez Cope and Beth Hellen][library-team] from the Library's Research Services Unit participated in [instructor training in Oxford][sc-training-oxford].  
 
 ![Software Carpentry Instructor Training session](/images/soft-carp-instructor-training.jpg)
 
+The four of us spent two days learning about the SC/DC teaching style, what makes for an effective instructor and got to practise several aspects of workshop development and delivery.  I must thank the instructors on the training course (Mateuz Kuzak and Steve Crouch) plus [Reproducible Research Oxford][rroxford] for hosting and organising the event.
 
+We are now planning our first Software Carpentry and Data Carpentry workshops.  These are to be held later in the summer.  
 
-
-**TODO**: list some key and/or exciting/interesting aspects of the training course (mention post-it notes, total immersion);
-
-**TODO**: mention benefits to the University (branding / CVs, quality of materials, engaging teaching style, RSE and Library teams meet/connect with researchers)
-
-Once we've completed the [final few tasks][sc-dc-checkout] required for us to become accredited SC and/or DC instructors 
-we'll start organising workshops at the University.  
-
-I must thank the instructors on the training course (Mateuz Kuzak and Steve Crouch) plus [Reproducible Research Oxford][rroxford] for hosting and organising the event.
+**Keep an eye on this blog, the `RSE-group@sheffield.ac.uk` mailing list and [@RSE_Sheffield](https://www.twitter.com/rse_sheffield) for dates!**
 
 [dc-lessons]: http://www.datacarpentry.org/lessons/
 [dc]: http://www.datacarpentry.org/
