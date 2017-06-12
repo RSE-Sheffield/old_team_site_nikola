@@ -1,5 +1,5 @@
 .. title: Contact Us
-.. slug: contact
+.. slug: index
 .. date: 2015-12-19 18:38:15 UTC
 .. tags:
 .. category:
