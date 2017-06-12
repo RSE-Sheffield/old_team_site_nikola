@@ -4,9 +4,9 @@
 .. slug: soft-carp-at-tuos
 .. date: 2017-06-08 12:00:00 UTC+00:00
 .. tags: software carpentry, data carpentry, training
-.. category: 
-.. link: 
-.. description: 
+.. category:
+.. link:
+.. description:
 .. type: text
 -->
 
@@ -17,24 +17,24 @@ The University of Sheffield is now a Software Carpentry Partner Organisation, al
 
 ## Addressing the training needs of researchers with regards to programming
 
-As more researchers realise they can produce better quality research more quickly if 
-they have some coding and data management skills under their belts 
+As more researchers realise they can produce better quality research more quickly if
+they have some coding and data management skills under their belts
 universities will need to ensure that training in these areas is accessible to those that need it.
 
-Academic institutions will most likely already have courses for teaching highly-specialist subjects 
+Academic institutions will most likely already have courses for teaching highly-specialist subjects
 (such as how to use the local [HPC cluster][uos-hpc-docs])
-but for the more generic aspects of research software development and data management 
+but for the more generic aspects of research software development and data management
 there are several obvious choices:
 
-  * Develop and deliver bespoke materials; 
+  * Develop and deliver bespoke materials;
   * Buy in to commercial training packages;
   * Point researchers towards free online resources;
 
-However, there is also a fourth option: 
-team up with the [Software Carpentry][sc] (SC) and 
-[Data Carpentry][dc] (DC) not-for-profit organisations 
-to deliver on-site, interative workshops based on open-source materials that have been 
-refined by a large community of SC and DC instructors. 
+However, there is also a fourth option:
+team up with the [Software Carpentry][sc] (SC) and
+[Data Carpentry][dc] (DC) not-for-profit organisations
+to deliver on-site, interative workshops based on open-source materials that have been
+refined by a large community of SC and DC instructors.
 
 ## Software whatywhaty?
 
@@ -56,18 +56,18 @@ refined by a large community of SC and DC instructors.
 
 ## What form do the workshops take?
 
-The Software and Data Carpentry organisations ask that acredited instructors delivering 'branded' workshops adopt a fairly progressive teaching style:
+The Software and Data Carpentry organisations ask that accredited instructors delivering 'branded' workshops adopt a fairly progressive teaching style:
 
   * Workshops typically last two days and include four lessons (e.g. the unix shell, Python, version control and databases).
   * There's lots of *live coding*: the instructor and students gather together in a room with laptops and a projector and all present go through a number of examples interactively.  Students use their own laptops to ensure that they're able to continue where they left off at the end of a workshop.  Instructors can and do make mistakes when doing live coding; students can then learn from these mistakes and may grow in confidence on learning that pros make mistakes too.
-  * Instructors try to elicit responses from students and use quizes to gauge comprehension and keep students focussed. 
+  * Instructors try to elicit responses from students and use quizes to gauge comprehension and keep students focussed.
   * Software Carpentry has a [code of conduct][sc-coc] and tries to ensure that all lessons delivered under its banner are as [inclusive as possible][sc-inclusive].
 
 ## What's happening at the University?
 
 The University is now a Software Carpentry Partner Organisation so can run many workshops per year using the Software Carpentry and Data Carpentry branding.  We could run workshops without the branding but Software and Data Carpentry are now familiar names to researchers (and potentially employers) and by working closely with those two organisations we become part of a global network of instructors with which we can share ideas and materials.
 
-The RSE team and Library collectively now have five accredited Software and Data Carpentry instructors: Mike Croucher received training some time ago and in March Tania Allard and I from the [RSE team](link://slug/contact) plus [Jez Cope and Beth Hellen][library-team] from the Library's Research Services Unit participated in [instructor training in Oxford][sc-training-oxford].  
+The RSE team and Library collectively now have five accredited Software and Data Carpentry instructors: Mike Croucher received training some time ago and in March Tania Allard and I from the [RSE team](http://rse.shef.ac.uk/contact/) plus [Jez Cope and Beth Hellen][library-team] from the Library's Research Services Unit participated in [instructor training in Oxford][sc-training-oxford].  
 
 ![Software Carpentry Instructor Training session](/images/soft-carp-instructor-training.jpg)
 
