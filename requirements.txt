@@ -1,2 +1,2 @@
 wheel
-Nikola[extras]
+Nikola[extras]==7.8.8
