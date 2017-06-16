@@ -181,7 +181,15 @@ Now let's look at creating, switching and deleting panes *within* a window:
 :<prefix> ": split the active window horizontally
 :<prefix> UP DOWN LEFT RIGHT: switch to pane in that direction
 
+And there's more
+----------------
 
+Things not covered in detail here include:
+
+* The ability to `customise much behaviour and all keybindings <https://wiki.archlinux.org/index.php/tmux#Configuration>`__
+(here's `my config file <https://github.com/willfurnass/dotfiles/blob/master/tmux/.tmux.conf>`__)
+* The `tpm <https://github.com/tmux-plugins/tpm>`__ plugin system (including the awesome `tmux fingers <https://github.com/Morantron/tmux-fingers>`__ plugin for intelligently copying key info (e.g. IP addresses) from the output of standard Unix utilities).
+* `Sharing a session with another user <https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen>`__
 
 Summary
 -------
