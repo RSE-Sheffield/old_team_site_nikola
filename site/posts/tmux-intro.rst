@@ -268,17 +268,29 @@ guarantee that you will be give an interactive job on on the node you started th
 However, note that you can have nested tmux sessions 
 (with **<prefix><prefix> <key>** used to send tmux commands to the 'inner' tmux session).
 
+**Warning**: many clusters have multiple login nodes for redundancy, 
+with only one being the default active login node at any given time.  
+If the active login node requires maintenance then logged-in users may be booted off 
+and long-running processes may be terminated 
+(before the system administrator makes a 'standby' login node the currently active one).
+Under such circumstances your tmux/Screen session may be killed.
+
 Being a good HPC citizen
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Your interactive job (on a cluster worker node) will be terminated by the cluster's job scheduler after a fixed amount of time (the default is 8 hours)
+Your interactive job (on a cluster worker node) will be terminated by the cluster's *Grid Engine* job scheduler after a fixed amount of time (the default is 8 hours)
 but your tmux/Screen session was started on a login node so is outside the control of the cluster and
 will keep running indefinitely unless you kill it.
 
 Each tmux/Screen session requires memory on the login node (which is used by all users) so to be a good HPC citizen you should:
 
--  **Kill your tmux/Screen session when you no longer need it** (tmux/Screen will exit when you close all windows)
+-  **Kill your tmux/Screen session when no longer needed** (tmux/Screen will exit when you close all windows)
 -  **Only start as many tmux/Screen sessions on the login node as you need (ideally 1)**
+-  **Exit your interactive Grid Engine job** (on a worker node) **if no longer needed** as then others can make use of the resources you had been using on this node.
+
+----
+Warn about how [hpc name].shef.ac.uk may be repointed to another login node if the current login node needs rebooting/maintenance? we'll also kill without warning any long running login node processes after draining the login nodes of users....
+----
 
 **Tip**: with tmux you can ensure that you either reconnect to an existing session (with a given name) if it already exists *or* create a new session using: ::
 
