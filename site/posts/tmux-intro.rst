@@ -11,6 +11,10 @@
 .. figure:: /images/tmux-intro/intro.png
    :alt: Making remote Linux/Unix machines easier to administer/use!
 
+Today we have a guide to 'terminal multiplexing' including 
+suggestions on how to use it on computer clusters such as 
+`ShARC and Iceberg <http://docs.hpc.shef.ac.uk/>`__.
+
 Have you ever?
 --------------
 
@@ -97,8 +101,11 @@ However, what do you do when there is no HPC-style scheduling software availble?
 Neither of these allow you to easily **return to interactive sessions** though. 
 For that we need terminal multiplexers.
 
-Terminal Multiplexers for detaching and reattaching to sessions
----------------------------------------------------------------
+A brief guide to the tmux Terminal Multiplexer
+----------------------------------------------
+
+Detaching and reattaching to sessions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Terminal Multiplexer programs like 
 `GNU Screen <https://www.gnu.org/software/screen/>`__ and
@@ -117,7 +124,7 @@ solve this problem by:
    **(re)connect to an existing server process**
 
 Demo 1
-------
+""""""
 
 Here we look at demonstrating the above using **tmux**. 
 I recommend tmux over GNU Screen as 
@@ -145,8 +152,8 @@ In this case we started tmux on the local machine.
 tmux is much more useful though when you 
 start it on a remote machine **after connecting via ssh**.
 
-Windows
--------
+Windows (like tabs)
+^^^^^^^^^^^^^^^^^^^
 
 What else can we do with terminal multiplexers? 
 Well, as the name implies, 
@@ -155,6 +162,9 @@ they can be used to view and control multiple virtual consoles from one session.
 A given tmux session can have multiple windows, 
 each of which can contain multiple panes, 
 each of which is a virtual console!
+
+Demo 2
+""""""
 
 Here's a demonstration of creating, renaming, switching and deleting tmux windows:
 
@@ -169,8 +179,8 @@ Used keys:
 :<prefix> p: switch to previous window
 :<prefix> x: delete current window (actually deletes the current **pane** in the window but will also delete the window if it contains only one pane)
 
-Panes in windows
-----------------
+Dividing up Windows into Panes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now let's look at creating, switching and deleting panes *within* a window:
 
@@ -182,7 +192,7 @@ Now let's look at creating, switching and deleting panes *within* a window:
 :<prefix> UP DOWN LEFT RIGHT: switch to pane in that direction
 
 Copying and pasting
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 If you have multiple panes side-by-side then attempt to copy text using the mouse, you'll copy lines of characters that span *all* panes, which is almost certainly not going to be what you want.
 Instead you can 
@@ -210,7 +220,7 @@ You can then move to another pane/window and press
 I find this mechanism very useful.
 
 And there's more
-----------------
+^^^^^^^^^^^^^^^^
 
 Things not covered in detail here include:
 
@@ -220,6 +230,45 @@ Things not covered in detail here include:
    (including the awesome `tmux fingers <https://github.com/Morantron/tmux-fingers>`__ plugin for 
    intelligently copying key info (e.g. IP addresses) from the output of standard Unix utilities).
 -  `Sharing a session with another user <https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen>`__
+
+Using tmux on HPC clusters
+--------------------------
+
+Terminal Multiplexors can be useful if doing `interactive work <http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html#interactive-sessions)>`__ 
+on a `HPC <https://en.wikipedia.org/wiki/Supercomputer>`__ cluster such as the University of Sheffield clusters `ShARC and Iceberg <http://docs.hpc.shef.ac.uk/>`__
+(assuming that you don't need a `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__).
+
+On ShARC and Iceberg can:
+
+#. Start a tmux or GNU Screen session on a login node;
+#. Start an interactive job using `qrshx or qrshx <http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html>`__;
+#. Disconnect and reconnect from the tmux/Screen session (either deliberately or due an issue with the SSH connection to the cluster);
+#. Create additional windows/panes on the login node for editing files, starting additional interactive jobs etc, watching log files.
+
+Starting tmux on worker nodes is also useful if you want to have multiple windows/panes on a worker node *but*
+less useful if you want to disconnect/reconnect from/to a session as if you run qrsh a second time you cannot
+guarantee that you will be give an interactive job on on the node you started the tmux session from.
+
+However, note that you can have nested tmux sessions 
+(with **<prefix><prefix> <key>** used to send tmux commands to the 'inner' tmux session).
+
+Being a good HPC citizen
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Your interactive job (on a cluster worker node) will be terminated by the cluster's job scheduler after a fixed amount of time (the default is 8 hours)
+but your tmux/Screen session was started on a login node so is outside the control of the cluster and
+will keep running indefinitely unless you kill it.
+
+Each tmux/Screen session requires memory on the login node (which is used by all users) so to be a good HPC citizen you should:
+
+-  **Kill your tmux/Screen session when you no longer need it** (tmux/Screen will exit when you close all windows)
+-  **Only start as many tmux/Screen sessions on the login node as you need (ideally 1)**
+
+**Tip**: with tmux you can ensure that you either reconnect to an existing session (with a given name) if it already exists *or* create a new session using: ::
+
+    tmux new-session -A -s mysession
+
+This should help avoid accidentally creating more than one tmux session.
 
 Summary
 -------
