@@ -191,6 +191,13 @@ Now let's look at creating, switching and deleting panes *within* a window:
 :<prefix> ": split the active window horizontally
 :<prefix> UP DOWN LEFT RIGHT: switch to pane in that direction
 
+Scrolling backwards
+^^^^^^^^^^^^^^^^^^^
+
+You can scroll back up through the terminal history of the current pane/window using:
+
+:<prefix> Page Up: scroll back through terminal history
+
 Copying and pasting
 ^^^^^^^^^^^^^^^^^^^
 
