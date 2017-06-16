@@ -257,7 +257,7 @@ on a `HPC <https://en.wikipedia.org/wiki/Supercomputer>`__ cluster such as the U
 On ShARC and Iceberg can:
 
 #. Start a tmux or GNU Screen session on a login node;
-#. Start an interactive job using `qrshx or qrshx <http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html>`__;
+#. Start an interactive job using `qrshx or qrsh <http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html>`__;
 #. Disconnect and reconnect from the tmux/Screen session (either deliberately or due an issue with the SSH connection to the cluster);
 #. Create additional windows/panes on the login node for editing files, starting additional interactive jobs etc, watching log files.
 
