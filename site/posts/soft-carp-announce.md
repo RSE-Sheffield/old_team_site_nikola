@@ -12,6 +12,14 @@
 
 The University of Sheffield is now a Software Carpentry Partner Organisation, allowing the Research Software Engineering and Library teams to start organising *Software Carpentry* and *Data Carpentry* workshops.  These are designed to help researchers develop the programming, automation and data management skills needed to support their research.  **Workshop dates are to be announced shortly.**
 
+---
+
+**Edit**: 
+
+Our first Software Carpentry workshop is scheduled for 16th and 17th August!  More details to follow.
+
+---
+
 ![Software Carpentry and Data Carpentry logos](/images/sc-dc-logos.png)
 
 
