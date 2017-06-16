@@ -189,7 +189,9 @@ Instead you can
 
 :<prefix> z: toggle the maximisation of the current pane
 
-then copy the text you want or, if you want to copy and paste between tmux panes/windows you can 
+then copy the text you want.
+
+Alternively, if you want to copy and paste between tmux panes/windows you can 
 
 :<prefix> [: enter copy mode
 
@@ -212,10 +214,12 @@ And there's more
 
 Things not covered in detail here include:
 
-* The ability to `customise much behaviour and all keybindings <https://wiki.archlinux.org/index.php/tmux#Configuration>`__
-(here's `my config file <https://github.com/willfurnass/dotfiles/blob/master/tmux/.tmux.conf>`__)
-* The `tpm <https://github.com/tmux-plugins/tpm>`__ plugin system (including the awesome `tmux fingers <https://github.com/Morantron/tmux-fingers>`__ plugin for intelligently copying key info (e.g. IP addresses) from the output of standard Unix utilities).
-* `Sharing a session with another user <https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen>`__
+-  The ability to `customise much behaviour and all keybindings <https://wiki.archlinux.org/index.php/tmux#Configuration>`__ 
+   (here's `my config file <https://github.com/willfurnass/dotfiles/blob/master/tmux/.tmux.conf>`__) 
+-  The `tpm <https://github.com/tmux-plugins/tpm>`__ plugin system 
+   (including the awesome `tmux fingers <https://github.com/Morantron/tmux-fingers>`__ plugin for 
+   intelligently copying key info (e.g. IP addresses) from the output of standard Unix utilities).
+-  `Sharing a session with another user <https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen>`__
 
 Summary
 -------
