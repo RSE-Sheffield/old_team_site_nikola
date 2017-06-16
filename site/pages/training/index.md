@@ -13,6 +13,7 @@ We offer a range of training courses in topics such as Programming, High Perform
 
 All of these events are free to members of the University of Sheffield.
 
+* 2017-08-16 - 2017-08-17: A two-day **Software Carpentry** workshop covering four topics; the [Unix shell, version control with git, programming with Python and using databases and SQL](https://software-carpentry.org/lessons/).  More details to follow.
 * 2017-08-24 - 2017-08-25: **Introduction to parallel programming with MPI**.  If you want your code to scale to 100s or even 1000s of CPU cores then [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) is the traditional way to do it and is the dominant programming model used in High Performance Computing.  To be delivered by Jon Gibson of the [Numerical Algorithms Group](https://www.nag.co.uk/) (NAG).  Further details and registration info [here](https://www.eventbrite.co.uk/e/introduction-to-parallel-programming-with-mpi-tickets-33848678308).
 
 ## University modules
