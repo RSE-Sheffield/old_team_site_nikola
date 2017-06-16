@@ -18,6 +18,8 @@ Mike Croucher
 -------------
 Mike is an `EPSRC Research Software Engineering Fellow <http://www.walkingrandomly.com/?p=6037>`_ with 10+ years experience supporting scientific software, high performance computing and research software engineering at The University of Manchester and, more recently, the University of Sheffield.  Mike specialises in high-level languages such as MATLAB, R, Python and Mathematica but also has significant experience with compiled languages such as C and Fortran and assists researchers in developing faster, more robust, more usable code. Mike writes about research software on his blog, `www.walkingrandomly.com <http://www.walkingrandomly.com/>`_, which receives over 500,000 visitors annually.
 
+He is an accredited `Software Carpentry <https://software-carpentry.org/>`__ and `Data Carpentry <http://www.datacarpentry.org/>`__ instructor.
+
 * Email: M.Croucher (at) Sheffield.ac.uk
 * Web: `www.walkingrandomly.com <http://www.walkingrandomly.com/>`_
 * Twitter: `@walkingrandomly <https://twitter.com/walkingrandomly>`_
@@ -53,6 +55,8 @@ helping researchers optimise data analysis workflows (primarily using higher-lev
 providing training in RSE best practices and
 systems administration.
 
+He is an accredited `Software Carpentry <https://software-carpentry.org/>`__ and `Data Carpentry <http://www.datacarpentry.org/>`__ instructor.
+
 * Email: w.furnass (at) sheffield.ac.uk
 * Twitter: `@willfurnass <https://twitter.com/willfurnass>`_
 
@@ -76,6 +80,8 @@ Her interests include data science/engineering, reproducible research and suppor
 research teams to develop and optimise complex data analysis workflows. Also, she is actively involved
 in community building, mentoring, and scientific outreach activities within and outside
 the University of Sheffield.
+
+She is an accredited `Software Carpentry <https://software-carpentry.org/>`__ and `Data Carpentry <http://www.datacarpentry.org/>`__ instructor.
 
 * Email: t.allard (at) sheffield.ac.uk
 * Twitter: `@ixek <https://twitter.com/ixek>`_
