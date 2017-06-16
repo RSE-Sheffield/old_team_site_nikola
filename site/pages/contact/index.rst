@@ -52,6 +52,7 @@ His interests include
 helping researchers optimise data analysis workflows (primarily using higher-level languages),
 providing training in RSE best practices and
 systems administration.
+He is an accredited `Software Carpentry <https://software-carpentry.org/>`__ and `Data Carpentry <http://www.datacarpentry.org/>`__ instructor.
 
 * Email: w.furnass (at) sheffield.ac.uk
 * Twitter: `@willfurnass <https://twitter.com/willfurnass>`_
