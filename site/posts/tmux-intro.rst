@@ -286,11 +286,6 @@ Each tmux/Screen session requires memory on the login node (which is used by all
 
 This should help avoid accidentally creating more than one tmux session.
 
-Summary
--------
-
-TODO
-
 ----
 
 NB the animated GIF recordings of terminal sessions shown were created using `ttyrec <http://0xcc.net/ttyrec/index.html.en>`__ and `ttygif <https://github.com/icholy/ttygif>`__.
