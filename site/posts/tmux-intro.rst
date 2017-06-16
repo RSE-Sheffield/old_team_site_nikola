@@ -8,12 +8,11 @@
 .. description: 
 .. type: text
 
-.. figure:: /images/tmux-intro/intro.png
-   :alt: Making remote Linux/Unix machines easier to administer/use!
-
 Today we have a guide to 'terminal multiplexing' including 
 suggestions on how to use it on computer clusters such as 
 `ShARC and Iceberg <http://docs.hpc.shef.ac.uk/>`__.
+
+----
 
 Have you ever?
 --------------
@@ -37,10 +36,18 @@ Have you ever?
 
 If the answer to any of these is "yes" then 
 **terminal multiplexing** may help! 
+
+.. figure:: /images/tmux-intro/intro.png
+   :alt: Making remote Linux/Unix machines easier to administer/use!
+
+----
+
 First, we need to delve a little deeper into some of the problems we are trying to solve.
 
 Why do my remote processes die when my SSH connection dies/hangs?
 -----------------------------------------------------------------
+
+(*Skip over this section if you want!*)
 
 Every process 
 (bar the ``systemd`` process or ``init`` process with a process ID of 1) 
@@ -187,9 +194,11 @@ Now let's look at creating, switching and deleting panes *within* a window:
 .. figure:: /images/tmux-intro/panes.gif
    :alt: Creating, switching and deleting panes
 
+Used keys:
+
 :<prefix> %: split the active window vertically
 :<prefix> ": split the active window horizontally
-:<prefix> UP DOWN LEFT RIGHT: switch to pane in that direction
+:<prefix> Up or Down or Left or Right: switch to pane in that direction
 
 Scrolling backwards
 ^^^^^^^^^^^^^^^^^^^
@@ -282,6 +291,6 @@ Summary
 
 TODO
 
-**Animated GIF recordings of terminal sessions**
+----
 
-The animations shown above were created using `ttyrec <http://0xcc.net/ttyrec/index.html.en>`__ and `ttygif <https://github.com/icholy/ttygif>`__
+NB the animated GIF recordings of terminal sessions shown were created using `ttyrec <http://0xcc.net/ttyrec/index.html.en>`__ and `ttygif <https://github.com/icholy/ttygif>`__.
