@@ -250,7 +250,7 @@ Things not covered in detail here include:
 Using tmux on HPC clusters
 --------------------------
 
-Terminal Multiplexors can be useful if doing `interactive work <http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html#interactive-sessions)>`__ 
+Terminal Multiplexers can be useful if doing `interactive work <http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html#interactive-sessions)>`__ 
 on a `HPC <https://en.wikipedia.org/wiki/Supercomputer>`__ cluster such as the University of Sheffield clusters `ShARC and Iceberg <http://docs.hpc.shef.ac.uk/>`__
 (assuming that you don't need a `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__).
 
