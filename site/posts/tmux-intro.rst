@@ -181,6 +181,32 @@ Now let's look at creating, switching and deleting panes *within* a window:
 :<prefix> ": split the active window horizontally
 :<prefix> UP DOWN LEFT RIGHT: switch to pane in that direction
 
+Copying and pasting
+-------------------
+
+If you have multiple panes side-by-side then attempt to copy text using the mouse, you'll copy lines of characters that span *all* panes, which is almost certainly not going to be what you want.
+Instead you can 
+
+:<prefix> z: toggle the maximisation of the current pane
+
+then copy the text you want or, if you want to copy and paste between tmux panes/windows you can 
+
+:<prefix> [: enter copy mode
+
+move the cursor using the arrow keys to where you want to start copying then
+
+:space: (in copy mode) mark start of section to copy 
+
+move the cursor keys to the end of the section you want to copy then
+
+:enter: (in copy mode) mark end of section to copy and exit copy mode 
+
+You can then move to another pane/window and press
+
+:<prefix> ]: paste copied text
+
+I find this mechanism very useful.
+
 And there's more
 ----------------
 
