@@ -288,10 +288,6 @@ Each tmux/Screen session requires memory on the login node (which is used by all
 -  **Only start as many tmux/Screen sessions on the login node as you need (ideally 1)**
 -  **Exit your interactive Grid Engine job** (on a worker node) **if no longer needed** as then others can make use of the resources you had been using on this node.
 
-----
-Warn about how [hpc name].shef.ac.uk may be repointed to another login node if the current login node needs rebooting/maintenance? we'll also kill without warning any long running login node processes after draining the login nodes of users....
-----
-
 **Tip**: with tmux you can ensure that you either reconnect to an existing session (with a given name) if it already exists *or* create a new session using: ::
 
     tmux new-session -A -s mysession
