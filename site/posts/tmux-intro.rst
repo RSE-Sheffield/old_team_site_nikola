@@ -144,8 +144,14 @@ Let's create and attach to a new tmux session,
 start a long-running command in it then 
 detach and reattach to the session:
 
-.. figure:: /images/tmux-intro/reattach.gif
-   :alt: Attaching, detaching, reattaching
+.. raw:: html
+
+    <embed>
+    <video controls>
+      <source src="/images/tmux-intro/reattach.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video> 
+    </embed>
 
 Used keys:
 
@@ -175,8 +181,14 @@ Demo 2
 
 Here's a demonstration of creating, renaming, switching and deleting tmux windows:
 
-.. figure:: /images/tmux-intro/windows.gif
-   :alt: Creating, renaming, switching and deleting windows
+.. raw:: html
+
+    <embed>
+    <video controls>
+      <source src="/images/tmux-intro/windows.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video> 
+    </embed>
 
 Used keys:
 
@@ -191,8 +203,14 @@ Dividing up Windows into Panes
 
 Now let's look at creating, switching and deleting panes *within* a window:
 
-.. figure:: /images/tmux-intro/panes.gif
-   :alt: Creating, switching and deleting panes
+.. raw:: html
+
+    <embed>
+    <video controls>
+      <source src="/images/tmux-intro/panes.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video> 
+    </embed>
 
 Used keys:
 
@@ -296,4 +314,5 @@ This should help avoid accidentally creating more than one tmux session.
 
 ----
 
-NB the animated GIF recordings of terminal sessions shown were created using `ttyrec <http://0xcc.net/ttyrec/index.html.en>`__ and `ttygif <https://github.com/icholy/ttygif>`__.
+NB the recordings of terminal sessions shown were created using `ttyrec <http://0xcc.net/ttyrec/index.html.en>`__ and `ttygif <https://github.com/icholy/ttygif>`__
+then converted to `.webm <http://www.webmproject.org/>`__ videos using `ffmpeg <http://ffmpeg.org/>`__.
