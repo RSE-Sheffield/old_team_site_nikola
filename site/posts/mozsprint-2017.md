@@ -38,13 +38,13 @@ however it was a different experience for a number of reasons.
 
 Firstly, the roles have been reversed, and from mentee, I was now a
 seasoned open leadership mentor. In fact, I had enjoyed the Open
-Leadership training program so much that I’d volunteered to to mentor on
+Leadership training program so much that I’d volunteered to mentor on
 the following two rounds, the first culminating at [MozFest
-2106](https://science.mozilla.org/blog/2016-mozfest-recap) and this
+2016](https://science.mozilla.org/blog/2016-mozfest-recap) and this
 latest round at the Global Sprint 2017. Apart from staying connected to
 the vibrant network of movers and makers that is
 [Mozilla](https://www.youtube.com/watch?v=quKdaqlR_9w), I also found I
-got a lot out mentoring myself. From improving skills in understanding
+got a lot out of mentoring myself. From improving skills in understanding
 different people’s styles and support requirements to being introduced
 to new ideas, tools and technologies by interesting people from all over
 the world! Overall **I find mentorship a positive sum activity for all
@@ -175,8 +175,8 @@ though, and the team managed to push on with bug fixes and documentation
 development.
 
 Jez Cope ([@jezcope](https://twitter.com/jezcope)), our University's
-Research Data Manager was contributing to [Library
-Carpentry](https://librarycarpentry.github.io/), one of the biggest and
+Research Data Manager was contributing to [**Library
+Carpentry**](https://librarycarpentry.github.io/), one of the biggest and
 most popular projects at his year's Sprint and also brought super tasty
 banana bread. He's also blogged about his experiences
 [here](https://erambler.co.uk/blog/mozilla-global-sprint-2017/?utm_content=buffer35502&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer).
@@ -190,7 +190,7 @@ interested in personally. So I teamed up with Tyler Kolody
 address our growing, social media facilitated, retreat into echo
 chambers, which is resulting in increasingly polarised public discourse
 and an unwillingness to engage with views we disagree with. The idea is
-to attempt to **burst through such bubbles**, by developing a browser
+to attempt to [**burst through such bubbles**](https://medium.com/read-write-participate/echoburst-77b3aa661d52), by developing a browser
 extension with the potential to distinguish toxic content, more likely
 to shut down discussion, from more constructive content that might be
 able to bridge different perspectives.
