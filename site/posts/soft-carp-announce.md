@@ -16,7 +16,7 @@ The University of Sheffield is now a Software Carpentry Partner Organisation, al
 
 **Edit**: 
 
-Our first Software Carpentry workshop is scheduled for 16th and 17th August!  More details to follow.
+Our first Software Carpentry workshop is scheduled for [16th and 17th August](http://rse.shef.ac.uk/2017-08-16-sheffield/)!
 
 ---
 
