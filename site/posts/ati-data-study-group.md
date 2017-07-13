@@ -9,8 +9,8 @@
 .. author: Tania A.
 
 
-Over a month ago (22nd-26th May) I had the opportunity to attend the Alan Turing Institute (ATI) Data Study Group.
-As you might be aware the ATI is the main UK's data science centre, and as such, it has strong ties to both academia and industry.
+Over a month ago (22nd-26th May) I had the opportunity to attend the [Alan Turing Institute (ATI)](https://www.turing.ac.uk/) Data Study Group.
+As you might be aware the ATI is the national institute for data science and as such, it has strong ties to both academia and industry.
 
 The event was a week long data hackathon in which multiple groups used their best skills to crack the various projects proposed by the industrial partners. Over 5 days 6 groups worked intensively to deliver feasible solutions to the problems proposed.
 
