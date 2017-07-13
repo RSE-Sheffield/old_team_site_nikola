@@ -1,4 +1,7 @@
 # RSE-Sheffield.github.io
+
+[![Travis status](https://travis-ci.org/RSE-Sheffield/RSE-Sheffield.github.io.svg?branch=devel)](https://travis-ci.org/RSE-Sheffield/RSE-Sheffield.github.io)
+
 Source code for the Research Software Engineering @ Sheffield website. Built using [Nikola (https://getnikola.com/)](https://getnikola.com/).
 
 Contributors to this site need to make Pull Requests to this branch (`devel`). 
@@ -10,7 +13,7 @@ The site is deployed from the master branch using `nikola github_deploy`,  an op
 First install conda; then:
 
 ```bash
-conda create -n nikola python=3.5
+conda create -n nikola python=3.6
 source activate nikola
 pip install --upgrade 'Nikola[extras]'
 ```
@@ -30,7 +33,7 @@ sudo apt-get install python3-venv  # or the macOS equivalent
 # Create a directory to house your venvs
 mkdir ~/.venvs
 # Create the venv
-python3.5 -m venv ~/.venvs/rse-blog
+python3.6 -m venv ~/.venvs/rse-blog
 # Activate the venv
 source ~/.venvs/rse-blog/bin/activate
 # Install the wheel package, needed to install the (binary) wheel versions of
