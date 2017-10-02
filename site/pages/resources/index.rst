@@ -27,6 +27,6 @@ High Performance Computing at Sheffield
 The University of Sheffield provides staff and students with access to two High Performance Computing (HPC) systems called ShARC and Iceberg.
 ShARC is the new system and the one we recommend for new users.
 
+* `The RSE premium queue <hpc/premium-hpc>`_ - How to get extra resources on ShARC such as very high memory nodes, nodes with high core counts and advanced GPUs.
 * http://docs.hpc.shef.ac.uk/en/latest/index.html - ShARC and Iceberg documentation
 * http://shef.ac.uk/cics/research-storage - Information on applying for research storage at Sheffield
-
