@@ -18,6 +18,8 @@ Mike Croucher
 -------------
 Mike is an `EPSRC Research Software Engineering Fellow <http://www.walkingrandomly.com/?p=6037>`_ with 10+ years experience supporting scientific software, high performance computing and research software engineering at The University of Manchester and, more recently, the University of Sheffield.  Mike specialises in high-level languages such as MATLAB, R, Python and Mathematica but also has significant experience with compiled languages such as C and Fortran and assists researchers in developing faster, more robust, more usable code. Mike writes about research software on his blog, `www.walkingrandomly.com <http://www.walkingrandomly.com/>`_, which receives over 500,000 visitors annually.
 
+He is an accredited `Software Carpentry <https://software-carpentry.org/>`__ and `Data Carpentry <http://www.datacarpentry.org/>`__ instructor.
+
 * Email: M.Croucher (at) Sheffield.ac.uk
 * Web: `www.walkingrandomly.com <http://www.walkingrandomly.com/>`_
 * Twitter: `@walkingrandomly <https://twitter.com/walkingrandomly>`_
@@ -42,7 +44,7 @@ Will Furnass
 ------------
 Will is also a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>`_.
 The path to this point has not been particularly direct:
-he has a computer scence degree,
+he has a computer science degree,
 has worked as a IT systems engineer in the film industry,
 has a PhD plus post-doc experience in water engineering
 (where he developed semi-physical and data-driven models of water quality in water distribution networks) and
@@ -52,6 +54,8 @@ His interests include
 helping researchers optimise data analysis workflows (primarily using higher-level languages),
 providing training in RSE best practices and
 systems administration.
+
+He is an accredited `Software Carpentry <https://software-carpentry.org/>`__ and `Data Carpentry <http://www.datacarpentry.org/>`__ instructor.
 
 * Email: w.furnass (at) sheffield.ac.uk
 * Twitter: `@willfurnass <https://twitter.com/willfurnass>`_
@@ -65,7 +69,7 @@ Twin is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>
 * Twitter: `@twin_karma <https://twitter.com/twin_karma>`_
 
 Tania Allard
----------------
+------------
 Tania is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>`_.
 She recently completed a PhD in computational nanomechanics at the University of Manchester
 where she focused on the multi-scale modelling of biological and biocompatible materials.
@@ -77,5 +81,24 @@ research teams to develop and optimise complex data analysis workflows. Also, sh
 in community building, mentoring, and scientific outreach activities within and outside
 the University of Sheffield.
 
+She is an accredited `Software Carpentry <https://software-carpentry.org/>`__ and `Data Carpentry <http://www.datacarpentry.org/>`__ instructor.
+
 * Email: t.allard (at) sheffield.ac.uk
 * Twitter: `@ixek <https://twitter.com/ixek>`_
+
+
+Anna Krystalli
+--------------
+Anna is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>`_.
+She fell in love with statistical programming and R in particular, during her PhD in Macroecology at the University of Sheffield. This was followed by two years of freelancing as a Research Data Scientist. These and previous experiences as a quality assurance auditor have led her to focus on efforts to promote more transparent, robust, reproducible research through better scientific software development and research data management.
+
+She’s also passionate about community and capacity building. She has extensive teaching experience, was part of the inaugural Mozilla Science Lab `Open Leadership Training <https://mozilla.github.io/leadership-training/readme/>`_ cohort, has been a veteran mentor on following rounds and a member of the organising committee for the `Sheffield R users group <http://sheffieldr.github.io/>`_.
+
+Key interests include:
+
+*	All things `#rstats <https://twitter.com/search?q=%23rstats&src=typd>`_!
+*	Reproducible research
+*	Open source research technologies and culture enabling next generation open science.
+
+* Email: a.krystalli (at) sheffield.ac.uk
+* Twitter: `@annakrystalli <https://twitter.com/annakrystalli>`_

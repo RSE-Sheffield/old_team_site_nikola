@@ -133,7 +133,6 @@ NAVIGATION_LINKS = {
         ("/blog","Blog"),
         ("/community","Community"),
         ("/resources","Resources"),
-        ("/forged","Forged in Sheffield"),
         ("/testimonials","Testimonials"),
         ("/contact","Contact Us")
     ),
