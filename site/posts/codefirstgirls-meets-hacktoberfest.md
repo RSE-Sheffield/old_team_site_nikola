@@ -10,8 +10,12 @@
 .. author: Tania A.
 -->
 
-
-![ CFG1](/images/CFG_AW1.jpg)
+<div style='width: 90%;
+		height: auto;
+		margin: 30px;
+    text-align:center;'>
+    <img src='/images/CFG_AW1.jpg'>
+</div>
 
 It is that time of the year again! The autumn-winter courses for
 [CodeFirst: girls](http://www.codefirstgirls.org.uk/)
@@ -40,28 +44,41 @@ These are some of the approaches we are currently using in our courses:
     text-align:center;'>
     <img src='/images/CFG_AW2.jpg'>
 </div>
-<br/>
 
 
 ## Hacktoberfest
 I mentioned before that we try to keep the gals actively engaged throughout the course as well as to integrate them to the wider community.
-And what a better way to do this but getting the gals involved in [Hacktoberfest](https://hacktoberfest.digitalocean.com/)!!!
+And what a better way to do this but getting the gals involved in [Hacktoberfest](https://hacktoberfest.digitalocean.com/)!!! We ere a bit tight on time but I thought it was worth trying to get some of the girls involved in something like this.
 
-<br/>
+
 <div style='width: 70%;
 		height:400px;
-		margin: 0 auto;
+		margin: 20px auto;
     text-align:center;'>
     <img src='/images/hacktoberfest.jpg'>
 </div>
-<br/>
 
 By doing so the girls would get the following benefits:
 
 - Learn how to contribute to open source projects
 - Integrate to the open source community
 - Get extra coding practice
-- Get extra git practice (4 Pull requests were needed to complete this)
-- If completed they would get a special edition t-shirt
+- Get extra git practice (4 Pull Requests were needed to complete this)
+- If completed they would get a special edition t-shirt (Whoop whoop)
 
-That meant extra work for me: find specific tasks and projects for them to contribute to, merge pull requests bonanza, and prepare extra gifs and guides on how to do it.
+That meant extra work for me: find specific tasks and projects for them to contribute to, merge pull requests bonanza, and prepare extra gifs and guides on how to complete the tasks.
+But it was totally worth it!!! I was more than delighted to see all the PR coming into our own repo as well as getting all the notifications from the girls getting involved in Hacktoberfest.
+
+I know not everyone got involved as many have PhDs, Master's, dissertations, and a life to look after.
+But I am massively proud of them all. So many of our gals had never used Git or GitHub before and now they
+are collaborating like pros.
+
+<div style='width: 45%;
+		height: auto;
+		margin: 20px auto;
+    text-align:center;'>
+    <img src='/images/PR_bonanza.png'>
+</div>
+
+
+Talk about motivation :) And if you want to keep up to date with the end of course projects they will be presenting in 5 weeks time keep an eye on Twitter!
