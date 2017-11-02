@@ -101,5 +101,6 @@ My t-shirt in the end was mainly earned by helping with typos. For Hackoberfest,
 
 - **Run a git & github clinic before the first hack session :** This would give the opportunity to folks that have not used github before to get some experience and confidence before turning up to a hack session.
 
-### So long #Hactoberfest! See you in 2018!
 
+##
+ So long #Hactoberfest! See you in 2018!
