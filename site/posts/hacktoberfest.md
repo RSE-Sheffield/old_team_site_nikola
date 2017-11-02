@@ -13,7 +13,7 @@
 
 <br>
 
-We'll be honest here and say that our **Sheffield R Users group Hacktoberfest celebrations** started as a last minute stroke of inspiration. Nearing our standard first Tuesday of the month, our speaker lineup for October was thin. At the same time I'd spent the last month mentoring as part of [**Mozilla Open Leadership program**](https://mozilla.github.io/leadership-training/) again, which was gearing up to have projects participate in [**Hacktoberfest**](https://hacktoberfest.digitalocean.com/), **a global month long celebration of open source**, organised by [**Digital Ocean**](https://www.digitalocean.com/) and designed to get people engaged with projects hosted openly on [**GitHub**](https://github.com/). For those unfamiliar with the platform, GitHub is one of many code repositories where open projects live allowing anyone to copy, modify and even contribute back to open source projects, many of which depend on such volunteer contributions, as Yihue Xiu blogpost. As it takes a village to raise a child so it takes a small village to build, maintain, continue to develop and support the users of a succesful open source project, where even small non-technical contributions, for example, to documentation can be a huge help to maintainers (see Yihue Xie's (of `knitr` fame) [post](https://yihui.name/en/2017/10/thanks-claus/) on this). 
+We'll be honest here and say that our **Sheffield R Users group Hacktoberfest celebrations** started as a last minute stroke of inspiration. Nearing our standard first Tuesday of the month, our speaker lineup for October was thin. At the same time I'd spent the last month mentoring as part of [**Mozilla Open Leadership program**](https://mozilla.github.io/leadership-training/) again, which was gearing up to have projects participate in [**Hacktoberfest**](https://hacktoberfest.digitalocean.com/), **a global month long celebration of open source**, organised by [**Digital Ocean**](https://www.digitalocean.com/) and designed to get people engaged with projects hosted openly on [**GitHub**](https://github.com/). For those unfamiliar with the platform, GitHub is one of many code repositories where open projects live allowing anyone to copy, modify and even contribute back to open source projects, many of which depend on such volunteer contributions, as Yihue Xiu blogpost. As it takes a village to raise a child so it takes a small village to build, maintain, continue to develop and support the users of a succesful open source project, where even small non-technical contributions, for example, to documentation can be a huge help to maintainers (see Yihue Xie's (of `knitr` fame) [blog post](https://yihui.name/en/2017/10/thanks-claus/) on this). 
 
 So what better way to entice folks to get involved than the promise of **stickers and a free t-shirt on completion of the Hacktoberfest challenge!** And the challenge? Simple! **Make four contributions** (pull requests) to any open source project on GitHub between the 1st and 31st of October. And the contribution can be anything — fixing bugs, creating new features, or updating and writing documentation. Game on!
 
@@ -46,8 +46,8 @@ At the kick off meetup, fellow Sheffield R Users Group co-organisers **Tamora Ja
 
 ## The sessions
 
-Admittedly, when you work at a computer all day, spending another 3 hours at your screen voluntarily is probably not everyone's top choice. But I personally found the opportunity to carve some time out to explore the huge variety of projects and diverse ways in which to get involved engaging and in some ways quite relaxing. The great collaborative spaces available for booking at the University of Sheffield, the informal setting and hanging out with friends made the sessions something I actually looked forward to. And **the "no pressure" aspect of voluntary contribution meant I was free to play around, follow my own curiosity and explore things I was interested in** but don't necessarily get the time to work with during my normal working day. 
-
+Admittedly, when you work at a computer all day, spending another 3 hours at your screen voluntarily is probably not everyone's top choice. But I personally found the opportunity to carve some time out to explore the huge variety of projects and diverse ways in which to get involved engaging and in some ways quite relaxing. The great collaborative spaces available for booking at the University of Sheffield, the informal setting and hanging out with friends made the sessions something I actually looked forward to. And **the "no pressure" aspect of voluntary contribution meant I was free to play around, follow my own curiosity and explore things I was interested in** but don't necessarily get the time to work with during my normal working day. Indeed some participants came along to make use of the company and learn some new things not necessarily related to the hacktoberfest challenge. So **collaboratory, no pressure spaces can be really useful for sharing knowledge.**
+ 
 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">2nd <a href="https://twitter.com/Sheffield_R_?ref_src=twsrc%5Etfw">@Sheffield_R_</a>  <a href="https://twitter.com/hashtag/Hacktoberfest?src=hash&amp;ref_src=twsrc%5Etfw">#Hacktoberfest</a> in session!<br><br>Featuring <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> aficionados: <a href="https://twitter.com/soayipm?ref_src=twsrc%5Etfw">@soayipm</a>, <a href="https://twitter.com/philmikejones?ref_src=twsrc%5Etfw">@philmikejones</a>, Maria and Phil! <a href="https://t.co/IRV0dh7rwk">pic.twitter.com/IRV0dh7rwk</a></p>&mdash; annakrystalli (@annakrystalli) <a href="https://twitter.com/annakrystalli/status/920333953617276933?ref_src=twsrc%5Etfw">October 17, 2017</a></blockquote>
@@ -99,8 +99,18 @@ My t-shirt in the end was mainly earned by helping with typos. For Hackoberfest,
 - **Reach out to more organisations:** There's a great variety of clubs and meetups at the University and more widely in Sheffield that could be interested in joining forces for a Hacktoberfest event. This would give us R users an opportunity to interact with users of other tools and potentially even tackle issues requiring mixed skills as teams.
 - **Start planning earlier!** This would give us an opportunity to advertise better leading up to the kick-off session and allow us to co-ordinate with other groups. 
 
-- **Run a git & GitHub clinic before the first hack session:** This would give the opportunity to folks that have not used GitHub before to get some experience and confidence before turning up to a hack session.
+- **Run a git & GitHub clinic before the first hack session\:** This would give the opportunity to folks that have not used GitHub before to get some experience and confidence before turning up to a hack session.
 
 
-##
- So long #Hactoberfest! See you in 2018!
+### So long #Hactoberfest! See you in 2018!
+
+
+<br>
+<br>
+
+
+ 
+*Pumpking Carving session and Halloween special powered by:*
+
+
+<iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A6gidHRiuT1Aj0HxK7TzAC2" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
