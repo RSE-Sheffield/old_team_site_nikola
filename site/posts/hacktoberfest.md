@@ -92,7 +92,7 @@ While we all got our t-shirts I was really impressed with Tamora and Raniere's c
 
 <br>
 
-My t-shirt in the end was mainly earned by helping with typos. For Hackoberfest, *the size of your contribution doesn't matter* as long as you send a contribution. And finding typos is actually non-trivial and time consuming due our brain's auto-correct feature. Sadly, the coding pieces that I worked on over the session did not end up making the cut to submit as a functional PR yet (There'll be a personal blog about my experience during Hacktoberfest coming soon instead). **Mostly however I loved the experience and am already looking forward to organising it next year!**. 
+My t-shirt in the end was mainly earned by helping with typos. For Hackoberfest, *the size of your contribution doesn't matter* as long as you send a contribution. And finding typos is actually non-trivial and time consuming due our brain's auto-correct feature. Sadly, the coding pieces that I worked on over the session did not end up making the cut to submit as a functional PR yet (there'll be a personal blog about my experience during Hacktoberfest coming soon instead). **Mostly however I loved the experience and am already looking forward to organising it next year!** 
 
 **Thinking ahead, 3 things I'd do differently in 2018 would be:**
 
