@@ -2,7 +2,7 @@
 .. title: Sheffield R Users group celebrates Hacktoberfest
 .. author: Anna Krystalli
 .. slug: sheffieldR-hacktoberfest
-.. date: 2017-10-31 08:09:22 UTC
+.. date: 2017-11-02 08:09:22 UTC
 .. tags:
 .. category:
 .. link:
@@ -14,7 +14,7 @@
 <br>
 
 
-We'll be honest here and say that our **Sheffield R Users group Hacktoberfest celebrations** started as a last minute stroke of inspiration. Nearing our standard first Tuesday of the month meetup, our speaker lineup for October was thin. At the same time I'd spent the last month mentoring as part of [**Mozilla Open Leadership program**](https://mozilla.github.io/leadership-training/) again, which was gearing up to have projects participate in [**Hacktoberfest**](https://hacktoberfest.digitalocean.com/), **a global month long celebration of open source**, organised by [**Digital Ocean**](https://www.digitalocean.com/) and designed to get people engaged with projects hosted openly on [**GitHub**](https://github.com/). For those unfamiliar with the platform, GitHub is one of many code repositories where open projects live allowing anyone to copy, modify and even contribute back to open source projects, many of which depend on such volunteer contributions. As it takes a village to raise a child so it takes a small village to build, maintain, continue to develop and support the users of a succesful open source project, where even small non-technical contributions, for example, to documentation, can be a huge help to maintainers (see Yihui Xie's (of `knitr` fame) [blog post](https://yihui.name/en/2017/10/thanks-claus/) on this). 
+We'll be honest here and say that our [**Sheffield R Users group**](http://sheffieldr.github.io/) **Hacktoberfest celebrations** started as a last minute stroke of inspiration. Nearing our standard first Tuesday of the month meetup, our speaker lineup for October was thin. At the same time I'd spent the last month mentoring as part of [**Mozilla Open Leadership program**](https://mozilla.github.io/leadership-training/) again, which was gearing up to have projects participate in [**Hacktoberfest**](https://hacktoberfest.digitalocean.com/), **a global month long celebration of open source**, organised by [**Digital Ocean**](https://www.digitalocean.com/) and designed to get people engaged with projects hosted openly on [**GitHub**](https://github.com/). For those unfamiliar with the platform, GitHub is one of many code repositories where open projects live allowing anyone to copy, modify and even contribute back to open source projects, many of which depend on such volunteer contributions. As it takes a village to raise a child so it takes a small village to build, maintain, continue to develop and support the users of a succesful open source project, where even small non-technical contributions, for example, to documentation, can be a huge help to maintainers (see Yihui Xie's (of `knitr` fame) [blog post](https://yihui.name/en/2017/10/thanks-claus/) on this). 
 
 So what better way to entice folks to get involved than the promise of **stickers and a free t-shirt on completion of the Hacktoberfest challenge!** And the challenge? Simple. **Make four contributions** (pull requests) to any open source project on GitHub between the 1st and 31st of October. And the contribution can be anything — fixing bugs, creating new features, or updating and writing documentation. Game on!
 
@@ -47,7 +47,7 @@ At the kick off meetup, fellow Sheffield R Users Group co-organisers **Tamora Ja
 
 ## The sessions
 
-Admittedly, when you work at a computer all day, spending another 3 hours at your screen voluntarily is probably not everyone's top choice. But I personally found the opportunity to carve some time out to explore the huge variety of projects and diverse ways in which to get involved engaging and in some ways quite relaxing. The great collaborative spaces available for booking at the University of Sheffield, the informal setting and hanging out with friends made the sessions something I actually looked forward to. And **the "no pressure" aspect of voluntary contribution meant I was free to play around, follow my own curiosity and explore things I was interested in** but don't necessarily get the time to work with during my normal working day. Indeed some participants came along to make use of the company and learn some new things not necessarily related to the hacktoberfest challenge. So **collaboratory, no pressure spaces can be really useful for sharing knowledge.**
+Admittedly, when you work at a computer all day, spending another 3 hours at your screen voluntarily is probably not everyone's top choice. But I personally found the opportunity to carve some time out to explore the huge variety of projects and diverse ways in which to get involved engaging and in some ways quite relaxing. The great collaborative spaces available for booking at the University of Sheffield, the informal setting and hanging out with friends made the sessions something I actually looked forward to. And **the "no pressure" aspect of voluntary contribution meant I was free to play around, follow my own curiosity and explore things I was interested in** but don't necessarily get the time to work with during my normal working day. Indeed some participants came along to make use of the company and learn some new things not necessarily related to the Hacktoberfest challenge. So **collaboratory, no pressure spaces can be really useful for sharing knowledge.**
  
 
 
@@ -93,7 +93,7 @@ While we all got our t-shirts I was really impressed with Tamora and Raniere's c
 
 <br>
 
-My t-shirt in the end was mainly earned by helping with typos. For Hackoberfest, *the size of your contribution doesn't matter* as long as you send a contribution. And finding typos is actually non-trivial and time consuming due to our brain's auto-correct feature. Sadly, the coding pieces that I worked on over the session did not end up making the cut to submit as a functional PR yet (there'll be a personal blog about my experience during Hacktoberfest coming soon instead). **Mostly however I loved the experience and am already looking forward to organising it next year!**. 
+My t-shirt in the end was mainly earned by helping with typos. For Hackoberfest, *the size of your contribution doesn't matter* as long as you send a contribution. And finding typos is actually non-trivial and time consuming due to our brain's auto-correct feature. Sadly, the coding pieces that I worked on over the session did not end up making the cut to submit as a functional pull request yet (there'll be a personal blog about my experience during Hacktoberfest coming soon instead). **Mostly however I loved the experience and am already looking forward to organising it next year!**. 
 
 **Thinking ahead, 3 things I'd do differently in 2018 would be:**
 
