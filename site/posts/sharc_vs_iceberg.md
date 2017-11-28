@@ -40,4 +40,4 @@ Details of how to participate in the RSE-queue experiment on ShARC can be [found
 
 ## What if ShARC is slower than Iceberg?
 
-These benchmarks give reproducible evidence that ShARC can be significantly faster than Iceberg when well-optimised code is used.  We have heard some unconfirmed reports that code run on ShARC can be slower than code run on Iceberg.  If this is the case for you, please get in touch with us and give details.
+These benchmarks give reproducible evidence that ShARC can be significantly faster than Iceberg when well-optimised code is used.  We have heard some unconfirmed reports that code run on ShARC can be slower than code run on Iceberg.  If this is the case for you, please [get in touch with us](http://rse.shef.ac.uk/contact/) and give details.
