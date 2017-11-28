@@ -20,7 +20,7 @@ I have been benchmarking various nodes on Iceberg and ShARC using Matrix-Matrix 
 This operation is highly parallel and optimised these days and is also a vital operation in many scientific workflows.
 
 The benchmark units are GigaFlops (Billion operations per second) and **higher is better**
-Here are the results, sorted worst to best
+Here are the results for maximum matrix sizes of 10000 by 10000, sorted worst to best
 
 * [119 GigaFlops](https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/Sheffield_iceberg_12cores.ipynb) - Old Iceberg 'Westmere' Nodes (12 core X5650 CPUs )
 * [169 Gigaflops](https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/MacBookPro2014.ipynb) - My 4 core Mid-2014 MacBook Pro
