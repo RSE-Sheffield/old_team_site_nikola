@@ -14,11 +14,13 @@
 ![](https://d3n8a8pro7vhmx.cloudfront.net/righttoresearch/pages/1462/features/original/OpenCon_2017_London_-_NB_Banner.png?1505763567)
 
 
-Building on the success of last year’s [**#Reprohack2016**](https://annakrystalli.shinyapps.io/OpenConBerlin_reprohack/) for the Berlin OpenCon satellite event, I rejoined the team of organisers ([Laura Wheeler](https://twitter.com/laurawheelers), [Jon Tennant](https://twitter.com/Protohedgehog) and [Tony Ross-Hellauer](https://twitter.com/tonyR_H) ) and teamed up with [Peter Kraker](https://twitter.com/PeterKraker?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) to develop the hackday for this year’s OpenCon London 2017.  
+Building on the success of last year’s [**#Reprohack2016**](https://annakrystalli.shinyapps.io/OpenConBerlin_reprohack/) for the Berlin OpenCon satellite event, I rejoined the team of organisers ([Laura Wheeler](https://twitter.com/laurawheelers), [Jon Tennant](https://twitter.com/Protohedgehog) and [Tony Ross-Hellauer](https://twitter.com/tonyR_H) ) and teamed up with [Peter Kraker](https://twitter.com/PeterKraker?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) to develop the hackday for this year’s [**OpenCon London 2017**](https://www.eventbrite.co.uk/e/opencon-london-2017-open-for-what-tickets-38036414941#).  
 
 To allow better reflection on this year's theme, “Open for what?”, we expanded the format to two tracks, opening up the scope for both projects and participants. **One track retained the ReproHack format from last year, the other, a broader track, offered the opportunity for leads of any type of open science project to [submit them for work](https://annakrystalli.shinyapps.io/OpenConLondon_Doathon/)**. Projects were not constrained to coding and you didn't have to code to take part in the session - anyone with an interest in creative contribution to open science in whichever capacity was welcome. 
 
 On the day, after a round of introductions and sharing our motivations for attending, we reviewed the submissions and knuckled down.
+
+<br>
 
 ### ReproHacking
 
@@ -79,6 +81,8 @@ On the do-athon side there were a couple of cool projects. Peter and [Ali Smith]
 
 Tony, [Lisa Mattias](https://twitter.com/l_matthia) and Jon continued work on the, open to anyone, hyper-collaborative drafting of the [**"Foundations for Open Science Strategy Development"**](https://docs.google.com/document/d/1un3N3JsvfodSxW3FMAoOMHaESPMzJSBr7kcrxWjoEnE/edit#) document, started at the [Opencon 2017 Do-athon](https://github.com/sparcopen/doathon/issues/24).
 
+<br>
+
 ### Agile hacking
 
 One thing I love about hacks is that you never know quite what skills you’re gonna get in the room. In our case, we got scrumaster [Sven Ihnken](https://www.linkedin.com/in/sven-ihnken-4153b525/) offering to help us navigate the day. We’ve actually been agile working for the passed few months with the nascent shef dataviz team and I find it a productive way to work. So an agile hack seemed a worthy experiment. I personally thought it worked really well. It was nice to split up the day into shorter sprints and review progress around the room half way. And Sven did do a great job “buzzing” around the room, keeping us focused and engaged and ultimately, getting all our tasks from doing to done!
@@ -87,4 +91,4 @@ One thing I love about hacks is that you never know quite what skills you’re g
 
 <br>
 
-At the end of the day, we shared what we'd worked on, and settled in for the main Opencon London evening event. As the event talks went through more traditional remits of Opencon, from public engagement to open access to literature and data, it just reiterated to me that each strand of openness is yet another way to invite people in to science. For me, inviting people all the way in, into your code and data, your entire workflow, is the bravest and most rewarding of all!
+At the end of the day, we shared what we'd worked on, and settled in for the main Opencon London evening event. As the event talks went through more traditional remits of OpenCon, from public engagement to open access to literature and data, it just reiterated to me that each strand of openness is yet another way to invite people in to science. For me, inviting people all the way in, into your code and data, your entire workflow, is the bravest and most rewarding of all!
