@@ -24,7 +24,7 @@ On the day, after a round of introductions and sharing our motivations for atten
 
 ### ReproHacking
 
-The original ReproHack was inspired by Owen Petchey’s [Reproducible Research in Ecology, Evolution, Behaviour, and Environmental Studies course](https://github.com/opetchey/RREEBES), where students attempt to reproduce the analysis and figures of a paper from the raw data, so we wanted to attempt the same. They take a few months over a number of sessions though, so, given our time constraints, we focused on reproducing papers that have also published the code behind them. This year we had a whole day, which gave us more time to dig deeper into the materials, moving beyond evaluating them for reproducibility, to how understandable, even how reusable they were. While fewer, we still had some [excellent submissions](https://annakrystalli.shinyapps.io/OpenConLondon_Doathon/) to choose from.
+The original ReproHack was inspired by **Owen Petchey’s [Reproducible Research in Ecology, Evolution, Behaviour, and Environmental Studies course](https://github.com/opetchey/RREEBES)**, where students attempt to reproduce the analysis and figures of a paper from the raw data, so we wanted to attempt the same. They take a few months over a number of sessions though, so, given our time constraints, we focused on reproducing papers that have also published the code behind them. This year we had a whole day, which gave us more time to dig deeper into the materials, moving beyond evaluating them for reproducibility, to how understandable, even how reusable they were. While fewer, we still had some [excellent submissions](https://annakrystalli.shinyapps.io/OpenConLondon_Doathon/) to choose from.
 
 **I'm pleased to report that two of the three papers attempted were succesfully reproduced!**  
 
@@ -42,7 +42,7 @@ I was particulalrly impressed with the paper [**Andrew Ajube**](https://www.link
 
 
 
-Under very minimal supervision and never having used R or Rstudio before, he managed to reproduce **an analysis in an rmarkdown [vignette](http://r-pkgs.had.co.nz/vignettes.html)** of the analysis. I think this speaks volumes, to the power of the tools and approaches we have freely available to us, of following best practice (well described in this epic Jenny Bryan [blog post](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) on **project-oriented workflows**), the effort the producers went to, and of course, genuine engagement by Andrew. It can work and it is rewarding!
+Under very minimal supervision and never having used R or Rstudio before, he managed to reproduce **an analysis in an rmarkdown [vignette](http://r-pkgs.had.co.nz/vignettes.html)**]. I think this speaks volumes, to the power of the tools and approaches we have freely available to us, of following best practice (well described in this epic Jenny Bryan [blog post](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) on **project-oriented workflows**), the effort the producers went to, and of course, genuine engagement by Andrew. It can work and it is rewarding!
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Let it be known that Andrew Ajube, the participant that reproduced it had never used <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a>, <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw">@rstudio</a> or rmd before but still managed to reproduce it w/ only minimal guidance from me. <br><br>Kudos to you the producers! <a href="https://twitter.com/hashtag/OpenConLondon?src=hash&amp;ref_src=twsrc%5Etfw">#OpenConLondon</a> <a href="https://twitter.com/hashtag/ReproHack17?src=hash&amp;ref_src=twsrc%5Etfw">#ReproHack17</a> <a href="https://t.co/4WE2cXOetn">https://t.co/4WE2cXOetn</a></p>&mdash; annakrystalli (@annakrystalli) <a href="https://twitter.com/annakrystalli/status/933075390154887169?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -79,7 +79,7 @@ On the do-athon side there were a couple of cool projects. Peter and [Ali Smith]
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-Tony, [Lisa Mattias](https://twitter.com/l_matthia) and Jon continued work on the, open to anyone, hyper-collaborative drafting of the [**"Foundations for Open Science Strategy Development"**](https://docs.google.com/document/d/1un3N3JsvfodSxW3FMAoOMHaESPMzJSBr7kcrxWjoEnE/edit#) document, started at the [Opencon 2017 Do-athon](https://github.com/sparcopen/doathon/issues/24).
+Tony, [Lisa Mattias](https://twitter.com/l_matthia) and Jon continued work on the, open to anyone, hyper-collaborative drafting of the [**"Foundations for Open Science Strategy Development"**](https://docs.google.com/document/d/1un3N3JsvfodSxW3FMAoOMHaESPMzJSBr7kcrxWjoEnE/edit#) document, started at the [OpenCon 2017 Do-athon](https://github.com/sparcopen/doathon/issues/24).
 
 <br>
 
