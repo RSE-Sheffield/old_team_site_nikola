@@ -1,7 +1,7 @@
 <!--
 .. title: A successful 2nd RSE conference
 .. slug: a-successful-2nd-rse-conference
-.. date: 2017-11-01 14:46:35 UTC
+.. date: 2017-12-19 14:46:35 UTC
 .. tags:
 .. category:
 .. link:
