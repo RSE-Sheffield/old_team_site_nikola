@@ -1,7 +1,7 @@
 <!--
 .. title: CodeFirstGirls meets Hacktoberfest
 .. slug: codefirstgirls-meets-hacktoberfest
-.. date: 2017-11-01 16:00:26 UTC
+.. date: 2018-01-04 13:31:32 UTC
 .. tags:
 .. category:
 .. link:
