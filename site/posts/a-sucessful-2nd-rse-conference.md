@@ -21,7 +21,7 @@ There were over 200 attendees, 40 talks, 15  workshops,
 3 keynote talks, one of which was given by our very own head honcho Mike Croucher
 (slides [here](https://mikecroucher.github.io/RSE_2017_keynote_presentation/)), and geeky chats galore.
 
-RSE team members Mozghan and Tania were involved in the organising committee as talks co-chairs and diversity chair (disclose: they had nothing to do with Mike's keynote). Also, all of the RSE Sheffield team members made it to the conference, which seems to be a first due to the diverse commitments and project involvement of all of us.
+RSE team members [Mozhgan](mkchimeh.com) and Tania were involved in the organising committee as talks co-chairs and diversity chair (disclose: they had nothing to do with Mike's keynote). Also, all of the RSE Sheffield team members made it to the conference, which seems to be a first due to the diverse commitments and project involvement of all of us.
 
 Once again, the event was a huge success thanks to the efforts of the committee and volunteers as well as the amazing RSE community that made this a en engaging and welcoming event.
 
