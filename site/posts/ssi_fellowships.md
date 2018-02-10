@@ -19,13 +19,19 @@ I am extremely happy to report that Sheffield has won, not just one, but **three
 
 **Tania Allard**
 
+![Tania Allard photo](https://software.ac.uk/sites/default/files/inline-images/Tania-Allard.jpg)
+
 TANIA'S PROJECT TO GO HERE
 
 **Becky Arnold**
 
+![Becky Arnold photo](https://software.ac.uk/sites/default/files/inline-images/Becky-Arnold.jpg)
+
 I'm planning use the fellowship funds to bring external speakers in to talk to the astrophysics group, with the goal of improving the style, efficiency and sustainability of our coding. As physicists, as I imagine in many fields, we are largely taught to code to get the things we need to be done completed as quickly as possible, with little regard for the quality of the code itself. We are taught how to code, but not how to code well. I want to give us the opportunity to improve in that. Also I hope to change the way we think about coding, from a disposable stepping stone used to further research as quickly as possible to a fundamental part of the science itself.
 
 **Adam Tomkins**
+
+![Adam Tomkind Photo](https://software.ac.uk/sites/default/files/inline-images/Adam-Tomkins.png)
 
 I am part of the Fruit Fly Brain Observatory project, with the aim to open up neurological data to the community, in an accessible way. Part of the issue with open data sharing is the vast amount of custom storage and format solutions, used by different labs. With this fellowship, I will be holding training events for both biologists and computational modelers on how to use the latest open data standards, demonstrating how using open software can generate instant added-value to data, with a larger community of tools and platforms.   
 
