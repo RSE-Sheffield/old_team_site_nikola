@@ -16,6 +16,7 @@ Research Software Engineering groups and activities at Sheffield.
 * The University of Sheffield has a `local RSE google group <https://groups.google.com/a/sheffield.ac.uk/forum/#!forum/rse-group>`_, intended for staff and students of the University, for RSE-related discussion. It also includes announcements about training and hardware and software resources available.
 * The University of Sheffield's `Open Data Science Initiative <http://opendsi.cc/>`_
 * The city of Sheffield has an `active R-user's group <http://sheffieldr.github.io/>`_
+* The `Sheffield Bioinformatics Core <http://sbc.shef.ac.uk/>`_ provides a Bioinformatics analysis and consulting service and runs specialised training courses
 
 National RSE Websites
 ---------------------

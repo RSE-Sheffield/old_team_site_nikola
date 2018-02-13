@@ -64,6 +64,10 @@ to your job submission script or start a `qrshx` session with `qrshx -P rse`
 
 This will tell the system to prefer the use of nodes in the rse pool but if they are full, and if the public nodes can satisfy your request, your job will automatically be sent to the rest of Sharc.
 
+# What's the default run-time limit for jobs submitted to the RSE pool?
+
+96 hours (four days) for both interactive and batch jobs.
+
 # How do you control access quotas
 
 We currently use the standard fair-use policy operated by Sun Grid Engine.  In short, your priority goes down the more you use the system.
@@ -99,8 +103,6 @@ These nodes have the same number of CPUs as standard ShARC nodes but they have m
 
 These nodes have twice the number of CPUs as standard ShARC nodes with the same amount of RAM per core.
 This makes them ideal for shared-memory parallel workloads that can scale beyond what is currently available on ShARC.
-
-We are in the process of buying these right now so they are not available just yet. We currently propose to buy:
 
 * 4 nodes
 * Each node has 32 CPU cores (so 128 cores in total in this part of the pool)
