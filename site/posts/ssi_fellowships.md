@@ -53,7 +53,7 @@ padding-left: 1%;">
 <br>
 <br>
 
-<div style="background:#255498; display: inline-block; font-size:16px; padding: 1% 0;">
+<div style="background:#255498; display: inline-block; font-size:16px; padding: 1%;">
 
   <div style="float:left; margin-left:1%; padding: 0.25% 0;">
     <img src="https://software.ac.uk/sites/default/files/inline-images/Adam-Tomkins.png"
