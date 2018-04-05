@@ -57,13 +57,13 @@ of Automatic Control and Systems Engineering, The University of
 Sheffield</a>, mostly involved with the design and implementation of
 the architecture for the
 <a href="http://urbanflows.org.uk/">Urban Flows Observatory
-project.</a>.  Its objective is to monitor a number of variables in a urban
+project</a>.  Its objective is to monitor a number of variables in a urban
 environment, from whether variables, air pollution to behaviour of
 construction materials. Its data can potentially be correlated with data
 dealing with human activities and human health issues, and it could involve several disciplines
-in the long run. The <b>Urban flows observatory</b> is mostly financed by EPSRC
+in the long run. The <b>Urban Flows Observatory</b> is mostly financed by EPSRC
 and UKCRIC. Sheffield is one of a handful of cities involved in this
-nationawide effort.
+nationwide effort.
 
   </font>
   </div>
