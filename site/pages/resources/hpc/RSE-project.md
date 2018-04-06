@@ -54,19 +54,29 @@ That way, if it turns out that our model really doesn't work for you, we can rem
 
 # Once I join the pool, how do I access the hardware?
 
-Add the line
+Start an interactive session with 
 
 ```
-#$ -P rse
+qrshx -P rse -q rse-interactive.q
 ```
 
-to your job submission script or start a `qrshx` session with `qrshx -P rse`
+or run a batch job by adding the lines
 
-This will tell the system to prefer the use of nodes in the rse pool but if they are full, and if the public nodes can satisfy your request, your job will automatically be sent to the rest of Sharc.
+```
+#$ -P rse 
+#$ -q rse.q
+```
+
+to your job submission script.
+You also need to specify any additional resources you require (CPU cores, RAM, GPUs etc) - 
+see [this page](http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html) in the main ShARC documentation for more information on how to do that.
 
 # What's the default run-time limit for jobs submitted to the RSE pool?
 
-96 hours (four days) for both interactive and batch jobs.
+The same as for the 'public' job queues in ShARC:
+
+* Interactive jobs (started with `qrshx`/`qsh`/`qrsh`): 8 hours (i.e. `h_rt=08:00:00`)
+* Batch jobs (started with `qsub`): 4 days (i.e. `h_rt=96:00:00`)
 
 # How do you control access quotas
 
