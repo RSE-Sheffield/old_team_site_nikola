@@ -11,7 +11,7 @@
 -->
 
 Back in mid-January three members of the University of Sheffield's Research Software Engineering Team 
-(me, `Mike Croucher <link://section_index/contact>`_ and `Tania Allard <link://slug/tania_allard>`_) 
+(me, `Mike Croucher <link://section_index/alumni>`_ and `Tania Allard <link://slug/tania_allard>`_) 
 spent a week at a `Computational Mathematics with Jupyter workshop`_, hosted at Edinburgh's `International Centre for Mathematical Sciences`_.
 
 This brought together the many members of the consortium working on the OpenDreamKit_ Horizon 2020 European Research Infrastructure project.  

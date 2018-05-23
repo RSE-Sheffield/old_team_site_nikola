@@ -14,17 +14,6 @@ For most queries, we advise that you contact the entire team using one of the ch
 
 Current members of the Research Software Engineering team are:
 
-Mike Croucher
--------------
-Mike is an `EPSRC Research Software Engineering Fellow <http://www.walkingrandomly.com/?p=6037>`_ with 10+ years experience supporting scientific software, high performance computing and research software engineering at The University of Manchester and, more recently, the University of Sheffield.  Mike specialises in high-level languages such as MATLAB, R, Python and Mathematica but also has significant experience with compiled languages such as C and Fortran and assists researchers in developing faster, more robust, more usable code. Mike writes about research software on his blog, `www.walkingrandomly.com <http://www.walkingrandomly.com/>`_, which receives over 500,000 visitors annually.
-
-He is an accredited `Software Carpentry <https://software-carpentry.org/>`__ and `Data Carpentry <http://www.datacarpentry.org/>`__ instructor.
-
-* Email: M.Croucher (at) Sheffield.ac.uk
-* Web: `www.walkingrandomly.com <http://www.walkingrandomly.com/>`_
-* Twitter: `@walkingrandomly <https://twitter.com/walkingrandomly>`_
-* LinkedIn: `http://uk.linkedin.com/pub/mike-croucher/13/361/323 <http://uk.linkedin.com/pub/mike-croucher/13/361/323>`_
-
 Paul Richmond
 -------------
 Paul is an `EPSRC Research Software Engineering Fellow <http://www.walkingrandomly.com/?p=6037>`_. Paul's career as an academic researcher has always been focused on the development of software to support research, predominantly through the application of emerging hardware architectures to complex systems simulation. His technical expertise in GPU computing has led him to work more broadly, engaging with researchers in a wide range of domains to embed accelerated and GPU computing into their research ecosystems. His background in independent research means that he self-identifies as a `Research Software Engineer <http://www.rse.ac.uk/>`_ with a strong emphasis on research relating to the application of GPUs.
@@ -68,25 +57,6 @@ Twin is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>
 * Email: t.karmakharm (at) sheffield.ac.uk
 * Twitter: `@twin_karma <https://twitter.com/twin_karma>`_
 
-Tania Allard
-------------
-Tania is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>`_.
-She recently completed a PhD in computational nanomechanics at the University of Manchester
-where she focused on the multi-scale modelling of biological and biocompatible materials.
-She is part of `Open Dream Kit <http://opendreamkit.org>`_
-(a `Horizon2020 project <https://ec.europa.eu/programmes/horizon2020/>`_),
-which focuses on the set up of Virtual research environments.
-Her interests include data science/engineering, reproducible research and supporting
-research teams to develop and optimise complex data analysis workflows. Also, she is actively involved
-in community building, mentoring, and scientific outreach activities within and outside
-the University of Sheffield.
-
-She is an accredited `Software Carpentry <https://software-carpentry.org/>`__ and `Data Carpentry <http://www.datacarpentry.org/>`__ instructor.
-
-* Email: t.allard (at) sheffield.ac.uk
-* Twitter: `@ixek <https://twitter.com/ixek>`_
-
-
 Anna Krystalli
 --------------
 Anna is a `Research Associate/Research Software Engineer <http://www.rse.ac.uk/>`_.
@@ -96,13 +66,12 @@ She’s also passionate about community and capacity building. She has extensive
 
 Key interests include:
 
-*	All things `#rstats <https://twitter.com/search?q=%23rstats&src=typd>`_!
-*	Reproducible research
-*	Open source research technologies and culture enabling next generation open science.
+* All things `#rstats <https://twitter.com/search?q=%23rstats&src=typd>`_!
+* Reproducible research
+* Open source research technologies and culture enabling next generation open science.
 
 * Email: a.krystalli (at) sheffield.ac.uk
 * Twitter: `@annakrystalli <https://twitter.com/annakrystalli>`_
-
 
 Peter Heywood
 -------------
