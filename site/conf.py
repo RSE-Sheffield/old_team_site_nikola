@@ -17,7 +17,7 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Mike Croucher and Paul Richmond"  # (translatable)
+BLOG_AUTHOR = "RSE Sheffield"  # (translatable)
 BLOG_TITLE = "RSE at Sheffield"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
