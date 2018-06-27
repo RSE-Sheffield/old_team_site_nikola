@@ -11,9 +11,7 @@ We offer a range of training courses in topics such as Programming, High Perform
 
 ## Upcoming training events
 
-All of these events are free to members of the University of Sheffield.
-
-* 2017-08-24 - 2017-08-25: **Introduction to parallel programming with MPI**.  If you want your code to scale to 100s or even 1000s of CPU cores then [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) is the traditional way to do it and is the dominant programming model used in High Performance Computing.  To be delivered by Jon Gibson of the [Numerical Algorithms Group](https://www.nag.co.uk/) (NAG).  Further details and registration info [here](https://www.eventbrite.co.uk/e/introduction-to-parallel-programming-with-mpi-tickets-33848678308).
+None scheduled.
 
 ## University modules
 
@@ -24,6 +22,9 @@ All of these events are free to members of the University of Sheffield.
 
 Here are details of previous training events we've run. If you'd like us to rerun any of them, please get in touch and we'll see what we can do.
 
+* 2018-05-18 - 2018-05-23: A three-day **Software Carpentry** workshop for the [Sheffield Methods Institute]() that covered: the [Unix shell, version control with git, scientific programming with Python](https://software-carpentry.org/lessons/) plus a new lesson by [Tania Allard](/alumni) on [Working with Web Data in Python](https://github.com/trallard/WebData_Python) ([doi:10.5281/zenodo.1250751](http://doi.org/10.5281/zenodo.1250751)).  [More information](http://rse.shef.ac.uk/2018-05-18-methods-inst-soft-carp/).
+* 2018-05-12: Workshop on [using multiple CPU cores with Python, multithreading and multiprocessing](https://www.eventbrite.co.uk/e/using-multiple-cpu-cores-with-python-multithreading-multiprocessing-tickets-44913511522#).  Taught using [JupyterHub on the University's ShARC HPC cluster](http://docs.hpc.shef.ac.uk/en/latest/hpc/jupyterhub.html#using-jupyter-on-sharc).
+* 2017-08-24 - 2017-08-25: **Introduction to parallel programming with MPI**.  If you want your code to scale to 100s or even 1000s of CPU cores then [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) is the traditional way to do it and is the dominant programming model used in High Performance Computing.  Delivered by Jon Gibson of the [Numerical Algorithms Group](https://www.nag.co.uk/) (NAG).  [More info](https://www.eventbrite.co.uk/e/introduction-to-parallel-programming-with-mpi-tickets-33848678308).
 * 2017-08-16 - 2017-08-17: A two-day **Software Carpentry** workshop covering four topics; the [Unix shell, version control with git, programming with Python and using databases and SQL](https://software-carpentry.org/lessons/).  [Information about the workshop](http://rse.shef.ac.uk/2017-08-16-sheffield/). 
 * 2017-04-20: **Amazon AWS immersion day**.  Information for researchers on [how get going and make the most of Amazon's cloud infrastructure](https://aws.amazon.com/events/immersion-sheffield/).
 * 2017-02-16, 2017-02-23: **An Introduction to Deep Learning** on the [ShARC](http://www.sheffield.ac.uk/cics/research/hpc/sharc) cluster's [DGX-1](http://www.nvidia.com/object/deep-learning-system.html) node.  Two afternoons of running [Caffe](http://caffe.berkeleyvision.org/) on the DGX-1's P100 GPUs to train and run various [Deep Learning](https://en.wikipedia.org/wiki/Deep_learning) models.  An overview can be found [here](https://www.eventbrite.co.uk/e/introduction-to-deep-learning-on-sharcs-dgx-1-tickets-31359086873) and the course material [here](http://gpucomputing.shef.ac.uk/education/intro_dl_sharc_dgx1/).
