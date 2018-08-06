@@ -128,14 +128,46 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/activities","What we do"),
-        ("/training","Training"),
         ("/blog","Blog"),
-        ("/community","Community"),
-        ("/resources","Resources"),
-        ("/testimonials","Testimonials"),
+        (
+            (
+                ('/service', 'Overview'),
+                ('/service/financial-model', 'Financial Model'), 
+                ('/service/service-model', 'Service Model'),
+                ('/service/what-we-do', 'What we do'),
+                ('/service/work-with-us', 'How to work with us'),
+                ('/service/testimonials', 'Testimonials'),
+                ('/service/projects', 'Projects'),
+            ), 
+            'RSE Service'
+        ),
+        (
+            (
+                ('/community', 'Overview'),
+                ('/community/coffee-and-cake', 'Coffee and Cake'), 
+                ('/community/seminar-series', 'Seminar Series'),
+                ('/community/ask-for-help', 'Asking for Help'),
+                ('/community/equipment-and-resources', 'Equipment and Resources'),
+            ), 
+            'RSE Community'
+        ),
+        (
+            (
+                ('/training', 'Overview'),
+                ('/training/events', 'Training Events'), 
+                ('/training/on-demand', 'On Demand Training'),
+                ('/training/development', 'Development of Training'),
+            ), 
+            'Training'
+        ),
+        (
+            (
+                ('/team', 'Team'),
+                ('/team/alumni', 'Alumni'), 
+            ), 
+            'Team'
+        ),
         ("/contact","Contact Us"),
-        ("/alumni","Alumni")
     ),
 }
 
