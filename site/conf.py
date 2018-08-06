@@ -134,8 +134,14 @@ NAVIGATION_LINKS = {
         ("/community","Community"),
         ("/resources","Resources"),
         ("/testimonials","Testimonials"),
+        (
+            (
+                ('/team', 'Team'),
+                ('/team/alumni', 'Alumni'), 
+            ), 
+            'Team'
+        ),
         ("/contact","Contact Us"),
-        ("/alumni","Alumni")
     ),
 }
 
