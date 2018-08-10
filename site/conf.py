@@ -17,7 +17,7 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Mike Croucher and Paul Richmond"  # (translatable)
+BLOG_AUTHOR = "RSE Sheffield"  # (translatable)
 BLOG_TITLE = "RSE at Sheffield"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
@@ -131,13 +131,10 @@ NAVIGATION_LINKS = {
         ("/blog","Blog"),
         (
             (
-                ('/service', 'Overview'),
-                ('/service/financial-model', 'Financial Model'), 
-                ('/service/service-model', 'Service Model'),
-                ('/service/what-we-do', 'What we do'),
-                ('/service/work-with-us', 'How to work with us'),
+                ('/service', 'RSE Service Overview'),
+                ('/service/provison', 'Service Model Provision'), 
                 ('/service/testimonials', 'Testimonials'),
-                ('/service/projects', 'Projects'),
+                #('/service/projects', 'Projects'),
             ), 
             'RSE Service'
         ),

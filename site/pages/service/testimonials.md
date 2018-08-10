@@ -1,5 +1,5 @@
 .. title: Testimonials
-.. slug: index
+.. slug: testimonials
 .. date: 2016-06-01 08:36:23 UTC
 .. tags:
 .. category:
