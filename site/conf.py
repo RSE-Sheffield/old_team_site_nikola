@@ -132,7 +132,7 @@ NAVIGATION_LINKS = {
         (
             (
                 ('/service', 'RSE Service Overview'),
-                ('/service/provison', 'Service Model Provision'), 
+                ('/service/provision', 'Service Model Provision'), 
                 ('/service/testimonials', 'Testimonials'),
                 #('/service/projects', 'Projects'),
             ), 
@@ -142,9 +142,9 @@ NAVIGATION_LINKS = {
             (
                 ('/community', 'Overview'),
                 ('/community/coffee-and-cake', 'Coffee and Cake'), 
-                ('/community/seminar-series', 'Seminar Series'),
-                ('/community/ask-for-help', 'Asking for Help'),
-                ('/community/equipment-and-resources', 'Equipment and Resources'),
+                ('/community/seminars', 'Seminar Series'),
+                #('/community/asking-for-help', 'Asking for Help'),
+                ('/community/resources-and-equipment', 'Resources and Equipment'),
             ), 
             'RSE Community'
         ),
