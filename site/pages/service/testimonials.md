@@ -1,10 +1,5 @@
 .. title: Testimonials
 .. slug: testimonials
-.. date: 2016-06-01 08:36:23 UTC
-.. tags:
-.. category:
-.. link:
-.. description:
 .. type: text
 
 Once you've seen [What we do](http://rse.shef.ac.uk/activities/), you might wonder how well we do it. Here is a selection of testimonials from academics we have collaborated with

@@ -1,10 +1,5 @@
 .. title: RSE Service Provision
 .. slug: provision
-.. date: 2015-12-19 18:38:02 UTC
-.. tags:
-.. category:
-.. link:
-.. description:
 .. type: text
 
 Initial enquiries for RSE service should be made by first [contacting us](../contact). If you attend one of our [code clinics](code_clinic) you may also be refereed through to the paid service for dedicated help if this is something which is required.
