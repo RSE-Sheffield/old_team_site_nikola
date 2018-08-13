@@ -1,5 +1,5 @@
 .. title: Testimonials
-.. slug: testimonials
+.. slug: index
 .. type: text
 
 Once you've seen [What we do](http://rse.shef.ac.uk/activities/), you might wonder how well we do it. Here is a selection of testimonials from academics we have collaborated with
