@@ -141,7 +141,7 @@ NAVIGATION_LINKS = {
         ),
         (
             (
-                ('/support', 'Code Clinic'),
+                ('/support/code-clinic', 'Code Clinic'),
             ), 
             'Support'
 
