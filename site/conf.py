@@ -128,14 +128,51 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/activities","What we do"),
-        ("/training","Training"),
         ("/blog","Blog"),
-        ("/community","Community"),
-        ("/resources","Resources"),
-        ("/testimonials","Testimonials"),
-        ("/contact","Contact Us"),
-        ("/alumni","Alumni")
+        (
+            (
+                ('/service', 'RSE Service Overview'),
+                ('/service/provision', 'Service Model Provision'), 
+                ('/service/activities', 'What we do'), 
+                ('/service/testimonials', 'Testimonials'),
+                #('/service/projects', 'Projects'),
+            ), 
+            'RSE Service'
+        ),
+        (
+            (
+                ('/support/code-clinic', 'Code Clinic'),
+            ), 
+            'Support'
+
+        ),
+        (
+            (
+                ('/training', 'Overview'),
+                ('/training/events', 'Training Events'), 
+                #('/training/on-demand', 'On Demand Training'),
+                #('/training/development', 'Development of Training'),
+                ('/training/carpentry', 'Software and Data Carpentry'),
+            ), 
+            'Training'
+        ),
+        (
+            (
+                ('/community', 'Overview'),
+                ('/community/coffee-and-cake', 'Coffee and Cake'), 
+                ('/community/seminars', 'Seminar Series'),
+                #('/community/asking-for-help', 'Asking for Help'),
+                ('/community/resources/resources-and-equipment', 'Resources and Equipment'),
+            ), 
+            'RSE Community'
+        ),
+        (
+            (
+                ('/contact', 'Contact Us'),
+                ('/contact/team', 'RSE Team'), 
+            ), 
+            'Contact'
+        ),
     ),
 }
 
