@@ -3,7 +3,7 @@
 .. author: Mike Croucher
 .. slug: linuistics_grant_2016
 .. date: 2017-01-03 15:22:11 UTC
-.. tags:
+.. tags: projects
 .. category:
 .. link:
 .. description:
