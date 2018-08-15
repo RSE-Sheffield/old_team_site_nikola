@@ -4,27 +4,12 @@
 
 The RSE group organises seminars and promotes seminars from other groups which are of interest to the community. If you have an interesting seminar then announce it on the [mailing-list](../). Below are a number of seminars which are scheduled or have taken place.
 
-<!--
-* 12th September 2018 - "Demystifying big data, machine learning and all that [[more info](https://www.sheffield.ac.uk/physics/news/programming-skills-sessions)]" by Rob Baxter (EPCC)
-* 27th June 2018 - "Software engineering in practise [announcement](https://groups.google.com/a/sheffield.ac.uk/forum/#!topic/rse-group/1CumYPMHsXg)" by Joz Martin (Mathworks)
-* 19th June 2018 - "[Tackling the learning curve of scientific programming](../../blog/2018-06-19-rse-computing-seminar-coffe-cake)" by Patrizo Ortiz
-* 30th April 2018 - "Accelerating Road Network Simulations using GPUs [[pdf](http://ptheywood.uk/download/presentations/heywood-com4521-2018.pdf)]" by Peter Heywood (RSE team member)
-* 16th April 2018 - "Structuring code efficiently [[announcement](https://groups.google.com/a/sheffield.ac.uk/forum/#!topic/rse-group/lWAmtjW2d4o)]" by David Hubber ((Ludwig-Maximilians-University Munich))
-
-Talks prior to 2018 can be found by looking through the [mailing-list](../)-->
-
-
 This page provides a list of upcoming and previous seminars held by RSE@Sheffield group. We aim to hold lunchtime seminars on the last Tuesday of every month, inviting speakers to talk about a wide range of topics that involves practical issues relating to research software.
 
 If you would like to recommend a speaker or would like to give a talk then please [contact us](../../contact). We have a budget to support inviting speakers.
 
-<!--If you have an idea for a talk or would like to invite someone to give an interesting talk then please [contact us](../../contact). We have a budget to support inviting speakers.-->
-
-
-
 # Upcoming Senimars #
 
-<!--<strong>No offical talks are held by RSE@Sheffield in September.</strong><br/><br/>-->
 
 ### September 12, 2018 &mdash; 15:30-16:30, Hicks building, lecture theatre 7
 <strong>Rob Baxter (EPCC)</strong><br/><br/>

@@ -5,7 +5,6 @@
 
 **<center>"Stop wasting valuable time trying to fix issues on your own."</center>**
 
-<br/>
 
 The Code Clinics is a 2-hours session (held every 2-weeks) run by RSE@Sheffield at Computer Science department, University of Sheffield where every TUoS researcher/developer can stop by and get help with their own source code. Experienced programmers from RSE team are available to talk, review code, suggest ways to improve it, or generally solve other programming related problems.
 
@@ -17,12 +16,10 @@ Upon your arrival, you will be asked to fill a registeration form, explaining (i
 
 During the Code Clinic session, someone from the RSE team or an experienced programmer will look at your code and will review your code. They may make suggestions on how you can get help via online forums. We will assign you to an RSE team member with right set of skills and will book you an appointment for next Code Clinic session. 
 
-<br/>
 
 ## Who are we?
 We are code doctors who help attendees who drop by the code clinic with their programming problems. We offer computational advice to those who do not have access to expertise & resources. Moreover, we will direct you to a specific information and resources (e.g. online forums, training sessions, etc) in addition to giving general advice on best software practices. We are a community of developers/Research Software Engineers helping others within the TUoS, master software skills and craftsmanship.
 
-<br/>
 
 ## Who may find the "code clinics" useful? 
 
@@ -39,10 +36,10 @@ We are code doctors who help attendees who drop by the code clinic with their pr
 
 If your specific problem does not fit to the examples above, or you are just curious about programming and never programmed before it might be worth to drop in. We can help you develop your software more efficiently and effectively.
 
-<br/>
+
 
 ## Where and when?
-Dates and location will be announced later via the [mailing-list](../). Any changes and extra events will be sent to the mailing list only. **To get updates on future RSE events, please join our** [RSE Google Discussion Group](https://groups.google.com/a/sheffield.ac.uk/forum/#!forum/rse-group).
+Dates and location will be announced later via the [mailing-list](../../community). Any changes and extra events will be sent to the mailing list only.
 
 <!--
 Upcoming "code clinics" sessions will be held as follows:
@@ -50,16 +47,15 @@ When: **1st** and **3rd** Monday of every month (14:00 - 16:00)
 Where: COM-G12-Main Lewin, Regent Court, Computer Science
 -->
 
-<br/>
+
 
 **Note:** Initial meetings are for a maxmimum of half-hour. There are 4-slots per session (First-come, first-served). We will be trialling this for a few months, to see what the demand for these sessions are. 
 
-<br/>
+
 
 ## Interested in getting involved?
-If you would like to get involve and help a fellow developer, please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](http://rse.shef.ac.uk/contact).
+If you would like to get involve and help a fellow developer, please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](../../contact).
 
-<br/>
 
 <!--
 ## Usefull links: 
