@@ -31,7 +31,7 @@ We are code doctors who help attendees who drop by the code clinic with their pr
 - Thinking about the best statistical model for your data?
 - You have a lot of data and need help visualising it?
 - Need some advice on accelerating your code? Want to know whether your code could run faster by using multiple cores or some other way of parallelising, or by using GPUs?
-- Want to re-write your code written in another language (e.g: Excel) in another language such as Python?
+- Want to re-write your code written in one language (e.g: Excel) in another language such as Python?
 - Want to know more about making your code open?
 
 If your specific problem does not fit to the examples above, or you are just curious about programming and never programmed before it might be worth to drop in. We can help you develop your software more efficiently and effectively.
