@@ -21,7 +21,7 @@ Mozhgan is a Research Associate/Research Software Engineer who specialises in pe
 
 # Will Furnass
 
-Will is also a Research Associate/Research Software Engineer.  Current projects:
+Will is a Research Software Engineer who is curently working on:
 
   - Workflows and data management for the [Sheffield Biomedical Research Centre](http://sheffieldbrc.nihr.ac.uk/)
   - Research computing strategy and support for the [Insigneo Institute for in silico Medicine](https://insigneo.org/)
