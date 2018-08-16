@@ -5,7 +5,7 @@
 [Software Carpentry][soft-carp], [Data Carpentry][data-carp] and [Library Carpentry][lib-carp] are 
 training programmes designed to equip researchers (and library staff) 
 with the the computing skills they need to get more done in less time and with less pain. 
-A Carpentry workshop is a hands-on, (typically) two-day event that covers 
+A Carpentry workshop ("bootcamp") is a hands-on, (typically) two-day event that covers 
 the core research computing skills needed to be productive in a small research-like environment. 
 Short tutorials alternate with practical exercises, and 
 all instruction is done via live coding. 
@@ -29,15 +29,15 @@ Carpentry events and instructor training are jointly organised by a working grou
 
 ## Planned Carpentry Events
 
-A number of events are expected to be run on the following days;
+We expect to run bootcamps on the following days:
 
-* 26th-27th November 2018 - Software Carpentry
-* 26th-27th February 2019 - Software or Data Carpentry
-* 9th-10th April 2019 - Data Carpentry
+* 26th-27th November 2018 — Software Carpentry
+* 26th-27th February 2019 — Software or Data Carpentry
+* 9th-10th April 2019 — Data Carpentry
 
 Details for these events will be posted on this page and shared via the [RSE announcement mailing list][announce-mail-list].
 
-## Current Instructors
+## Current Certified Instructors
 
 * [Will Furnass][will-furnass] (RSE Sheffield)
 * [Jez Cope][jez-cope] (Library)
@@ -52,7 +52,7 @@ Please contact [carpentries-at-sheffield-group@sheffield.ac.uk][email-contact] t
 
 [carpentries]: https://carpentries.org/
 [data-carp]: https://datacarpentry.org/
-[email-contact]: carpentries-at-sheffield-group@sheffield.ac.uk
+[email-contact]: mailto:carpentries-at-sheffield-group@sheffield.ac.uk
 [lib-carp]: https://librarycarpentry.org/
 [silver-member]: https://carpentries.org/members/
 [soft-carp]: https://software-carpentry.org/
