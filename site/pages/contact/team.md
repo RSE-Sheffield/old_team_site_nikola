@@ -21,7 +21,22 @@ Mozhgan is a Research Associate/Research Software Engineer who specialises in pe
 
 # Will Furnass
 
-Will is also a Research Associate/Research Software Engineer.
+Will is also a Research Associate/Research Software Engineer.  Current projects:
+
+  - Workflows and data management for the [Sheffield Biomedical Research Centre](http://sheffieldbrc.nihr.ac.uk/)
+  - Research computing strategy and support for the [Insigneo Institute for in silico Medicine](https://insigneo.org/)
+  - Software development and code optimisation for [Out Of Our Minds](outofourminds.shef.ac.uk), 
+    a Leverhume Trust-funded project to "develop new, accurate ways of describing speakers’ linguistic knowledge, by
+    using machine-learning techniques that mimic the way in which humans learn".
+
+Previous projects:
+
+  - A [JupyterHub service for the University's ShARC HPC system](http://docs.hpc.shef.ac.uk/en/latest/hpc/jupyterhub.html), 
+    plus training materials that can be delivered using that service 
+    (the materials relate to [multithreading/multiprocessing using Python](https://github.com/RSE-Sheffield/hi-perf-ipynb).
+    Work conducted as part of [OpenDreamKit](https://opendreamkit.org/), 
+    an EU-funded project to further the computational mathematics ecosystem.
+
 The path to this point has not been particularly direct:
 he has a computer science degree,
 has worked as a IT systems engineer in the film industry,
@@ -34,7 +49,9 @@ helping researchers optimise data analysis workflows (primarily using higher-lev
 providing training in RSE best practices and
 systems administration.
 
-He is an accredited [Software Carpentry](https://software-carpentry.org) and [Data Carpentry](http://www.datacarpentry.org/) instructor.
+He is an accredited [Carpentries instructor](https://carpentries.org/instructors/) and 
+has facilitated Software and Data Carpentry workshops on topics 
+including Python, R, version control with Git, the UNIX shell and SQL.
 
 * Email: w.furnass (at) sheffield.ac.uk
 * Twitter: [@willfurnass](https://twitter.com/willfurnass)
