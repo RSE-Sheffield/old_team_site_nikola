@@ -41,7 +41,6 @@ Details for these events will be posted on this page and shared via the [RSE ann
 
 * [Will Furnass][will-furnass] (RSE Sheffield)
 * [Jez Cope][jez-cope] (Library)
-* [Mike Griffiths][mike-griffiths] (CiCS)
 
 ### Becoming an Instructor
 
@@ -63,4 +62,3 @@ Please contact [carpentries-at-sheffield-group@sheffield.ac.uk][email-contact] t
 [announce-mail-list]: /community/
 [will-furnass]: /contact/team/
 [jez-cope]: http://jcope.shef.ac.uk/
-[mike-griffiths]: https://www.sheffield.ac.uk/cics/about/staff-list
