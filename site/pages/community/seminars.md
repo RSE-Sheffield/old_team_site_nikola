@@ -13,18 +13,17 @@ If you would like to recommend a speaker or would like to give a talk then pleas
 
 ### September 12, 2018 &mdash; 15:30-16:30, Hicks building, lecture theatre 7
 <strong>Rob Baxter (EPCC)</strong><br/><br/>
-**Talk:** *"Demystifying big data, machine learning and all that"*
+**Talk:** *"Don’t Panic! Demystifying Big Data, Data Science and all that."*
 <br/>
-**Abstract:** [[more info](https://www.sheffield.ac.uk/physics/news/programming-skills-sessions)]" 
-
+**Abstract:** The world’s digital data are still doubling in number every year or so, and research is a big culprit. Whether you measure it by volume, velocity or variety, research data is getting Big. All is not lost, though. It is challenging, and it does take a slightly different approach, but dealing with oodles of research data is not as terrifying as it seems. In this talk I aim to give researchers some practical ideas on working with “big” research data, illustrated with examples of how we manage stuff like this at EPCC. 
 <br/>
 
 # Previous Seminars #
 ### June 27, 2018 &mdash; 15:30-16:30, Hicks building, lecture theatre 7
-<strong>Joz Martin (Mathworks)</strong><br/><br/>
+<strong>Joz Martin (Mathworks) <a href="/seminar_files/bio/joz_martin.md" target="popup" onclick="window.open('/seminar_files/bio/joz_martin.md','name','width=600,height=400')">(Bio)</a></strong><br/><br/>
 **Talk:** *"Software engineering in practise"*
 <br/>
-**Abstract:**  [announcement](https://groups.google.com/a/sheffield.ac.uk/forum/#!topic/rse-group/1CumYPMHsXg)
+**Abstract:** Jos will discuss how MathWorks develop and extend MATLAB and its associated tools from an engineering perspective. Focusing on the opportunities – and challenges – in ensuring MATLAB continues to be the tool of choice in the world of multicore CPUs, in grids and clouds, on mobile platforms, and on GPUs. He discusses the processes involved in developing and testing MATLAB to drive usability features, development environment enhancements, and overall reliability.
 
 <br/>
 
@@ -63,10 +62,10 @@ A supportive link:
 <br/><br/>
 
 ### April 16, 2018 &mdash; 15:30-16:30, Hicks building, lecture theatre 6
-<strong>David Hubber, Researcher at Ludwig-Maximilians-Universität Munich </strong><br/><br/>
+<strong>David Hubber, Researcher at Ludwig-Maximilians-Universität Munich<a href="/seminar_files/bio/david_hubber.md" target="popup" onclick="window.open('/seminar_files/bio/david_hubber.md','name','width=600,height=400')"> (Bio)</a></strong><br/><br/>
 **Talk:** *"Structuring code efficiently"*
 <br/>
-**Abstract:** [[announcement](https://groups.google.com/a/sheffield.ac.uk/forum/#!topic/rse-group/lWAmtjW2d4o)]
+**Abstract:** David will discuss how to structure code efficiently. He will also discuss code module design, decoupling strategies and test-driven development. 
 
 <br/>
 
