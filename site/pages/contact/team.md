@@ -54,6 +54,7 @@ has facilitated Software and Data Carpentry workshops on topics
 including Python, R, version control with Git, the UNIX shell and SQL.
 
 * Email: w.furnass (at) sheffield.ac.uk
+* Web: [https://learningpatterns.me](https://learningpatterns.me)
 * Twitter: [@willfurnass](https://twitter.com/willfurnass)
 
 # Twin Karmakharm
