@@ -11,7 +11,7 @@ If you would like to recommend a speaker or would like to give a talk then pleas
 # Upcoming Senimars #
 
 
-### September 12, 2018 &mdash; 15:30-16:30, Hicks building, Lecture theatre 7
+### September 12, 2018 &mdash; 15:30-16:30, Hicks building, Lecture Theatre 7
 <strong>Rob Baxter (EPCC)</strong><br/><br/>
 **Talk:** *"Don’t Panic! Demystifying Big Data, Data Science and all that."*
 <br/>
@@ -19,7 +19,7 @@ If you would like to recommend a speaker or would like to give a talk then pleas
 <br/>
 
 # Previous Seminars #
-### June 27, 2018 &mdash; 15:30-16:30, Hicks building, Lecture theatre 7
+### June 27, 2018 &mdash; 15:30-16:30, Hicks building, Lecture Theatre 7
 <strong>Jos Martin (Mathworks)</strong><br/><br/>
 **Talk:** *"Software engineering in practise"*
 <br/>
@@ -78,7 +78,7 @@ Patricio now works as a Research Software Engineer at the Department of Automati
 <br/><br/>
 <hr/>
 
-### April 16, 2018 &mdash; 15:30-16:30, Hicks building, lecture theatre 6
+### April 16, 2018 &mdash; 15:30-16:30, Hicks building, Lecture Theatre 6
 <strong>David Hubber, Researcher at Ludwig-Maximilians-Universität Munich</strong><br/><br/>
 **Talk:** *"Structuring code efficiently"*
 <br/>
