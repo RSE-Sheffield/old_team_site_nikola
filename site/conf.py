@@ -583,6 +583,11 @@ GITHUB_DEPLOY_BRANCH = 'master'
 # The name of the remote where you wish to push to, using github_deploy.
 GITHUB_REMOTE_NAME = 'origin'
 
+# Controls whether or not the source branch is automatically committed to and
+# pushed. We recommend setting it to True, unless you are automating builds
+# with Travis CI.
+GITHUB_COMMIT_SOURCE = False
+
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
 # to the location of conf.py
