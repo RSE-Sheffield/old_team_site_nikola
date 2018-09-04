@@ -9,13 +9,29 @@ This page provides a list of upcoming and previous seminars held by RSE@Sheffiel
 If you would like to recommend a speaker or would like to give a talk then please [contact us](../../contact). We have a budget to support inviting speakers.
 
 # Upcoming Senimars #
+### October 30, 2018 &mdash; 12:00-13:00, COM-G12-Main Lewin
+<strong>Andrew Turner (EPCC)</strong><br/><br/>
+**Talk:** *"TBD"*
+<br/>
+**Abstract:** The recent investments in national HPC services in the UK (for example the national Tier2 HPC services and DiRAC 2.5x) and the offerings from public cloud providers have led to a wider range of advanced computing architectures available to UK-based researchers. We have undertaken a comparative benchmarking exercise across these different services to help improve our understanding of the performance characteristics of these platforms and help researchers choose the best services for different stages of their research workflows. In this seminar we will present results comparing the performance of different architectures for traditional HPC applications (e.g. CFD, periodic electronic structure) and synthetic benchmarks (for assessing I/O and interconnect performance limits). We will also describe how we have used an open research model where all the results and analysis methodologies are publicly available at all times. We will comment on the ease (or not) of compiling applications on the different platforms in a performant way, assess the strengths and weakness of architectures for different workloads, and demonstrate the benefits of working in an open way
 
+Benchmarking repository: [https://github.com/hpc-uk/archer-benchmarks]([https://github.com/hpc-uk/archer-benchmarks)
+
+<br/>
+
+**Bio:** Andy works for EPCC at the University of Edinburgh and has a particular focus on helping users get the best from the national HPC services around the UK. Much of his recent work has focussed on achieving this through an open benchmarking exercise comparing performance across different HPC systems and different applications and by developing HPC Carpentry training to provide researchers with the tools they need to use advanced computing in their research.
+<br/><br/>
+<hr/>
 
 ### September 12, 2018 &mdash; 15:30-16:30, Hicks building, Lecture Theatre 7
 <strong>Rob Baxter (EPCC)</strong><br/><br/>
 **Talk:** *"Don’t Panic! Demystifying Big Data, Data Science and all that."*
 <br/>
 **Abstract:** The world’s digital data are still doubling in number every year or so, and research is a big culprit. Whether you measure it by volume, velocity or variety, research data is getting Big. All is not lost, though. It is challenging, and it does take a slightly different approach, but dealing with oodles of research data is not as terrifying as it seems. In this talk I aim to give researchers some practical ideas on working with “big” research data, illustrated with examples of how we manage stuff like this at EPCC. 
+
+<br/>
+
+**Bio:** [https://www.epcc.ed.ac.uk/about/staff/dr-rob-baxter](https://www.epcc.ed.ac.uk/about/staff/dr-rob-baxter)
 <br/>
 
 # Previous Seminars #
@@ -32,7 +48,7 @@ If you would like to recommend a speaker or would like to give a talk then pleas
 <hr/>
 
 ### June 19, 2018 &mdash; 12:00-13:00, COM-G12-Main Lewin ###
-<strong>Dr Patricio Ortiz, Newcastle University</strong><br/><br/>
+<strong>Dr Patricio Ortiz, University of Sheffield</strong><br/><br/>
 **Talk:** *"Tackling the learning curve of scientific programming"*
 <br/>
 **Abstract:** Programming is part of the curriculum of students of computer science, and it will be complemented with other related subjects to make them knowledgeable on the subject. The situation of a science or engineering student is the opposite; typically they have one course to learn one language, and that language is usually not the one they will first face in real-life situations. This situation has occurred for decades, and it is likely not going to change, but there is a real need to better prepare science and engineering students to face the very steep learning curve of having to start programming as part of an ongoing project or their thesis.
