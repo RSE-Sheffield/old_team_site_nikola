@@ -11,7 +11,7 @@ If you would like to recommend a speaker or would like to give a talk then pleas
 # Upcoming Senimars #
 ### October 30, 2018 &mdash; 12:00-13:00, COM-G12-Main Lewin
 <strong>Andrew Turner (EPCC)</strong><br/><br/>
-**Talk:** *"TBD"*
+**Talk:** *"Open source UK HPC benchmarking"*
 <br/>
 **Abstract:** The recent investments in national HPC services in the UK (for example the national Tier2 HPC services and DiRAC 2.5x) and the offerings from public cloud providers have led to a wider range of advanced computing architectures available to UK-based researchers. We have undertaken a comparative benchmarking exercise across these different services to help improve our understanding of the performance characteristics of these platforms and help researchers choose the best services for different stages of their research workflows. In this seminar we will present results comparing the performance of different architectures for traditional HPC applications (e.g. CFD, periodic electronic structure) and synthetic benchmarks (for assessing I/O and interconnect performance limits). We will also describe how we have used an open research model where all the results and analysis methodologies are publicly available at all times. We will comment on the ease (or not) of compiling applications on the different platforms in a performant way, assess the strengths and weakness of architectures for different workloads, and demonstrate the benefits of working in an open way
 
