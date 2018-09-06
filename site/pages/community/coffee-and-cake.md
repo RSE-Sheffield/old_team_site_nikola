@@ -10,7 +10,8 @@ If you have any particular research software issues or would like to have a gene
 
 Check the [mailing-list](../) for announcements as to when our next coffee and cakes event is hosted. Coffee and Cake will be provided (the cake is not a lie)!
 
-
+## Upcoming Senimars ##
+#### October 30, 2018 &mdash; 13:00-14:00, COM-G12-Main Lewin, Regent Court ####
 ## Previous Events ##
 #### June 19, 2018 &mdash; 13:00-14:00, COM-G12-Main Lewin, Regent Court ####
 #### September 27, 2017 &mdash; 12:00-13:00, Workroom 3 (205), The Diamond ####
