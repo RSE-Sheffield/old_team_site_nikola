@@ -162,7 +162,7 @@ NAVIGATION_LINKS = {
                 ('/community/coffee-and-cake', 'Coffee and Cake'), 
                 ('/community/seminars', 'Seminar Series'),
                 #('/community/asking-for-help', 'Asking for Help'),
-                ('/community/resources/resources-and-equipment', 'Resources and Equipment'),
+                ('/community/resources-and-equipment', 'Resources and Equipment'),
             ), 
             'RSE Community'
         ),
