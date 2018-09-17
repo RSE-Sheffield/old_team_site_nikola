@@ -3,10 +3,10 @@
 [![Travis status](https://travis-ci.org/RSE-Sheffield/RSE-Sheffield.github.io.svg?branch=devel)](https://travis-ci.org/RSE-Sheffield/RSE-Sheffield.github.io)
 
 Source code for the Research Software Engineering @ Sheffield website. Built using [Nikola (https://getnikola.com/)](https://getnikola.com/).
+The source for this site is maintained on the `devel` branch and 
+rendered content is deployed to the `master` branch.
 
-Contributors to this site need to make Pull Requests to this branch (`devel`). 
-
-The site is deployed from the master branch using `nikola github_deploy`,  an operation performed by the owners of the site.
+Read on to learn how you can contribute to this site and about how the site is built, tested and deployed.
 
 ## Installation on macOS / Linux using conda
 
@@ -90,15 +90,14 @@ to detect changes, automatically rebuild your site and refresh your browser.
 
 When you are happy, submit a Pull Request.
 
-## For site admins
+## Site testing and deployment
 
-To publish a post, accept the PR then from the `site` directory you can run a single command to:
+When you create a pull request against this repo
+or push to a branch in this repo, travis-ci.org:
 
-* commit a rendered version of the site to the `master` branch then 
-* push this to the `origin` (_not_ `upstream`) branch on GitHub
+ 1. Checks that the site can be built
+ 2. Then, if the build was triggered by a push to devel, deploys the rendered content to the master branch.  
+    NB Travis CI deployment tasks [never run for builds triggered by pull requests](https://docs.travis-ci.com/user/deployment#pull-requests).
 
-this command being:
-
-```bash
-nikola github_deploy
-```
+See `.travis.yml` for more info and see [this guide](https://medium.com/@bezgachev/6-simple-steps-to-automatically-test-and-deploy-your-javascript-app-to-github-pages-c4c32a34bcb1) 
+for how to set up Travis-driven deployment.

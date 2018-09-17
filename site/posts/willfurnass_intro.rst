@@ -3,7 +3,7 @@
 .. author: Will Furnass
 .. slug: willfurnass_intro
 .. date: 2017-01-30 10:56:00 UTC
-.. tags:
+.. tags: projects
 .. category:
 .. link:
 .. description:

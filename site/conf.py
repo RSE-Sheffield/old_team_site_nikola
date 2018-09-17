@@ -17,7 +17,7 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Mike Croucher and Paul Richmond"  # (translatable)
+BLOG_AUTHOR = "RSE Sheffield"  # (translatable)
 BLOG_TITLE = "RSE at Sheffield"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
@@ -128,14 +128,51 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/activities","What we do"),
-        ("/training","Training"),
         ("/blog","Blog"),
-        ("/community","Community"),
-        ("/resources","Resources"),
-        ("/testimonials","Testimonials"),
-        ("/contact","Contact Us"),
-        ("/alumni","Alumni")
+        (
+            (
+                ('/service', 'RSE Service Overview'),
+                ('/service/provision', 'Service Model Provision'), 
+                ('/service/activities', 'What we do'), 
+                ('/service/testimonials', 'Testimonials'),
+                #('/service/projects', 'Projects'),
+            ), 
+            'RSE Service'
+        ),
+        (
+            (
+                ('/support/code-clinic', 'Code Clinic'),
+            ), 
+            'Support'
+
+        ),
+        (
+            (
+                ('/training', 'Overview'),
+                ('/training/events', 'Training Events'), 
+                #('/training/on-demand', 'On Demand Training'),
+                #('/training/development', 'Development of Training'),
+                ('/training/carpentry', 'Software and Data Carpentry'),
+            ), 
+            'Training'
+        ),
+        (
+            (
+                ('/community', 'Overview'),
+                ('/community/coffee-and-cake', 'Coffee and Cake'), 
+                ('/community/seminars', 'Seminar Series'),
+                #('/community/asking-for-help', 'Asking for Help'),
+                ('/community/resources-and-equipment', 'Resources and Equipment'),
+            ), 
+            'RSE Community'
+        ),
+        (
+            (
+                ('/contact', 'Contact Us'),
+                ('/contact/team', 'RSE Team'), 
+            ), 
+            'Contact'
+        ),
     ),
 }
 
@@ -545,6 +582,11 @@ GITHUB_DEPLOY_BRANCH = 'master'
 
 # The name of the remote where you wish to push to, using github_deploy.
 GITHUB_REMOTE_NAME = 'origin'
+
+# Controls whether or not the source branch is automatically committed to and
+# pushed. We recommend setting it to True, unless you are automating builds
+# with Travis CI.
+GITHUB_COMMIT_SOURCE = False
 
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative

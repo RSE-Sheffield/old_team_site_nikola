@@ -17,3 +17,13 @@ before_script: cd site/
 
 script:
     - nikola build --no-continue --strict
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: site/output
+  target-branch: master
+  github_token: $github_token
+  on:
+    branch: devel
+
