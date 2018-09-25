@@ -1,13 +1,11 @@
 <!--
 .. title: New Group Member: Phil Tooley 
-.. author: Phil Tooley
 .. slug: philtooley_intro
 .. date: 2017-10-31 15:56:00 UTC
-.. tags: mathjax
-.. category:
-.. link:
-.. description:
+.. tags: 
 .. type: text
+.. author: Phil Tooley
+.. has_math: yes
 -->
 
 I am thrilled to have joined the [Research Software Engineering team at
