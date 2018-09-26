@@ -9,3 +9,4 @@ output/
 *.pyc
 posts/*.html
 anna-dev
+pages/*/*.html
