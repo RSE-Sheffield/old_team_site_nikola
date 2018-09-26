@@ -132,7 +132,7 @@ to my heart, aiming to collate and develop training materials to
 Secondly, this year I helped host a site here at the [University of
 Sheffield](https://ti.to/Mozilla/global-sprint-sheffield), and seeing as
 the sprint coincided with my first day as a [Research Software Engineer
-for Sheffield RSE](http://rse.shef.ac.uk/contact/), we decided to take
+for Sheffield RSE](https://rse.shef.ac.uk/contact/), we decided to take
 the event under our wing. With space secured and swag and coffee funds
 supplied by the Science Lab, the local site was read for action!
 
@@ -222,8 +222,6 @@ the caption content.
 What a productive event this year's sprint was! While details of the
 level of activity have been
 [**covered**](https://medium.com/read-write-participate/48-hours-devoted-to-a-healthier-internet-c3e1d03cf5aa)
-and
-[storyfied](https://storify.com/MozillaScience/2017-mozilla-global-sprint)
 elsewhere and the final project demos can be found
 [here](https://public.etherpad-mozilla.org/p/mozsprint-2017-demos-jun-6)
 and
@@ -337,9 +335,9 @@ Final thoughts
 The end of the sprint is always a bit sad but the **projects live on**,
 hopefully with a new lease of life. So if, by reading this, you're
 [inspired to
-contribute](https://mozilla.github.io/global-sprint/participants/),
+contribute](https://mozilla.github.io/global-sprint/participants-guide/),
 check out the [**full list of
-projects**](https://mozilla.github.io/global-sprint/projects/) for
+projects**](https://foundation.mozilla.org/en/opportunity/global-sprint/) for
 something that might appeal. There's a huge diversity of topics, tasks
 and skills required to chose from and fun new people to meet!
 

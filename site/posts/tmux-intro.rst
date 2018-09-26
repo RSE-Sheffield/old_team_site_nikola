@@ -314,5 +314,5 @@ This should help avoid accidentally creating more than one tmux session.
 
 ----
 
-NB the recordings of terminal sessions shown were created using `ttyrec <http://0xcc.net/ttyrec/index.html.en>`__ and `ttygif <https://github.com/icholy/ttygif>`__
-then converted to `.webm <http://www.webmproject.org/>`__ videos using `ffmpeg <http://ffmpeg.org/>`__.
+NB the recordings of terminal sessions shown were created using `ttyrec <http://0xcc.net/ttyrec/>`__ and `ttygif <https://github.com/icholy/ttygif>`__
+then converted to `.webm <https://www.webmproject.org/>`__ videos using `ffmpeg <http://ffmpeg.org/>`__.
