@@ -19,7 +19,7 @@ If you would like to recommend a speaker or would like to give a talk then pleas
 
 **Abstract:** The recent investments in national HPC services in the UK (for example the national Tier2 HPC services and DiRAC 2.5x) and the offerings from public cloud providers have led to a wider range of advanced computing architectures available to UK-based researchers. We have undertaken a comparative benchmarking exercise across these different services to help improve our understanding of the performance characteristics of these platforms and help researchers choose the best services for different stages of their research workflows. In this seminar we will present results comparing the performance of different architectures for traditional HPC applications (e.g. CFD, periodic electronic structure) and synthetic benchmarks (for assessing I/O and interconnect performance limits). We will also describe how we have used an open research model where all the results and analysis methodologies are publicly available at all times. We will comment on the ease (or not) of compiling applications on the different platforms in a performant way, assess the strengths and weakness of architectures for different workloads, and demonstrate the benefits of working in an open way
 
-Benchmarking repository: [https://github.com/hpc-uk/archer-benchmarks]([https://github.com/hpc-uk/archer-benchmarks)
+Benchmarking repository: [https://github.com/hpc-uk/archer-benchmarks](https://github.com/hpc-uk/archer-benchmarks)
 
 **Bio:** Andy works for EPCC at the University of Edinburgh and has a particular focus on helping users get the best from the national HPC services around the UK. Much of his recent work has focussed on achieving this through an open benchmarking exercise comparing performance across different HPC systems and different applications and by developing HPC Carpentry training to provide researchers with the tools they need to use advanced computing in their research.
 
@@ -70,7 +70,7 @@ A supportive link:
 Patricio now works as a Research Software Engineer at the Department of Automatic Control and Systems Engineering at the University of Sheffield. He uses C, Fortran, Python, Java and Perl as his main toolkits, and as a pragmatic person, he uses the language which suits a problem best. Amongst his interests are: scientific data visualisation as a discovery tool, photography and (human) languages.
 
 <center><img src="/seminar_files/img/2018_06_19_curve.jpg" alt=""  style="max-width: 500px"></center>
-<strong><a href="/seminar_files/slides/2018_06_19_curve_talk">SLIDES</a></strong>
+<strong><a href="/seminar_files/slides/2018_06_19_curve_talk.pdf">SLIDES</a></strong>
 
 ### April 30, 2018 &mdash; 15:00-16:00, Broad Lane Lecture Theater 11 (BROAD-LT11) ###
 
@@ -130,7 +130,7 @@ We will present our approach moving forwards to overcome these limitations and p
 **Bio:** Thomas Nowotny received his PhD in theoretical physics in 2001 from the University of Leipzig and worked for five years at the University of California, San Diego. In 2007 he joined the University of Sussex, where he is now a Professor of Informatics and the Director for Research and Knowledge Exchange at the School of Engineering and Informatics. His research interests include olfaction in animals and machines, GPU accelerated scientific computing, hybrid brain-computer systems and bio-inspired machine learning.
 
 <center><img src="/seminar_files/img/2017_09_27_thomas_nowotny.jpg" alt=""  style="max-width: 500px"></center>
-<strong><a href="https://sussex.box.com/s/8i7dby89e6fj2t8lw447y68dkrsc1oo5">SLIDES</a></strong>
+<strong><a href="https://sussex.app.box.com/s/8i7dby89e6fj2t8lw447y68dkrsc1oo5">SLIDES</a></strong>
 
 ### August 08, 2017 &mdash; 13:00-14:00, Workroom 3 (205), The Diamond ###
 

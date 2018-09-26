@@ -26,7 +26,7 @@ At each session, **members of the RSE team will be available to review code, adv
     - Want to re-write your code written in one language (e.g: Excel) in another language such as Python?
     - Need help with version control?
     - Want to know more about making your code open and/or citable?
-
+    
     #### We can help!
 
 <br>
@@ -51,12 +51,10 @@ Clinic sessions are split into 4 half-hourly slots, bookable for consultation. T
 We will always try and help as best as possible. The overarching aim of the sessions is better equip you to solve your own computational problems. This may iclude directing you to relevant documentation, online forums and resources, relevant upcoming training sessions, etc.
 
 
-
 ***
 
 #### Interested in getting involved?
-
-If you would like to get involved and help a fellow developer, please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](../../contact).
+If you would like to get involve and help a fellow developer, please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](https://rse.shef.ac.uk/contact/).
 
 
 <!--

@@ -6,7 +6,7 @@ Current members of the Research Software Engineering team are listed below. Prev
 
 # Paul Richmond (Group Director)
 
-Paul is an [EPSRC Research Software Engineering Fellow](https://rse.ac.uk/community/epsrc-rse-fellows/). Paul's career as an academic researcher has always been focused on the development of software to support research, predominantly through the application of emerging hardware architectures to complex systems simulation. His technical expertise in GPU computing has led him to work more broadly, engaging with researchers in a wide range of domains to embed accelerated and GPU computing into their research ecosystems. His background in independent research means that he self-identifies as a [Research Software Engineer](http://www.rse.ac.uk/) with a strong emphasis on research relating to the application of GPUs. He is the director of the RSE group and oversees and manages team members and their more broad contribution to projects around research software development.
+Paul is an [EPSRC Research Software Engineering Fellow](https://rse.ac.uk/community/epsrc-rse-fellows/). Paul's career as an academic researcher has always been focused on the development of software to support research, predominantly through the application of emerging hardware architectures to complex systems simulation. His technical expertise in GPU computing has led him to work more broadly, engaging with researchers in a wide range of domains to embed accelerated and GPU computing into their research ecosystems. His background in independent research means that he self-identifies as a [Research Software Engineer](https://rse.ac.uk/) with a strong emphasis on research relating to the application of GPUs. He is the director of the RSE group and oversees and manages team members and their more broad contribution to projects around research software development.
 
 * Email: P.Richmond (at) Sheffield.ac.uk
 * Web: [http://paulrichmond.shef.ac.uk](http://paulrichmond.shef.ac.uk)
@@ -20,7 +20,7 @@ She is currently working on the new version of [FLAMEGPU](http://www.flamegpu.co
 
 * Email: m.kabiri-chimeh (at) sheffield.ac.uk
 * Web: [mkchimeh.com](http://mkchimeh.com)
-* LinkedIn: [https://uk.linkedin.com/in/mozhgankch](https://uk.linkedin.com/in/mozhgankch)
+* LinkedIn: [https://www.linkedin.com/in/mozhgankch/](https://www.linkedin.com/in/mozhgankch/)
 
 # Will Furnass
 
@@ -28,7 +28,7 @@ Will is a Research Software Engineer who is curently working on:
 
   - Workflows and data management for the [Sheffield Biomedical Research Centre](http://sheffieldbrc.nihr.ac.uk/)
   - Research computing strategy and support for the [Insigneo Institute for in silico Medicine](https://insigneo.org/)
-  - Software development and code optimisation for [Out Of Our Minds](outofourminds.shef.ac.uk), 
+  - Software development and code optimisation for [Out Of Our Minds](http://outofourminds.shef.ac.uk/), 
     a Leverhume Trust-funded project to "develop new, accurate ways of describing speakers’ linguistic knowledge, by
     using machine-learning techniques that mimic the way in which humans learn".
 
@@ -71,7 +71,7 @@ Twin is a Research Software Engineer who completed his PhD at the University of 
 
 Anna is a Research Software Engineer. She fell in love with statistical programming and R in particular, during her PhD in Macroecology at the University of Sheffield. This was followed by two years of freelancing as a Research Data Scientist. These and previous experiences as a quality assurance auditor have led her to focus on efforts to promote more transparent, robust, reproducible research through better scientific software development and research data management.
 
-She’s also passionate about community and capacity building. She has extensive teaching experience, was part of the inaugural Mozilla Science Lab [Open Leadership Training](https://mozilla.github.io/leadership-training/readme) cohort, has been a veteran mentor on following rounds and a member of the organising committee for the [Sheffield R users group](http://sheffieldr.github.io/).
+She’s also passionate about community and capacity building. She has extensive teaching experience, was part of the inaugural Mozilla Science Lab [Open Leadership Training](https://mozilla.github.io/leadership-training/readme/) cohort, has been a veteran mentor on following rounds and a member of the organising committee for the [Sheffield R users group](http://sheffieldr.github.io/).
 
 Key interests include:
 
@@ -87,7 +87,7 @@ Key interests include:
 Peter is a Research Software Engineer in the process of completing his PhD at the University of Sheffield.
 He specialises in GPU accelerated computing and complex system simulations; including transport network simulation and biological cellular simulations.
 He is currently working on the [STriTuVaD project](https://cordis.europa.eu/project/rcn/212940_en.html)
-(a [Horizon2020 project](https://ec.europa.eu/programmes/horizon2020)),
+(a [Horizon2020 project](https://ec.europa.eu/programmes/horizon2020/)),
 which focuses on the use of in silico trials to support and improve tuberculosis vaccine development.
 
 * Email: p.heywood (at) sheffield.ac.uk

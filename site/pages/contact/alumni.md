@@ -23,7 +23,7 @@ instructor.
 
 -   Web: [www.walkingrandomly.com]
 -   Twitter: [@walkingrandomly]
--   LinkedIn: <http://uk.linkedin.com/pub/mike-croucher/13/361/323>
+-   LinkedIn: <https://www.linkedin.com/in/mike-croucher-32336113>
 
 Tania Allard
 ============
@@ -48,10 +48,10 @@ instructor.
   [EPSRC Research Software Engineering Fellow]: http://www.walkingrandomly.com/?p=6037
   [www.walkingrandomly.com]: http://www.walkingrandomly.com/
   [Software Carpentry]: https://software-carpentry.org/
-  [Data Carpentry]: http://www.datacarpentry.org/
+  [Data Carpentry]: https://datacarpentry.org/
   [@walkingrandomly]: https://twitter.com/walkingrandomly
-  [Research Associate/Research Software Engineer]: http://www.rse.ac.uk/
-  [Open Dream Kit]: http://opendreamkit.org
+  [Research Associate/Research Software Engineer]: https://rse.ac.uk/
+  [Open Dream Kit]: https://opendreamkit.org/
   [Horizon2020 project]: https://ec.europa.eu/programmes/horizon2020/
   [@ixek]: https://twitter.com/ixek
 

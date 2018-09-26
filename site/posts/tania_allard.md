@@ -9,11 +9,11 @@
 .. description:
 .. type: text
 -->
-Tania Allard has recently joined the [Research Software Engineering team at Sheffield](http://rse.shef.ac.uk/). This is an introduction to her, her research career and why she has moved into [Research Software Engineering](http://www.rse.ac.uk/).
+Tania Allard has recently joined the [Research Software Engineering team at Sheffield](https://rse.shef.ac.uk/). This is an introduction to her, her research career and why she has moved into [Research Software Engineering](https://rse.ac.uk/).
 
 ## About my research
 
-I recently completed a PhD in [Materials Science at the University of Manchester](http://www.materials.manchester.ac.uk/) which focused on computational nanomechanics. The primary goal was to develop a robust characterisation technique for very small volumes of biocompatible materials and biological tissues.
+I recently completed a PhD in [Materials Science at the University of Manchester](https://www.materials.manchester.ac.uk/) which focused on computational nanomechanics. The primary goal was to develop a robust characterisation technique for very small volumes of biocompatible materials and biological tissues.
 
 Since such materials exhibit highly complex mechanical responses, the extraction of the values of constitutive parameters from test outputs is not straightforward and often requires inverse analysis. For such purposes I used an iterative [Finite Element Analysis](https://en.wikipedia.org/wiki/Finite_element_method) approach to extract meaningful constitutive parameters from the experimental data.
 

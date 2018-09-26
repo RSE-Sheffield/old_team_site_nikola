@@ -11,7 +11,7 @@
 -->
 
 Back in mid-January three members of the University of Sheffield's Research Software Engineering Team 
-(me, `Mike Croucher <https://rse.shef.ac.uk/contact/alumni>`_ and `Tania Allard <link://slug/tania_allard>`_) 
+(me, `Mike Croucher <https://rse.shef.ac.uk/contact/alumni//>`_ and `Tania Allard <link://slug/tania_allard>`_) 
 spent a week at a `Computational Mathematics with Jupyter workshop`_, hosted at Edinburgh's `International Centre for Mathematical Sciences`_.
 
 This brought together the many members of the consortium working on the OpenDreamKit_ Horizon 2020 European Research Infrastructure project.  
@@ -59,7 +59,7 @@ proposed the following as partial solutions:
 * Write code in a (very) high-level language
 * Get some training
 * Use version control
-* Get a code buddy (Maybe an `RSE <http://rse.shef.ac.uk/contact/>`_!)
+* Get a code buddy (Maybe an `RSE <https://rse.shef.ac.uk/contact/>`_!)
 * Share your code and data openly
 * Use literate computing technologies
 * Write tests
@@ -87,7 +87,7 @@ but also touched upon
 * `tmpnb`_: a JupyterHub-like system for launching temporary single-user Notebook sessions in the cloud (which are each backed by a Docker container).  tmpnb powers `https://try.jupyter.org/ <https://try.jupyter.org/>`_ (hosted by RackSpace), which allows people to briefly test out Jupyter without installing anything locally;
 * `binder`_: a tool for turning a GitHub repository into a collection of interactive Notebooks, configuring the required environment/dependencies using a Dockerfile, Python requirements.txt file or Conda environment file;
 * `nbgrader`_: a tool for distributing coding and/or free text Notebook-based assignments then automatically or manually grading them.  This can integrate with JupyterHub;
-* `nbconvert`_: convert a Notebook to HTML/Markdown/PDF/scripts or a custom format (using a `Jinja2`_ template).  It is used by `nbviewer.jupyter.org <nbviewer.jupyter.org>`_ to create online static HTML views of Notebooks.  nbconvert is also used by GitHub for rendering Notebooks;
+* `nbconvert`_: convert a Notebook to HTML/Markdown/PDF/scripts or a custom format (using a `Jinja2`_ template).  It is used by `nbviewer.jupyter.org <https://nbviewer.jupyter.org/>`_ to create online static HTML views of Notebooks.  nbconvert is also used by GitHub for rendering Notebooks;
 * `nbparameterise`_:  Often you want design Notebooks to demonstrate/explore the impact of a small number of key variables.  This project of Thomas's allows such variables to be set in the first code cell then the entire Notebook can be run non-interactively and rendered to HTML;
 * `jupyterlab`_: This will be the next iteration of Jupyter's UI: rather than exclusively displaying a terminal, Notebook or file editor in the Jupyter interface, instead a multi-tab and multi-pane interface allows you to view and interact with several of these things at once.  It will therefore look and feel a bit more like Spyder/R Studio/MATLAB but this is no bad thing as all of those make good use of screen real estate provided by the wide monitors we all have these days.
 
@@ -101,7 +101,7 @@ but also touched upon
 Given the enormity of the Jupyter ecosystem and how quickly it has grown 
 it was great to hear from a core developer which related projects he thinks are the most significant and interesting!
 
-Next up, Vidar Fauske gave `this talk <http://opendreamkit.org/meetings/2017-01-16-ICMS/talks/nbdime.pdf>`_ on `nbdime`_, a new tool for `merging <https://en.wikipedia.org/wiki/Merge_(version_control)>`_ and `diffing <https://en.wikipedia.org/wiki/Diff_utility>`_ Jupyter Notebooks.  
+Next up, Vidar Fauske gave `this talk <https://opendreamkit.org/meetings/2017-01-16-ICMS/talks/nbdime.pdf>`_ on `nbdime`_, a new tool for `merging <https://en.wikipedia.org/wiki/Merge_(version_control)>`_ and `diffing <https://en.wikipedia.org/wiki/Diff_utility>`_ Jupyter Notebooks.  
 The backstory is that for some time we've been recommending Jupyter to those wanting to start using Python or R in their research and we've also been telling everyone to use version control but the diffing and merging tools typically used with version control systems don't work well with Notebooks as they 
 
 * Operate on lines without consideration of whether a file has a nested structure (JSON in the case of Notebooks);
@@ -138,11 +138,11 @@ We were treated to two talks on the `ipywidgets`_ package, which provides **Pyth
 
 First, `Jeroen Demeyer <https://github.com/jdemeyer>`_ introduced us to the high-level ``interact`` Python decorator function and ``interactive`` class one can use to control function inputs using a HTML+Javascript widget.  He then went on to explain how one can manually reproduce the magic of these mechanisms: you instantiate some (typed) input widgets and output widgets, add them to an on-screen container then associate each input widget with a callback.
 
-Next, `Sylvain Corlay <http://www.proba.jussieu.fr/pageperso/corlay/>`_ talked about the ipywidgets ecosystem and the future direction of the project.  He mentioned several projects that have built on ipywidgets, all of which sound exciting but none of which I'd heard of before this!
+Next, `Sylvain Corlay <https://www.lpsm.paris//pageperso/corlay/>`_ talked about the ipywidgets ecosystem and the future direction of the project.  He mentioned several projects that have built on ipywidgets, all of which sound exciting but none of which I'd heard of before this!
 
-* `bqplot <https://github.com/bloomberg/bqplot>`_: a `matplotlib <http://matplotlib.org/>`_ alternative that supports the same API, uses custom ipywidgets and behind the scenes uses `d3.js <https://d3js.org/>`_ for low-level drawing;
-* `pythreejs <https://github.com/jovyan/pythreejs>`_: this exposes the API of the `three.js` Javascript/WebGL 3D library to Python; this is a low-level API, not a Python plotting library.  
-* `ipyleaflet <https://github.com/ellisonbg/ipyleaflet>`_: a GIS plotting library that uses ipywidgets and the `Leaflet <http://leafletjs.com/>`_ Javascript library.
+* `bqplot <https://github.com/bloomberg/bqplot>`_: a `matplotlib <https://matplotlib.org/>`_ alternative that supports the same API, uses custom ipywidgets and behind the scenes uses `d3.js <https://d3js.org/>`_ for low-level drawing;
+* `pythreejs <https://github.com/jupyter-widgets/pythreejs>`_: this exposes the API of the `three.js` Javascript/WebGL 3D library to Python; this is a low-level API, not a Python plotting library.  
+* `ipyleaflet <https://github.com/jupyter-widgets/ipyleaflet>`_: a GIS plotting library that uses ipywidgets and the `Leaflet <https://leafletjs.com/>`_ Javascript library.
 * `widget-cookiecutter <https://github.com/jupyter-widgets/widget-cookiecutter>`_: a template for creating custom ipywidgets.
 
 The current version of ipywidgets, released since the workshop, includes some interesting developments: much more of the code is now written in Javascript (actually Typescript) rather than Python so widgets state is maintained in JavaScript-land: widgets can therefore now be rendered and manipulated without a Jupyter kernel!  See `this statically-rendered Notebook <http://nbviewer.jupyter.org/github/ipython/ipywidgets/blob/master/docs/source/examples/Widget%20List.ipynb>`_ on GitHub as an example.  Another advantage of migrating the bulk of the code to Javascript is that the widgets should be usable with kernel languages other than Python such as R (once people have written language-specific ipywidgets backends).
@@ -151,7 +151,7 @@ Separate to ipywidgets, we were also introduced to `SciviJS`_, a tool currently 
 
 Numbas for online computer-aided assessment (CAS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-`Numbas`_ is a open web-based system for formative and summative maths and science tests.  It is being developed by `Christian Lawson-Perfect`_ from the University of Newcastle's `Maths and Stats E-Learning unit <http://www.ncl.ac.uk/maths/outreach/elearning/#overview>`_.  It's very different to teaching environments that use Jupyter (e.g. `SageMathCloud`_) as almost all the code is self-contained HTML+Javascript that is run on the client (for scalability and resilience) and it is for generating closed tests (rather than open mathematical exercises).  Looks very attractive and intuitive from the user's perspective!
+`Numbas`_ is a open web-based system for formative and summative maths and science tests.  It is being developed by `Christian Lawson-Perfect`_ from the University of Newcastle's `Maths and Stats E-Learning unit <https://www.ncl.ac.uk/maths-physics/outreach/elearning/#overview>`_.  It's very different to teaching environments that use Jupyter (e.g. `SageMathCloud`_) as almost all the code is self-contained HTML+Javascript that is run on the client (for scalability and resilience) and it is for generating closed tests (rather than open mathematical exercises).  Looks very attractive and intuitive from the user's perspective!
 
 Christian also mentioned `Up For Grabs`_, a site of projects wanting help on simpler tasks.  He says it's a good and simple way of getting less experienced developers involved with open-source projects.  As a project maintainer you upload some blurb about your project and tell the site which GitHub Issue tag(s) indicate smaller tasks that are 'up for grabs'.
 
@@ -159,10 +159,10 @@ Case studies of Jupyter usage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `Hans Fangohr <http://www.southampton.ac.uk/~fangohr/>`_ from the `University of Southampton <http://cmg.soton.ac.uk/>`_ reported on using Python and Jupyter to encapsulate multi-stage micro-magnetism modelling workflows: 
-his team have been able to automate the generation of input files and processing of output files for/from old but robust modelling software (`OOMMF <http://math.nist.gov/oommf/>`_); 
+his team have been able to automate the generation of input files and processing of output files for/from old but robust modelling software (`OOMMF <https://math.nist.gov/oommf/>`_); 
 Jupyter then further masks away the complexities of running models.
 
-`Mark Quinn <http://www.sheffield.ac.uk/physics/contacts/mark-quinn>`_ then talked about the impact that `SageMathCloud`_, an online teaching environment which uses Jupyter, has had on the teaching of physics, astronomy and coding at the University of Sheffield.  He's been working with Mike Croucher to develop SageMathCloud courses for the Physics department with the goal of introducing effective programming tuition early in undergraduate Physics degree programmes.  He's now quite a fan of the used coding environment (Jupyter) and SageMathCloud's courseware tools (chat facilities and mechanisms for setting and grading assignments) but has now been using it long enough to identify some challenges/issues too (e.g. students getting confused about the order of execution of cells; students opening many notebooks at once (each of which has a resource footprint).
+`Mark Quinn <https://www.sheffield.ac.uk/physics/contacts/mark-quinn>`_ then talked about the impact that `SageMathCloud`_, an online teaching environment which uses Jupyter, has had on the teaching of physics, astronomy and coding at the University of Sheffield.  He's been working with Mike Croucher to develop SageMathCloud courses for the Physics department with the goal of introducing effective programming tuition early in undergraduate Physics degree programmes.  He's now quite a fan of the used coding environment (Jupyter) and SageMathCloud's courseware tools (chat facilities and mechanisms for setting and grading assignments) but has now been using it long enough to identify some challenges/issues too (e.g. students getting confused about the order of execution of cells; students opening many notebooks at once (each of which has a resource footprint).
 
 Mark is involved with the Shepherd Group, who research the efficacy of teaching methods and are based in the same Physics department.  They've recently been studying the impact of using the Jupyter Notebook to undergraduate students who had and hadn't studied Physics at A-Level.  They tested students (at different levels of `Bloom's Taxonomy <https://en.wikipedia.org/wiki/Bloom%27s_taxonomy>`_) before and after teaching and concluded that the Notebooks were suitable for aiding students, regardless of whether they had a Physics background.  Hopefully the `Software Sustainability Institute`_ can lend their support to pedagogical studies of this nature in future.
 
@@ -205,12 +205,12 @@ This was the first time I'd been to a conference where the emphasis was very muc
 the academic conferences I'd attended prior to this had previously had an air of competition about them.  
 Looking forward to meeting up with the OpenDreamKit gang again!
 
-.. _binder: http://mybinder.org/ 
+.. _binder: https://mybinder.org/ 
 .. _Christian Lawson-Perfect: http://somethingorotherwhatever.com/
 .. _code sprints: https://www.software.ac.uk/blog/2017-02-23-computational-mathematics-jupyter-sprint
-.. _Computational Mathematics with Jupyter workshop: http://opendreamkit.org/meetings/2017-01-16-ICMS/
-.. _Docker: http://www.docker.com/ 
-.. _full programme: http://opendreamkit.org/meetings/2017-01-16-ICMS/programme/
+.. _Computational Mathematics with Jupyter workshop: https://opendreamkit.org/meetings/2017-01-16-ICMS/
+.. _Docker: https://www.docker.com/ 
+.. _full programme: https://opendreamkit.org/meetings/2017-01-16-ICMS/programme/
 .. _GAP: https://www.gap-system.org/
 .. _git hook: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 .. _Group Theory: https://en.wikipedia.org/wiki/Group_theory
@@ -224,25 +224,25 @@ Looking forward to meeting up with the OpenDreamKit gang again!
 .. _jupyterlab: https://github.com/jupyterlab/jupyterlab
 .. _LogiLab: https://www.logilab.org/
 .. _Martin Renou: https://twitter.com/Renou_Martin
-.. _matplotlib: http://matplotlib.org/
+.. _matplotlib: https://matplotlib.org/
 .. _nbconvert: https://nbconvert.readthedocs.io/en/latest/
 .. _nbdime: https://nbdime.readthedocs.io/en/latest/
 .. _nbgrader: https://nbgrader.readthedocs.io/en/stable/
 .. _nbparameterise: https://github.com/takluyver/nbparameterise
 .. _nbstripout: https://github.com/kynan/nbstripout
 .. _nbval: https://github.com/computationalmodelling/nbval
-.. _Numbas: http://www.numbas.org.uk/ 
-.. _OpenDreamKit: http://opendreamkit.org/
+.. _Numbas: https://www.numbas.org.uk/
+.. _OpenDreamKit: https://opendreamkit.org/
 .. _pytest: http://doc.pytest.org/en/latest/
-.. _Raniere Silva: https://www.software.ac.uk/raniere-silva
+.. _Raniere Silva: https://www.software.ac.uk/about/staff/person/raniere-silva
 .. _REPL: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
 .. _SageMath: http://www.sagemath.org/
-.. _SageMathCloud: https://cloud.sagemath.com/
+.. _SageMathCloud: https://cocalc.com/
 .. _SciviJS: https://www.logilab.org/blogentry/8541176
 .. _Semigroup: https://en.wikipedia.org/wiki/Semigroup
 .. _Software Sustainability Institute: https://www.software.ac.uk/
 .. _Thomas Kluyver: https://twitter.com/takluyver
 .. _three.js: https://threejs.org/
 .. _tmpnb: https://github.com/jupyter/tmpnb
-.. _Up For Grabs: http://up-for-grabs.net/
+.. _Up For Grabs: https://up-for-grabs.net/
 .. _WebGL: https://www.khronos.org/webgl/

@@ -35,6 +35,6 @@ There are a number of other local initiatives that may be of interest to the res
 
 Research Software Engineering is a movement that's gaining momentum nationally. The following links can provide more information on national initiatives.
 
-* [http://www.rse.ac.uk](http://www.rse.ac.uk) - The UK Community of Research Software Engineers
+* [https://rse.ac.uk](https://rse.ac.uk) - The UK Community of Research Software Engineers
 * [http://www.software.ac.uk](http://www.software.ac.uk) - The Software Sustainability Institute
 * [https://twitter.com/ResearchSoftEng](https://twitter.com/ResearchSoftEng) - Official twitter feed of the UK RSE Community

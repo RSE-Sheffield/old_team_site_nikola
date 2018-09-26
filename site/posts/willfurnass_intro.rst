@@ -103,7 +103,7 @@ RSEs aren't simply post-doctoral researchers who happen to write software.
 The path to this point has not been particularly direct: 
 I have a `computer scence degree <https://engineering.leeds.ac.uk/computing>`_, 
 worked as a IT systems engineer in the film industry, 
-have a PhD plus post-doc experience in `water engineering <http://www.shef.ac.uk/civil/>`_
+have a PhD plus post-doc experience in `water engineering <https://www.sheffield.ac.uk/civil/>`_
 (where I developed semi-physical and data-driven models of water quality in water distribution networks) and 
 I have provided support to the users of the University of Sheffield's `HPC clusters <http://docs.hpc.shef.ac.uk/>`_.  
 In addition I taught or helped run RSE, water engineering and study skills workshops.  
@@ -117,7 +117,7 @@ You can contact me via:
 * Email: w.furnass (at) sheffield.ac.uk
 * Twitter: `@willfurnass <https://twitter.com/willfurnass>`_
 
-.. _an instance of JupyterHub running: http://docs.hpc.shef.ac.uk/en/latest/iceberg/accessing/jupyterhub.html
+.. _an instance of JupyterHub running: http://docs.hpc.shef.ac.uk/en/latest/hpc/jupyterhub.html
 .. _Azure Notebooks: https://notebooks.azure.com/
 .. _Grid Engine: https://arc.liv.ac.uk/trac/SGE
 .. _High-Performance Computing: https://en.wikipedia.org/wiki/High-performance_computing
@@ -127,11 +127,11 @@ You can contact me via:
 .. _kernels for many different programming languages: https://github.com/jupyter/jupyter/wiki/Jupyter-kernels
 .. _Markdown: https://en.wikipedia.org/wiki/Markdown
 .. _MathJax: https://www.mathjax.org/
-.. _OpenDreamKit: http://opendreamkit.org/ 
+.. _OpenDreamKit: https://opendreamkit.org/ 
 .. _Research Infrastructure: https://ec.europa.eu/programmes/horizon2020/en/h2020-section/european-research-infrastructures-including-e-infrastructures
-.. _Research Software Engineer: http://www.rse.ac.uk/  
-.. _Research Software Engineering: http://www.rse.ac.uk/who.html
-.. _SageMathCloud: https://cloud.sagemath.com/settings
+.. _Research Software Engineer: https://rse.ac.uk/  
+.. _Research Software Engineering: https://rse.ac.uk/who/
+.. _SageMathCloud: https://cocalc.com/settings
 .. _ShARC: http://docs.hpc.shef.ac.uk/en/latest/sharc/index.html
 .. _Software Sustainability Institute: https://www.software.ac.uk/
 .. _Stuart Mumford: http://stuartmumford.uk/
