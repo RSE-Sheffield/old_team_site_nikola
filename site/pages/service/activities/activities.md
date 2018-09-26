@@ -36,7 +36,7 @@ technology. We can also help you learn more about deep learning, the
 powerful new machine learning technique that uses GPUs to solve complex
 data science problems.
 
-As part of our [GPU computing at University of Sheffield](http://www.gpucomputing.shef.ac.uk) initiative,
+As part of our [GPU computing at University of Sheffield](http://gpucomputing.shef.ac.uk/) initiative,
 we have a number of RSE team members who are Deep Learning Institute accredited 
 trainers who run courses which aim to teach how to use GPUs
 and help you gain access to hardware.
@@ -68,7 +68,7 @@ dedicated Research Software Engineering posts and can offer assistance
 to you for your next grant application.
 
 Working with organisations such as the [Software Sustainability
-Institute](http://www.software.ac.uk/) and the UK community of [Research Software Engineers](http://www.rse.ac.uk/), we
+Institute](http://www.software.ac.uk/) and the UK community of [Research Software Engineers](https://rse.ac.uk/), we
 engage with funding providers to demonstrate the importance of research
 software engineers in modern research.
 

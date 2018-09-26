@@ -13,10 +13,10 @@ The NAG [Numerical Algorithms Group] library is a large collection of tried and 
 
 **NAG Fortran Compiler**
 
-According to the [2015 Fortran UK compiler comparisons](http://www.fortran.uk/fortran-compiler-comparisons-2015/intellinux-fortran-compiler-diagnostic-capabilities/), the NAG compiler was one of the best diagnostic compilers available:  The University has a full site license for all staff and students.
+According to the [2015 Fortran UK compiler comparisons](https://www.fortran.uk/fortran-compiler-comparisons/intellinux-fortran-compiler-diagnostic-capabilities/), the NAG compiler was one of the best diagnostic compilers available:  The University has a full site license for all staff and students.
 
 **NAG Links**
 
-* [University of Sheffield's NAG Page](http://www.nag.co.uk/edu/uk/sheffield) - Go here to download software and request licenses
+* [University of Sheffield's NAG Page](https://www.nag.co.uk/edu/uk/sheffield) - Go here to download software and request licenses
 * [NAG Fortran Compiler on Iceberg](http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/compilers/nag.html) - Access the compiler on Sheffield's High Performance Computing system.
 * [NAG Fortran library on Iceberg](http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/libs/nagfortran.html)

@@ -19,7 +19,7 @@ A few weeks ago (19-20th September 2016) I had the chance to attend the very fir
 
 # Day 1: Tutorial and Hackathon
 
-There are several ways to [run Julia](http://julialang.org/downloads/) in any OS, including command line version, [Juno](http://junolab.org/) IDE and Jupyter notebook ([IJulia](https://github.com/JuliaLang/IJulia.jl)). In case you want to avoid any installation process then there is also the  browser based [JuliaBox.com](https://www.juliabox.com/). I was surprised that the whole process was smooth without any software setup issues!
+There are several ways to [run Julia](https://julialang.org/downloads/) in any OS, including command line version, [Juno](http://junolab.org/) IDE and Jupyter notebook ([IJulia](https://github.com/JuliaLang/IJulia.jl)). In case you want to avoid any installation process then there is also the  browser based [JuliaBox.com](https://www.juliabox.com/). I was surprised that the whole process was smooth without any software setup issues!
 
 The tutorial consisted of some very basic demonstration of Julia mostly on linear algebra and statistics and after a short break we were left to explore Julia, collaborate and exchange ideas. There were also two Exercises proposed to us:
 
@@ -32,8 +32,8 @@ As I wanted to try as many libraries as possible from image processing and data 
 
 The talks were centred around specific fields with heavy scientific computing (automatic differentiation, molecular modelling, natural language processing, bioinformatics and computational biology) and how Julia influence these fields. Each speaker presented his field of research and his Julia implementations which ended up as another package for the Julia community. More information about the speakers can be found on the [Manchester Julia Workshop webpage](http://www.maths.manchester.ac.uk/~siam/julia16/) and a list of the presented packages can be found below:
 
-* Data analysis and visualization: [Distributions.jl](http://distributionsjl.readthedocs.io/en/latest/), [DataFrames.jl](https://github.com/JuliaStats/DataFrames.jl), [GLM.jl](https://github.com/JuliaStats/GLM.jl)
-* Embed other languages with Julia (Python, R): [PyCall.jl](https://github.com/JuliaPy/PyCall.jl), [RCall.jl](https://github.com/JuliaStats/RCall.jl).
+* Data analysis and visualization: [Distributions.jl](http://distributionsjl.readthedocs.io/en/latest/), [DataFrames.jl](https://github.com/JuliaData/DataFrames.jl), [GLM.jl](https://github.com/JuliaStats/GLM.jl)
+* Embed other languages with Julia (Python, R): [PyCall.jl](https://github.com/JuliaPy/PyCall.jl), [RCall.jl](https://github.com/JuliaInterop/RCall.jl).
 * Automatic differentiation: [ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl).
 * Molecular modelling: [JuLIP.jl](https://github.com/libAtoms/JuLIP.jl).
 * Bioinformatics and computational biology: [bio.jl](https://github.com/BioJulia/Bio.jl).
@@ -42,9 +42,9 @@ The talks were centred around specific fields with heavy scientific computing (a
 
 Overall I was very satisfied with the Julia experience and I am waiting for its first official release (v1.0) which will probably be next year. Here are the main advantages which led me to believe that Julia can be the next on demand programming language for scientific computing:
 
-* Combines the productivity of dynamic languages (Java, Python) and the performance of static languages (C, Fortran). In other words: very easy to write optimized code and run your program fast at the same time. [Dr Jiahao Chen](https://jiahao.github.io/) from MIT in his [talk](http://www.slideshare.net/acidflask/programming-languages-history-relativity-and-design) mentioned the following referring to Julia's speed, "*You can define many methods for a generic function. If the compiler can figure out exactly which method you need to use when you invoke a function, then it generates optimized code*".
+* Combines the productivity of dynamic languages (Java, Python) and the performance of static languages (C, Fortran). In other words: very easy to write optimized code and run your program fast at the same time. [Dr Jiahao Chen](https://jiahao.github.io/) from MIT in his [talk](https://www.slideshare.net/acidflask/programming-languages-history-relativity-and-design) mentioned the following referring to Julia's speed, "*You can define many methods for a generic function. If the compiler can figure out exactly which method you need to use when you invoke a function, then it generates optimized code*".
 * Deals with the two language problem: base library and functionality is written in Julia itself.
 * It is free and open source (MIT licensed), high advantageous for the scientific community to share code or expand existing one.
 * A great and friendly community and users from various fields which constantly expand the existing Julia library.
 
-**Fun fact:** The system for variable declaration accepts any [Unicode character](http://docs.julialang.org/en/release-0.5/manual/unicode-input/): `\delta[tab] = 2` results in `δ = 2`, `\:smiley: = 4` results in `😃 = 4.` Although, apart from some April Fool's pranks, Julia's [stylistic conventions](http://docs.julialang.org/en/release-0.5/manual/variables/) is advised to be followed when defining variable names!
+**Fun fact:** The system for variable declaration accepts any [Unicode character](https://docs.julialang.org/en/v1/manual/unicode-input/): `\delta[tab] = 2` results in `δ = 2`, `\:smiley: = 4` results in `😃 = 4.` Although, apart from some April Fool's pranks, Julia's [stylistic conventions](https://docs.julialang.org/en/v1/manual/variables/) is advised to be followed when defining variable names!
