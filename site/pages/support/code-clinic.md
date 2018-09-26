@@ -5,56 +5,58 @@
 
 **<center>"Stop wasting valuable time trying to fix issues on your own."</center>**
 
+<br>
 
-The Code Clinics is a 2-hours session (held every 2-weeks) run by RSE@Sheffield at Computer Science department, University of Sheffield where every TUoS researcher/developer can stop by and get help with their own source code. Experienced programmers from RSE team are available to talk, review code, suggest ways to improve it, or generally solve other programming related problems.
+Code Clinics are **fortnightly sessions** run by **Research Software Engineering @Sheffield**. They are open to **anyone at TUoS writing code for research** to get help with programming problems and general advice on best practice. 
+At each session, **members of the RSE team will be available to review code, advise, troubleshoot and suggest ways to improve your computational workflows**.
 
-We would like the "code clinics" to be a semi-formal venue and encourage anyone from the University of Sheffield to drop in, so registration prior to the session is not necessary. However, a short email with a brief explanation of the type of assistance required would help us to have the people with the relevant experience available.  
+- #### **When: Every second Wed (14:00 - 16:00)**
+    Clinics launch on **Wednesday, Oct 3rd, 2018** and run fortnightly after that. Check for scheduled dates on the RSE [**Code Clinic** calendar](https://calendar.google.com/calendar/embed?src=sheffield.ac.uk_28d0d6953rcq30teo2rapepho0%40group.calendar.google.com&ctz=Europe%2FLondon).
 
+- #### **Where: COM-G12-Main Lewin Lab**
+  [Regent Court, Dept. of Computer Science, The University of Sheffield, 211 Portobello, Sheffield, S1 4DP](https://goo.gl/maps/t88GdT9Yjmz).
 
-Upon your arrival, you will be asked to fill a registeration form, explaining (in one or two sentences) the problem or question. If you are not sure if your problem is appropriate,  please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](http://rse.shef.ac.uk/contact). You are expected to provide us a reproducible example of the problem in addition to the source code.  Feel free to bring your data or code on a laptop.  
+- #### **Who: Are you...** 
+    - Thinking of ways to improve your code?
+    - Want to automate a task (e.g: series of scripts)?
+    - Unsure of which software tools to use for your project?
+    - You have a lot of data and need help organising, storing, accessing or visualising it?
+    - Need some advice on optimising your code? 
+    - Want to know whether your code could run faster on multiple cores or GPUs?
+    - Want to re-write your code written in one language (e.g: Excel) in another language such as Python?
+    - Need help with version control?
+    - Want to know more about making your code open and/or citable?
 
+    #### We can help!
 
-During the Code Clinic session, someone from the RSE team or an experienced programmer will look at your code and will review your code. They may make suggestions on how you can get help via online forums. We will assign you to an RSE team member with right set of skills and will book you an appointment for next Code Clinic session. 
+<br>
 
+***
 
-## Who are we?
-We are code doctors who help attendees who drop by the code clinic with their programming problems. We offer computational advice to those who do not have access to expertise & resources. Moreover, we will direct you to a specific information and resources (e.g. online forums, training sessions, etc) in addition to giving general advice on best software practices. We are a community of developers/Research Software Engineers helping others within the TUoS, master software skills and craftsmanship.
+## Book a session
 
+Clinic sessions are split into 4 half-hourly slots, bookable for consultation. To book, please fill in this [brief form](https://goo.gl/forms/ws2OxZavIlL8Za4m1). If there is time in between slots, we will also strive to accomodate drop-ins. However, to avoid disappointment and allow us to better allocate the most appropriate members of the team to help you, we strongly advise you book in advance.
 
-## Who may find the "code clinics" useful? 
+### Preparing for your session:
 
-- Do you have a C/C++, Python, R, MATLAB, etc. program that is slow, or takes a huge amount of RAM?
-- Thinking of ways to improve your code?
-- Want to automate a task (e.g: series of scripts)?
-- New to programming and don't know where to start?
-- Unsure of a software tool to use for your project?
-- Thinking about the best statistical model for your data?
-- You have a lot of data and need help visualising it?
-- Need some advice on accelerating your code? Want to know whether your code could run faster by using multiple cores or some other way of parallelising, or by using GPUs?
-- Want to re-write your code written in one language (e.g: Excel) in another language such as Python?
-- Want to know more about making your code open?
+- Organise and annotate your code to clarifying comments.
+- Try and restrict any materials you show us to those related to the specific matter at hand. Consider stripping your code or data down to a reproducible example of your problem.
+- If helping with the problem requires us to understand your data, please include at the very least a README with descriptions of data attributes.
 
-If your specific problem does not fit to the examples above, or you are just curious about programming and never programmed before it might be worth to drop in. We can help you develop your software more efficiently and effectively.
+### On the day:
 
+- Please bring your laptop to work on.
+- Try and have your workflow set up, ready to demonstrate your issue.
 
-
-## Where and when?
-Dates and location will be announced later via the [mailing-list](../../community). Any changes and extra events will be sent to the mailing list only.
-
-<!--
-Upcoming "code clinics" sessions will be held as follows:
-When: **1st** and **3rd** Monday of every month (14:00 - 16:00)
-Where: COM-G12-Main Lewin, Regent Court, Computer Science
--->
-
-
-
-**Note:** Initial meetings are for a maxmimum of half-hour. There are 4-slots per session (First-come, first-served). We will be trialling this for a few months, to see what the demand for these sessions are. 
-
+We will always try and help as best as possible. The overarching aim of the sessions is better equip you to solve your own computational problems. This may iclude directing you to relevant documentation, online forums and resources, relevant upcoming training sessions, etc.
 
 
-## Interested in getting involved?
-If you would like to get involve and help a fellow developer, please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](../../contact).
+
+***
+
+#### Interested in getting involved?
+
+If you would like to get involved and help a fellow developer, please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](../../contact).
 
 
 <!--
