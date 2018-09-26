@@ -13,7 +13,7 @@
 
 ![python1](/images/CF_python1.jpg)
 
-Anyone working on any STEM area knows, as a fact, that we are facing a digital and technical skills gap.  In the governement's digital strategy [report](http://www.bbc.co.uk/news/business-36510266) last year it
+Anyone working on any STEM area knows, as a fact, that we are facing a digital and technical skills gap.  In the governement's digital strategy [report](https://www.bbc.co.uk/news/business-36510266) last year it
 was highlighted that we would need an extra 745,000 workers with digital skills by 2017, as 90% of jobs require digital skills to some degree.
 On top of this, many technical areas suffer a diversity deficit (cultural and gender based).
 With the UK being among the European countries with the smaller number of female
@@ -33,7 +33,7 @@ make an informed career choice
 
 I do believe, however, that the most fruitful approach is to work with the upcoming generations and provide them with useful technical and personal skills early on. This would not only make them better qualified for their future but would enable them to make informed decisions with regards to their professional future.
 
-[Code First: girls](http://www.codefirstgirls.org.uk) is a multi-award organization that aims to tackle the gender imbalance in three ways: training women, building a strong and supportive community, and helping companies to train, recruit, and retain their female force.
+[Code First: girls](https://www.codefirstgirls.org.uk) is a multi-award organization that aims to tackle the gender imbalance in three ways: training women, building a strong and supportive community, and helping companies to train, recruit, and retain their female force.
 
 Belonging to a minority within STEM has lead me to take an active role as an equality and diversity ambassador, which eventually lead me to volunteer as a Python instructor for the Code First courses.
 

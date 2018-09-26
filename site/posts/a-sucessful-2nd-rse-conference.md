@@ -16,12 +16,12 @@
 <img src='/images/RSE17.jpg'/ alt='RSE17'/>
 
 The second RSE conference took place on the 7th and 8th of September 2017 at the
-Museum of Science and Industry [MOSI](https://www.msimanchester.org.uk/).
+Museum of Science and Industry [MOSI](https://www.scienceandindustrymuseum.org.uk/).
 There were over 200 attendees, 40 talks, 15  workshops,
 3 keynote talks, one of which was given by our very own head honcho Mike Croucher
 (slides [here](https://mikecroucher.github.io/RSE_2017_keynote_presentation/)), and geeky chats galore.
 
-RSE team members [Mozhgan](mkchimeh.com) and Tania were involved in the organising committee as talks co-chairs and diversity chair (disclose: they had nothing to do with Mike's keynote). Also, all of the RSE Sheffield team members made it to the conference, which seems to be a first due to the diverse commitments and project involvement of all of us.
+RSE team members [Mozhgan](http://mkchimeh.com) and Tania were involved in the organising committee as talks co-chairs and diversity chair (disclose: they had nothing to do with Mike's keynote). Also, all of the RSE Sheffield team members made it to the conference, which seems to be a first due to the diverse commitments and project involvement of all of us.
 
 Once again, the event was a huge success thanks to the efforts of the committee and volunteers as well as the amazing RSE community that made this a en engaging and welcoming event.
 
@@ -55,7 +55,7 @@ Such is the case of Jupyter notebooks. They brought up to life a whole new era o
 However, the adoption of tools like this  brings not only a number of advantages but also presents a number of challenges and integration issues with previously developed tools.
 For example, the traditional version control tools (including diff and merge tools) do not play nicely with the notebooks. Also, the notebooks have to be tested as any other piece of code.
 
-During the workshop, I introduced two tools: [nbdime](https://github.com/jupyter/nbdime) and [nbval](https://github.com/computationalmodelling/nbval), which were developed as part of the European funded project: [OpenDreamKit](www.opendreamkit.org). Such tools introduce very much needed version control and validation capabilities to the Jupyter notebooks, addressing some of the issues mentioned before.
+During the workshop, I introduced two tools: [nbdime](https://github.com/jupyter/nbdime) and [nbval](https://github.com/computationalmodelling/nbval), which were developed as part of the European funded project: [OpenDreamKit](https://opendreamkit.org). Such tools introduce very much needed version control and validation capabilities to the Jupyter notebooks, addressing some of the issues mentioned before.
 
 So in order to cover these tools as well as how you would integrate them within your
 workflow I divided the workshop in three parts: diffing and merging of the notebooks, notebooks validation, and a brief 101 on reproducibility practices.
@@ -88,6 +88,6 @@ The closing to the workshop was a 101 on working towards reproducible scientific
 
 Let me highlight that all the materials for the workshop can be found at: [https://github.com/trallard/JNB_reproducible](https://github.com/trallard/JNB_reproducible) and that all of it is completely self contained in the form of a Docker container.
 
-If you missed out on the conference and would like to see the videos and slides of the various talks do not forget to visit the [RSE conference website](http://rse.ac.uk/conf2017/talk-slides-downloads/).
+If you missed out on the conference and would like to see the videos and slides of the various talks do not forget to visit the [RSE conference website](https://rse.ac.uk/conf2017/talk-slides-downloads/).
 
 ---

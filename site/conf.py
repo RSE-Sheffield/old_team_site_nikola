@@ -170,6 +170,7 @@ NAVIGATION_LINKS = {
             (
                 ('/contact', 'Contact Us'),
                 ('/contact/team', 'RSE Team'), 
+                ('/contact/alumni', 'Alumni'), 
             ), 
             'Contact'
         ),

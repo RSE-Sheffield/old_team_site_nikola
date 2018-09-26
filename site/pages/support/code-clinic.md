@@ -11,7 +11,7 @@ The Code Clinics is a 2-hours session (held every 2-weeks) run by RSE@Sheffield 
 We would like the "code clinics" to be a semi-formal venue and encourage anyone from the University of Sheffield to drop in, so registration prior to the session is not necessary. However, a short email with a brief explanation of the type of assistance required would help us to have the people with the relevant experience available.  
 
 
-Upon your arrival, you will be asked to fill a registeration form, explaining (in one or two sentences) the problem or question. If you are not sure if your problem is appropriate,  please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](http://rse.shef.ac.uk/contact). You are expected to provide us a reproducible example of the problem in addition to the source code.  Feel free to bring your data or code on a laptop.  
+Upon your arrival, you will be asked to fill a registeration form, explaining (in one or two sentences) the problem or question. If you are not sure if your problem is appropriate,  please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](https://rse.shef.ac.uk/contact/). You are expected to provide us a reproducible example of the problem in addition to the source code.  Feel free to bring your data or code on a laptop.  
 
 
 During the Code Clinic session, someone from the RSE team or an experienced programmer will look at your code and will review your code. They may make suggestions on how you can get help via online forums. We will assign you to an RSE team member with right set of skills and will book you an appointment for next Code Clinic session. 
@@ -39,7 +39,7 @@ If your specific problem does not fit to the examples above, or you are just cur
 
 
 ## Where and when?
-Dates and location will be announced later via the [mailing-list](../../community). Any changes and extra events will be sent to the mailing list only.
+Dates and location will be announced later via the [mailing-list](https://rse.shef.ac.uk/community/). Any changes and extra events will be sent to the mailing list only.
 
 <!--
 Upcoming "code clinics" sessions will be held as follows:
@@ -54,7 +54,7 @@ Where: COM-G12-Main Lewin, Regent Court, Computer Science
 
 
 ## Interested in getting involved?
-If you would like to get involve and help a fellow developer, please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](../../contact).
+If you would like to get involve and help a fellow developer, please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](https://rse.shef.ac.uk/contact/).
 
 
 <!--

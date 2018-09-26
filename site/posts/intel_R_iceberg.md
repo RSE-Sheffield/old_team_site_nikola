@@ -20,7 +20,7 @@ If it works more quickly for you, or if you have problems, please let us know by
 
 I took over building [R for Iceberg](http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html), Sheffield's High Performance Computing System, around a year ago and have been incrementally improving both the install and the documentation with every release. Something that's been bothering me for a while is the lack of optimisation. The standard Iceberg build uses an ancient version of the gcc compiler and (probably) unoptimised versions of [BLAS](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms) and [LAPCK](https://en.wikipedia.org/wiki/LAPACK).
 
-BLAS and LAPACK are extremely important libraries -- they provide the code that programs such as R use for linear algebra: Matrix-Matrix multiplication, Cholesky decomposition, principle component analysis and so on. It's important to note that there are lots of implementations of BLAS and LAPACK: [ATLAS](http://math-atlas.sourceforge.net/), [OpenBLAS](http://www.openblas.net/) and the [Intel MKL](https://software.intel.com/en-us/intel-mkl) are three well-known examples. Written in Fortran, the interfaces of all of these versions are identical, which means you can use them interchangeably, but the speed of the implementation can vary considerably.
+BLAS and LAPACK are extremely important libraries -- they provide the code that programs such as R use for linear algebra: Matrix-Matrix multiplication, Cholesky decomposition, principle component analysis and so on. It's important to note that there are lots of implementations of BLAS and LAPACK: [ATLAS](http://math-atlas.sourceforge.net/), [OpenBLAS](http://www.openblas.net/) and the [Intel MKL](https://software.intel.com/en-us/mkl) are three well-known examples. Written in Fortran, the interfaces of all of these versions are identical, which means you can use them interchangeably, but the speed of the implementation can vary considerably.
 
 The BLAS and LAPACK implementations on Iceberg are undocumented (before my time!) which means that we have no idea what we are dealing with. Perhaps they are optimised, perhaps not. I suspected 'not'.
 
@@ -197,7 +197,7 @@ Another way of viewing these results is to see the speed up compared to the stan
 
 **Parallel environment**
 
-The type of parallelisation in use here is [OpenMP](http://openmp.org/wp/). As such, you need to use Iceberg's openmp environment.  That is, if you want 8 cores (say), add the following to your submission  script
+The type of parallelisation in use here is [OpenMP](https://www.openmp.org/). As such, you need to use Iceberg's openmp environment.  That is, if you want 8 cores (say), add the following to your submission  script
 
 <pre>
 #$ -pe openmp 8

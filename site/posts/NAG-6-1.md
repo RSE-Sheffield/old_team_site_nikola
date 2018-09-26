@@ -16,6 +16,6 @@ Version 6.1 has just been released:
 
 ![NAG Fortran Compiler Screenshot](/images/macFB2a.PNG)
 
- * Details at [http://www.nag.co.uk/nag-compiler](http://www.nag.co.uk/nag-compiler)
- * Download at [http://www.nag.co.uk/content/downloads-nag-fortran-compiler-versions](http://www.nag.co.uk/content/downloads-nag-fortran-compiler-versions)
+ * Details at [https://www.nag.co.uk/nag-compiler](https://www.nag.co.uk/nag-compiler)
+ * Download at [https://www.nag.co.uk/content/downloads-nag-fortran-compiler-versions](https://www.nag.co.uk/content/downloads-nag-fortran-compiler-versions)
  * Obtain licenses from **support@nag.co.uk** - Ensure that you email them from your @Sheffield.ac.uk email address
