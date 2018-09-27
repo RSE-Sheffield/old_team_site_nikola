@@ -1,7 +1,7 @@
 <!--
 .. title: Osteolytica Project Wrapup
 .. author: Twin Karmakharm
-.. slug: 2nd-gpu-seminar-amr
+.. slug: osteolytica-project-wrapup
 .. date: 2018-09-17 14:00:00 UTC+01:00
 .. tags:
 .. category:
