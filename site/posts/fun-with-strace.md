@@ -148,7 +148,7 @@ to deal with.
 ## Fanzine!
 
 If you liked this, then you should check out this [strace
-fanzine](http://jvns.ca/blog/2015/04/14/strace-zine/).
+fanzine](https://jvns.ca/blog/2015/04/14/strace-zine/).
 I cannot recommend it enough.
 It's enthusiastic, witty, fun to read, and you will learn
 something about `strace` and system calls (I did!).

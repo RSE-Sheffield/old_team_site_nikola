@@ -16,7 +16,7 @@ Members of the University of Sheffield have access to several commercial Fortran
 
 NAG Fortran Compiler (Windows, MacOS X and Linux)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-According to the 2015 Fortran UK compiler comparisons, the NAG compiler was one of the best diagnostic compilers available: http://www.fortran.uk/fortran-compiler-comparisons-2015/intellinux-fortran-compiler-diagnostic-capabilities/
+According to the 2015 Fortran UK compiler comparisons, the NAG compiler was one of the best diagnostic compilers available: https://www.fortran.uk/fortran-compiler-comparisons/intellinux-fortran-compiler-diagnostic-capabilities/
 
 The Windows and Mac versions of the NAG compiler have graphical user interfaces containing full documentation for the Fortran language. Combined with the fact that students can install it on their personal machines, this makes it an ideal compiler for teaching and learning Fortran. Unfortunately, the Linux version is command line only and so is not as easy to use.
 
@@ -24,19 +24,19 @@ The Windows and Mac versions of the NAG compiler have graphical user interfaces 
 * Installed on the Iceberg High Performance Computing facility: http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/compilers/nag.html
 * Unlimited number of licenses for members of the University
 * Network access not required at compile time
-* Download (University staff and students only): https://cics.dept.shef.ac.uk/software/
-*	Vendor Website: http://www.nag.co.uk/nagware/np.asp
+* Download (University staff and students only): https://www.sheffield.ac.uk/software/
+*	Vendor Website: https://www.nag.co.uk/nag-compiler
 
 Intel Fortran Compiler (Windows, MacOS X and Linux)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-On average, programs generated using the Intel Fortran Compiler run faster than those produced by other Fortran compilers (see http://www.fortran.uk/fortran-compiler-comparisons-2015/polyhedron-benchmarks-linux64-on-intel/ for details). At Sheffield, the small number of network licenses mean this compiler is suitable for research use only, i.e. not suitable for teaching use. Our license also allows use of Intel's debugger and the Math Kernel Library (MKL) which includes optimised versions of the BLAS, LAPACK, FFTW etc.
+On average, programs generated using the Intel Fortran Compiler run faster than those produced by other Fortran compilers (see https://www.fortran.uk/fortran-compiler-comparisons/polyhedron-benchmarks-linux64-on-intel/ for details). At Sheffield, the small number of network licenses mean this compiler is suitable for research use only, i.e. not suitable for teaching use. Our license also allows use of Intel's debugger and the Math Kernel Library (MKL) which includes optimised versions of the BLAS, LAPACK, FFTW etc.
 
 * Best for compute intensive research.
 * Small number of network licenses. Need to be connected to the network at compile time
-* Installed on the Iceberg High Performance Computing facility: http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/compilers/intel.html
+* Installed on the Iceberg High Performance Computing facility: http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/compilers/intel_compilers.html
 * Can be used as a mex compiler for MATLAB (Windows only)
-* Download (University staff and students only): https://cics.dept.shef.ac.uk/software/
-* Vendor Website: http://software.intel.com/en-us/intel-compilers
+* Download (University staff and students only): https://www.sheffield.ac.uk/software/
+* Vendor Website: https://software.intel.com/en-us/intel-compilers
 
 PGI Fortran Compiler (Linux and Windows)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,7 +45,7 @@ The PGI Compiler is a useful alternative to the Intel Compiler but its real stre
 * Best for GPU development
 * Small number of network licenses. Need to be connected to the network at compile time
 * Installed on the Iceberg High Performance Computing facility: http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/compilers/pgi.html
-* Vendor Website: http://www.pgroup.com/
+* Vendor Website: https://www.pgroup.com/
 
 Silverfrost Fortran Compiler (Windows only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,15 +65,15 @@ Numerical Fortran Libraries
 ---------------------------
 The University of Sheffield has site licenses for the following Fortran numerical libraries:
 
-* `NAG Fortran Library <http://www.nag.co.uk/numeric/fl/FLdescription.asp>`_. Contains 1844 user-callable routines covering a huge variety of mathematical and statistical areas.
+* `NAG Fortran Library <https://www.nag.co.uk/nag-fortran-library>`_. Contains 1844 user-callable routines covering a huge variety of mathematical and statistical areas.
 
-  * Obtain the NAG Fortran Library from CiCS' software download site. (University staff and students only). https://cics.dept.shef.ac.uk/software/
+  * Obtain the NAG Fortran Library from CiCS' software download site. (University staff and students only). https://www.sheffield.ac.uk/software/
   * NAG Fortran Library documentation on Sheffield's High Performance Computing cluster: http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/libs/nagfortran.html
-  * Complete list of functions provided by the NAG Fortran library: http://www.nag.co.uk/numeric/fl/nagdoc_fl25/html/FRONTMATTER/manconts.html
+  * Complete list of functions provided by the NAG Fortran library: https://www.nag.co.uk/numeric/fl/nagdoc_fl25/html/FRONTMATTER/manconts.html
 
-* `Intel Math kernel Library (MKL) <https://software.intel.com/en-us/intel-mkl>`_. Contains extremely fast functions for linear algebra, fourier transforms, data fitting and statistics.
+* `Intel Math kernel Library (MKL) <https://software.intel.com/en-us/mkl>`_. Contains extremely fast functions for linear algebra, fourier transforms, data fitting and statistics.
 
-  * The MKL is distributed as part of the Intel compiler suite which can be obtained from CiCS' software download site. (University staff and students only) https://cics.dept.shef.ac.uk/software/
+  * The MKL is distributed as part of the Intel compiler suite which can be obtained from CiCS' software download site. (University staff and students only) https://www.sheffield.ac.uk/software/
 
 
 Additional Fortran Resources

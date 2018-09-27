@@ -1,19 +1,17 @@
 <!--
 .. title: New Group Member: Phil Tooley 
-.. author: Phil Tooley
 .. slug: philtooley_intro
 .. date: 2017-10-31 15:56:00 UTC
-.. tags: mathjax
-.. category:
-.. link:
-.. description:
+.. tags: 
 .. type: text
+.. author: Phil Tooley
+.. has_math: yes
 -->
 
 I am thrilled to have joined the [Research Software Engineering team at
-Sheffield](http://rse.shef.ac.uk/). My new role is attached to the [INSIGNEO](https://insigneo.org)
+Sheffield](https://rse.shef.ac.uk/). My new role is attached to the [INSIGNEO](https://insigneo.org)
 Institute for in silico Medicine here at the University of Sheffield, developing image registration
-software as part of the [CompBioMed](https://compbiomed.eu) project.   
+software as part of the [CompBioMed](http://www.compbiomed.eu) project.   
 
 ## About Me
 <img src="/images/ptooley.jpg" align="right" />
@@ -25,7 +23,7 @@ scientific computing, and enjoy trying to make python speed competitive with C a
 Although I am a user of both C(++) and Fortran I find that python is often a better choice for many
 tasks even in high performance scientific computing. As well as the huge array of fast mathematical libraries
 available to python, it is also possible to write custom routines in pure
-([Numba](https://numba.pydata.org)) or nearly-pure ([Cython](https://cython.org)) python
+([Numba](https://numba.pydata.org)) or nearly-pure ([Cython](http://cython.org)) python
 code, and compile them to native machine code.  This can give python equivalent performance to
 traditional C or Fortran codes, and opens up the possibility of running python code efficiently
 on HPC platforms. (More to come on this topic...)
@@ -35,7 +33,7 @@ Outside the office you will usually find me rock climbing or hiking somewhere.
 ### My previous work
 
 For the last 4 years I have been working on my Ph.D in Theoretical and Computational Plasma Physics
-at the [University of Strathclyde](https://strath.ac.uk) working on novel accelerator technology
+at the [University of Strathclyde](https://www.strath.ac.uk) working on novel accelerator technology
 known as Laser Wakefield Acceleration (LWFA).  This involves firing a short \\((30\\,
 \\mathrm{fs})\\) but highly intense \\((10^{25}\\mathrm{W/m^2})\\) laser pulse, into a jet of
 helium gas.  The laser ionises the gas to a plasma and drives an electrostatic plasma wave with

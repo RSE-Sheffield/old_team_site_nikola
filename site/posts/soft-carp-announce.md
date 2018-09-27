@@ -16,7 +16,7 @@ The University of Sheffield is now a Software Carpentry Partner Organisation, al
 
 **Edit**: 
 
-Our first Software Carpentry workshop is scheduled for [16th and 17th August](http://rse.shef.ac.uk/2017-08-16-sheffield/)!
+Our first Software Carpentry workshop is scheduled for [16th and 17th August](https://rse.shef.ac.uk/2017-08-16-sheffield/)!
 
 ---
 
@@ -75,7 +75,7 @@ The Software and Data Carpentry organisations ask that accredited instructors de
 
 The University is now a Software Carpentry Partner Organisation so can run many workshops per year using the Software Carpentry and Data Carpentry branding.  We could run workshops without the branding but Software and Data Carpentry are now familiar names to researchers (and potentially employers) and by working closely with those two organisations we become part of a global network of instructors with which we can share ideas and materials.
 
-The RSE team and Library collectively now have five accredited Software and Data Carpentry instructors: Mike Croucher received training some time ago and in March Tania Allard and I from the [RSE team](http://rse.shef.ac.uk/contact/) plus [Jez Cope and Beth Hellen][library-team] from the Library's Research Services Unit participated in [instructor training in Oxford][sc-training-oxford].  
+The RSE team and Library collectively now have five accredited Software and Data Carpentry instructors: Mike Croucher received training some time ago and in March Tania Allard and I from the [RSE team](https://rse.shef.ac.uk/contact/) plus [Jez Cope and Beth Hellen][library-team] from the Library's Research Services Unit participated in [instructor training in Oxford][sc-training-oxford].  
 
 ![Software Carpentry Instructor Training session](/images/soft-carp-instructor-training.jpg)
 
@@ -83,10 +83,10 @@ The four of us spent two days learning about the SC/DC teaching style, what make
 
 We are now planning our first Software Carpentry and Data Carpentry workshops.  These are to be held later in the summer.  
 
-**Keep an eye on this blog, the `RSE-group@sheffield.ac.uk` mailing list and [@RSE_Sheffield](https://www.twitter.com/rse_sheffield) for dates!**
+**Keep an eye on this blog, the `RSE-group@sheffield.ac.uk` mailing list and [@RSE_Sheffield](https://twitter.com/rse_sheffield) for dates!**
 
-[dc-lessons]: http://www.datacarpentry.org/lessons/
-[dc]: http://www.datacarpentry.org/
+[dc-lessons]: https://datacarpentry.org/lessons/
+[dc]: https://datacarpentry.org/
 [gis]: https://en.wikipedia.org/wiki/Geographic_information_system
 [library-team]: https://www.sheffield.ac.uk/library/libstaff/researchservices
 [make]: https://en.wikipedia.org/wiki/Make_(software)

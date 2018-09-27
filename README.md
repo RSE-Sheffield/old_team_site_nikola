@@ -15,7 +15,7 @@ First install conda; then:
 ```bash
 conda create -n nikola python=3.6
 source activate nikola
-pip install --upgrade 'Nikola[extras]'
+pip install --upgrade -r "requirements.txt"
 ```
 
 On macOS you [may also need to](http://stackoverflow.com/questions/23172384/lxml-runtime-error-reason-incompatible-library-version-etree-so-requires-vers<Paste>) add the following to your `~/.bashrc`:
@@ -36,11 +36,8 @@ mkdir ~/.venvs
 python3.6 -m venv ~/.venvs/rse-blog
 # Activate the venv
 source ~/.venvs/rse-blog/bin/activate
-# Install the wheel package, needed to install the (binary) wheel versions of
-# various other packages (often far quicker than installing from source)
-pip install wheel
-# Install nikola static site generator package plus extras
-pip install 'Nikola[extras]'
+# Install dependencies via pip, including wheel and nikola
+pip install --upgrade -r "requirements.txt"
 ```
 
 ## Writing a blog post

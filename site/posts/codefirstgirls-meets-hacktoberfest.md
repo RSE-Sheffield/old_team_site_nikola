@@ -18,7 +18,7 @@
 </div>
 
 It is that time of the year again! The autumn-winter courses for
-[CodeFirst: girls](http://www.codefirstgirls.org.uk/)
+[CodeFirst: girls](https://www.codefirstgirls.org.uk/)
 are in full swing at Sheffield, Manchester and many other locations all
  over the UK.
 
