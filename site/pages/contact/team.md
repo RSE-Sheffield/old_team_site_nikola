@@ -28,16 +28,16 @@ Will is a Research Software Engineer who is curently working on:
 
   - Workflows and data management for the [Sheffield Biomedical Research Centre](http://sheffieldbrc.nihr.ac.uk/)
   - Research computing strategy and support for the [Insigneo Institute for in silico Medicine](https://insigneo.org/)
-  - Software development and code optimisation for [Out Of Our Minds](http://outofourminds.shef.ac.uk/), 
+  - Software development and code optimisation for [Out Of Our Minds](http://outofourminds.shef.ac.uk/),
     a Leverhume Trust-funded project to "develop new, accurate ways of describing speakers’ linguistic knowledge, by
     using machine-learning techniques that mimic the way in which humans learn".
 
 Previous projects:
 
-  - A [JupyterHub service for the University's ShARC HPC system](http://docs.hpc.shef.ac.uk/en/latest/hpc/jupyterhub.html), 
-    plus training materials that can be delivered using that service 
+  - A [JupyterHub service for the University's ShARC HPC system](http://docs.hpc.shef.ac.uk/en/latest/hpc/jupyterhub.html),
+    plus training materials that can be delivered using that service
     (the materials relate to [multithreading/multiprocessing using Python](https://github.com/RSE-Sheffield/hi-perf-ipynb).
-    Work conducted as part of [OpenDreamKit](https://opendreamkit.org/), 
+    Work conducted as part of [OpenDreamKit](https://opendreamkit.org/),
     an EU-funded project to further the computational mathematics ecosystem.
 
 The path to this point has not been particularly direct:
@@ -52,8 +52,8 @@ helping researchers optimise data analysis workflows (primarily using higher-lev
 providing training in RSE best practices and
 systems administration.
 
-He is an accredited [Carpentries instructor](https://carpentries.org/instructors/) and 
-has facilitated Software and Data Carpentry workshops on topics 
+He is an accredited [Carpentries instructor](https://carpentries.org/instructors/) and
+has facilitated Software and Data Carpentry workshops on topics
 including Python, R, version control with Git, the UNIX shell and SQL.
 
 * Email: w.furnass (at) sheffield.ac.uk
@@ -61,6 +61,7 @@ including Python, R, version control with Git, the UNIX shell and SQL.
 * Twitter: [@willfurnass](https://twitter.com/willfurnass)
 
 # Twin Karmakharm
+<a name="twin"></a>
 
 Twin is a Research Software Engineer who completed his PhD at the University of Sheffield. He specialises in High-performance agent-based pedestrian simulation, Parallel computing using GPUs, Virtual reality and Deep learning. He currently provides consultancy, training and technical support for researchers on Deep learning and other GPU related software engineering problems.
 

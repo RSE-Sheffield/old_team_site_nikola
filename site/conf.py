@@ -132,46 +132,47 @@ NAVIGATION_LINKS = {
         (
             (
                 ('/service', 'RSE Service Overview'),
-                ('/service/provision', 'Service Model Provision'), 
-                ('/service/activities', 'What we do'), 
+                ('/service/provision', 'Service Model Provision'),
+                ('/service/activities', 'What we do'),
                 ('/service/testimonials', 'Testimonials'),
                 #('/service/projects', 'Projects'),
-            ), 
+            ),
             'RSE Service'
         ),
         (
             (
                 ('/support/code-clinic', 'Code Clinic'),
-            ), 
+            ),
             'Support'
 
         ),
         (
             (
                 ('/training', 'Overview'),
-                ('/training/events', 'Training Events'), 
+                ('/training/events', 'Training Events'),
                 #('/training/on-demand', 'On Demand Training'),
                 #('/training/development', 'Development of Training'),
                 ('/training/carpentry', 'Software and Data Carpentry'),
-            ), 
+                ('/training/deeplearning', 'Deep Learning'),
+            ),
             'Training'
         ),
         (
             (
                 ('/community', 'Overview'),
-                ('/community/coffee-and-cake', 'Coffee and Cake'), 
+                ('/community/coffee-and-cake', 'Coffee and Cake'),
                 ('/community/seminars', 'Seminar Series'),
                 #('/community/asking-for-help', 'Asking for Help'),
                 ('/community/resources-and-equipment', 'Resources and Equipment'),
-            ), 
+            ),
             'RSE Community'
         ),
         (
             (
                 ('/contact', 'Contact Us'),
-                ('/contact/team', 'RSE Team'), 
-                ('/contact/alumni', 'Alumni'), 
-            ), 
+                ('/contact/team', 'RSE Team'),
+                ('/contact/alumni', 'Alumni'),
+            ),
             'Contact'
         ),
     ),
