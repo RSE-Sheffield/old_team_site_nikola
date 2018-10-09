@@ -164,6 +164,7 @@ NAVIGATION_LINKS = {
                 ('/community/seminars', 'Seminar Series'),
                 #('/community/asking-for-help', 'Asking for Help'),
                 ('/community/resources-and-equipment', 'Resources and Equipment'),
+                ('/community/job-descriptions', 'RSE Job Descriptions'),
             ),
             'RSE Community'
         ),
