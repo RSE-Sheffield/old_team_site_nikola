@@ -15,6 +15,8 @@ In conjunction with the release of these RSE job descriptions **I am excited to 
 
 [Follow this link for the job advert](https://jobs.shef.ac.uk/sap/bc/webdynpro/sap/hrrcf_a_posting_apply?PARAM=cG9zdF9pbnN0X2d1aWQ9NUJCQzAwMEQ0ODI4MTVGQUUxMDAwMDAwQUMxRTg4NzgmY2FuZF90eXBlPUVYVA%3d%3d&sap-client=400&sap-language=EN&sap-accessibility=X&sap-ep-themeroot=%2fSAP%2fPUBLIC%2fBC%2fUR%2fuos#)
 
+[jobs.ac.uk advert](https://www.jobs.ac.uk/job/BNJ857/research-software-engineer-rse)
+
 Informal questions relating to this post or any other matter can be directed to myself (Paul Richmond) via the RSE website [contact](../../contact) details.
 
 <a name="open_ended_footnote">1</a>: The University of Sheffield RSE strategy has enabled current RSE team members to transition into open-ended positions from fixed term contracts.
