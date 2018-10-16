@@ -48,7 +48,7 @@ We're **offering a range of sessions, open to anyone, in a friendly informal env
 We'll kick off with an **introductory session on open source** on the **2nd of October** at the [Sheffield R Users Group meetup](https://www.meetup.com/SheffieldR-Sheffield-R-Users-Group/events/254986012/). The focus of the session will be on **using GitHub to explore and contribute to open source and is not limited to R users**. Also note that there is a huge variety of projects available, many not involving coding at all (ie collaborative writing projects, training material development). So feel free to attend if your just curious about open source in general. 
 
 ### Hacky hour sessions
-#### [**Meeting room 1, the Diamond**](https://goo.gl/maps/hs685HH7cwx), **5:30 pm  to  8:30 pm**  
+#### [**Room 3.15 (Meeting Room 1), the Diamond**](https://goo.gl/maps/hs685HH7cwx), **5:30 pm  to  8:30 pm**  
 ##### The University of Sheffield, 32 Leavygreave Rd, S3 7RD
 
 For **every following tuesday evening of October**, we've booked a **room to explore Hacktoberfest projects together!** The room is booked on the following dates:
