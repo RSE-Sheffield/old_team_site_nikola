@@ -7,7 +7,7 @@
 
 <br>
 
-Code Clinics are research software engineering (RSE) **fortnightly support sessions** run by **RSE@Sheffield**. They are open to **anyone at TUoS writing code for research** to get help with programming problems and general advice on best practice. 
+Code Clinics are research software engineering (RSE) **fortnightly support sessions** run by **RSE@Sheffield**. They are open to **anyone at TUoS writing code for research** to get help with programming problems and general advice on best practice.
 
 At each session, **members of the RSE team will be available to review code, advise, troubleshoot and suggest ways to improve your computational workflows**.
 
@@ -19,17 +19,17 @@ At each session, **members of the RSE team will be available to review code, adv
 - #### **Where: COM-G12-Main Lewin Lab**
   [Regent Court, Dept. of Computer Science, The University of Sheffield, 211 Portobello, Sheffield, S1 4DP](https://goo.gl/maps/t88GdT9Yjmz).
 
-- #### **Who: Are you...** 
+- #### **Who: Are you...**
     - Thinking of ways to improve your code?
     - Want to automate a task (e.g: series of scripts)?
     - Unsure of which software tools to use for your project?
     - You have a lot of data and need help organising, storing, accessing or visualising it?
-    - Need some advice on optimising your code? 
+    - Need some advice on optimising your code?
     - Want to know whether your code could run faster on multiple cores or GPUs?
     - Want to re-write your code written in one language (e.g: Excel) in another language such as Python?
     - Need help with version control?
     - Want to know more about making your code open and/or citable?
-    
+
     #### We can help!
 
 <br>
@@ -38,7 +38,7 @@ At each session, **members of the RSE team will be available to review code, adv
 
 ## Book a session
 
-Clinic sessions are split into 4 half-hourly slots, bookable for consultation. To book, please **fill in this [brief form](https://goo.gl/forms/ws2OxZavIlL8Za4m1).** If there is time in between slots, we will also strive to accomodate drop-ins. However, to avoid disappointment and allow us to better allocate the most appropriate members of the team to help you, we strongly advise you book in advance.
+Clinic sessions are split into 4 half-hourly slots, bookable for consultation. To book, please **fill in this [brief form](https://goo.gl/forms/5MVy0jM6xQhWlpmn1).** If there is time in between slots, we will also strive to accomodate drop-ins. However, to avoid disappointment and allow us to better allocate the most appropriate members of the team to help you, we strongly advise you book in advance.
 
 ### Preparing for your session:
 
@@ -53,6 +53,9 @@ Clinic sessions are split into 4 half-hourly slots, bookable for consultation. T
 
 We will always try and help as best as possible. The overarching aim of the sessions is to better equip you to solve your own computational problems. This may include directing you to relevant documentation, appropriate online forums and resources, relevant upcoming training sessions, etc.
 
+### Cancelling your session:
+
+If you cannot attend the session, please give a **No** response on the calendar invite so we can proceed to remove your booking from the system.
 
 ***
 
@@ -63,6 +66,6 @@ If you would like to get involved as a helper, please contact [Dr Mozhgan Kabiri
 
 
 <!--
-## Usefull links: 
+## Usefull links:
 [Good Coding Practice]()
 -->
