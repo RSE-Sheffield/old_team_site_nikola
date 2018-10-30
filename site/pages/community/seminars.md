@@ -11,7 +11,7 @@ This page provides a list of upcoming and previous seminars held by RSE@Sheffiel
 
 If you would like to recommend a speaker or would like to give a talk then please [contact us](/contact). We have a budget to support inviting speakers.
 
-# Upcoming Senimars #
+# Upcoming Seminars #
 <br/>
 
 ### <span style="background-color: #FFFF00">November 27, 2018</span> &mdash; 12:00-13:00, COM-G12-Main Lewin
