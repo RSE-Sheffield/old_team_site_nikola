@@ -60,29 +60,29 @@ If you would like to contribute to the list, please get in touch with Twin at [t
 * Major DL software packages
   * [Caffe](http://caffe.berkeleyvision.org/)
   * [Caffe2](https://caffe2.ai/)
+  * [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/)
+  * [DIGITS](https://developer.nvidia.com/digits) - GUI and scheduler that uses Caffe and Torch backend
+  * [Keras](https://keras.io/) - Wrapper over Tensorflow, Theano and CNTK
+  * [MXNet](https://mxnet.apache.org/)
+  * [PyTorch](http://pytorch.org/)
   * [Tensorflow](https://www.tensorflow.org/)
   * [Theano](deeplearning.net/software/theano)
   * [Torch](http://torch.ch/)
-  * [PyTorch](http://pytorch.org/)
-  * [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/)
-  * [Keras](https://keras.io/) - Wrapper over Tensorflow, Theano and CNTK
-  * [DIGITS](https://developer.nvidia.com/digits) - GUI and scheduler that uses Caffe and Torch backend
 * Datasets
   * [MNIST](http://yann.lecun.com/exdb/mnist/) - Handwritten digits dataset
   * [Cifar](https://www.cs.toronto.edu/~kriz/cifar.html)/[TinyImages](http://groups.csail.mit.edu/vision/TinyImages/) - Small images classfication
   * [Imagenet](http://www.image-net.org/) - Image classification
   * [COCO](http://cocodataset.org) - Image classification and object segmentation
   * [Kaggle](https://www.kaggle.com/) - Various datasets and competitions
-
-* Blog post on more specific DL/ML topics
+* Blog posts on more specific DL/ML topics
   * [Colah's blog](http://colah.github.io/)
   * [Andrej Karpathy's blog](http://karpathy.github.io/)
+  * [Deep learning on Matlab](https://sites.google.com/a/sheffield.ac.uk/rcg/my-blog/research-computing-notes/deeplearningusingmatlab2018bgpurequired)
 * Interesting Applications and news
   * [Converting photos to a particular art style](https://arxiv.org/abs/1508.06576)
   * [Google's deep dream](https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html)
   * [AlphaGo](https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf)
   * [Nvidia's AI news portal](https://news.developer.nvidia.com/category/artificial-intelligence/)
-
 * Deep Learning resource aggregate
   * [deeplearning.net](http://deeplearning.net/)
   * [Nvidia deep learning resources](https://developer.nvidia.com/deep-learning-resources)
