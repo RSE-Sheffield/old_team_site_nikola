@@ -14,6 +14,17 @@ If you would like to recommend a speaker or would like to give a talk then pleas
 # Upcoming Seminars #
 <br/>
 
+### <span style="background-color: #FFFF00">January 29, 2019</span> &mdash; 12:00-13:00, COM-G12-Main Lewin
+**Spiridon Siouris, University of Sheffield**
+
+**Talk:** *"Taking up development of existing scientific codes. A discussion on common issues and effective ways of dealing with them"*
+
+**Abstract:** TBA
+
+
+<br/><hr/><br/>
+
+
 ### <span style="background-color: #FFFF00">November 27, 2018</span> &mdash; 12:00-13:00, COM-G12-Main Lewin
 **Luke Mason, Application Performance Engineering Group Leader at Hartree Center**
 
@@ -29,7 +40,8 @@ The challenges faced by CCP’s and HEC consortia in modernising their codes are
 
 **Bio:** Luke leads the Application Performance Engineering group at the Hartree Centre. The group specialises in code scalability and performance on HPC (high performance computing) systems as well as porting and optimisation for emerging and novel architectures. He is experienced in working alongside both industrial and academic scientists to produce accurate and efficient code across a range of disciplines and architectures. His group is involved in development for the Square Kilometre Array and the EPSRC funded SERT (Scale-free, Energy-aware, Resilient and Transparent Adaptation of CSE applications to Mega-core Systems) project to name a few of its current activities.
 
-<br/><hr/><br/>
+# Previous Seminars #
+<br/>
 
 ### <span style="background-color: #FFFF00">October 30, 2018</span> &mdash; 12:00-13:00, COM-G12-Main Lewin
 **Andrew Turner (EPCC)**
@@ -54,8 +66,7 @@ Benchmarking repository: [https://github.com/hpc-uk/archer-benchmarks](https://g
 
 **Bio:** [https://www.epcc.ed.ac.uk/about/staff/dr-rob-baxter](https://www.epcc.ed.ac.uk/about/staff/dr-rob-baxter)
 
-# Previous Seminars #
-<br/>
+<br/><hr/><br/>
 
 ### <span style="background-color: #FFFF00">June 27, 2018</span> &mdash; 15:30-16:30, Hicks building, Lecture Theatre 7
 
