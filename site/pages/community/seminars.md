@@ -15,12 +15,21 @@ If you would like to recommend a speaker or would like to give a talk then pleas
 <br/>
 
 ### <span style="background-color: #FFFF00">January 29, 2019</span> &mdash; 12:00-13:00, COM-G12-Main Lewin
-**Spiridon Siouris, University of Sheffield**
+**Dr Spiridon Siouris, University of Sheffield**
 
-**Talk:** *"Taking up development of existing scientific codes. A discussion on common issues and effective ways of dealing with them"*
+**Talk:** *"Taking up development of existing research codes. A discussion on common issues and effective ways of dealing with them"*
 
-**Abstract:** TBA
+**Abstract:** Research codes in Engineering are written with the aim of generating results as quick as possible so that interesting physical phenomena can be analysed. However, time constraints, lack of formal training in Computer Science/Software development, and pressure for results leads to software that can be problematic. In this talk we will discuss about:
 
+* The issues faced with research software and the need for maintainable and reliable code
+* The steps taken for quickly getting familiarised and productive in code development
+* The tools used, such as for documentation, debugging, profiling 
+* Holistic approach on code optimisation
+* Good programming practises, along with references for further reading
+
+The aspects of software development discussed here will be helpful to researchers joining projects that require further development of existing software, and also researchers that are tasked to create new software.
+
+**Bio:** Dr. Spiridon Siouris is a Research Fellow in the Low Carbon Combustion Group in Mechanical Engineering at The University of Sheffield. His research is focused on modeling chemically reacting flows in gas turbine fuel and lubrication systems using CFD and lower order modelling codes. Currently he is working on further developing a CFD code in which wall boundaries can deform according to deposition growth layers due to thermal oxidative degradation in jet fuels (FINCAP project with Rolls Royce). For over a decade he has been involved in numerous software projects for aerospace applications, and has worked alongside students, PhD researchers, and professional engineers developing modeling software. He has been exposed to a wide range in quality of coding, and his enthusiasm for computers, programming and engineering, drive him to educate people towards developing high quality software.
 
 <br/><hr/><br/>
 
@@ -53,6 +62,10 @@ The challenges faced by CCP’s and HEC consortia in modernising their codes are
 Benchmarking repository: [https://github.com/hpc-uk/archer-benchmarks](https://github.com/hpc-uk/archer-benchmarks)
 
 **Bio:** Andy works for EPCC at the University of Edinburgh and has a particular focus on helping users get the best from the national HPC services around the UK. Much of his recent work has focussed on achieving this through an open benchmarking exercise comparing performance across different HPC systems and different applications and by developing HPC Carpentry training to provide researchers with the tools they need to use advanced computing in their research.
+
+
+<center><img src="/seminar_files/img/2018_10_30_epcc.jpg" alt=""  style="max-width: 500px"></center>
+
 
 <br/><hr/><br/>
 
