@@ -65,6 +65,8 @@ Benchmarking repository: [https://github.com/hpc-uk/archer-benchmarks](https://g
 
 
 <center><img src="/seminar_files/img/2018_10_30_epcc.jpg" alt=""  style="max-width: 500px"></center>
+<strong><a href="https://aturner-epcc.github.io/presentations/Sheff_Oct2018/">SLIDES</a></strong>
+
 
 
 <br/><hr/><br/>
