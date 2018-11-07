@@ -47,7 +47,7 @@ The aspects of software development discussed here will be helpful to researcher
 
 The challenges faced by CCP’s and HEC consortia in modernising their codes are fed directly into Software Outlook’s remit. During this talk, we will discuss these challenges and the subsequent work being done by Software Outlook.
 
-**Bio:** Luke leads the Application Performance Engineering group at the Hartree Centre. The group specialises in code scalability and performance on HPC (high performance computing) systems as well as porting and optimisation for emerging and novel architectures. He is experienced in working alongside both industrial and academic scientists to produce accurate and efficient code across a range of disciplines and architectures. His group is involved in development for the Square Kilometre Array and the EPSRC funded SERT (Scale-free, Energy-aware, Resilient and Transparent Adaptation of CSE applications to Mega-core Systems) project to name a few of its current activities.
+**Bio:** Luke leads the High Performance Software Engineering group at the Hartree Centre. The group specialises in code scalability and performance on HPC (high performance computing) systems as well as porting and optimisation for emerging and novel architectures. He is experienced in working alongside both industrial and academic scientists to produce accurate and efficient code across a range of disciplines and architectures. His group is involved in development for the Met Office and the EPSRC funded “Big Hypotheses” project, to name just a few of its current activities.
 
 # Previous Seminars #
 <br/>
