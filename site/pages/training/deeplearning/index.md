@@ -6,7 +6,9 @@ In conjunction with [Nvidia Deep Learning Institue (DLI)](https://www.nvidia.com
 
 ## Upcoming Workshops
 
-* 2018-11-28: A one-day **Fundamentals of Deep Learning for Computer Vision** workshop for the [University of Sheffield](https://sheffield.ac.uk) that provides an introduction to deep learning through practial labs using [Nvidia DIGITS](https://developer.nvidia.com/digits) and [Caffe](http://caffe.berkeleyvision.org/). Overview and course materials can be found [here](/training/deeplearning/2018-11-28-dli-sheffield).
+* 2018-12-18: A one-day **Fundamentals of Deep Learning for Computer Vision** workshop for the [University of Sheffield](https://sheffield.ac.uk) that provides an introduction to deep learning through practial labs using [Nvidia DIGITS](https://developer.nvidia.com/digits) and [Caffe](http://caffe.berkeleyvision.org/). Course overview and registration can be found [here](/training/deeplearning/2018-12-18-dli-sheffield).
+
+* 2018-11-28: A one-day **Fundamentals of Deep Learning for Computer Vision** workshop for the [University of Sheffield](https://sheffield.ac.uk) that provides an introduction to deep learning through practial labs using [Nvidia DIGITS](https://developer.nvidia.com/digits) and [Caffe](http://caffe.berkeleyvision.org/). Course overview and registration can be found [here](/training/deeplearning/2018-11-28-dli-sheffield).
 
 
 ## Previous Workshops

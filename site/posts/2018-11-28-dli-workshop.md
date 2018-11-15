@@ -1,5 +1,5 @@
 <!--
-.. title: Upcoming Deep Learning Workshop
+.. title: Upcoming Deep Learning Workshop (28th November 2018)
 .. author: Twin Karmakharm
 .. slug: 2018-11-28-dli-sheffield-news
 .. date: 2018-10-31 10:00:00 UTC
