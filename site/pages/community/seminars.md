@@ -11,8 +11,48 @@ This page provides a list of upcoming and previous seminars held by RSE@Sheffiel
 
 If you would like to recommend a speaker or would like to give a talk then please [contact us](/contact). We have a budget to support inviting speakers.
 
-# Upcoming Senimars #
-### October 30, 2018 &mdash; 12:00-13:00, COM-G12-Main Lewin
+# Upcoming Seminars #
+<br/>
+
+### <span style="background-color: #FFFF00">January 29, 2019</span> &mdash; 12:00-13:00, COM-G12-Main Lewin
+**Dr Spiridon Siouris, University of Sheffield**
+
+**Talk:** *"Taking up development of existing research codes. A discussion on common issues and effective ways of dealing with them"*
+
+**Abstract:** Research codes in Engineering are written with the aim of generating results as quick as possible so that interesting physical phenomena can be analysed. However, time constraints, lack of formal training in Computer Science/Software development, and pressure for results leads to software that can be problematic. In this talk we will discuss about:
+
+* The issues faced with research software and the need for maintainable and reliable code
+* The steps taken for quickly getting familiarised and productive in code development
+* The tools used, such as for documentation, debugging, profiling 
+* Holistic approach on code optimisation
+* Good programming practises, along with references for further reading
+
+The aspects of software development discussed here will be helpful to researchers joining projects that require further development of existing software, and also researchers that are tasked to create new software.
+
+**Bio:** Dr. Spiridon Siouris is a Research Fellow in the Low Carbon Combustion Group in Mechanical Engineering at The University of Sheffield. His research is focused on modeling chemically reacting flows in gas turbine fuel and lubrication systems using CFD and lower order modelling codes. Currently he is working on further developing a CFD code in which wall boundaries can deform according to deposition growth layers due to thermal oxidative degradation in jet fuels (FINCAP project with Rolls Royce). For over a decade he has been involved in numerous software projects for aerospace applications, and has worked alongside students, PhD researchers, and professional engineers developing modeling software. He has been exposed to a wide range in quality of coding, and his enthusiasm for computers, programming and engineering, drive him to educate people towards developing high quality software.
+
+<br/><hr/><br/>
+
+
+### <span style="background-color: #FFFF00">November 27, 2018</span> &mdash; 12:00-13:00, COM-G12-Main Lewin
+**Luke Mason, Application Performance Engineering Group Leader at Hartree Center**
+
+**Talk:** *"Software Outlook"*
+
+**Abstract:** Software Outlook is a project funded by the EPSRC as part of the Computational Science Centre for Research Communities. It aims to support the UK’s Collaborative Computational Projects (CCPs) and High-End Computing (HEC) Consortia in the development and optimisation of their world-leading software. These activities include
+
+* Evaluations of new programming languages, libraries and frameworks
+* Investigations into timely and cost-effective exploitation of current and near-future systems
+* Demonstrations into how specific software technologies can be applied to existing applications
+
+The challenges faced by CCP’s and HEC consortia in modernising their codes are fed directly into Software Outlook’s remit. During this talk, we will discuss these challenges and the subsequent work being done by Software Outlook.
+
+**Bio:** Luke leads the High Performance Software Engineering group at the Hartree Centre. The group specialises in code scalability and performance on HPC (high performance computing) systems as well as porting and optimisation for emerging and novel architectures. He is experienced in working alongside both industrial and academic scientists to produce accurate and efficient code across a range of disciplines and architectures. His group is involved in development for the Met Office and the EPSRC funded “Big Hypotheses” project, to name just a few of its current activities.
+
+# Previous Seminars #
+<br/>
+
+### <span style="background-color: #FFFF00">October 30, 2018</span> &mdash; 12:00-13:00, COM-G12-Main Lewin
 **Andrew Turner (EPCC)**
 
 **Talk:** *"Open source UK HPC benchmarking"*
@@ -23,7 +63,15 @@ Benchmarking repository: [https://github.com/hpc-uk/archer-benchmarks](https://g
 
 **Bio:** Andy works for EPCC at the University of Edinburgh and has a particular focus on helping users get the best from the national HPC services around the UK. Much of his recent work has focussed on achieving this through an open benchmarking exercise comparing performance across different HPC systems and different applications and by developing HPC Carpentry training to provide researchers with the tools they need to use advanced computing in their research.
 
-### September 12, 2018 &mdash; 15:30-16:30, Hicks building, Lecture Theatre 7
+
+<center><img src="/seminar_files/img/2018_10_30_epcc.jpg" alt=""  style="max-width: 500px"></center>
+<strong><a href="https://aturner-epcc.github.io/presentations/Sheff_Oct2018/">SLIDES</a></strong>
+
+
+
+<br/><hr/><br/>
+
+### <span style="background-color: #FFFF00">September 12, 2018</span> &mdash; 15:30-16:30, Hicks building, Lecture Theatre 7
 
 **Rob Baxter (EPCC)**
 
@@ -33,8 +81,9 @@ Benchmarking repository: [https://github.com/hpc-uk/archer-benchmarks](https://g
 
 **Bio:** [https://www.epcc.ed.ac.uk/about/staff/dr-rob-baxter](https://www.epcc.ed.ac.uk/about/staff/dr-rob-baxter)
 
-# Previous Seminars #
-### June 27, 2018 &mdash; 15:30-16:30, Hicks building, Lecture Theatre 7
+<br/><hr/><br/>
+
+### <span style="background-color: #FFFF00">June 27, 2018</span> &mdash; 15:30-16:30, Hicks building, Lecture Theatre 7
 
 **Jos Martin (Mathworks)**
 
@@ -44,7 +93,9 @@ Benchmarking repository: [https://github.com/hpc-uk/archer-benchmarks](https://g
 
 **Bio:** Jos Martin is the senior engineering manager for parallel computing products at MathWorks. He has responsibility for all parts of Parallel Computing Toolbox, including the use of GPU and big data types in other areas. In addition, he is also responsible for MATLAB Drive, MATLAB Connector, and products that help link the desktop to the cloud. Before moving to a development role within MathWorks, he worked as a consultant in the U.K., writing large-scale MATLAB applications, particularly in the finance and automotive sectors. Prior to joining MathWorks in 2000, he held a Royal Society Post-Doctoral Fellowship at the University of Otago, New Zealand. His area of research was Experimental Bose-Einstein Condensation (BEC), a branch of low-temperature atomic physics.
 
-### June 19, 2018 &mdash; 12:00-13:00, COM-G12-Main Lewin ###
+<br/><hr/><br/>
+
+### <span style="background-color: #FFFF00">June 19, 2018</span> &mdash; 12:00-13:00, COM-G12-Main Lewin ###
 
 **Dr Patricio Ortiz, University of Sheffield**
 
@@ -72,7 +123,9 @@ Patricio now works as a Research Software Engineer at the Department of Automati
 <center><img src="/seminar_files/img/2018_06_19_curve.jpg" alt=""  style="max-width: 500px"></center>
 <strong><a href="/seminar_files/slides/2018_06_19_curve_talk.pdf">SLIDES</a></strong>
 
-### April 30, 2018 &mdash; 15:00-16:00, Broad Lane Lecture Theater 11 (BROAD-LT11) ###
+<br/><hr/><br/>
+
+### <span style="background-color: #FFFF00">April 30, 2018</span> &mdash; 15:00-16:00, Broad Lane Lecture Theater 11 (BROAD-LT11) ###
 
 **Peter Heywood, University of Sheffield**
 
@@ -88,7 +141,9 @@ A multi-GPU version of the SATURN macroscopic road network simulation package ha
 
 <center><img src="/seminar_files/img/2018_04_30_roadNetwork.jpg" alt=""  style="max-width: 500px"></center>
 
-### April 16, 2018 &mdash; 15:30-16:30, Hicks building, Lecture Theatre 6
+<br/><hr/><br/>
+
+### <span style="background-color: #FFFF00">April 16, 2018</span> &mdash; 15:30-16:30, Hicks building, Lecture Theatre 6
 
 **David Hubber, Researcher at Ludwig-Maximilians-Universität Munich**
 
@@ -98,7 +153,9 @@ A multi-GPU version of the SATURN macroscopic road network simulation package ha
 
 **Bio:** David Hubber is an astrophysicist by training that has worked extensively on writing software such as GANDALF and SEREN to simulate star forming regions. He has been a researcher at the university of Cardiff, the university of Sheffield, and is currently a Postdoc researcher Ludwig-Maximilians-Universitat Munich.
 
-### November 28, 2017 &mdash; 11:00-12:00, Lecture Theatre G02, Firth Court ###
+<br/><hr/><br/>
+
+### <span style="background-color: #FFFF00">November 28, 2017</span> &mdash; 11:00-12:00, Lecture Theatre G02, Firth Court ###
 
 **Dr Stephen McGough, Newcastle University**
 
@@ -119,7 +176,9 @@ We will present our approach moving forwards to overcome these limitations and p
 <center><img src="/seminar_files/img/2017_11_28_parallem.jpg" alt=""  style="max-width: 500px"></center>
 <strong><a href="/seminar_files/slides/2017_11_28_gpu_parallem_talk.pdf">SLIDES</a></strong>
 
-### September 09, 2017 &mdash; 13:00-14:00, Workroom 3 (205), The Diamond ###
+<br/><hr/><br/>
+
+### <span style="background-color: #FFFF00">September 09, 2017</span> &mdash; 13:00-14:00, Workroom 3 (205), The Diamond ###
 
 **Dr Thomas Nowotny, University of Sussex**
 
@@ -132,7 +191,9 @@ We will present our approach moving forwards to overcome these limitations and p
 <center><img src="/seminar_files/img/2017_09_27_thomas_nowotny.jpg" alt=""  style="max-width: 500px"></center>
 <strong><a href="https://sussex.app.box.com/s/8i7dby89e6fj2t8lw447y68dkrsc1oo5">SLIDES</a></strong>
 
-### August 08, 2017 &mdash; 13:00-14:00, Workroom 3 (205), The Diamond ###
+<br/><hr/><br/>
+
+### <span style="background-color: #FFFF00">August 08, 2017</span> &mdash; 13:00-14:00, Workroom 3 (205), The Diamond ###
 
 **Twin Karmakharm, Research Software Engineer, University of Sheffield**
 
@@ -142,7 +203,9 @@ We will present our approach moving forwards to overcome these limitations and p
 
 <center><img src="/seminar_files/img/2017_08_29_gpu_containers.jpg" alt=""  style="max-width: 500px"></center>
 
-### May 30, 2017 &mdash; 13:00-14:00, Workroom 2 (G05), The Diamond ###
+<br/><hr/><br/>
+
+### <span style="background-color: #FFFF00">May 30, 2017</span> &mdash; 13:00-14:00, Workroom 2 (G05), The Diamond ###
 
 **Ania Brown, Research Software Engineer, Oxford e-Research Centre**
 
