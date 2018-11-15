@@ -26,4 +26,9 @@ In this full-day workshop, you will learn the basics of deep learning by trainin
 
 **Platforms:** [Nvidia DIGITS](https://developer.nvidia.com/digits) and [Caffe](http://caffe.berkeleyvision.org/)
 
-### **[Register for the workshop](https://www.eventbrite.co.uk/e/fundamentals-of-deep-learning-for-computer-vision-nvidia-ambassador-event-tickets-52664367541)**
+
+<div style="width:90%; text-align:center;">
+	<iframe src="https://eventbrite.co.uk/tickets-external?eid=52664367541&ref=etckt" frameborder="0" height="275" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true" ></iframe>
+	<div style="font-family:Helvetica, Arial; font-size:12px; padding:10px 0 5px; margin:2px; width:100%; text-align:left;" ><a class="powered-by-eb" style="color: #ADB0B6; text-decoration: none;" target="_blank" href="https://www.eventbrite.co.uk/">Powered by Eventbrite</a>
+	</div>
+</div>
