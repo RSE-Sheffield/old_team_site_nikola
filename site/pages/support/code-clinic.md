@@ -16,7 +16,7 @@ At each session, **members of the RSE team will be available to review code, adv
 - #### **When: Every second Wed (14:00 - 16:00)**
     Clinics launch on **Wednesday, Oct 3rd, 2018** and run fortnightly after that. Check for scheduled dates on the RSE [**Code Clinic** calendar](https://calendar.google.com/calendar/embed?src=sheffield.ac.uk_28d0d6953rcq30teo2rapepho0%40group.calendar.google.com&ctz=Europe%2FLondon).
 
-- #### **Where: COM-G12-Main Lewin Lab**
+- #### **Where: Room COM-G25**
   [Regent Court, Dept. of Computer Science, The University of Sheffield, 211 Portobello, Sheffield, S1 4DP](https://goo.gl/maps/t88GdT9Yjmz).
 
 - #### **Who: Are you...**
