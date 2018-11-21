@@ -25,7 +25,7 @@ If you would like to recommend a speaker or would like to give a talk then pleas
 * The steps taken for quickly getting familiarised and productive in code development
 * The tools used, such as for documentation, debugging, profiling 
 * Holistic approach on code optimisation
-* Good programming practises, along with references for further reading
+* Good programming practices, along with references for further reading
 
 The aspects of software development discussed here will be helpful to researchers joining projects that require further development of existing software, and also researchers that are tasked to create new software.
 
@@ -33,7 +33,7 @@ The aspects of software development discussed here will be helpful to researcher
 
 <br/><hr/><br/>
 
-
+<!--
 ### <span style="background-color: #FFFF00">November 27, 2018</span> &mdash; 12:00-13:00, COM-G12-Main Lewin
 **Luke Mason, Application Performance Engineering Group Leader at Hartree Center**
 
@@ -48,6 +48,7 @@ The aspects of software development discussed here will be helpful to researcher
 The challenges faced by CCP’s and HEC consortia in modernising their codes are fed directly into Software Outlook’s remit. During this talk, we will discuss these challenges and the subsequent work being done by Software Outlook.
 
 **Bio:** Luke leads the High Performance Software Engineering group at the Hartree Centre. The group specialises in code scalability and performance on HPC (high performance computing) systems as well as porting and optimisation for emerging and novel architectures. He is experienced in working alongside both industrial and academic scientists to produce accurate and efficient code across a range of disciplines and architectures. His group is involved in development for the Met Office and the EPSRC funded “Big Hypotheses” project, to name just a few of its current activities.
+-->
 
 # Previous Seminars #
 <br/>
