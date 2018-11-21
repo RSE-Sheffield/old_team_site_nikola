@@ -87,6 +87,10 @@ to detect changes, automatically rebuild your site and refresh your browser.
 
 When you are happy, submit a Pull Request.
 
+## Formatting tips
+
+* When editing a Markdown page make sure you leave a blank line before any bulleted lists.
+
 ## Site testing and deployment
 
 When you create a pull request against this repo
