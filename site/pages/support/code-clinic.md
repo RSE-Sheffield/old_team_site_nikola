@@ -14,9 +14,9 @@ At each session, **members of the RSE team will be available to review code, adv
 <br>
 
 - #### **When: Every second Wed (14:00 - 16:00)**
-    Clinics launch on **Wednesday, Oct 3rd, 2018** and run fortnightly after that. Check for scheduled dates on the RSE [**Code Clinic** calendar](https://calendar.google.com/calendar/embed?src=sheffield.ac.uk_28d0d6953rcq30teo2rapepho0%40group.calendar.google.com&ctz=Europe%2FLondon).
+    Clinics launch on **Wednesday, Oct 3rd, 2018** and run fortnightly after that. Check for scheduled dates on the RSE [**Code Clinic** calendar](#calendar).
 
-- #### **Where: COM-G12-Main Lewin Lab**
+- #### **Where: Room COM-G25**
   [Regent Court, Dept. of Computer Science, The University of Sheffield, 211 Portobello, Sheffield, S1 4DP](https://goo.gl/maps/t88GdT9Yjmz).
 
 - #### **Who: Are you...**
@@ -64,6 +64,10 @@ If you cannot attend the session, please give a **No** response on the calendar 
 If you would like to get involved as a helper, please contact [Dr Mozhgan Kabiri Chimeh or Dr Anna Krystalli from the RSE Group](../../contact).
 
 
+<br>
+<br>
+
+<iframe src="https://calendar.google.com/calendar/b/1/embed?title=RSE%20Code%20Clinic%20Calendar&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23ccffff&amp;src=sheffield.ac.uk_28d0d6953rcq30teo2rapepho0%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=Europe%2FLondon" style="border-width:0" width="400" height="600" frameborder="0" scrolling="no"></iframe>
 
 <!--
 ## Usefull links:
