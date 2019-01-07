@@ -109,3 +109,11 @@ traditional compiled languages, possible in conjunction with parallel frameworks
 
 * Email: phil.tooley (at) sheffield.ac.uk
 * Twitter: [@acceleratedsci](https://twitter.com/acceleratedsci)
+
+# Becky Arnold
+
+Becky is Research Software Engineer working with the University of Sheffield RSE group and the Alan Turing institute developing open source [guidance](https://github.com/alan-turing-institute/the-turing-way) on best practise for reproducible data science. She is taking a leave of absence from her astrophysics PhD (where she uses simulations to study the evolution of star clusters) to work on this project.
+
+She is also a [Software Sustainability Institute](https://www.software.ac.uk/) fellow and is using the fellowship finds to organise a [series](https://www.sheffield.ac.uk/physics/news/programming-skills-sessions) of talks and workshops on a diverse range of topics surrounding best practise.
+
+- Email: rjarnold1@sheffield.ac.uk
