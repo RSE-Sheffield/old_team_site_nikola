@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts by Tania A.)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/authors/tania-a.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>CodeFirstGirls meets Hacktoberfest</title><link>http://rse.shef.ac.uk/blog/codefirstgirls-meets-hacktoberfest/</link><dc:creator>Tania A.</dc:creator><description>&lt;div&gt;&lt;div style="width: 90%;
+        height: auto;
+        margin: 30px;
+    text-align:center;"&gt;
+    &lt;img src="http://rse.shef.ac.uk/images/CFG_AW1.jpg"&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It is that time of the year again! The autumn-winter courses for
+&lt;a href="https://www.codefirstgirls.org.uk/"&gt;CodeFirst: girls&lt;/a&gt;
+are in full swing at Sheffield, Manchester and many other locations all
+ over the UK.&lt;/p&gt;
+&lt;p&gt;As the lead instructor of the Python courses part of my 'job' is to make sure
+that everything runs smoothly and that the gals make the most of the course.
+Since the courses run only over 8 weeks and we have loads of ground to cover I decided to
+improve the way the instructors communicate and plan the course as well as how we deliver the
+contents for the course.&lt;/p&gt;
+&lt;h3&gt;Implementation&lt;/h3&gt;
+&lt;p&gt;These are some of the approaches we are currently using in our courses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: I use Git and GitHub all the time for all my projects and tasks. So it only made sense to make it a central point of contact as well as the main place for all the additional material to be kept into. It has worked wonders, all of the organisation stuff is there, we make sure that the additional materials developed by us are peer-reviewed and it makes it makes all of our lives easier.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitKraken&lt;/strong&gt;: ok ok I know many people would prefer teaching Git using the command line, but I have used both command line and GUI approaches and I think you first need to know your audience to better understand which approach to use. In this case GitKraken was my weapon of choice... powerful, intuitive, it can be easily integrated with GitHub, BitBucket and GitLab, and did I say beautiful? Yes, which makes it suitable for visual learners.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning by doing&lt;/strong&gt;: I am a firm believer of learning by doing. It sometimes is the best approach to get the grips of things. How do you make the git-add-commit-push workflow a natural habit? Exactly, by doing it over and over again. So we are making sure that every session would include bits and pieces where the gals had to generate pieces of code, push them to their repos, collaborate with others and or create pull requests.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Feedback on the fly&lt;/strong&gt;: As a Sofware/Data carpentry intructor some of the things I love the most is the use of post-its. That way you and the helpers know straight away who is struggling (red post-it) and how is not (green post-it) that way the learners get help instantly and the main instructor gets visual clues on how fast or slow to proceed. At the end of the day the learners write on the post-its something they liked or learned and something that could be improved or that they struggled with. So I decided to give this a go at CFG and so it has helped us a lot so far.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Active engagement&lt;/strong&gt;: one of the key things that makes initiatives such as CodeFirstGirls work is not the fact that we teach them how to code, online courses do that. But the whole thing is an excellent community building activity, the gals find common minded people, are exposed to role models, and feel empowered to continue their career in tech. That is the beauty of what we do. So it is only fair that we engage with them. We have our own #hashtag (Go now and look for #ShefCodeFirst in Twitter), we have guest speakers, slack channels, &lt;a href="http://bitsandchips.me/Shef_CodeFirst_Python/"&gt;our very own course website&lt;/a&gt; (obvs in GitHub pages) and we try to open their eyes to the wider tech and open source community. Also we have many Octocat stickers to give away!!!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;/p&gt;&lt;div style="width: 70%;
+        height: auto;
+        margin: 0 auto;
+    text-align:center;"&gt;
+    &lt;img src="http://rse.shef.ac.uk/images/CFG_AW2.jpg"&gt;
+&lt;/div&gt;
+&lt;h3&gt;Hacktoberfest&lt;/h3&gt;
+&lt;p&gt;I mentioned before that we try to keep the gals actively engaged throughout the course as well as to integrate them to the wider community.
+And what a better way to do this but getting the gals involved in &lt;a href="https://hacktoberfest.digitalocean.com/"&gt;Hacktoberfest&lt;/a&gt;!!! We ere a bit tight on time but I thought it was worth trying to get some of the girls involved in something like this.&lt;/p&gt;
+&lt;div style="width: 70%;
+        height:400px;
+        margin: 20px auto;
+    text-align:center;"&gt;
+    &lt;img src="http://rse.shef.ac.uk/images/hacktoberfest.jpg"&gt;
+&lt;/div&gt;
+
+&lt;p&gt;By doing so the girls would get the following benefits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn how to contribute to open source projects&lt;/li&gt;
+&lt;li&gt;Integrate to the open source community&lt;/li&gt;
+&lt;li&gt;Get extra coding practice&lt;/li&gt;
+&lt;li&gt;Get extra git practice (4 Pull Requests were needed to complete this)&lt;/li&gt;
+&lt;li&gt;If completed they would get a special edition t-shirt (Whoop whoop)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That meant extra work for me: find specific tasks and projects for them to contribute to, merge pull requests bonanza, and prepare extra gifs and guides on how to complete the tasks.
+But it was totally worth it!!! I was more than delighted to see all the PR coming into our own repo as well as getting all the notifications from the girls getting involved in Hacktoberfest.&lt;/p&gt;
+&lt;p&gt;I know not everyone got involved as many have PhDs, Master's, dissertations, and a life to look after.
+But I am massively proud of them all. So many of our gals had never used Git or GitHub before and now they
+are collaborating like pros.&lt;/p&gt;
+&lt;div style="width: 45%;
+        height: auto;
+        margin: 20px auto;
+    text-align:center;"&gt;
+    &lt;img src="http://rse.shef.ac.uk/images/PR_bonanza.png"&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Talk about motivation :) And if you want to keep up to date with the end of course projects they will be presenting in 5 weeks time keep an eye on Twitter!&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/codefirstgirls-meets-hacktoberfest/</guid><pubDate>Thu, 04 Jan 2018 13:31:32 GMT</pubDate></item><item><title>A successful 2nd RSE conference</title><link>http://rse.shef.ac.uk/blog/a-successful-2nd-rse-conference/</link><dc:creator>Tania A.</dc:creator><description>&lt;div&gt;&lt;h2&gt;RSE Sheffield in the 2nd RSE conference&lt;/h2&gt;
+&lt;p&gt;&lt;img src="http://rse.shef.ac.uk/images/RSE17.jpg" alt="RSE17"&gt;&lt;/p&gt;
+&lt;p&gt;The second RSE conference took place on the 7th and 8th of September 2017 at the
+Museum of Science and Industry &lt;a href="https://www.scienceandindustrymuseum.org.uk/"&gt;MOSI&lt;/a&gt;.
+There were over 200 attendees, 40 talks, 15  workshops,
+3 keynote talks, one of which was given by our very own head honcho Mike Croucher
+(slides &lt;a href="https://mikecroucher.github.io/RSE_2017_keynote_presentation/"&gt;here&lt;/a&gt;), and geeky chats galore.&lt;/p&gt;
+&lt;p&gt;RSE team members &lt;a href="http://mkchimeh.com"&gt;Mozhgan&lt;/a&gt; and Tania were involved in the organising committee as talks co-chairs and diversity chair (disclose: they had nothing to do with Mike's keynote). Also, all of the RSE Sheffield team members made it to the conference, which seems to be a first due to the diverse commitments and project involvement of all of us.&lt;/p&gt;
+&lt;p&gt;Once again, the event was a huge success thanks to the efforts of the committee and volunteers as well as the amazing RSE community that made this a en engaging and welcoming event.&lt;/p&gt;
+&lt;h3&gt;Conference highlights&lt;/h3&gt;
+&lt;p&gt;With so many parallel sessions, workshops, and chats happening all at the same time it is quite complicated to keep a track of every single thing going on. And it seems rather unlikely that this will change over time as it was &lt;strong&gt;evident&lt;/strong&gt; that the RSE community has outgrown the current conference size.
+So we decided to highlight our favourites of the event:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The talk on 'Imposter syndrome' by Vijay Sharma: Who in the scientific community has not ever experienced this? Exactly! So when given the chance everyone jumped into this talk full of relatable stories and handy tips on how to get over it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another talk that seemed to have gathered loads of interest was that of
+&lt;a href="https://twitter.com/tbyhdgs"&gt;Toby Hodges&lt;/a&gt; from  EMBL on community building. This came as no surprise (at least to me) as RSEs often act as community builders or as a bridge between collaborating communities. Opposed to &lt;em&gt;just&lt;/em&gt; being focused on developing software and pushing it into production.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;During the first day the RSEs had the chance to have a go at interacting with the &lt;a href="https://www.microsoft.com/en-gb/hololens"&gt;Microsoft Hololens&lt;/a&gt;. There was a considerable queue to have a go at this, and unfortunately, we were not among the chosen ones to play with this. Maybe in the future.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;My hands-on workshop on 'Jupyter notebooks for reproducible research'. I was ecstatic to know the community found this workshop interesting and had to run this twice!!!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Also, I'd like to casually throw in here that I have been elected as a committee member for the UK RSE association, so expect to read more about this in this blog.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For obvious reasons I missed most of the workshops but Kenji Takeda's workshop on 'Learn how to become an AI Super-RSE' was another favourite of the delegates as this was run twice too!&lt;/p&gt;
+&lt;h3&gt;Our workshop on Jupyter notebooks for reproducible research&lt;/h3&gt;
+&lt;p&gt;Being a RSE means that I serve as an advocate of sustainable software development. Also, as I have discussed here before: I am greatly concerned about reproducibility and replicability in science.
+Which, I might add, is not an easy task to embark onto.
+Thankfully, there are loads of tools and practices that we can adopt as part of our workflows to ensure that the code we develop is done by following the best practices possible, and as a consequence, can support science accordingly.&lt;/p&gt;
+&lt;p&gt;Naturally, as members of the community come up with more refined and powerful tools in the realm of scientific computing we (the users and other developers) adopt some of those tools meaning that we often end up modifying our workflows.&lt;/p&gt;
+&lt;p&gt;Such is the case of Jupyter notebooks. They brought up to life a whole new era of literate programming: where scientist, students, data scientist, and aficionados can share their scripts in a human readable format. What is more important, they transform scripts into a conveying scientific narrative where functions and loops are followed by their graphical outputs or allow the user to interact via widgets. This ability to openly share whole analysis pipelines is for sure, a step in the right direction.&lt;/p&gt;
+&lt;p&gt;However, the adoption of tools like this  brings not only a number of advantages but also presents a number of challenges and integration issues with previously developed tools.
+For example, the traditional version control tools (including diff and merge tools) do not play nicely with the notebooks. Also, the notebooks have to be tested as any other piece of code.&lt;/p&gt;
+&lt;p&gt;During the workshop, I introduced two tools: &lt;a href="https://github.com/jupyter/nbdime"&gt;nbdime&lt;/a&gt; and &lt;a href="https://github.com/computationalmodelling/nbval"&gt;nbval&lt;/a&gt;, which were developed as part of the European funded project: &lt;a href="https://opendreamkit.org"&gt;OpenDreamKit&lt;/a&gt;. Such tools introduce very much needed version control and validation capabilities to the Jupyter notebooks, addressing some of the issues mentioned before.&lt;/p&gt;
+&lt;p&gt;So in order to cover these tools as well as how you would integrate them within your
+workflow I divided the workshop in three parts: diffing and merging of the notebooks, notebooks validation, and a brief 101 on reproducibility practices.&lt;/p&gt;
+&lt;h3&gt;Notebooks diffing and merging&lt;/h3&gt;
+&lt;p&gt;During the first part of the workshop the attendees shared their experiences using traditional version control tools with Jupyter notebooks... unsurprisingly everyone had had terrible experiences.&lt;/p&gt;
+&lt;p&gt;Then all of them had some hands-on time on how to use nbdime for diffing and merging from the command line as well as from their rich html rendered version (completely offline).
+As we progressed with the tutorial I could see some happy faces around the room and they all agreed that this was much needed.&lt;/p&gt;
+&lt;p&gt;Need more convincing? This tweet showed up in my feed just this week
+And just earlier this week this tweet showed up on my feed:
+&lt;img src="http://rse.shef.ac.uk/images/tweet-nbdime.PNG" width="500px"&gt;&lt;/p&gt;
+&lt;h3&gt;Notebooks validation&lt;/h3&gt;
+&lt;p&gt;The second part of the workshop focused on the validation of the notebooks. And here I would like to ask this first: &lt;em&gt;'How many of you have found an amazing notebook somewhere in the web just to clone it and find out that it just does not work: dependencies are broken, functions are deprecated, can't tell if the results are reproducible?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I can tell you, we have all been there. And in such cases nbval is your best friend. It is a &lt;strong&gt;py.test&lt;/strong&gt; plugin to determine whether execution of the stored inputs match the stored outputs of the &lt;code&gt;.ipynb&lt;/code&gt; file. Whilst also ensuring that the notebooks are running without errors.&lt;/p&gt;
+&lt;p&gt;This lead to an incredible discussion on its place within conventional testing approaches. Certainly, it does not replace unittesting or integration testing, but it could be seen as a form of &lt;em&gt;regression&lt;/em&gt; testing for the notebooks. Want to make sure that your awesome documentation
+formed by Jupyter notebooks is still working in a few months time? Why not use CI and nbval?&lt;/p&gt;
+&lt;h3&gt;Wrapping up&lt;/h3&gt;
+&lt;p&gt;The closing to the workshop was a 101 on working towards reproducible scientific computing. We shared some of our approaches for reproducible workflows and encouraged the delegates to share theirs. We covered topics such as valuing your digital assets, licensing, automation, version control and continuous integration, among others.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The perfect close to a great RSE conference!&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Just a few more things&lt;/h4&gt;
+&lt;p&gt;Let me highlight that all the materials for the workshop can be found at: &lt;a href="https://github.com/trallard/JNB_reproducible"&gt;https://github.com/trallard/JNB_reproducible&lt;/a&gt; and that all of it is completely self contained in the form of a Docker container.&lt;/p&gt;
+&lt;p&gt;If you missed out on the conference and would like to see the videos and slides of the various talks do not forget to visit the &lt;a href="https://rse.ac.uk/conf2017/talk-slides-downloads/"&gt;RSE conference website&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/a-successful-2nd-rse-conference/</guid><pubDate>Tue, 19 Dec 2017 14:46:35 GMT</pubDate></item><item><title>ATI Data study group</title><link>http://rse.shef.ac.uk/blog/ati-data-study-group/</link><dc:creator>Tania A.</dc:creator><description>&lt;div&gt;&lt;p&gt;I had the opportunity to attend the &lt;a href="https://www.turing.ac.uk/"&gt;Alan Turing Institute (ATI)&lt;/a&gt; Data Study Group (22nd-26th May 2017). The ATI is the national institute for data science and as such, it has strong ties to both academia and industry.&lt;/p&gt;
+&lt;p&gt;The event was a week long data hackathon in which multiple groups used their best skills to crack the various projects proposed by the industrial partners. Over 5 days 6 groups worked intensively to deliver feasible solutions to the problems proposed.&lt;/p&gt;
+&lt;h3&gt;The projects&lt;/h3&gt;
+&lt;p&gt;The projects spanned over a wide range of topics, each with their very unique challenges and requirements.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DSTL presented two projects: the first of which was aimed at cyber security, thus trying to identify malicious attacks from IP's traffic data. The second project was focused on the identification of places/geographical landmarks so that the team could predict the likelihood of a given event to take place at a given location.&lt;/li&gt;
+&lt;li&gt;HSBC's challenge consisted in not the study of a particular data set(s) as the rest of the problems, but was in fact based on the development of a synthetic dataset that could be used along with some algorithms to evaluate the users' behaviour.&lt;/li&gt;
+&lt;li&gt;Siemens' project was centred around the study of vehicle traffic data that would enable efficient traffic lights and traffic volume control, which would eventually lead to the reduction of carbon emissions.&lt;/li&gt;
+&lt;li&gt;Samsung, being one of the leaders in the smartphones industry decided on using their collected (anonymous) users' data to analyse the users' gaming behaviour (e.g. which games would you biuy/play based on your current gaming habits) as well as developing a gaming recommendation engine.&lt;/li&gt;
+&lt;li&gt;Thomson Reuters's challenge was centred around graph analysis. Such a project had as primary goal to identify how positive/negative news of a given company affect other companies/industries within their network and how far does this effect extend.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;The Hack&lt;/h3&gt;
+&lt;p&gt;I joined the Thomson Reuters' project as this seemed to be one of the projects with the richest data set, both in its extension and type (e.g news, sentiment analysis, stock market, time series, etc.). The team was formed by 13 people with a huge variety of skills and coming from totally different backgrounds, which is what makes hackathons so exciting. You have to make the most of the skill sets your team has, in a very limited amount of time... pushing you out of your comfort zone.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AT-1" src="http://rse.shef.ac.uk/images/tr.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;After a brief team introduction our 3 Thomson Reuters facilitators described the data and the challenge in more detail. We then identified the main goals of the project and subdivided the team in about other 4 teams. Once the initial planning was completed, we spent Monday's evening through Wednesday morning learning about their various API's, getting the data, wrangling data... and getting more data.&lt;/p&gt;
+&lt;p&gt;We soon realised that analysing all the data was incredibly complex and of course, there was not one correct way to do it. So we had to reduce the scope of the data we were in fact going to use and the sort of features/phenomena we were interested in.&lt;/p&gt;
+&lt;p&gt;The rest of the Wednesday and Thursday were used to start doing some prediction and regression on the data as well as writing up the report and finishing off our pitch presentation.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ATI-2" src="http://rse.shef.ac.uk/images/tr2.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;The findings&lt;/h3&gt;
+&lt;p&gt;Certainly, we were able to obtain loads of insight from our data and the various algorithms we used. Some of the most important expected and unexpected findings were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Negative news have a longer impact on the companies involved and those within their network (20 days as opposed to a 4 days impact from the positive news)&lt;/li&gt;
+&lt;li&gt;The companies are related to each other based on whether their are affiliates, competitors, parents, etc., not surprisingly the competitors are the companies that have the biggest effect on the other companies' stock prices&lt;/li&gt;
+&lt;li&gt;Different types of industries react differently to negative/positive news and the degree of extension of such an impact varies considerably from one industry type to another&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Taking home&lt;/h3&gt;
+&lt;p&gt;As every time I have been to a hackathon of some sort I ended up feeling absolutely drained, but accomplished at the same time. Hacks are such a good opportunity to meet like minded people, learn loads of stuff, test yourself, and have fun.&lt;/p&gt;
+&lt;p&gt;Would I encourage people to go to one of these events? &lt;strong&gt;Absolutely!&lt;/strong&gt; If you are interested in all things data science you should keep an eye on the future events by the Alan Turing Institute. If you only want to have a go at hacking for fun, for a cause, or to meet new people I would suggest you have a look at the &lt;a href="https://mlh.io"&gt;Major League Hacking&lt;/a&gt;. I am sure you will be able to find something near you and for all sort of interests. Our guys at &lt;a href="https://www.hacksheffield.co"&gt;Hack Sheffield&lt;/a&gt; organise a hackathon once a year so you might want to keep an eye on their activities. For those around Manchester area check out &lt;a href="https://www.hac100.com"&gt;Hac100&lt;/a&gt; including the youth and junior hacks (formerly Hack Manchester).&lt;/p&gt;
+&lt;p&gt;Will the RSE team at the university of Sheffield organise hacks? We have a crazy amount of work on our plates at the moment but we are definitely interested in (co)organising hackathons and many other events throughout the year. So keep your eyes peeled!&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/ati-data-study-group/</guid><pubDate>Wed, 12 Jul 2017 11:32:49 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts about projects)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/categories/projects.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Will Furnass joins to work on Jupyter and Grid Engine integration</title><link>http://rse.shef.ac.uk/blog/willfurnass_intro/</link><dc:creator>Will Furnass</dc:creator><description>&lt;div&gt;&lt;img alt="Will Furnass" class="align-right" src="http://rse.shef.ac.uk/images/willfurnass.png"&gt;
+&lt;p&gt;The Research Software Engineering team at the University of Sheffield has gained a new member.
+I joined at the start of January and
+will primarily be working on &lt;a class="reference external" href="https://opendreamkit.org/"&gt;OpenDreamKit&lt;/a&gt;
+which is a &lt;a class="reference external" href="https://ec.europa.eu/programmes/horizon2020/"&gt;Horizon 2020&lt;/a&gt;
+European &lt;a class="reference external" href="https://ec.europa.eu/programmes/horizon2020/en/h2020-section/european-research-infrastructures-including-e-infrastructures"&gt;Research Infrastructure&lt;/a&gt; project
+with the aim of furthering the open-source computational mathematics ecosystem.&lt;/p&gt;
+&lt;p&gt;My contribution to this project is to extend work previously started at the University of Sheffield
+to allow researchers to more easily run interactive workflows on &lt;a class="reference external" href="https://en.wikipedia.org/wiki/High-performance_computing"&gt;High-Performance Computing&lt;/a&gt; clusters,
+specifically to make it easy, robust and intuitive to run &lt;a class="reference external" href="http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html"&gt;Jupyter Notebooks&lt;/a&gt; on
+clusters running job scheduling software from the &lt;a class="reference external" href="https://arc.liv.ac.uk/trac/SGE"&gt;Grid Engine&lt;/a&gt; family.&lt;/p&gt;
+&lt;p&gt;Jupyter Notebooks are &lt;strong&gt;runnable documents&lt;/strong&gt; containing code snippets
+that are viewed and manipulated from a web browser.
+They are an increasingly popular way of encapsulating, presenting and sharing a coding-oriented workflow.
+A Notebook comprises a column of cells, where each cell can contain:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;some code or&lt;/li&gt;
+&lt;li&gt;explanatory text (that can be formatted using &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Markdown"&gt;Markdown&lt;/a&gt;) and/or mathematical expressions (formatted using &lt;a class="reference external" href="https://www.mathjax.org/"&gt;MathJax&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When a code cell is executed by the user it can return anything renderable by a modern web browser:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a single value,&lt;/li&gt;
+&lt;li&gt;a table of data,&lt;/li&gt;
+&lt;li&gt;a figure or&lt;/li&gt;
+&lt;li&gt;a mathematical expression.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;img alt="/images/jupyter_notebook_example.png" src="http://rse.shef.ac.uk/images/jupyter_notebook_example.png"&gt;
+&lt;p&gt;The code cells of a Notebook can be (re)run in any order, so Notebooks are very useful for interactive exploration.&lt;/p&gt;
+&lt;p&gt;The structure of Jupyter is typically as follows:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[Notebook in browser] &amp;lt;---&amp;gt; [Jupyter server] &amp;lt;---&amp;gt; [Kernel]
+&lt;/pre&gt;
+&lt;p&gt;where the kernel is the part that executes code cells.  There are &lt;a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels"&gt;kernels for many different programming languages&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;The server and kernel can run on the same machine as the web browser
+but the architecture allows them to also run on remote machines.
+These remote systems could be:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a research group's central server,&lt;/li&gt;
+&lt;li&gt;a Jupyter-aware cloud service (e.g. &lt;a class="reference external" href="https://cocalc.com/settings"&gt;SageMathCloud&lt;/a&gt; or &lt;a class="reference external" href="https://notebooks.azure.com/"&gt;Azure Notebooks&lt;/a&gt;) or ...&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the HPC clusters operated by so many academic institutions&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is where my part of OpenDreamKit comes in.
+Computer clusters such as &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/index.html"&gt;Iceberg&lt;/a&gt; and &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/sharc/index.html"&gt;ShARC&lt;/a&gt; here at the University of Sheffield allow users to
+run computational jobs with more resources than typically available in researchers' own machines.
+Jobs can have parallel threads of execution running on up to sixteen cores per node
+and/or running over multiple nodes,
+jobs can use hundreds of MB of RAM and
+can make use of the latest generation of GPUs for things like
+accelerated &lt;a class="reference external" href="http://www.acrc.com/deep-learning/"&gt;deep learning workflows&lt;/a&gt;.
+However, the need to request resources, then submit and monitor jobs from the command-line can be a steep barrier to entry for some.
+Being able to easily run Jupyter Notebooks on our clusters and
+request the necessary resources for our interactive explorations via an intuitive web interface
+could help make HPC more accessible and useful to those without a strong understanding of Linux and the command-line.&lt;/p&gt;
+&lt;p&gt;We already have &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/hpc/jupyterhub.html"&gt;an instance of JupyterHub running&lt;/a&gt; to allow users to start Jupyter sessions on our &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/index.html"&gt;Iceberg&lt;/a&gt; cluster
+thanks to the efforts of &lt;a class="reference external" href="http://stuartmumford.uk/"&gt;Stuart Mumford&lt;/a&gt;.
+I will be working on:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Upgrading this to use the latest version of JupyterHub;&lt;/li&gt;
+&lt;li&gt;Setting up JupyterHub on our new cluster (&lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/sharc/index.html"&gt;ShARC&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;Developing a mechanism for easily requesting resources (more RAM / CPU cores / GPUs) from the Grid Engine scheduler;&lt;/li&gt;
+&lt;li&gt;Making the JupyterHub and Grid Engine integration more robust.&lt;/li&gt;
+&lt;li&gt;Looking at how JupyterHub could be set up on HPC clusters at other institutions (possibly using different schedulers) for research/teaching.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'm rather excited about this new role.  One nice aspect to it is that I am now according to my contract officially a &lt;a class="reference external" href="https://rse.ac.uk/"&gt;Research Software Engineer&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dear Dr Furnass&lt;/p&gt;
+&lt;p&gt;Further to recent discussions, I am pleased to confirm the change in your appointment with the University of Sheffield.
+The details of your offer are provided below:&lt;/p&gt;
+&lt;p&gt;Appointment Details:
+You, Dr William Furnass, shall be employed by the University of Sheffield as a Research Software Engineer
+in the Department of Computer Science with effect from 1 January 2017.
+This position is offered on a fixed term basis.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This demonstrates that research institutions have started recognising &lt;a class="reference external" href="https://rse.ac.uk/who/"&gt;Research Software Engineering&lt;/a&gt; as an alternative career path in academia
+(something the &lt;a class="reference external" href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt; have been pushing for for some time) and
+RSEs aren't simply post-doctoral researchers who happen to write software.&lt;/p&gt;
+&lt;p&gt;The path to this point has not been particularly direct:
+I have a &lt;a class="reference external" href="https://engineering.leeds.ac.uk/computing"&gt;computer scence degree&lt;/a&gt;,
+worked as a IT systems engineer in the film industry,
+have a PhD plus post-doc experience in &lt;a class="reference external" href="https://www.sheffield.ac.uk/civil/"&gt;water engineering&lt;/a&gt;
+(where I developed semi-physical and data-driven models of water quality in water distribution networks) and
+I have provided support to the users of the University of Sheffield's &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/"&gt;HPC clusters&lt;/a&gt;.
+In addition I taught or helped run RSE, water engineering and study skills workshops.&lt;/p&gt;
+&lt;p&gt;My interests include
+helping researchers optimise data analysis workflows (primarily using higher-level languages),
+providing training in RSE best practices and
+systems administration.
+You can contact me via:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Email: w.furnass (at) sheffield.ac.uk&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a class="reference external" href="https://twitter.com/willfurnass"&gt;@willfurnass&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>projects</category><guid>http://rse.shef.ac.uk/blog/willfurnass_intro/</guid><pubDate>Mon, 30 Jan 2017 10:56:00 GMT</pubDate></item><item><title>£1 million grant to shed light on how we learn languages</title><link>http://rse.shef.ac.uk/blog/linuistics_grant_2016/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;A £1 million grant to help researchers understand what speakers know about languages, in order to help make learning foreign languages easier, has been awarded to the University of Sheffield's Faculty of Arts and Humanities.  &lt;/p&gt;
+&lt;p&gt;Over five years, the Research Leadership Award from the Leverhulme Trust will allow experts to develop new, accurate ways of describing speakers’ linguistic knowledge, by using machine-learning techniques that mimic the way in which humans learn.&lt;/p&gt;
+&lt;p&gt;The patterns they find will be verified in laboratory settings and then tested on adult foreign language learners to see if such patterns can help them learn a foreign language in a way that resembles how they learned their mother tongue.&lt;/p&gt;
+&lt;p&gt;The aim is to lead a step-change in research on language and language learning by capturing the linguistic knowledge adult speakers build up when they are exposed to a language in natural settings. These insights will help with the development of strategic language teaching materials to transform the way in which we teach foreign languages.&lt;/p&gt;
+&lt;p&gt;The team will be led by Dr Dagmar Divjak from the University’s School of Languages and Cultures, in close collaboration with Dr Petar Milin, Department of Journalism Studies, and with Research Software Engineering support from Dr Mike Croucher, Department of Computer Science.&lt;/p&gt;
+&lt;p&gt;Sheffield's Research Software Engineering Group are collaborators on the project and will provide support in High Performance Computing, software engineering and data management. This will help ensure that all developed software is efficient, correct, citable, easy to use and openly available. The aim is to maximise research impact and reproducibility through the application of modern software engineering methodologies.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The out of our minds team" src="http://rse.shef.ac.uk/images/DSC03577.jpg"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>projects</category><guid>http://rse.shef.ac.uk/blog/linuistics_grant_2016/</guid><pubDate>Tue, 03 Jan 2017 15:22:11 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,4 @@
+Sitemap: http://rse.shef.ac.uk/sitemapindex.xml
+
+User-Agent: *
+Host: rse.shef.ac.uk

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts about tmux)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/categories/tmux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>tmux: remote terminal management and multiplexing</title><link>http://rse.shef.ac.uk/blog/tmux-intro/</link><dc:creator>Will Furnass</dc:creator><description>&lt;div&gt;&lt;p&gt;Today we have a guide to 'terminal multiplexing' including
+suggestions on how to use it on computer clusters such as
+&lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/"&gt;ShARC and Iceberg&lt;/a&gt;.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;div class="section" id="have-you-ever"&gt;
+&lt;h2&gt;Have you ever?&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Started a process (such as a compilation or application install) over
+SSH only to realise that it's taking far longer than you expected and
+you need to shut down your laptop to go to a meeting, which you know
+will therefore &lt;strong&gt;kill both the SSH connection and your process&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;Been in a cafe with flakey wifi and had a remote process hang or
+possibly die due to an unstable SSH connection?&lt;/li&gt;
+&lt;li&gt;Accidentally closed a window with a SSH session running in it and
+really regretted it?&lt;/li&gt;
+&lt;li&gt;Wanted to be able to switch between multiple terminal sessions on a
+remote machine without having to establish a SSH connection per
+session?&lt;/li&gt;
+&lt;li&gt;Wanted to be able to have multiple terminals visible at once so you
+can say edit source code in one terminal whilst keeping compilation
+errors visible in another?&lt;/li&gt;
+&lt;li&gt;Wanted a nicer way to copy and paste between remote terminal
+sessions?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If the answer to any of these is "yes" then
+&lt;strong&gt;terminal multiplexing&lt;/strong&gt; may help!&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="Making remote Linux/Unix machines easier to administer/use!" src="http://rse.shef.ac.uk/images/tmux-intro/intro.png"&gt;
+&lt;/div&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;First, we need to delve a little deeper into some of the problems we are trying to solve.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="why-do-my-remote-processes-die-when-my-ssh-connection-dies-hangs"&gt;
+&lt;h2&gt;Why do my remote processes die when my SSH connection dies/hangs?&lt;/h2&gt;
+&lt;p&gt;(&lt;em&gt;Skip over this section if you want!&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;Every process
+(bar the &lt;tt class="docutils literal"&gt;systemd&lt;/tt&gt; process or &lt;tt class="docutils literal"&gt;init&lt;/tt&gt; process with a process ID of 1)
+has a parent process.
+If a process is sent a signal telling it to cleanly terminate
+(or &lt;a class="reference external" href="https://en.wikipedia.org/wiki/SIGHUP"&gt;'hang up'&lt;/a&gt;)
+then typically its child processes will be told to do the same.&lt;/p&gt;
+&lt;p&gt;When you SSH to a remote machine,
+the SSH service on that machine creates
+a shell for you within which you can run commands.&lt;/p&gt;
+&lt;p&gt;To illustrate, here I logged into a server and
+used the &lt;tt class="docutils literal"&gt;pstree&lt;/tt&gt; program to view the tree of
+child-parent relationships between processes.
+Notice in the excerpt shown below that the SSH service (&lt;tt class="docutils literal"&gt;sshd&lt;/tt&gt;) has
+&lt;em&gt;spawned&lt;/em&gt; a (bash) shell process for my SSH session,
+which in turn has spawned my &lt;tt class="docutils literal"&gt;pstree&lt;/tt&gt; process:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[will@acai ~]$ ssh sharc
+...
+[will@sharc-login1 ~]$ pstree -a
+systemd --switched-root --system --deserialize 21
+...
+  ├─sshd -D
+  │   └─sshd
+  │       └─sshd
+  │           └─bash
+  │               └─pstree -a
+...
+&lt;/pre&gt;
+&lt;p&gt;So if the SSH service decides that your connection has timed out then
+it will send a signal to &lt;tt class="docutils literal"&gt;bash&lt;/tt&gt; process were to die then
+any child processes started by that &lt;tt class="docutils literal"&gt;bash&lt;/tt&gt; process would also die.&lt;/p&gt;
+&lt;p&gt;If the remote servers you work with are
+primarily High-Performance Computing (HPC) clusters
+running scheduling software such as Grid Engine
+then you have a simple, robust way of ensuring that
+the sucess of your processes doesn't depend on
+the reliability of your connection to the clusters:
+&lt;strong&gt;submit your work to the scheduler as batch jobs&lt;/strong&gt;.
+There are many other benefits to submitting batch jobs over using interactive sessions
+when using such clusters but we won't go into those here.&lt;/p&gt;
+&lt;p&gt;However, what do you do when there is no HPC-style scheduling software availble?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;You could run batch jobs using much simpler schedulers such as
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/At_(Unix)"&gt;at&lt;/a&gt; for one-off tasks or
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Cron"&gt;cron&lt;/a&gt; or &lt;a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.timer.html"&gt;systemd
+Timers&lt;/a&gt;
+for periodic tasks.&lt;/li&gt;
+&lt;li&gt;You could prefix your command with
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Nohup"&gt;nohup&lt;/a&gt; (&lt;em&gt;no hang up&lt;/em&gt;) to
+ensure it continues running if the parent process tells it to &lt;em&gt;hang
+up&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Neither of these allow you to easily &lt;strong&gt;return to interactive sessions&lt;/strong&gt; though.
+For that we need terminal multiplexers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-brief-guide-to-the-tmux-terminal-multiplexer"&gt;
+&lt;h2&gt;A brief guide to the tmux Terminal Multiplexer&lt;/h2&gt;
+&lt;div class="section" id="detaching-and-reattaching-to-sessions"&gt;
+&lt;h3&gt;Detaching and reattaching to sessions&lt;/h3&gt;
+&lt;p&gt;Terminal Multiplexer programs like
+&lt;a class="reference external" href="https://www.gnu.org/software/screen/"&gt;GNU Screen&lt;/a&gt; and
+&lt;a class="reference external" href="https://tmux.github.io/"&gt;tmux&lt;/a&gt;
+solve this problem by:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Starting up a &lt;strong&gt;server process on-demand&lt;/strong&gt;, which then spawns a
+shell. The server process is configured not to respond when being
+told to &lt;em&gt;hang up&lt;/em&gt; so &lt;strong&gt;will persist&lt;/strong&gt; if is started over a SSH
+connection that subsequently hangs/dies.&lt;/li&gt;
+&lt;li&gt;Starting up a &lt;strong&gt;client process&lt;/strong&gt; that allows you to connect to that
+server and interact with the shell session it has started&lt;/li&gt;
+&lt;li&gt;Using key-bindings to stop the client process and &lt;strong&gt;detatch&lt;/strong&gt; from
+the server process.&lt;/li&gt;
+&lt;li&gt;Using command-line arguments to allow a client process to
+&lt;strong&gt;(re)connect to an existing server process&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="section" id="demo-1"&gt;
+&lt;h4&gt;Demo 1&lt;/h4&gt;
+&lt;p&gt;Here we look at demonstrating the above using &lt;strong&gt;tmux&lt;/strong&gt;.
+I recommend tmux over GNU Screen as
+the documentation is clearer and
+it makes fewer references to legacy infrastructure.
+Plus, it is easier to google for it!
+However, it may use more memory (true for older versions).&lt;/p&gt;
+&lt;p&gt;Let's create and attach to a new tmux session,
+start a long-running command in it then
+detach and reattach to the session:&lt;/p&gt;
+&lt;embed&gt;
+&lt;video controls&gt;
+  &lt;source src="http://rse.shef.ac.uk/images/tmux-intro/reattach.webm" type="video/webm"&gt;
+  Your browser does not support the video tag.
+&lt;/source&gt;&lt;/video&gt;
+&lt;/embed&gt;&lt;p&gt;Used keys:&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; d:&lt;/th&gt;&lt;td class="field-body"&gt;detatch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;where &lt;strong&gt;&amp;lt;prefix&amp;gt;&lt;/strong&gt; is &lt;strong&gt;Control&lt;/strong&gt; and &lt;strong&gt;b&lt;/strong&gt; by default.
+Here &lt;strong&gt;&amp;lt;prefix&amp;gt; d&lt;/strong&gt; means press &lt;strong&gt;Control&lt;/strong&gt; and &lt;strong&gt;b&lt;/strong&gt; then
+release that key combination before pressing &lt;strong&gt;d&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In this case we started tmux on the local machine.
+tmux is much more useful though when you
+start it on a remote machine &lt;strong&gt;after connecting via ssh&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="windows-like-tabs"&gt;
+&lt;h3&gt;Windows (like tabs)&lt;/h3&gt;
+&lt;p&gt;What else can we do with terminal multiplexers?
+Well, as the name implies,
+they can be used to view and control multiple virtual consoles from one session.&lt;/p&gt;
+&lt;p&gt;A given tmux session can have multiple windows,
+each of which can contain multiple panes,
+each of which is a virtual console!&lt;/p&gt;
+&lt;div class="section" id="demo-2"&gt;
+&lt;h4&gt;Demo 2&lt;/h4&gt;
+&lt;p&gt;Here's a demonstration of creating, renaming, switching and deleting tmux windows:&lt;/p&gt;
+&lt;embed&gt;
+&lt;video controls&gt;
+  &lt;source src="http://rse.shef.ac.uk/images/tmux-intro/windows.webm" type="video/webm"&gt;
+  Your browser does not support the video tag.
+&lt;/source&gt;&lt;/video&gt;
+&lt;/embed&gt;&lt;p&gt;Used keys:&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; ,:&lt;/th&gt;&lt;td class="field-body"&gt;rename a window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; c:&lt;/th&gt;&lt;td class="field-body"&gt;create a new window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; n:&lt;/th&gt;&lt;td class="field-body"&gt;switch to next window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; p:&lt;/th&gt;&lt;td class="field-body"&gt;switch to previous window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; x:&lt;/th&gt;&lt;td class="field-body"&gt;delete current window (actually deletes the current &lt;strong&gt;pane&lt;/strong&gt; in the window but will also delete the window if it contains only one pane)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dividing-up-windows-into-panes"&gt;
+&lt;h3&gt;Dividing up Windows into Panes&lt;/h3&gt;
+&lt;p&gt;Now let's look at creating, switching and deleting panes &lt;em&gt;within&lt;/em&gt; a window:&lt;/p&gt;
+&lt;embed&gt;
+&lt;video controls&gt;
+  &lt;source src="http://rse.shef.ac.uk/images/tmux-intro/panes.webm" type="video/webm"&gt;
+  Your browser does not support the video tag.
+&lt;/source&gt;&lt;/video&gt;
+&lt;/embed&gt;&lt;p&gt;Used keys:&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; %:&lt;/th&gt;&lt;td class="field-body"&gt;split the active window vertically&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; ":&lt;/th&gt;&lt;td class="field-body"&gt;split the active window horizontally&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name" colspan="2"&gt;&amp;lt;prefix&amp;gt; Up or Down or Left or Right:&lt;/th&gt;&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;td&gt; &lt;/td&gt;&lt;td class="field-body"&gt;switch to pane in that direction&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="scrolling-backwards"&gt;
+&lt;h3&gt;Scrolling backwards&lt;/h3&gt;
+&lt;p&gt;You can scroll back up through the terminal history of the current pane/window using:&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name" colspan="2"&gt;&amp;lt;prefix&amp;gt; Page Up:&lt;/th&gt;&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;td&gt; &lt;/td&gt;&lt;td class="field-body"&gt;scroll back through terminal history&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="copying-and-pasting"&gt;
+&lt;h3&gt;Copying and pasting&lt;/h3&gt;
+&lt;p&gt;If you have multiple panes side-by-side then attempt to copy text using the mouse, you'll copy lines of characters that span &lt;em&gt;all&lt;/em&gt; panes, which is almost certainly not going to be what you want.
+Instead you can&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; z:&lt;/th&gt;&lt;td class="field-body"&gt;toggle the maximisation of the current pane&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;then copy the text you want.&lt;/p&gt;
+&lt;p&gt;Alternively, if you want to copy and paste between tmux panes/windows you can&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; [:&lt;/th&gt;&lt;td class="field-body"&gt;enter copy mode&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;move the cursor using the arrow keys to where you want to start copying then&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;space:&lt;/th&gt;&lt;td class="field-body"&gt;(in copy mode) mark start of section to copy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;move the cursor keys to the end of the section you want to copy then&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;enter:&lt;/th&gt;&lt;td class="field-body"&gt;(in copy mode) mark end of section to copy and exit copy mode&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;You can then move to another pane/window and press&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; ]:&lt;/th&gt;&lt;td class="field-body"&gt;paste copied text&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I find this mechanism very useful.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="and-there-s-more"&gt;
+&lt;h3&gt;And there's more&lt;/h3&gt;
+&lt;p&gt;Things not covered in detail here include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The ability to &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/tmux#Configuration"&gt;customise much behaviour and all keybindings&lt;/a&gt;
+(here's &lt;a class="reference external" href="https://github.com/willfurnass/dotfiles/blob/master/tmux/.tmux.conf"&gt;my config file&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;The &lt;a class="reference external" href="https://github.com/tmux-plugins/tpm"&gt;tpm&lt;/a&gt; plugin system
+(including the awesome &lt;a class="reference external" href="https://github.com/Morantron/tmux-fingers"&gt;tmux fingers&lt;/a&gt; plugin for
+intelligently copying key info (e.g. IP addresses) from the output of standard Unix utilities).&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen"&gt;Sharing a session with another user&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="using-tmux-on-hpc-clusters"&gt;
+&lt;h2&gt;Using tmux on HPC clusters&lt;/h2&gt;
+&lt;p&gt;Terminal Multiplexers can be useful if doing &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html#interactive-sessions)"&gt;interactive work&lt;/a&gt;
+on a &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Supercomputer"&gt;HPC&lt;/a&gt; cluster such as the University of Sheffield clusters &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/"&gt;ShARC and Iceberg&lt;/a&gt;
+(assuming that you don't need a &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Graphical_user_interface"&gt;GUI&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;On ShARC and Iceberg can:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Start a tmux or GNU Screen session on a login node;&lt;/li&gt;
+&lt;li&gt;Start an interactive job using &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html"&gt;qrshx or qrsh&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Disconnect and reconnect from the tmux/Screen session (either deliberately or due an issue with the SSH connection to the cluster);&lt;/li&gt;
+&lt;li&gt;Create additional windows/panes on the login node for editing files, starting additional interactive jobs etc, watching log files.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Starting tmux on worker nodes is also useful if you want to have multiple windows/panes on a worker node &lt;em&gt;but&lt;/em&gt;
+less useful if you want to disconnect/reconnect from/to a session as if you run qrsh a second time you cannot
+guarantee that you will be give an interactive job on on the node you started the tmux session from.&lt;/p&gt;
+&lt;p&gt;However, note that you can have nested tmux sessions
+(with &lt;strong&gt;&amp;lt;prefix&amp;gt;&amp;lt;prefix&amp;gt; &amp;lt;key&amp;gt;&lt;/strong&gt; used to send tmux commands to the 'inner' tmux session).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: many clusters have multiple login nodes for redundancy,
+with only one being the default active login node at any given time.
+If the active login node requires maintenance then logged-in users may be booted off
+and long-running processes may be terminated
+(before the system administrator makes a 'standby' login node the currently active one).
+Under such circumstances your tmux/Screen session may be killed.&lt;/p&gt;
+&lt;div class="section" id="being-a-good-hpc-citizen"&gt;
+&lt;h3&gt;Being a good HPC citizen&lt;/h3&gt;
+&lt;p&gt;Your interactive job (on a cluster worker node) will be terminated by the cluster's &lt;em&gt;Grid Engine&lt;/em&gt; job scheduler after a fixed amount of time (the default is 8 hours)
+but your tmux/Screen session was started on a login node so is outside the control of the cluster and
+will keep running indefinitely unless you kill it.&lt;/p&gt;
+&lt;p&gt;Each tmux/Screen session requires memory on the login node (which is used by all users) so to be a good HPC citizen you should:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Kill your tmux/Screen session when no longer needed&lt;/strong&gt; (tmux/Screen will exit when you close all windows)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Only start as many tmux/Screen sessions on the login node as you need (ideally 1)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Exit your interactive Grid Engine job&lt;/strong&gt; (on a worker node) &lt;strong&gt;if no longer needed&lt;/strong&gt; as then others can make use of the resources you had been using on this node.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Tip&lt;/strong&gt;: with tmux you can ensure that you either reconnect to an existing session (with a given name) if it already exists &lt;em&gt;or&lt;/em&gt; create a new session using:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+tmux new-session -A -s mysession
+&lt;/pre&gt;
+&lt;p&gt;This should help avoid accidentally creating more than one tmux session.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;NB the recordings of terminal sessions shown were created using &lt;a class="reference external" href="http://0xcc.net/ttyrec/"&gt;ttyrec&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/icholy/ttygif"&gt;ttygif&lt;/a&gt;
+then converted to &lt;a class="reference external" href="https://www.webmproject.org/"&gt;.webm&lt;/a&gt; videos using &lt;a class="reference external" href="http://ffmpeg.org/"&gt;ffmpeg&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>terminals</category><category>tmux</category><guid>http://rse.shef.ac.uk/blog/tmux-intro/</guid><pubDate>Thu, 15 Jun 2017 11:53:04 GMT</pubDate></item></channel></rss>

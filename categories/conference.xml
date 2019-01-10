@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts about conference)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/categories/conference.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Computational Mathematics with Jupyter workshop</title><link>http://rse.shef.ac.uk/blog/icms-2017/</link><dc:creator>Will Furnass</dc:creator><description>&lt;div&gt;&lt;p&gt;Back in mid-January three members of the University of Sheffield's Research Software Engineering Team
+(me, &lt;a class="reference external" href="https://rse.shef.ac.uk/contact/alumni//"&gt;Mike Croucher&lt;/a&gt; and &lt;a class="reference external" href="http://rse.shef.ac.uk/blog/tania_allard/"&gt;Tania Allard&lt;/a&gt;)
+spent a week at a &lt;a class="reference external" href="https://opendreamkit.org/meetings/2017-01-16-ICMS/"&gt;Computational Mathematics with Jupyter workshop&lt;/a&gt;, hosted at Edinburgh's &lt;a class="reference external" href="http://www.icms.org.uk/"&gt;International Centre for Mathematical Sciences&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This brought together the many members of the consortium working on the &lt;a class="reference external" href="https://opendreamkit.org/"&gt;OpenDreamKit&lt;/a&gt; Horizon 2020 European Research Infrastructure project.
+The overall aim of the project is broad (to further the open-source computational mathematics ecosystem)
+so it was unsurprising that the collective experience of the attendees was too.
+The attendees generally fell into one of the following four camps:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Researchers interested in solving &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Group_theory"&gt;Group Theory&lt;/a&gt; and &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Semigroup"&gt;Semigroup&lt;/a&gt; problems using the &lt;a class="reference external" href="https://www.gap-system.org/"&gt;GAP&lt;/a&gt; software,
+some of which were involved with developing a &lt;a class="reference external" href="http://jupyter.readthedocs.io/en/latest/projects/kernels.html"&gt;Jupyter kernel&lt;/a&gt; for GAP;&lt;/li&gt;
+&lt;li&gt;Others interested in the &lt;a class="reference external" href="http://www.sagemath.org/"&gt;SageMath&lt;/a&gt; computational mathematics ecosystem
+(which is particularly strong for computational algebra) and
+working on a Jupyter kernel for it;&lt;/li&gt;
+&lt;li&gt;Research Software Engineers working on interactive widgets, visualisation tools and workflow tools for &lt;a class="reference external" href="http://jupyter.readthedocs.io/"&gt;Jupyter&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;People with experience/interest in using computational mathematics tools for teaching purposes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="The attendees of the workshop" src="http://rse.shef.ac.uk/images/icms-2017-attendees.jpg"&gt;
+&lt;p class="caption"&gt;The attendees of the workshop.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The structure was different from conferences I'd attended previously:
+for each of the five days we listened and debated presentations in the morning then
+busied ourselves with &lt;a class="reference external" href="https://www.software.ac.uk/blog/2017-02-23-computational-mathematics-jupyter-sprint"&gt;code sprints&lt;/a&gt; in the afternoons.&lt;/p&gt;
+&lt;div class="section" id="correctness-sustainability-and-human-fallibility"&gt;
+&lt;h2&gt;Correctness, sustainability and human fallibility&lt;/h2&gt;
+&lt;p&gt;Our own Mike Croucher kicked things off by asking
+&lt;a class="reference external" href="http://mikecroucher.github.io/MLPM_talk/"&gt;Is your research software correct?&lt;/a&gt;
+in which he presented &lt;strong&gt;Croucher's Law&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+I can be an idiot and &lt;strong&gt;will&lt;/strong&gt; make mistakes.&lt;/blockquote&gt;
+&lt;p&gt;with the corollary that&lt;/p&gt;
+&lt;blockquote&gt;
+You are no different!&lt;/blockquote&gt;
+&lt;p&gt;He argued, convincingly, that in our research we therefore need to put in place safeguards
+to lessen the chance and impact of mistakes, and
+proposed the following as partial solutions:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Automate (aka learn to program)&lt;/li&gt;
+&lt;li&gt;Write code in a (very) high-level language&lt;/li&gt;
+&lt;li&gt;Get some training&lt;/li&gt;
+&lt;li&gt;Use version control&lt;/li&gt;
+&lt;li&gt;Get a code buddy (Maybe an &lt;a class="reference external" href="https://rse.shef.ac.uk/contact/"&gt;RSE&lt;/a&gt;!)&lt;/li&gt;
+&lt;li&gt;Share your code and data openly&lt;/li&gt;
+&lt;li&gt;Use literate computing technologies&lt;/li&gt;
+&lt;li&gt;Write tests&lt;/li&gt;
+&lt;li&gt;Cite code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.software.ac.uk/about/staff/person/raniere-silva"&gt;Raniere Silva&lt;/a&gt; from the &lt;a class="reference external" href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt; followed on with a complementary talk on how to make computational mathematics software more sustainable.  He commented that odd numerical bugs can easily creep in over time (e.g. differing floating point behaviour between Python 2 and 3) but that we can maintain confidence in software using version control, continuous integration, good documentation, tutorials, knowledge bases, instant messaging and by developing communities around the software we value.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://blogs.cs.st-andrews.ac.uk/alexk/"&gt;Alexander Konovalov&lt;/a&gt; then talked about a particular case of making research software more sustainable and portable: he's been using &lt;a class="reference external" href="https://www.docker.com/"&gt;Docker&lt;/a&gt; containers to run &lt;a class="reference external" href="https://www.gap-system.org/"&gt;GAP&lt;/a&gt;.  This lead into a discussion on whether Docker is a sensible solution for archiving/reproducing workflows: will it be around in ten years' time?  Those interested in that particular issue might benefit from attending the forthcoming &lt;a class="reference external" href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt; workshop on &lt;a class="reference external" href="https://www.software.ac.uk/c4rr"&gt;Docker Containers for Reproducible Research&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="jupyter-what-is-it-and-how-can-we-diff-merge-test-notebooks"&gt;
+&lt;h2&gt;Jupyter: what is it and how can we diff/merge/test Notebooks?&lt;/h2&gt;
+&lt;p&gt;We were then given what was pitched as a &lt;strong&gt;'general introduction' to Jupyter&lt;/strong&gt;
+but ended up covering much more ground than anticipated,
+largely due to the speaker being &lt;a class="reference external" href="https://twitter.com/takluyver"&gt;Thomas Kluyver&lt;/a&gt;, one of the core IPython developers
+(who happens to have gained his PhD from the University of Sheffield).
+Thomas talked about the most significant features
+(literate programming environments;
+the power and versatility of using the browser as a &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop"&gt;REPL&lt;/a&gt;;
+Jupyter's client-server architecture)
+but also touched upon
+&lt;strong&gt;various tools and platforms that have built on Jupyter&lt;/strong&gt; including:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://jupyterhub.readthedocs.io/en/latest/"&gt;JupyterHub&lt;/a&gt;: a multi-user hub which "spawns, manages, and proxies multiple instances of the single-user Jupyter Notebook server".  One of the University of Sheffield's deliverables for the OpenDreamKit project is to get this running on our own computer clusters so users dictate what resources (e.g. cores, memory, GPUs) they want when they start a single-user Notebook session;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/jupyter/tmpnb"&gt;tmpnb&lt;/a&gt;: a JupyterHub-like system for launching temporary single-user Notebook sessions in the cloud (which are each backed by a Docker container).  tmpnb powers &lt;a class="reference external" href="https://try.jupyter.org/"&gt;https://try.jupyter.org/&lt;/a&gt; (hosted by RackSpace), which allows people to briefly test out Jupyter without installing anything locally;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://mybinder.org/"&gt;binder&lt;/a&gt;: a tool for turning a GitHub repository into a collection of interactive Notebooks, configuring the required environment/dependencies using a Dockerfile, Python requirements.txt file or Conda environment file;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/"&gt;nbgrader&lt;/a&gt;: a tool for distributing coding and/or free text Notebook-based assignments then automatically or manually grading them.  This can integrate with JupyterHub;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://nbconvert.readthedocs.io/en/latest/"&gt;nbconvert&lt;/a&gt;: convert a Notebook to HTML/Markdown/PDF/scripts or a custom format (using a &lt;a class="reference external" href="http://jinja.pocoo.org/"&gt;Jinja2&lt;/a&gt; template).  It is used by &lt;a class="reference external" href="https://nbviewer.jupyter.org/"&gt;nbviewer.jupyter.org&lt;/a&gt; to create online static HTML views of Notebooks.  nbconvert is also used by GitHub for rendering Notebooks;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/takluyver/nbparameterise"&gt;nbparameterise&lt;/a&gt;:  Often you want design Notebooks to demonstrate/explore the impact of a small number of key variables.  This project of Thomas's allows such variables to be set in the first code cell then the entire Notebook can be run non-interactively and rendered to HTML;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/jupyterlab/jupyterlab"&gt;jupyterlab&lt;/a&gt;: This will be the next iteration of Jupyter's UI: rather than exclusively displaying a terminal, Notebook or file editor in the Jupyter interface, instead a multi-tab and multi-pane interface allows you to view and interact with several of these things at once.  It will therefore look and feel a bit more like Spyder/R Studio/MATLAB but this is no bad thing as all of those make good use of screen real estate provided by the wide monitors we all have these days.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="JupyterLab: the future of the Jupyter interface" src="http://rse.shef.ac.uk/images/jupyterlab.png"&gt;
+&lt;p class="caption"&gt;JupyterLab: the future of the Jupyter interface.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Given the enormity of the Jupyter ecosystem and how quickly it has grown
+it was great to hear from a core developer which related projects he thinks are the most significant and interesting!&lt;/p&gt;
+&lt;p&gt;Next up, Vidar Fauske gave &lt;a class="reference external" href="https://opendreamkit.org/meetings/2017-01-16-ICMS/talks/nbdime.pdf"&gt;this talk&lt;/a&gt; on &lt;a class="reference external" href="https://nbdime.readthedocs.io/en/latest/"&gt;nbdime&lt;/a&gt;, a new tool for &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Merge_(version_control)"&gt;merging&lt;/a&gt; and &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Diff_utility"&gt;diffing&lt;/a&gt; Jupyter Notebooks.
+The backstory is that for some time we've been recommending Jupyter to those wanting to start using Python or R in their research and we've also been telling everyone to use version control but the diffing and merging tools typically used with version control systems don't work well with Notebooks as they&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Operate on lines without consideration of whether a file has a nested structure (JSON in the case of Notebooks);&lt;/li&gt;
+&lt;li&gt;Base64-encoded binary objects in Notebooks are naively treated in just the same way as text;&lt;/li&gt;
+&lt;li&gt;No logic for omitting certain entities (execution counters; cell outputs) from version control (although the wonderful &lt;a class="reference external" href="https://github.com/kynan/nbstripout"&gt;nbstripout&lt;/a&gt; can handle both of these cases when triggered by a &lt;a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks"&gt;git hook&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ultimately visualising the differences between two Notebooks and merging Notebooks in sensible, useful ways really requires that the tools that perform these functions have some understanding of the structure and purpose of Notebooks: &lt;strong&gt;nbdime&lt;/strong&gt; has that awareness:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The major unit for merging/diffing is the &lt;strong&gt;cell&lt;/strong&gt;, the line.&lt;/li&gt;
+&lt;li&gt;Input cell merging is string merging whereas&lt;/li&gt;
+&lt;li&gt;Cell outputs are treated as atomic: they match or they don't.&lt;/li&gt;
+&lt;li&gt;Execution counts are sensibly ignored by default.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;nbdime provides a core library, plus command-line and browser interfaces for diffing and merging.&lt;/p&gt;
+&lt;p&gt;Overall, I'm massively excited about nbdime for facilitating much slicker Notebook-based version controlled workflows and hope it sees widespread adoption and promotion by the likes of &lt;a class="reference external" href="https://software-carpentry.org/lessons/"&gt;Software Carpentry&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="nbdime's nbdiff tool for viewing the differences between two Notebooks" src="http://rse.shef.ac.uk/images/nbdiff-example.png"&gt;
+&lt;p class="caption"&gt;nbdime's nbdiff tool for viewing the differences between two Notebooks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Hans Fangohr then introduced &lt;a class="reference external" href="https://github.com/computationalmodelling/nbval"&gt;nbval&lt;/a&gt;, a new tool for &lt;strong&gt;automating the valdation of Jupyter Notebooks&lt;/strong&gt;.  This could give researchers greater confidence in their workflows: &lt;strong&gt;does a demonstrative Notebook still give the same answers if re-run after making changes to the Notebook's environment (e.g. the package dependencies)?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;nbval, a &lt;a class="reference external" href="http://doc.pytest.org/en/latest/"&gt;pytest&lt;/a&gt; plug-in, works as follows: it creates a copy of a Notebook file, executes the copy in the current Python environment, saves the copy Notebook with its new cell outputs then compares the outputs of the two Notebooks.  There are some nice features to control the granularity of testing: flags can be set so certain cells are run but not tested; &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Regular_expression"&gt;regexes&lt;/a&gt; can be used to ignore oft-changing output strings (e.g. paths, timestamps, memory addresses).  Images and LaTeX can't be handled yet.&lt;/p&gt;
+&lt;p&gt;Again, I'm exited about this new tool: being able to package both workflow documentation and regression/ acceptance tests as Notebooks is a great idea.  Note that at present both nbdime and nbval include mechanisms for comparing Notebooks but are presently separate projects.  It will be interesting to see if there's any convergence in future.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="interactive-widgets-in-notebooks"&gt;
+&lt;h2&gt;Interactive widgets in Notebooks&lt;/h2&gt;
+&lt;p&gt;We were treated to two talks on the &lt;a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/"&gt;ipywidgets&lt;/a&gt; package, which provides &lt;strong&gt;Python and Javascript-backed widgets for interacting with Notebooks&lt;/strong&gt; e.g. sliders for assessing the impact of model parameters on trends in embedded &lt;a class="reference external" href="https://matplotlib.org/"&gt;matplotlib&lt;/a&gt; plots.&lt;/p&gt;
+&lt;p&gt;First, &lt;a class="reference external" href="https://github.com/jdemeyer"&gt;Jeroen Demeyer&lt;/a&gt; introduced us to the high-level &lt;tt class="docutils literal"&gt;interact&lt;/tt&gt; Python decorator function and &lt;tt class="docutils literal"&gt;interactive&lt;/tt&gt; class one can use to control function inputs using a HTML+Javascript widget.  He then went on to explain how one can manually reproduce the magic of these mechanisms: you instantiate some (typed) input widgets and output widgets, add them to an on-screen container then associate each input widget with a callback.&lt;/p&gt;
+&lt;p&gt;Next, &lt;a class="reference external" href="https://www.lpsm.paris//pageperso/corlay/"&gt;Sylvain Corlay&lt;/a&gt; talked about the ipywidgets ecosystem and the future direction of the project.  He mentioned several projects that have built on ipywidgets, all of which sound exciting but none of which I'd heard of before this!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/bloomberg/bqplot"&gt;bqplot&lt;/a&gt;: a &lt;a class="reference external" href="https://matplotlib.org/"&gt;matplotlib&lt;/a&gt; alternative that supports the same API, uses custom ipywidgets and behind the scenes uses &lt;a class="reference external" href="https://d3js.org/"&gt;d3.js&lt;/a&gt; for low-level drawing;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/jupyter-widgets/pythreejs"&gt;pythreejs&lt;/a&gt;: this exposes the API of the &lt;cite&gt;three.js&lt;/cite&gt; Javascript/WebGL 3D library to Python; this is a low-level API, not a Python plotting library.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/jupyter-widgets/ipyleaflet"&gt;ipyleaflet&lt;/a&gt;: a GIS plotting library that uses ipywidgets and the &lt;a class="reference external" href="https://leafletjs.com/"&gt;Leaflet&lt;/a&gt; Javascript library.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/jupyter-widgets/widget-cookiecutter"&gt;widget-cookiecutter&lt;/a&gt;: a template for creating custom ipywidgets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The current version of ipywidgets, released since the workshop, includes some interesting developments: much more of the code is now written in Javascript (actually Typescript) rather than Python so widgets state is maintained in JavaScript-land: widgets can therefore now be rendered and manipulated without a Jupyter kernel!  See &lt;a class="reference external" href="http://nbviewer.jupyter.org/github/ipython/ipywidgets/blob/master/docs/source/examples/Widget%20List.ipynb"&gt;this statically-rendered Notebook&lt;/a&gt; on GitHub as an example.  Another advantage of migrating the bulk of the code to Javascript is that the widgets should be usable with kernel languages other than Python such as R (once people have written language-specific ipywidgets backends).&lt;/p&gt;
+&lt;p&gt;Separate to ipywidgets, we were also introduced to &lt;a class="reference external" href="https://www.logilab.org/blogentry/8541176"&gt;SciviJS&lt;/a&gt;, a tool currently being developed by &lt;a class="reference external" href="https://twitter.com/Renou_Martin"&gt;Martin Renou&lt;/a&gt; at &lt;a class="reference external" href="https://www.logilab.org/"&gt;LogiLab&lt;/a&gt; for &lt;strong&gt;visualising 3D mesh-based geometries in a Juypter Notebook&lt;/strong&gt;.  It uses also uses &lt;a class="reference external" href="https://www.khronos.org/webgl/"&gt;WebGL&lt;/a&gt; / &lt;a class="reference external" href="https://threejs.org/"&gt;three.js&lt;/a&gt; for rendering so is rather performant.  I can see some ex-colleagues in civil engineering really liking this.  Check out the &lt;a class="reference external" href="https://demo.logilab.fr/SciviJS/"&gt;online demo&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="numbas-for-online-computer-aided-assessment-cas"&gt;
+&lt;h2&gt;Numbas for online computer-aided assessment (CAS)&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.numbas.org.uk/"&gt;Numbas&lt;/a&gt; is a open web-based system for formative and summative maths and science tests.  It is being developed by &lt;a class="reference external" href="http://somethingorotherwhatever.com/"&gt;Christian Lawson-Perfect&lt;/a&gt; from the University of Newcastle's &lt;a class="reference external" href="https://www.ncl.ac.uk/maths-physics/outreach/elearning/#overview"&gt;Maths and Stats E-Learning unit&lt;/a&gt;.  It's very different to teaching environments that use Jupyter (e.g. &lt;a class="reference external" href="https://cocalc.com/"&gt;SageMathCloud&lt;/a&gt;) as almost all the code is self-contained HTML+Javascript that is run on the client (for scalability and resilience) and it is for generating closed tests (rather than open mathematical exercises).  Looks very attractive and intuitive from the user's perspective!&lt;/p&gt;
+&lt;p&gt;Christian also mentioned &lt;a class="reference external" href="https://up-for-grabs.net/"&gt;Up For Grabs&lt;/a&gt;, a site of projects wanting help on simpler tasks.  He says it's a good and simple way of getting less experienced developers involved with open-source projects.  As a project maintainer you upload some blurb about your project and tell the site which GitHub Issue tag(s) indicate smaller tasks that are 'up for grabs'.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="case-studies-of-jupyter-usage"&gt;
+&lt;h2&gt;Case studies of Jupyter usage&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.southampton.ac.uk/~fangohr/"&gt;Hans Fangohr&lt;/a&gt; from the &lt;a class="reference external" href="http://cmg.soton.ac.uk/"&gt;University of Southampton&lt;/a&gt; reported on using Python and Jupyter to encapsulate multi-stage micro-magnetism modelling workflows:
+his team have been able to automate the generation of input files and processing of output files for/from old but robust modelling software (&lt;a class="reference external" href="https://math.nist.gov/oommf/"&gt;OOMMF&lt;/a&gt;);
+Jupyter then further masks away the complexities of running models.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.sheffield.ac.uk/physics/contacts/mark-quinn"&gt;Mark Quinn&lt;/a&gt; then talked about the impact that &lt;a class="reference external" href="https://cocalc.com/"&gt;SageMathCloud&lt;/a&gt;, an online teaching environment which uses Jupyter, has had on the teaching of physics, astronomy and coding at the University of Sheffield.  He's been working with Mike Croucher to develop SageMathCloud courses for the Physics department with the goal of introducing effective programming tuition early in undergraduate Physics degree programmes.  He's now quite a fan of the used coding environment (Jupyter) and SageMathCloud's courseware tools (chat facilities and mechanisms for setting and grading assignments) but has now been using it long enough to identify some challenges/issues too (e.g. students getting confused about the order of execution of cells; students opening many notebooks at once (each of which has a resource footprint).&lt;/p&gt;
+&lt;p&gt;Mark is involved with the Shepherd Group, who research the efficacy of teaching methods and are based in the same Physics department.  They've recently been studying the impact of using the Jupyter Notebook to undergraduate students who had and hadn't studied Physics at A-Level.  They tested students (at different levels of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Bloom%27s_taxonomy"&gt;Bloom's Taxonomy&lt;/a&gt;) before and after teaching and concluded that the Notebooks were suitable for aiding students, regardless of whether they had a Physics background.  Hopefully the &lt;a class="reference external" href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt; can lend their support to pedagogical studies of this nature in future.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="other-talks"&gt;
+&lt;h2&gt;Other talks&lt;/h2&gt;
+&lt;p&gt;I should note that there were also a number of other talks that focussed on the &lt;a class="reference external" href="https://www.gap-system.org/"&gt;GAP&lt;/a&gt; and &lt;a class="reference external" href="http://www.sagemath.org/"&gt;SageMath&lt;/a&gt; computational mathematics software packages:
+I've deliberately not mentioned them here
+so as not to expose my lack of understanding of group theory and semi-groups
+and also this post is long enough already!
+See the &lt;a class="reference external" href="https://opendreamkit.org/meetings/2017-01-16-ICMS/programme/"&gt;full programme&lt;/a&gt; for info on things I've neglected plus links to the presentations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="coding-sprints-inc-jupyter-interactions-gallery"&gt;
+&lt;h2&gt;Coding Sprints (inc. Jupyter Interactions gallery)&lt;/h2&gt;
+&lt;p&gt;After lunch on each of the five days of the workshop we worked on various coding sprints:
+some wrote a Jupyter kernel for GAP,
+others worked on SageMath,
+whilst me and a few others started work on &lt;a class="reference external" href="https://github.com/mikecroucher/jupyter-interactions"&gt;Jupyter Interactions&lt;/a&gt;.
+This sprint was suggested by Mike Croucher:
+he thought it would be nice to have a curated set of Notebooks that
+demonstrate how to use different &lt;a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/"&gt;ipywidgets&lt;/a&gt; to manipulate various mathematical objects.
+Several of us wrote Notebooks while
+&lt;a class="reference external" href="http://somethingorotherwhatever.com/"&gt;Christian Lawson-Perfect&lt;/a&gt; quickly put together a very nice &lt;a class="reference external" href="https://github.com/christianp/jupyter-interactions-site"&gt;gallery-generating front end&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="Jupyter Interactions Notebook gallery" src="http://rse.shef.ac.uk/images/jupyter-interactions.png"&gt;
+&lt;p class="caption"&gt;Jupyter Interactions Notebook gallery.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;See the &lt;a class="reference external" href="https://mikecroucher.github.io/jupyter-interactions/"&gt;end result here&lt;/a&gt;.
+Should you wish to submit your own Jupyter Interactions Notebook then
+please &lt;a class="reference external" href="https://github.com/mikecroucher/jupyter-interactions/pulls"&gt;submit a pull request&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="culture"&gt;
+&lt;h2&gt;Culture&lt;/h2&gt;
+&lt;p&gt;This was the first time I'd been to a conference where the emphasis was very much on sharing ideas and working together:
+the academic conferences I'd attended prior to this had previously had an air of competition about them.
+Looking forward to meeting up with the OpenDreamKit gang again!&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>conference</category><guid>http://rse.shef.ac.uk/blog/icms-2017/</guid><pubDate>Sun, 12 Mar 2017 22:00:00 GMT</pubDate></item></channel></rss>

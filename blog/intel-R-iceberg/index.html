@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accelerated versions of R for Iceberg | RSE at Sheffield</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://rse.shef.ac.uk/blog/intel-R-iceberg/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Mike Croucher">
+<link rel="prev" href="../the-university-of-sheffield-named-an-nvidia-gpu-education-center/" title="The University of Sheffield named an NVIDIA GPU Education Center" type="text/html">
+<link rel="next" href="../coffee-and-cakes-event/" title="Coffee and Cakes Event" type="text/html">
+<meta property="og:site_name" content="RSE at Sheffield">
+<meta property="og:title" content="Accelerated versions of R for Iceberg">
+<meta property="og:url" content="http://rse.shef.ac.uk/blog/intel-R-iceberg/">
+<meta property="og:description" content="To Long; Didn't Read -- Summary
+I've built a version of R on Iceberg that is faster than the standard version for various operations. Documentation is at http://docs.hpc.shef.ac.uk/en/latest/iceberg/s">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-09-12T00:31:35Z">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="http://rse.shef.ac.uk/">
+
+            <span id="blog-title">RSE at Sheffield</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../blog" class="nav-link">Blog</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RSE Service</a>
+            <div class="dropdown-menu">
+                    <a href="../../service" class="dropdown-item">RSE Service Overview</a>
+                    <a href="../../service/provision" class="dropdown-item">Service Model Provision</a>
+                    <a href="../../service/activities" class="dropdown-item">What we do</a>
+                    <a href="../../service/testimonials" class="dropdown-item">Testimonials</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+            <div class="dropdown-menu">
+                    <a href="../../support/code-clinic" class="dropdown-item">Code Clinic</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Training</a>
+            <div class="dropdown-menu">
+                    <a href="../../training" class="dropdown-item">Overview</a>
+                    <a href="../../training/events" class="dropdown-item">Training Events</a>
+                    <a href="../../training/carpentry" class="dropdown-item">Software and Data Carpentry</a>
+                    <a href="../../training/deeplearning" class="dropdown-item">Deep Learning</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RSE Community</a>
+            <div class="dropdown-menu">
+                    <a href="../../community" class="dropdown-item">Overview</a>
+                    <a href="../../community/coffee-and-cake" class="dropdown-item">Coffee and Cake</a>
+                    <a href="../../community/seminars" class="dropdown-item">Seminar Series</a>
+                    <a href="../../community/resources-and-equipment" class="dropdown-item">Resources and Equipment</a>
+                    <a href="../../community/job-descriptions" class="dropdown-item">RSE Job Descriptions</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+            <div class="dropdown-menu">
+                    <a href="../../contact" class="dropdown-item">Contact Us</a>
+                    <a href="../../contact/team" class="dropdown-item">RSE Team</a>
+                    <a href="../../contact/alumni" class="dropdown-item">Alumni</a>
+            </div>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Accelerated versions of R for Iceberg</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    <a href="../../authors/mike-croucher/">Mike Croucher</a>
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2016-09-12T00:31:35Z" itemprop="datePublished" title="2016-09-12 00:31">2016-09-12 00:31</time></a>
+            </p>
+            
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p><strong>To Long; Didn't Read -- Summary</strong></p>
+<p>I've built a version of R on Iceberg that is faster than the standard version for various operations. Documentation is at <a href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html">http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html</a>.</p>
+<p>If it works more quickly for you, or if you have problems, please let us know by emailing <a href="mailto:rse@sheffield.ac.uk">rse@sheffield.ac.uk</a></p>
+<p><strong>Background</strong></p>
+<p>I took over building <a href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html">R for Iceberg</a>, Sheffield's High Performance Computing System, around a year ago and have been incrementally improving both the install and the documentation with every release. Something that's been bothering me for a while is the lack of optimisation. The standard Iceberg build uses an ancient version of the gcc compiler and (probably) unoptimised versions of <a href="https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms">BLAS</a> and <a href="https://en.wikipedia.org/wiki/LAPACK">LAPCK</a>.</p>
+<p>BLAS and LAPACK are extremely important libraries -- they provide the code that programs such as R use for linear algebra: Matrix-Matrix multiplication, Cholesky decomposition, principle component analysis and so on. It's important to note that there are lots of implementations of BLAS and LAPACK: <a href="http://math-atlas.sourceforge.net/">ATLAS</a>, <a href="http://www.openblas.net/">OpenBLAS</a> and the <a href="https://software.intel.com/en-us/mkl">Intel MKL</a> are three well-known examples. Written in Fortran, the interfaces of all of these versions are identical, which means you can use them interchangeably, but the speed of the implementation can vary considerably.</p>
+<p>The BLAS and LAPACK implementations on Iceberg are undocumented (before my time!) which means that we have no idea what we are dealing with. Perhaps they are optimised, perhaps not. I suspected 'not'.</p>
+<p><strong>Building R with the Intel Compiler and MKL</strong></p>
+<p>The Intel Compiler Suite often produces the fastest executables of all available compilers for any given piece of Fortran or C/C++ code. Additionally, the Intel MKL is probably the fastest implementation of BLAS and LAPACK available for Intel Hardware. As such, I've had <strong>Build R using Intel Compilers and MKL</strong> on my to-do list for some time.</p>
+<p>Following a recent visit to the University of Lancaster, where they've been doing this for a while, I finally bit the bullet and produced some build-scripts. Thanks to Lancaster's Mike Pacey for help with this!  There are two versions (links point to the exact commits that produced the builds used in this article):</p>
+<ul>
+<li>
+<a href="https://github.com/mikecroucher/HPC_Installers/blob/ea4a9f33b705a8cae01841d9c173278fcb486061/apps/R/3.3.1/sheffield/iceberg/intel_15/install_intel_r_sequential.sh">install_intel_r_sequential.sh</a> - Linked to the sequential (i.e. single-core) version of Intel MKL.</li>
+<li>
+<a href="https://github.com/mikecroucher/HPC_Installers/blob/ea4a9f33b705a8cae01841d9c173278fcb486061/apps/R/3.3.1/sheffield/iceberg/intel_15/install_intel_r_parallel.sh">install_intel_r_parallel.sh</a> - Linked to the parallel version of Intel MKL.</li>
+</ul>
+<p>The benchmark code is available in the Sheffield HPC examples repo <a href="https://github.com/mikecroucher/HPC_Examples/">https://github.com/mikecroucher/HPC_Examples/</a>. The exact commit that produced these results is <a href="https://github.com/mikecroucher/HPC_Examples/blob/35de11e7c47bc278b15a64fb77c5575b074e1a47/languages/R/linear_algebra/linear_algebra_bench.r">35de11e</a></p>
+<p><strong>Testing</strong></p>
+<p>It's no good having fast builds of R if they give the wrong results! To make sure that everything is OK, I ran R's installation test suite and everything passed. If you have an account on iceberg, you can see the output from the test suite at <code>/usr/local/packages6/apps/intel/15/R/sequential-3.3.1/install_logs/make_install_tests-R-3.3.1.log</code>.</p>
+<p>It's important to note that although the tests passed, there <strong>are</strong> differences in output between this build and the reference build that R's test suite is based on. This is due to a number of factors such as the fact that <a href="http://www.walkingrandomly.com/?p=5380">Floating point addition is not associative</a> and that the signs of eigenvectors are arbitrary and so on.</p>
+<p>A discussion around these differences and how they relate to R can be found <a href="http://r.789695.n4.nabble.com/quot-make-check-quot-fails-on-lapack-R-and-stats-Ex-R-td4698672.html">on nabble</a>.</p>
+<p><strong>How fast is it?</strong></p>
+<p>So is it worth it? I ran a benchmark called <a href="https://github.com/mikecroucher/HPC_Examples/blob/35de11e7c47bc278b15a64fb77c5575b074e1a47/languages/R/linear_algebra/linear_algebra_bench.r#L19">linear_algebra_bench.r</a> that implemented 5 tests</p>
+<ul>
+<li>MatMul - Multiplies two random 1000 x 5000 matrices together</li>
+<li>Chol - Cholesky decomposition of a 5000 x 5000 random matrix</li>
+<li>SVD - Singular Value Decompisition of a 10000 x 2000 random matrix</li>
+<li>PCA - Principle component analysis of a 10000 x 2000 random matrix</li>
+<li>LDA - A Linear Discriminant Analysis problem</li>
+</ul>
+<p>Run time of these operations compared to Iceberg's standard install of R is shown in the table below.</p>
+<ul>
+<li>Iceberg submission scripts for these can be found in the <a href="https://github.com/mikecroucher/HPC_Examples">HPC Examples repo</a>
+</li>
+</ul>
+<p><strong>Execution time in seconds (Mean of 5 independent runs) </strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+<tr>
+<th class="tg-yw4l"></th>
+    <th class="tg-yw4l">MatMul</th>
+    <th class="tg-yw4l">Chol</th>
+    <th class="tg-yw4l">SVD</th>
+    <th class="tg-yw4l">PCA</th>
+    <th class="tg-yw4l">LDA</th>
+  </tr>
+<tr>
+<td class="tg-yw4l">Standard R</td>
+    <td class="tg-yw4l">134.70</td>
+    <td class="tg-yw4l">20.95</td>
+    <td class="tg-yw4l">46.56</td>
+    <td class="tg-yw4l">179.60</td>
+    <td class="tg-yw4l">132.40</td>
+  </tr>
+<tr>
+<td class="tg-yw4l">Intel R with sequential MKL</td>
+    <td class="tg-yw4l">12.19</td>
+    <td class="tg-yw4l">2.24</td>
+    <td class="tg-yw4l">9.13</td>
+    <td class="tg-yw4l">24.58</td>
+    <td class="tg-yw4l">31.32</td>
+  </tr>
+<tr>
+<td class="tg-yw4l">Intel R with parallel MKL (2 cores)</td>
+    <td class="tg-yw4l">7.21</td>
+    <td class="tg-yw4l">1.60</td>
+    <td class="tg-yw4l">5.43</td>
+    <td class="tg-yw4l">14.66</td>
+    <td class="tg-yw4l">23.54</td>
+  </tr>
+<tr>
+<td class="tg-yw4l">Intel R with parallel MKL (4 cores)</td>
+    <td class="tg-yw4l">3.24</td>
+    <td class="tg-yw4l">1.17</td>
+    <td class="tg-yw4l">3.34</td>
+    <td class="tg-yw4l">7.87</td>
+    <td class="tg-yw4l">20.63</td>
+  </tr>
+<tr>
+<td class="tg-yw4l">Intel R with parallel MKL (8 cores)</td>
+    <td class="tg-yw4l">1.71</td>
+    <td class="tg-yw4l">0.38</td>
+    <td class="tg-yw4l">1.99</td>
+    <td class="tg-yw4l">5.33</td>
+    <td class="tg-yw4l">15.82</td>
+  </tr>
+<tr>
+<td class="tg-yw4l">Intel R with parallel MKL (16 cores)</td>
+    <td class="tg-yw4l">0.96</td>
+    <td class="tg-yw4l">0.28</td>
+    <td class="tg-yw4l">1.60</td>
+    <td class="tg-yw4l">4.05</td>
+    <td class="tg-yw4l">13.65</td>
+  </tr>
+</table>
+<p><img alt="" src="../../images/matmul_r_intel.png"></p>
+<p>Another way of viewing these results is to see the speed up compared to the standard install of R. <strong>Even on a single CPU core, the Intel builds are between 4 and 11 times faster than the standard builds</strong>.  Making use of 16 cores takes this up to <strong>141 times faster in the case of Matrix-Matrix Multiplication</strong>!</p>
+<p><strong>Speed up compared to standard R</strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+<tr>
+<th class="tg-yw4l"> </th>
+    <th class="tg-yw4l">MatMul</th>
+    <th class="tg-yw4l">Chol</th>
+    <th class="tg-yw4l">SVD</th>
+    <th class="tg-yw4l">PCA</th>
+    <th class="tg-yw4l">LDA</th>
+  </tr>
+<tr>
+<td class="tg-yw4l">Standard R</td>
+    <td class="tg-yw4l">1</td>
+    <td class="tg-yw4l">1</td>
+    <td class="tg-yw4l">1</td>
+    <td class="tg-yw4l">1</td>
+    <td class="tg-yw4l">1</td>
+  </tr>
+<tr>
+<td class="tg-yw4l">Intel R with sequential MKL</td>
+    <td class="tg-yw4l">11</td>
+    <td class="tg-yw4l">9</td>
+    <td class="tg-yw4l">5</td>
+    <td class="tg-yw4l">7</td>
+    <td class="tg-yw4l">4</td>
+  </tr>
+<tr>
+<td class="tg-yw4l">Intel R with parallel MKL (2 cores)</td>
+    <td class="tg-yw4l">19</td>
+    <td class="tg-yw4l">13</td>
+    <td class="tg-yw4l">9</td>
+    <td class="tg-yw4l">12</td>
+    <td class="tg-yw4l">6</td>
+  </tr>
+<tr>
+<td class="tg-yw4l">Intel R with parallel MKL (4 cores)</td>
+    <td class="tg-yw4l">42</td>
+    <td class="tg-yw4l">18</td>
+    <td class="tg-yw4l">14</td>
+    <td class="tg-yw4l">23</td>
+    <td class="tg-yw4l">6</td>
+  </tr>
+<tr>
+<td class="tg-yw4l">Intel R with parallel MKL (8 cores)</td>
+    <td class="tg-yw4l">79</td>
+    <td class="tg-yw4l">55</td>
+    <td class="tg-yw4l">23</td>
+    <td class="tg-yw4l">34</td>
+    <td class="tg-yw4l">8</td>
+  </tr>
+<tr>
+<td class="tg-yw4l">Intel R with parallel MKL (16 cores)</td>
+    <td class="tg-yw4l">141</td>
+    <td class="tg-yw4l">75</td>
+    <td class="tg-yw4l">29</td>
+    <td class="tg-yw4l">44</td>
+    <td class="tg-yw4l">10</td>
+  </tr>
+</table>
+<p><strong>Parallel environment</strong></p>
+<p>The type of parallelisation in use here is <a href="https://www.openmp.org/">OpenMP</a>. As such, you need to use Iceberg's openmp environment.  That is, if you want 8 cores (say), add the following to your submission  script</p>
+<pre>
+#$ -pe openmp 8
+export OMP_NUM_THREADS=8
+</pre>
+
+<p>Using OpenMP limits the number of cores you can use per job to the number available on a single node. At the time of writing, this is 16.</p>
+<p><strong>How many cores: Finding the sweet spot</strong></p>
+<p>Note that everything is fastest when using 16 cores! As such, it may be tempting to always use 16 cores for your jobs. This will almost always be a mistake.
+It may be that the aspect of your code that's accelerated by this build doesn't account for much of the runtime of your problem. As such, those 16 cores will sit idle most of the time -- wasting resources.  </p>
+<p>You'll also spend a lot longer waiting in the queue for 16 cores than you will for 2 cores which may swap any speed gains.</p>
+<p>You should always perform scaling experiments before deciding how many cores to use for your jobs. Consider the Linear Discriminant Analysis problem, for example. Using just one core, Intel build gives us a 4 times speed-up compared to the standard build. Moving to 8 cores only makes it twice as fast again. As such, if you had lots of these jobs to do, your throughput would be higher running lots of single core jobs compared to lots of 8 core jobs.</p>
+<p>If matrix-matrix multiply dominates your runtime, on the other hand, it may well be worth using 16 cores.</p>
+<p><strong>Using this version of R for your own work</strong></p>
+<p>As a user, there are a few things you need to be aware of with the Intel builds of R so I've created a separate documentation page for them.  This is currently at
+<a href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/intel_r.html">http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/intel_r.html</a></p>
+<p>My recommendation for using these builds is to work through the following procedure</p>
+<ul>
+<li>Ensure that your code runs with Iceberg's standard version of R and produce a test result.</li>
+<li>In the first instance, switch to the sequential version of the Intel R build. In the best case, this will just require changing the module. You may also need to install some of your packages since the Intel build has a separate packages directory to the standard build.</li>
+<li>If you see speed-up <strong>and</strong> the results are consistent with your test result, try the parallel version. Initially start with 2 cores and move upwards to find the sweet spot.</li>
+</ul>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../the-university-of-sheffield-named-an-nvidia-gpu-education-center/" rel="prev" title="The University of Sheffield named an NVIDIA GPU Education Center">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../coffee-and-cakes-event/" rel="next" title="Coffee and Cakes Event">Next post</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2019         <a href="mailto:rse@sheffield.ac.uk">RSE Sheffield</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts by Phil Tooley)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/authors/phil-tooley.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Group Member: Phil Tooley </title><link>http://rse.shef.ac.uk/blog/philtooley_intro/</link><dc:creator>Phil Tooley</dc:creator><description>&lt;div&gt;&lt;p&gt;I am thrilled to have joined the &lt;a href="https://rse.shef.ac.uk/"&gt;Research Software Engineering team at
+Sheffield&lt;/a&gt;. My new role is attached to the &lt;a href="https://insigneo.org"&gt;INSIGNEO&lt;/a&gt;
+Institute for in silico Medicine here at the University of Sheffield, developing image registration
+software as part of the &lt;a href="http://www.compbiomed.eu"&gt;CompBioMed&lt;/a&gt; project.   &lt;/p&gt;
+&lt;h3&gt;About Me&lt;/h3&gt;
+&lt;p&gt;&lt;img src="http://rse.shef.ac.uk/images/ptooley.jpg" align="right"&gt;
+I am a former theoretical and computational physicist with particular interests in mathematical
+modelling and code optimisation. I am also a stalwart champion of the use of the Scipy stack for
+scientific computing, and enjoy trying to make python speed competitive with C and Fortran
+(Spoiler alert: it totally can be!) &lt;/p&gt;
+&lt;p&gt;Although I am a user of both C(++) and Fortran I find that python is often a better choice for many
+tasks even in high performance scientific computing. As well as the huge array of fast mathematical libraries
+available to python, it is also possible to write custom routines in pure
+(&lt;a href="https://numba.pydata.org"&gt;Numba&lt;/a&gt;) or nearly-pure (&lt;a href="http://cython.org"&gt;Cython&lt;/a&gt;) python
+code, and compile them to native machine code.  This can give python equivalent performance to
+traditional C or Fortran codes, and opens up the possibility of running python code efficiently
+on HPC platforms. (More to come on this topic...)&lt;/p&gt;
+&lt;p&gt;Outside the office you will usually find me rock climbing or hiking somewhere.&lt;/p&gt;
+&lt;h4&gt;My previous work&lt;/h4&gt;
+&lt;p&gt;For the last 4 years I have been working on my Ph.D in Theoretical and Computational Plasma Physics
+at the &lt;a href="https://www.strath.ac.uk"&gt;University of Strathclyde&lt;/a&gt; working on novel accelerator technology
+known as Laser Wakefield Acceleration (LWFA).  This involves firing a short \((30\,
+\mathrm{fs})\) but highly intense \((10^{25}\mathrm{W/m^2})\) laser pulse, into a jet of
+helium gas.  The laser ionises the gas to a plasma and drives an electrostatic plasma wave with
+intense electric fields which can accelerate electrons to Gigaelectronvolt energies over just a few
+mm. (Compared to conventional accelerators such as &lt;a href="https://en.wikipedia.org/wiki/SLAC"&gt;SLAC&lt;/a&gt; which
+have to be kilometers in length to achieve the same energies.)&lt;/p&gt;
+&lt;p&gt;My research was into methods of controlling and improving the performance of these accelerations,
+and relied heavily on &lt;a href="https://en.wikipedia.org/wiki/Particle-in-cell"&gt;Particle in Cell Codes&lt;/a&gt;.
+These are massively parallel codes designed to run on HPCs and I spent a lot of my time developing
+code extensions and analysis tools for the terabyte scale datasets that they produce.  Typically I
+was interested in extracting a very small (usually \(&amp;lt;1\%\) of the total) subset of the electrons
+based on some selection criteria. To do this efficiently I developed a custom C++-based analysis
+code which can extract electron trajectories from the data based on arbitrary criteria.&lt;/p&gt;
+&lt;p&gt;A major application of LWFAs is as compact sources of X-ray and UV light for imaging and materials
+analysis tools in science and industry, and so the second major theme of my work was analysis of the
+radiation produced by the accelerated electrons.  This analysis required numerical integrators to
+calculate the radiation from the extracted electron trajectories by solving the Liénard-Wiechert
+potential equations.&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/philtooley_intro/</guid><pubDate>Tue, 31 Oct 2017 15:56:00 GMT</pubDate></item></channel></rss>

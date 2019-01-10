@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="RSE at Sheffield">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSE at Sheffield (old posts, page 3) | RSE at Sheffield</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="http://rse.shef.ac.uk/blog/index-3.html">
+<link rel="prev" href="index-4.html" type="text/html">
+<link rel="next" href="index-2.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="http://rse.shef.ac.uk/">
+
+            <span id="blog-title">RSE at Sheffield</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../blog" class="nav-link">Blog</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RSE Service</a>
+            <div class="dropdown-menu">
+                    <a href="../service" class="dropdown-item">RSE Service Overview</a>
+                    <a href="../service/provision" class="dropdown-item">Service Model Provision</a>
+                    <a href="../service/activities" class="dropdown-item">What we do</a>
+                    <a href="../service/testimonials" class="dropdown-item">Testimonials</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+            <div class="dropdown-menu">
+                    <a href="../support/code-clinic" class="dropdown-item">Code Clinic</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Training</a>
+            <div class="dropdown-menu">
+                    <a href="../training" class="dropdown-item">Overview</a>
+                    <a href="../training/events" class="dropdown-item">Training Events</a>
+                    <a href="../training/carpentry" class="dropdown-item">Software and Data Carpentry</a>
+                    <a href="../training/deeplearning" class="dropdown-item">Deep Learning</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RSE Community</a>
+            <div class="dropdown-menu">
+                    <a href="../community" class="dropdown-item">Overview</a>
+                    <a href="../community/coffee-and-cake" class="dropdown-item">Coffee and Cake</a>
+                    <a href="../community/seminars" class="dropdown-item">Seminar Series</a>
+                    <a href="../community/resources-and-equipment" class="dropdown-item">Resources and Equipment</a>
+                    <a href="../community/job-descriptions" class="dropdown-item">RSE Job Descriptions</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+            <div class="dropdown-menu">
+                    <a href="../contact" class="dropdown-item">Contact Us</a>
+                    <a href="../contact/team" class="dropdown-item">RSE Team</a>
+                    <a href="../contact/alumni" class="dropdown-item">Alumni</a>
+            </div>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+
+    
+
+
+    
+<div class="postindex">
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2nd-gpu-seminar-amr/" class="u-url">First GPU Computing Seminar - Towards achieving GPU-native adaptive mesh refinement</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/twin-karmakharm/">Twin Karmakharm</a>
+            </span></p>
+            <p class="dateline">
+            <a href="2nd-gpu-seminar-amr/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-06-01T14:00:00+01:00" itemprop="datePublished" title="2017-06-01 14:00">2017-06-01 14:00</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="amr" src="../images/2017_05_30_gpu_seminar_amr.jpg"></p>
+<p>We've kicked off our first GPU Computing group seminar this year with a talk by <strong>Ania Brown</strong> from Oxford e-Research Centre titled <strong>"Towards achieving GPU-native adaptive mesh refinement"</strong> on 30th of May 2017. Adaptive mesh refinement (AMR) is a method for reducing memory cost by varying the accuracy in each region to match the physical characteristics of the simulation, at the cost of increased data structure complexity. Ania described the optimisation and software challenges that need to be considered when implementing AMR on GPUs, based on her experience working on a GPU-native framework for stencil calculations on a tree-based adaptively refined mesh as part of her Master degree.</p>
+<p>There's no offical GPU Computing talks in June but we highly recommend the upcoming talk <strong>"From Democratic Consensus to Cannibalistic Hordes: The Principles of Collective Animal Behaviour"</strong> by <strong>Prof. Iain Couzin</strong> on the <strong>29th of June 2017</strong>.</p>
+<h3>Links and More Information</h3>
+<p>For presentation slides and more information on both of these talks, visit the <a href="http://gpucomputing.shef.ac.uk/seminars/">GPU Computing seminars</a> page.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="research_software_engineer_in_high_performance_computing/" class="u-url">Research Software Engineer in High Performance Computing</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/paul-richmond/">Paul Richmond</a>
+            </span></p>
+            <p class="dateline">
+            <a href="research_software_engineer_in_high_performance_computing/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-05-22T18:30:00+01:00" itemprop="datePublished" title="2017-05-22 18:30">2017-05-22 18:30</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>A job opportunity within the RSE Sheffield group is available under the job title of "Research Software Engineer in High Performance Computing (HPC) enabled Multi-Scale Modelling".</p>
+<p>The purpose of the Research Software Engineer post is to enhance The University’s capability and expertise in developing Research Software. This role will be based in the newly formed <a href="https://rse.shef.ac.uk/">Research Software Engineering group</a>, which aims to improve all aspects of research software including reproducibility, usability, efficiency and correctness.</p>
+<p>The primary function of this role is to support the EC funded CompBioMed project. A user-driven Centre of Excellence in Computational Biomedicine, to nurture and promote the uptake and exploitation of high performance computing within the biomedical modelling community. </p>
+<p>The post is fixed-term with an end date of 30 September 2019. The deadline for applications is 19th June 2017.</p>
+<h3>Links and More Information</h3>
+<p><a href="https://www.jobs.ac.uk/job/BBN749/research-software-engineer-in-high-performance-computing-hpc-enabled-multi-scale-modelling">Jobs.ac.uk posting</a></p>
+<p><a href="https://jobs.shef.ac.uk/sap/bc/webdynpro/sap/hrrcf_a_posting_apply?PARAM=cG9zdF9pbnN0X2d1aWQ9MzMwNjJBRkQ4MDQ5MUVFNzhGOEY4MkE0ODgzRjg4MEYmY2FuZF90eXBlPUVYVA%3d%3d&amp;sap-client=400&amp;sap-language=EN&amp;sap-accessibility=X&amp;sap-ep-themeroot=%2fSAP%2fPUBLIC%2fBC%2fUR%2fuos#">University of Sheffield Application Link</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="sheffield-code-firstgirls/" class="u-url">Sheffield Code First:girls</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/tania-allard/">Tania Allard</a>
+            </span></p>
+            <p class="dateline">
+            <a href="sheffield-code-firstgirls/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-05-18T09:32:49+01:00" itemprop="datePublished" title="2017-05-18 09:32">2017-05-18 09:32</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="python1" src="../images/CF_python1.jpg"></p>
+<p>Anyone working on any STEM area knows, as a fact, that we are facing a digital and technical skills gap.  In the governement's digital strategy <a href="https://www.bbc.co.uk/news/business-36510266">report</a> last year it
+was highlighted that we would need an extra 745,000 workers with digital skills by 2017, as 90% of jobs require digital skills to some degree.
+On top of this, many technical areas suffer a diversity deficit (cultural and gender based).
+With the UK being among the European countries with the smaller number of female
+professionals in STEM areas.</p>
+<p>Being this a rather complex problem, many people and organisations work hard to provide a solution to this issue.  Some approaches adopted by such individuals and organisations are:</p>
+<ul>
+<li>Encourage the hiring of highly skilled immigrants</li>
+<li>Provide wider support for underrepresented minorities</li>
+<li>Leverage inclusive and encouraging environments for those who
+demonstrate an interest in STEM areas</li>
+<li>Support and train those willing to make a career change/or follow non-traditonal career paths</li>
+<li>Approach the new generations and provide them with useful skills that would help them
+make an informed career choice</li>
+</ul>
+<p>... and the list goes on.</p>
+<p>I do believe, however, that the most fruitful approach is to work with the upcoming generations and provide them with useful technical and personal skills early on. This would not only make them better qualified for their future but would enable them to make informed decisions with regards to their professional future.</p>
+<p><a href="https://www.codefirstgirls.org.uk">Code First: girls</a> is a multi-award organization that aims to tackle the gender imbalance in three ways: training women, building a strong and supportive community, and helping companies to train, recruit, and retain their female force.</p>
+<p>Belonging to a minority within STEM has lead me to take an active role as an equality and diversity ambassador, which eventually lead me to volunteer as a Python instructor for the Code First courses.</p>
+<p>Over the course of 8 weeks we teach and guide groups of around 30 women with various levels of coding experience in CSS/HTML, Python, or Ruby. These courses are a mixture of in-person classes and self-learning, at the same time the ladies involved work in teams of 2-4 people to build a project of their own interest.</p>
+<p><img alt="python1" src="../images/CF_python3.jpg"></p>
+<p>The idea behind these workshops is rather simple: train people and provide them with practical use of the skills they are learning. Having as a final objective to develop a fully deployed RESTful app. But the whole CF:girls thing goes way beyond that. Over those 8 weeks the girls form a strong, motivating, and supportive community, in which they can acquire new skills, meet like-minded people, learn from other women working in STEM areas, and even attend external women in tech events!</p>
+<p><img alt="python1" src="../images/CF_python2.jpg"></p>
+<p>I find rather interesting the mixture of apps and projects pursued, as well as the high quality of the presented final products. But beyond that, I find this to be an excellent opportunity to give back to the amazing community that has adopted and welcome me as a professional in a STEM area. Thus I can say for sure I will be getting involved in more Code First events/workshops.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="coffee-and-cakes-event-2nd/" class="u-url">Coffee and Cakes Event</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/mozhgan-kabiri-chimeh/">Mozhgan Kabiri Chimeh</a>
+            </span></p>
+            <p class="dateline">
+            <a href="coffee-and-cakes-event-2nd/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-05-17T12:12:12+01:00" itemprop="datePublished" title="2017-05-17 12:12">2017-05-17 12:12</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>RSE Sheffield is hosting another coffee and cakes event on <strong>May 31st at 14:00 in the Ada Lovelace room</strong> on 1st floor of the Computer Science Department (Regents Court East). Attendance is free, but you need to register via <a href="https://goo.gl/forms/L2dRQNvSUvkIbtSm2">this link</a>.</p>
+<p>Take the opportunity to come and have an informal chat about research software.</p>
+<p>This event is a community event for anyone, not just computer science or members of the RSE team. If you work on software development are an RSE or simply want to talk about some aspect of software or software in teaching then come along.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="building-linux-gpu-code-with-nsight-in-windows/" class="u-url">Building Linux GPU Code with NSIGHT in Windows</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/paul-richmond/">Paul Richmond</a>
+            </span></p>
+            <p class="dateline">
+            <a href="building-linux-gpu-code-with-nsight-in-windows/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-05-08T16:03:00Z" itemprop="datePublished" title="2017-05-08 16:03">2017-05-08 16:03</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Why would you possibly want to build and execute CUDA GPU applications within NSight Eclipse for Linux within Microsoft Windows? Well if you use windows as your main OS there are plenty of reasons but the most obvious is that you may be developing cross platform code and want to build and test it without dual booting. If you are thinking about virtual machines then forget about it. Most (except some very expensive enterprise options) do not have the ability to access a GPU device (e.g GPU pass-through) from within a virtual machine. </p>
+<p>The purpose of this post is to describe how to install the necessary tools to permit local GPU development inside the Linux NSight IDE from within Windows. The advantages of which are not only cross platform development but also the ability to locally develop in powerful Linux IDE with remote execution and graphical debugging. This is particularly helpful if you want to execute or debug your code on a HPC system (like Sheffield's ShARC system) from Windows. The post focuses on the use of the new Windows 10 Linux subsystem, however you could use the approach to install CUDA tools on a lightweight Linux virtual machine. The concept is the same either way. i.e. build and debug locally execute remotely.</p>
+<h3>Configuring the Linux Windows Subsystem for CUDA compilation</h3>
+<p>The Windows 10 subsystem for Linux is available in the anniversary update. You can install it from the "Turn on or off windows features" dialogue. It is listed under "Windows subsystem for Linux (beta)". This alone is not enough to build our GPU applications as we will need to install CUDA. A normal CUDA install will require a local GPU and the installation of a CUDA compatible graphics driver. Fire up the Windows Bash Shell (or a Linux virtual machine). You can then use the following commands to install the CUDA toolkit without installing a graphics driver. This will install the core NVIDIA CUDA compiler (nvcc) and NSight. You can update the <code>CUDA_REPO_PKG</code> variable to install a different CUDA version.</p>
+<pre class="code literal-block"><span></span>sudo apt-get update
+CUDA_REPO_PKG=cuda-repo-ubuntu1404_8.0.44-1_amd64.deb
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/$CUDA_REPO_PKG
+sudo dpkg -i $CUDA_REPO_PKG
+sudo apt-get update
+sudo apt-get install -y --no-install-recommends cuda-core-8-0 cuda-cudart-dev-8-0 nsight
+</pre>
+
+
+<p>You can now create a symbolic link to a generic CUDA install. This will permit the addition and fast swapping of different CUDA versions.</p>
+<pre class="code literal-block"><span></span>sudo ln -s /usr/local/cuda-8.0 /usr/local/cuda 
+export PATH=$PATH:/usr/local/cuda/bin
+</pre>
+
+
+<p>Note: if you want the CUDA bin location to be persistently on the PATH (after you reboot the Bash shell) then you will need to add the <code>export PATH</code> line to your .bashrc profile. Test that the install was successful by running nvcc.</p>
+<pre class="code literal-block"><span></span>nvcc --version
+</pre>
+
+
+<p>This should give you some information on the nvcc version. e.g. </p>
+<pre class="code literal-block"><span></span><span class="n">nvcc</span><span class="o">:</span> <span class="n">NVIDIA</span> <span class="o">(</span><span class="n">R</span><span class="o">)</span> <span class="n">Cuda</span> <span class="n">compiler</span> <span class="n">driver</span>
+<span class="n">Copyright</span> <span class="o">(</span><span class="n">c</span><span class="o">)</span> <span class="mi">2005</span><span class="o">-</span><span class="mi">2016</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span>
+<span class="n">Built</span> <span class="n">on</span> <span class="n">Tue_Jan_10_13</span><span class="o">:</span><span class="mi">22</span><span class="o">:</span><span class="mi">03</span><span class="n">_CST_2017</span>
+<span class="n">Cuda</span> <span class="n">compilation</span> <span class="n">tools</span><span class="o">,</span> <span class="n">release</span> <span class="mf">8.0</span><span class="o">,</span> <span class="n">V8</span><span class="o">.</span><span class="mf">0.61</span>
+</pre>
+
+
+<p>The CUDA toolkit is now installed so you can build (but not execute) CUDA GPU programs using the Linux bash shell.</p>
+<h3>Graphical editing with Nsight IDE</h3>
+<p>To be able to run a graphical NSight IDE from within the Windows subsystem for Linux you will need to be running a X server within Windows. You can install the <strong>free</strong> <a href="https://sourceforge.net/projects/xming/">XMing</a> application for this purpose. If you would rather use a Linux virtual machine then you can avoid this step as the virtual machine will most likely have an X server included. The advantage of the Windows subsystem approach is that it is very lightweight. From within your Bash terminal you will need to set the following environment variable.</p>
+<pre class="code literal-block"><span></span>export DISPLAY=:0
+</pre>
+
+
+<p>The display variable is an environment variable passed to graphical applications. In this case, the value of <code>:0</code> it tells the application to use the first display on the local system (our XMing server in this case). If you want to make this environment variable change permanent then you should add it to your .bashrc profile. You can now run the NSight application from Bash.</p>
+<pre class="code literal-block"><span></span>nsight
+</pre>
+
+
+<p>Glorious isn't it. Within NSight we can create a new CUDA project which will compile using the local CUDA install. In order to remotely execute and debug you can use the "C++ Remote application" run configuration. This will require SSH access to a suitable Linux machine with a GPU and CUDA installed.</p>
+<p>Future blog posts will cover how remote execution and debugging can be achieved on the University of Sheffield ShARC system. ShARC has a typical of job based HPC system which encourages job submission rather than execution of code on worker nodes via SSH logins. </p>
+<h3>Summary of Bash Profile Changes</h3>
+<p>I added the following to my .bashrc profile (located in the home directory) to ensure that NSight could be launched straight after starting the Bash shell in Windows.</p>
+<pre class="code literal-block"><span></span># add cuda bin dir to path
+export PATH=$PATH:/usr/local/cuda/bin
+
+# export the display environment variable
+export DISPLAY=:0
+</pre>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="spark-scala-sheffield-hpc/" class="u-url">Spark and Scala on Sheffield HPC systems</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/mike-croucher/">Mike Croucher</a>
+            </span></p>
+            <p class="dateline">
+            <a href="spark-scala-sheffield-hpc/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-05-08T11:17:05Z" itemprop="datePublished" title="2017-05-08 11:17">2017-05-08 11:17</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>As part of our support for a Large scale machine learning MSc course in Computer Science, the Sheffield RSE group put together a tutorial for how to use <a href="http://spark.apache.org/">Spark</a> and Scala on <a href="http://docs.hpc.shef.ac.uk/en/latest/">Sheffields HPC systems</a>.
+We are sharing with the rest of the community in case its useful to you <a href="https://github.com/mikecroucher/Intro_to_HPC/blob/gh-pages/README.md">https://github.com/mikecroucher/Intro_to_HPC/blob/gh-pages/README.md</a> </p>
+<p>Its for people whove never used a HPC system before. By the time theyve finished, they are able to submit their own Spark jobs to the HPC cluster.
+If anyone is interested in us re-running this as a workshop (it takes around 2 hours) let us know.</p>
+<p>Some notes on our current implementation of Spark on HPC:-</p>
+<ul>
+<li>
+<p>We are currently restricted to jobs that run on one node. This is because Sheffields HPC clusters are not traditional Hadoop/Spark clusters and so some level of integration is required between Sun Grid Engine and Spark. We've only managed to get as far as implementing this across single nodes at the moment.</p>
+</li>
+<li>
+<p>One way weve fudged this is to make sure that we provide our students with access to nodes with a LOT of memory  768 GB per node in fact, 12 times as much as you get on a normal node on ShARC or Iceberg. We are experimenting with allowing others access to our kit via a contribution based model. See <a href="https://rse.shef.ac.uk/community/resources-and-equipment/">https://rse.shef.ac.uk/community/resources-and-equipment//</a> for details.</p>
+</li>
+</ul>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="sge-job-validation-2/" class="u-url">Job validation with Grid Engine: false negatives</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/will-furnass/">Will Furnass</a>
+            </span></p>
+            <p class="dateline">
+            <a href="sge-job-validation-2/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-04-19T10:15:00Z" itemprop="datePublished" title="2017-04-19 10:15">2017-04-19 10:15</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>In <a href="sge-job-validation/">a previous post</a>, 
+I noted that if you're not sure if a Sun Grid Engine (SGE) job can ever run on an <a href="https://en.wikipedia.org/wiki/Supercomputer">HPC cluster</a>
+you can perform 'dry-run' job validation:
+by passing <code>-w v</code> as arguments to <code>qrsh</code>/<code>qrshx</code>/<code>qsh</code>/<code>qalter</code> you can ask the SGE scheduler software 
+if your job could ever run if the cluster were entirely empty of other jobs.</p>
+<p>For example:</p>
+<pre class="code literal-block"><span></span>    qsub -pe smp 2 -l rmem=10000G -w v myjob.sge
+</pre>
+
+
+<p>would most likely tell you that your job could not be run in any of the cluster's job queues 
+(due to the size of the resource request).</p>
+<p><strong>But beware:</strong> 
+as mentioned in my earlier post 
+this his job validation mechanism sometimes results in <em>false negatives</em> i.e. you are told that a job cannot run even though though in reality it can.<br>
+This is something that the HPC sysadmin team at the University of Leeds alerted us to.</p>
+<p>Here's an example of a false positive (using our <a href="http://docs.hpc.shef.ac.uk/en/latest/sharc/">ShARC</a> cluster.<br>
+If you ask for a single-core interactive session with access to four GPUs then dry-run validation fails:</p>
+<pre class="code literal-block"><span></span>    [te1st@sharc-login1 ~]$ qrsh -l gpu=4 -w v
+    ...
+    verification: no suitable queues
+</pre>
+
+
+<p>yet (without validation) the resource request can be satisfied:</p>
+<pre class="code literal-block"><span></span>    [te1st@sharc-login1 ~]$ qrsh -l gpu=4 
+    [te1st@sharc-node100 ~]$   # works!
+</pre>
+
+
+<p>The <strong>reason for this</strong> appears to be that the validation is performed 
+without running any <a href="http://gridscheduler.sourceforge.net/htmlman/htmlman1/jsv.html">Job Submission Verifier</a> (JSV) scripts.
+These scripts are run (typically on the SGE master machine) on every submitted job to 
+centrally modify or reject job requests post-submission.</p>
+<p>On ShARC the main JSV script changes a job's <a href="http://gridscheduler.sourceforge.net/htmlman/htmlman5/project.html?pathrev=V62u5_TAG">Project</a> 
+from a generic one 
+to <code>gpu</code> 
+if <code>x &gt; 0</code> GPUs have been requested using <code>-l gpu=x</code>.
+The job can then be assigned to (GPU-equipped) nodes associated with that project.
+So, if the JSV is not run before job validation (using <code>-w v</code>) then 
+validation of jobs that request GPUs will fail as 
+no nodes (more accurately <em>queue instances</em>) will be found that can satisfy the resource request 
+given the (default) project of jobs.  </p>
+<p>The workaround here is to explicitly request a Project (using e.g. <code>-P gpu</code>) 
+when trying to validate a job using <code>-w v</code> 
+i.e. partly duplicate the logic in the (bypassed) JSV,
+but this requires that you know have read and understood the JSV.<br>
+This is something that users may not want to do and adds complexity, 
+when the whole point of investigating job validation in the first place was to 
+find a simple way by which users could check if if their jobs could run on a given SGE cluster.</p>
+<p>In summary, SGE's job validation mechanism is not a fool-proof option for users as 
+it does not take into consideration changes made to a job by Job Submission Verifier scripts post-submission.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="ModernFortran2017/" class="u-url">Introduction to Modern Fortran</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/mike-croucher/">Mike Croucher</a>
+            </span></p>
+            <p class="dateline">
+            <a href="ModernFortran2017/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-04-19T10:12:51Z" itemprop="datePublished" title="2017-04-19 10:12">2017-04-19 10:12</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>In February, the Research Software Engineering group hosted an ‘Introduction to Modern Fortran Course’ taught by EPSRC Research Software Engineering Fellow, <a href="http://www.walkingrandomly.com/?p=6006">Ian Bush</a>. The course material is available at <a href="https://www.oerc.ox.ac.uk/introduction-modern-fortran-course-materials">https://www.oerc.ox.ac.uk/introduction-modern-fortran-course-materials</a>.</p>
+<p>During the day, Ian recommended a bunch of books (below)</p>
+<p><img alt="" src="../images/fortran_books.jpg"></p>
+<p>We’ve been working with the University library and I’m happy to announce that all of these are now available to borrow. Search for them using the <a href="https://find.shef.ac.uk/primo_library/libweb/action/search.do">University catalogue</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="mpi_placement/" class="u-url">Determining MPI placement on the HPC clusters</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/mike-croucher/">Mike Croucher</a>
+            </span></p>
+            <p class="dateline">
+            <a href="mpi_placement/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-04-01T16:03:00Z" itemprop="datePublished" title="2017-04-01 16:03">2017-04-01 16:03</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Say you request a 16 slot MPI job on ShARC with 3GB per-process using a submission script like the one below:</p>
+<table class="codehilitetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td>
+<td class="code">
+<pre class="code literal-block"><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#Tell the scheduler that maximum runtime is 1 hour</span>
+<span class="c1">#$ -l h_rt=1:00:00</span>
+<span class="c1">#Request 16 slots</span>
+<span class="c1">#$ -pe mpi 16</span>
+<span class="c1">#Request 3 Gigabytes per slot</span>
+<span class="c1">#$ -l rmem=3G</span>
+
+<span class="c1">#Load gcc 4.9.4 and OpenMPI 2.0.1</span>
+module load dev/gcc/4.9.4
+module load mpi/openmpi/2.0.1/gcc-4.9.4
+
+mpirun  ./MPI_hello_world
+</pre>
+</td>
+</tr></table>
+<p>The scheduler is free to decide where on the system your 16 slots get placed. You may have all 16 slots running on one node, one slot per node for 16 nodes or anything in between. The exact placement of your jobs may affect runtime.</p>
+<p>We can find out where the scheculer placed your MPI processes using the <code>$PE_HOSTFILE</code> environment variable. When your job starts running, this points to a file that contains placement information. We make use of it in a submission script as follows</p>
+<table class="codehilitetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td>
+<td class="code">
+<pre class="code literal-block"><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#Tell the scheduler that maximum runtime is 1 hour</span>
+<span class="c1">#$ -l h_rt=1:00:00</span>
+<span class="c1">#Request 16 slots</span>
+<span class="c1">#$ -pe mpi 16</span>
+<span class="c1">#Request 3 Gigabytes per slot</span>
+<span class="c1">#$ -l rmem=3G</span>
+
+<span class="c1">#Load gcc 4.9.4 and OpenMPI 2.0.1</span>
+module load dev/gcc/4.9.4
+module load mpi/openmpi/2.0.1/gcc-4.9.4
+
+<span class="c1">#Put placement information into node_info.txt</span>
+cat <span class="nv">$PE_HOSTFILE</span>  &gt; node_info.txt
+
+mpirun  ./MPI_hello_world
+</pre>
+</td>
+</tr></table>
+<p>You'll now get a file called <code>node_info.txt</code> that contains information about which nodes your MPI slots were placed. For example</p>
+<pre class="code literal-block"><span></span>sharc-node031.shef.ac.uk 1 shortint.q@sharc-node031.shef.ac.uk UNDEFINED
+sharc-node069.shef.ac.uk 1 shortint.q@sharc-node069.shef.ac.uk UNDEFINED
+sharc-node112.shef.ac.uk 1 shortint.q@sharc-node112.shef.ac.uk UNDEFINED
+sharc-node108.shef.ac.uk 1 shortint.q@sharc-node108.shef.ac.uk UNDEFINED
+sharc-node081.shef.ac.uk 1 shortint.q@sharc-node081.shef.ac.uk UNDEFINED
+sharc-node090.shef.ac.uk 2 shortint.q@sharc-node090.shef.ac.uk UNDEFINED
+sharc-node080.shef.ac.uk 2 shortint.q@sharc-node080.shef.ac.uk UNDEFINED
+sharc-node050.shef.ac.uk 3 shortint.q@sharc-node050.shef.ac.uk UNDEFINED
+sharc-node059.shef.ac.uk 4 shortint.q@sharc-node059.shef.ac.uk UNDEFINED
+</pre>
+
+
+<p>In the above example, 4 slots were placed on node059, 3 slots on node 50, 2 slots on nodes 080 and 090 and one slot on the other listed nodes. </p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="sge-job-validation/" class="u-url">Job validation with Grid Engine</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/will-furnass/">Will Furnass</a>
+            </span></p>
+            <p class="dateline">
+            <a href="sge-job-validation/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-03-20T10:44:00Z" itemprop="datePublished" title="2017-03-20 10:44">2017-03-20 10:44</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>(<strong>Edit</strong>: caveats are listed in a <a href="sge-job-validation-2/">more recent post</a>)</p>
+<p>Computer cluster job scheduling software is fantastic at managing resources 
+and permitting many jobs to run efficiently and simultaneously.<br>
+However, schedulers aren't always great at giving end-users feedback 
+when things go wrong.  </p>
+<p>For example, on our ShARC cluster, which runs the (Son of) Grid Engine (SGE) scheduler, 
+if you request a longer run-time than is permitted by any of the cluster's job queue configurations 
+then your job will sit there queueing indefinitely until you or someone else deletes it.<br>
+For example, let's use <a href="http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html#running-batch-jobs-on-iceberg">qsub</a> 
+to submit a job where we ask for 1000 hours of run time and 4 GiB of RAM:</p>
+<pre class="code literal-block"><span></span><span class="o">[</span>will@mysofa ~<span class="o">]</span>$ ssh sharc
+...
+<span class="o">[</span>te1st@sharc-login1 ~<span class="o">]</span>$ qsub -l <span class="nv">h_rt</span><span class="o">=</span><span class="m">1000</span>:00:00 -l <span class="nv">rmem</span><span class="o">=</span>4G -m bea -M w.furnass@sheffield.ac.uk -N longtask myjobscript.sge
+
+Your job <span class="m">236268</span> <span class="o">(</span><span class="s2">"STDIN"</span><span class="o">)</span> has been submitted
+<span class="o">[</span>te1st@sharc-login1 ~<span class="o">]</span>$ qstat -u <span class="nv">$USER</span>
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+ <span class="m">217834</span> <span class="m">0</span>.00000 longtask   te1st        qw    <span class="m">03</span>/20/2017 <span class="m">10</span>:48:39                                    <span class="m">1</span>        
+</pre>
+
+
+<p>Job 217834 will now sit queuing forever.<br>
+Not only will you not be told why, 
+you won't be given <em>any</em> notification that the job will not run.</p>
+<p>In situations like this it can be useful to ask the scheduler to validate a job.<br>
+One way of doing this is to run '<code>qalter -w v &lt;myjobid&gt;</code>' after job submission 
+if say you think that a job has now been queueing for longer 
+than previously-submitted jobs of a similar nature:</p>
+<pre class="code literal-block"><span></span>[te1st@sharc-login1 ~]$ qalter -w v 217834
+Job 217834 (-l h_rt=3600000) cannot run in queue "flybrain.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "gpu.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "gen2reg.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "rse.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "gpu-vis.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "insigneo-polaris.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "interactive.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "shortint.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "all.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "evolgen.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "rse-training.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "cstest.q" because of cluster queue
+verification: no suitable queues
+</pre>
+
+
+<p>What this '<code>qalter -w v &lt;myjobid&gt;</code>' command does is check to see whether the job could run 
+in any of the job queues on the cluster 
+if the cluster were free of other jobs. </p>
+<p>The last line of output is key: 
+our job will never be run given the current cluster configuration.<br>
+Looking above that, we can see that it cannot run in any of the general-purpose job queues 
+(such as <code>all.q</code>) and 
+there is specific mention of our 1000 hour (3600000s) run-time resource request.<br>
+We can therefore deduce that our run-time resource request wasn't satisfiable.</p>
+<h3>Modifying a resource request post-submission</h3>
+<p>Once we know that our job can't run we could then delete our job...</p>
+<pre class="code literal-block"><span></span><span class="o">[</span>te1st@sharc-login1 ~<span class="o">]</span>$ qdel <span class="m">217834</span> 
+te1st has deleted job <span class="m">217834</span> 
+</pre>
+
+
+<p>...then consult the cluster's documentation to discover the maximum possible run-time and resubmit using more sensible resource requests.  </p>
+<p>Alternatively we can use <strong>qalter</strong> to modify the resource requests associated with a queueing job:</p>
+<pre class="code literal-block"><span></span>qalter -l <span class="nv">h_rt</span><span class="o">=</span><span class="m">96</span>:00:00 -l <span class="nv">rmem</span><span class="o">=</span>4G <span class="m">217834</span> 
+</pre>
+
+
+<p><strong>Important</strong>: using <code>qalter</code> in this fashion will change <strong>all</strong> resource requests for the job so here we need to re-specify the <code>rmem</code> request.</p>
+<h3>Job validation at submission time</h3>
+<p>You can also perform the same type of job validation <strong>at job submission time</strong> using <code>-w v</code> e.g.</p>
+<pre class="code literal-block"><span></span>qsub -w v -l <span class="m">1000</span>:00:00 -l <span class="nv">rmem</span><span class="o">=</span>4G myjobscript.sge
+</pre>
+
+
+<p>This won't actually submit your job; it just performs validation.</p>
+<h3>Why is validation not performed by default?</h3>
+<p>You may ask why such validation is not enabled by default for all jobs; 
+one reason for this is that it is believed it would place undue burden on the scheduler.</p>
+<p>Another is that sometimes a validation attempt results in a false negative that can be difficult to automatically identify
+(<strong>edit</strong>: see this <a href="sge-job-validation-2/">more recent post</a> for details).</p>
+<h3>Other types of resources</h3>
+<p>If you repeat the experiment outlined above but 
+instead of requesting 1000 hours of runtime 
+you ask for 100 GPUs, 9999GB of RAM or 10000 cores 
+you'll observe the same behaviour: jobs that make requests unsatisfiable under the current cluster configuration can be submitted but will never run.</p>
+<p>Again, job validation can help here but depending on the type of resource the validation error messages can be more or less cryptic.<br>
+For example, if you try to validate a 100000-'slot' (core) MPI job using <code>-w v</code> you get the following:</p>
+<pre class="code literal-block"><span></span>qsub -pe mpi 100000 -w v somejob.sge
+...
+Job 311838 cannot run in PE "mpi" because it only offers 0 slots
+</pre>
+
+
+<p>This is rather misleading but the mention of 'slots' should prompt you to check the number of cores you've requested is sensible.</p>
+<h3>'Poke' validation: consider the current cluster load</h3>
+<p>Another type of validation is <em>poke</em> validation, 
+which checks if a job could be run under the current cluster <em>load</em> 
+i.e. with many of the cluster's resources already in use.<br>
+See <code>man qsub</code> and search for <code>-w</code> 
+for more information on the different types of validation.</p>
+</div>
+    </div>
+    </article>
+</div>
+
+        <ul class="pager postindexpager clearfix">
+<li class="previous"><a href="index-4.html" rel="prev">Newer posts</a></li>
+            <li class="next"><a href="index-2.html" rel="next">Older posts</a></li>
+        </ul>
+<!--End of body content--><footer id="footer">
+            Contents © 2019         <a href="mailto:rse@sheffield.ac.uk">RSE Sheffield</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

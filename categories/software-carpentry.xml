@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts about software carpentry)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/categories/software-carpentry.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Software Carpentry and Data Carpentry at the University of Sheffield!</title><link>http://rse.shef.ac.uk/blog/soft-carp-at-tuos/</link><dc:creator>Will Furnass</dc:creator><description>&lt;div&gt;&lt;p&gt;The University of Sheffield is now a Software Carpentry Partner Organisation, allowing the Research Software Engineering and Library teams to start organising &lt;em&gt;Software Carpentry&lt;/em&gt; and &lt;em&gt;Data Carpentry&lt;/em&gt; workshops.  These are designed to help researchers develop the programming, automation and data management skills needed to support their research.  &lt;strong&gt;Workshop dates are to be announced shortly.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Edit&lt;/strong&gt;: &lt;/p&gt;
+&lt;p&gt;Our first Software Carpentry workshop is scheduled for &lt;a href="https://rse.shef.ac.uk/2017-08-16-sheffield/"&gt;16th and 17th August&lt;/a&gt;!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="Software Carpentry and Data Carpentry logos" src="http://rse.shef.ac.uk/images/sc-dc-logos.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Addressing the training needs of researchers with regards to programming&lt;/h3&gt;
+&lt;p&gt;As more researchers realise they can produce better quality research more quickly if
+they have some coding and data management skills under their belts
+universities will need to ensure that training in these areas is accessible to those that need it.&lt;/p&gt;
+&lt;p&gt;Academic institutions will most likely already have courses for teaching highly-specialist subjects
+(such as how to use the local &lt;a href="http://docs.hpc.shef.ac.uk/en/latest/"&gt;HPC cluster&lt;/a&gt;)
+but for the more generic aspects of research software development and data management
+there are several obvious choices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Develop and deliver bespoke materials;&lt;/li&gt;
+&lt;li&gt;Buy in to commercial training packages;&lt;/li&gt;
+&lt;li&gt;Point researchers towards free online resources;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, there is also a fourth option:
+team up with the &lt;a href="https://software-carpentry.org/"&gt;Software Carpentry&lt;/a&gt; (SC) and
+&lt;a href="https://datacarpentry.org/"&gt;Data Carpentry&lt;/a&gt; (DC) not-for-profit organisations
+to deliver on-site, interative workshops based on open-source materials that have been
+refined by a large community of SC and DC instructors.&lt;/p&gt;
+&lt;h3&gt;Software whatywhaty?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Software Carpentry&lt;/strong&gt; has developed &lt;a href="https://software-carpentry.org/lessons/"&gt;discipline-agnostic workshop material&lt;/a&gt; on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;programming with Python, R or MATLAB;&lt;/li&gt;
+&lt;li&gt;using databases and &lt;a href="https://en.wikipedia.org/wiki/SQL"&gt;SQL&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;the &lt;a href="https://en.wikipedia.org/wiki/Unix_shell"&gt;UNIX shell&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Version_control"&gt;version control&lt;/a&gt; with git or mercurial;&lt;/li&gt;
+&lt;li&gt;automation using &lt;a href="https://en.wikipedia.org/wiki/Make_(software)"&gt;Make&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://datacarpentry.org/lessons/"&gt;&lt;strong&gt;Data Carpentry&lt;/strong&gt; lessons&lt;/a&gt; look at data management and processing within the context of a specific domain (such as ecology or genomics), focussing on areas such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the command line;&lt;/li&gt;
+&lt;li&gt;data cleaning and filtering using &lt;a href="http://openrefine.org/"&gt;OpenRefine&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;data processing and visualisation with Python or R;&lt;/li&gt;
+&lt;li&gt;cloud computing&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Geographic_information_system"&gt;GIS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;What form do the workshops take?&lt;/h3&gt;
+&lt;p&gt;The Software and Data Carpentry organisations ask that accredited instructors delivering 'branded' workshops adopt a fairly progressive teaching style:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Workshops typically last two days and include four lessons (e.g. the unix shell, Python, version control and databases).&lt;/li&gt;
+&lt;li&gt;There's lots of &lt;em&gt;live coding&lt;/em&gt;: the instructor and students gather together in a room with laptops and a projector and all present go through a number of examples interactively.  Students use their own laptops to ensure that they're able to continue where they left off at the end of a workshop.  Instructors can and do make mistakes when doing live coding; students can then learn from these mistakes and may grow in confidence on learning that pros make mistakes too.&lt;/li&gt;
+&lt;li&gt;Instructors try to elicit responses from students and use quizes to gauge comprehension and keep students focussed.&lt;/li&gt;
+&lt;li&gt;Software Carpentry has a &lt;a href="https://software-carpentry.org/conduct/"&gt;code of conduct&lt;/a&gt; and tries to ensure that all lessons delivered under its banner are as &lt;a href="https://software-carpentry.org/blog/2017/02/inclusion.html"&gt;inclusive as possible&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;What's happening at the University?&lt;/h3&gt;
+&lt;p&gt;The University is now a Software Carpentry Partner Organisation so can run many workshops per year using the Software Carpentry and Data Carpentry branding.  We could run workshops without the branding but Software and Data Carpentry are now familiar names to researchers (and potentially employers) and by working closely with those two organisations we become part of a global network of instructors with which we can share ideas and materials.&lt;/p&gt;
+&lt;p&gt;The RSE team and Library collectively now have five accredited Software and Data Carpentry instructors: Mike Croucher received training some time ago and in March Tania Allard and I from the &lt;a href="https://rse.shef.ac.uk/contact/"&gt;RSE team&lt;/a&gt; plus &lt;a href="https://www.sheffield.ac.uk/library/libstaff/researchservices"&gt;Jez Cope and Beth Hellen&lt;/a&gt; from the Library's Research Services Unit participated in &lt;a href="https://steve-crouch.github.io/2017-03-16-oxford-ttt/"&gt;instructor training in Oxford&lt;/a&gt;.  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Software Carpentry Instructor Training session" src="http://rse.shef.ac.uk/images/soft-carp-instructor-training.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;The four of us spent two days learning about the SC/DC teaching style, what makes for an effective instructor and got to practise several aspects of workshop development and delivery.  I must thank the instructors on the training course (Mateuz Kuzak and Steve Crouch) plus &lt;a href="https://rroxford.github.io/"&gt;Reproducible Research Oxford&lt;/a&gt; for hosting and organising the event.&lt;/p&gt;
+&lt;p&gt;We are now planning our first Software Carpentry and Data Carpentry workshops.  These are to be held later in the summer.  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Keep an eye on this blog, the &lt;code&gt;RSE-group@sheffield.ac.uk&lt;/code&gt; mailing list and &lt;a href="https://twitter.com/rse_sheffield"&gt;@RSE_Sheffield&lt;/a&gt; for dates!&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</description><category>data carpentry</category><category>software carpentry</category><category>training</category><guid>http://rse.shef.ac.uk/blog/soft-carp-at-tuos/</guid><pubDate>Thu, 08 Jun 2017 12:00:00 GMT</pubDate></item></channel></rss>

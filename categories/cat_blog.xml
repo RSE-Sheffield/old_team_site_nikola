@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts about blog)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/categories/cat_blog.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to contribute to open source software</title><link>http://rse.shef.ac.uk/blog/2019-01-09-ssi-workshop-contribute-foss/</link><dc:creator>Becky Arnold</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;NB originally &lt;a href="https://software.ac.uk/blog/2019-01-08-how-contribute-open-source-software"&gt;posted on the Software Sustainability Insittute (SSI) blog&lt;/a&gt;
+on 8 January 2019&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="*Image courtesy of Becky Arnold*" src="http://rse.shef.ac.uk/images/ssi-workshop-contribute-foss.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;By &lt;a href="https://software.ac.uk/fellows/becky-arnold"&gt;Becky Arnold&lt;/a&gt;,
+&lt;a href="https://www.sheffield.ac.uk"&gt;University of Sheffield&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On the 28th of November, &lt;a href="http://yo-yehudi.com/"&gt;Yo Yehudi&lt;/a&gt; of the
+&lt;a href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt;  and
+the &lt;a href="https://www.cam.ac.uk/"&gt;University of Cambridge&lt;/a&gt; gave a half day
+workshop for researchers on how to contribute to open source software at
+the &lt;a href="http://sheffield.ac.uk"&gt;University of Sheffield&lt;/a&gt;. Many researchers
+make use of open source projects in their work. Also, in the course of
+conducting their own research many develop their own software which
+others in their field could potentially benefit from. Further, openly
+sharing software makes it much easier for researchers to check each
+other\'s results, which makes scientific outputs more reliable and
+reproducible. This workshop introduced researchers to what "open source"
+means, how to contribute to pre-existing open source projects, and how
+to start their own. &lt;a href="http://annakrystalli.me/"&gt;Anna Krystalli&lt;/a&gt; of the
+&lt;a href="http://rse.shef.ac.uk"&gt;University of Sheffield Research Software
+Engineering&lt;/a&gt; group also helped out at this event.
+The materials for this workshop are &lt;a href="https://open-source-for-researchers.github.io/open-source-workshop/"&gt;(openly) available
+here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This workshop is part of a
+&lt;a href="https://www.sheffield.ac.uk/physics/news/programming-skills-sessions"&gt;series&lt;/a&gt;
+I've organised as part of my &lt;a href="https://www.software.ac.uk/programmes-and-events/fellowship-programme"&gt;Software Sustainability Institute
+Fellowship&lt;/a&gt;,
+and it kicked off with a discussion about various issues surrounding
+open source projects. These were drawn from a set of talking points
+available
+&lt;a href="https://github.com/baricks/opentodiscussion/blob/master/OpenSource"&gt;here&lt;/a&gt;.\
+A topic that received much discussion was how to make your work open
+when it depends on sensitive or confidential data. The work of several
+researchers at the workshop fell into this category and they discussed
+their experiences. For some they were able to share their code with
+synthetic datasets. Without the original datasets results can never be
+fully reproduced, but still in this case the software can be checked and
+improved upon by others. This solution at least allows researchers in
+the same field to make use of each other\'s software, which saves
+valuable time by avoiding duplication of efforts.&lt;/p&gt;
+&lt;p&gt;Other attendees voiced frustration that they are unable to even share
+synthetic datasets, for fear that it could be used to reverse engineer
+or infer features of the original. Again, this makes research still less
+reproducible, but is simply unavoidable in some cases where the data is
+extremely sensitive. The consensus of the discussion can be summarised
+as "share what you can" because even if it's not everything, even if
+it's not much, it's still something.&lt;/p&gt;
+&lt;p&gt;Next, Yo gave an introduction to version control, specifically
+&lt;a href="https://git-scm.com/"&gt;Git&lt;/a&gt;. She discussed how to add and commit
+changes, and the myriad benefits of using version control. She
+demonstrated how to use Github to setup a repository, put it online, and
+push and pull changes. Then it was the turn of attendees to set up their
+own and get some hands on practise. This was something people seemed to
+really, really enjoy, sending changes back and forth, reviewing and
+commenting on each others work, and generally getting a feel for the
+possibilities. Several attendees commented to me after the workshop
+finished on how useful they found this exercise.&lt;/p&gt;
+&lt;p&gt;To avoid language conflicts between attendees who worked in everything
+from Fortran and C++ to python and Matlab we primarily practiced using
+Github by making changes to Markdown files. Something that I wasn't
+previously aware of was how to use Markdown on Github to publish your
+own website, which is an extremely useful tip I'll be taking forwards.&lt;/p&gt;
+&lt;p&gt;Yo finished with a session on what makes an open source project good and
+how to get started contributing. She recommended looking for issues
+tagged as
+&lt;a href="https://github.com/search?q=label%3Afirst-timers-only&amp;amp;state=open&amp;amp;type=Issues"&gt;first-timers-only&lt;/a&gt;
+on GitHub or to visit
+&lt;a href="https://www.firsttimersonly.com/"&gt;firsttimersonly.com&lt;/a&gt; to build
+confidence. I really do think that giving people confidence is
+absolutely key: helping people to have the confidence to share their
+code, to ask questions, and to contribute to projects is fundamental for
+helping open source projects continue to flourish.&lt;/p&gt;&lt;/div&gt;</description><category>SSI open-source workshops FOSS</category><guid>http://rse.shef.ac.uk/blog/2019-01-09-ssi-workshop-contribute-foss/</guid><pubDate>Wed, 09 Jan 2019 16:56:00 GMT</pubDate></item><item><title>Upcoming Deep Learning Workshop (18th January 2019)</title><link>http://rse.shef.ac.uk/blog/2019-01-18-dli-sheffield-news/</link><dc:creator>Twin Karmakharm</dc:creator><description>&lt;p&gt;We're hosting another &lt;strong&gt;Fundamentals of Deep Learning for Computer Vision&lt;/strong&gt; workshop on the &lt;strong&gt;18th of January&lt;/strong&gt;! &lt;a href="http://rse.shef.ac.uk/training/deeplearning/2019-01-18-dli-sheffield"&gt;More details can be found here&lt;/a&gt;.&lt;/p&gt;</description><guid>http://rse.shef.ac.uk/blog/2019-01-18-dli-sheffield-news/</guid><pubDate>Thu, 20 Dec 2018 10:00:00 GMT</pubDate></item><item><title>Blog articles on our Deep Learning workshops</title><link>http://rse.shef.ac.uk/blog/2018-11-27-dli-blog-articles-dl/</link><dc:creator>Twin Karmakharm</dc:creator><description>&lt;div&gt;&lt;p&gt;We've had a couple of blog articles with mentions of our Deep Learning workshops. One is by Adam Tomkins from the Software Sustainability Institute (&lt;a href="https://software.ac.uk/blog/2018-11-22-dabbling-deep-learning"&gt;link&lt;/a&gt;), and the other by Andrei Roibu, one of our masters student in the Aerospace department  (&lt;a href="http://www.residencelife.co.uk/what-have-you-done-today-i-trained-my-pc-to-learn._60163"&gt;link&lt;/a&gt;). Thank you for the writeup guys!&lt;/p&gt;
+&lt;p&gt;For more information on upcoming training events hosted by the RSE group, &lt;a href="https://rse.shef.ac.uk/training/events/"&gt;you can visit this page&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/2018-11-27-dli-blog-articles-dl/</guid><pubDate>Tue, 27 Nov 2018 09:00:00 GMT</pubDate></item><item><title>Upcoming Deep Learning Workshop (18th December 2018)</title><link>http://rse.shef.ac.uk/blog/2018-12-18-dli-sheffield-news/</link><dc:creator>Twin Karmakharm</dc:creator><description>&lt;p&gt;We're hosting another &lt;strong&gt;Fundamentals of Deep Learning for Computer Vision&lt;/strong&gt; workshop on the &lt;strong&gt;18th of December&lt;/strong&gt;! &lt;a href="http://rse.shef.ac.uk/training/deeplearning/2018-12-18-dli-sheffield"&gt;More details can be found here&lt;/a&gt;.&lt;/p&gt;</description><guid>http://rse.shef.ac.uk/blog/2018-12-18-dli-sheffield-news/</guid><pubDate>Thu, 15 Nov 2018 10:00:00 GMT</pubDate></item><item><title>Upcoming Deep Learning Workshop (28th November 2018)</title><link>http://rse.shef.ac.uk/blog/2018-11-28-dli-sheffield-news/</link><dc:creator>Twin Karmakharm</dc:creator><description>&lt;p&gt;We're hosting another &lt;strong&gt;Fundamentals of Deep Learning for Computer Vision&lt;/strong&gt; workshop on the &lt;strong&gt;28th of November&lt;/strong&gt;! &lt;a href="http://rse.shef.ac.uk/training/deeplearning/2018-11-28-dli-sheffield"&gt;More details can be found here&lt;/a&gt;.&lt;/p&gt;</description><guid>http://rse.shef.ac.uk/blog/2018-11-28-dli-sheffield-news/</guid><pubDate>Wed, 31 Oct 2018 10:00:00 GMT</pubDate></item><item><title>RSE Career Paths and a Vacancy in the RSE Team</title><link>http://rse.shef.ac.uk/blog/rse-career-paths-and-a-vacancy-in-the-rse-team/</link><dc:creator>Paul Richmond</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the key motivations, shared by myself and Mike Croucher, for establishing an RSE group at the University of Sheffield was to provide a career path for RSEs. The RSE team has been working for some time with HR on establishing a generic job (role) description for G7 and G8 (lecturer level) RSEs which can be used for staff progression. I am please to announce that these are now &lt;a href="http://rse.shef.ac.uk/community/job-descriptions"&gt;published on our website&lt;/a&gt;. The job descriptions provide a template for the recruitment of RSEs across the whole university and are the job descriptions which members of the RSE team work from. &lt;/p&gt;
+&lt;p&gt;In conjunction with the release of these RSE job descriptions &lt;strong&gt;I am excited to announce that we are currently advertising an open-ended RSE position to join the RSE group&lt;/strong&gt;. This is particularly important to me as the group director as it is the first &lt;em&gt;new&lt;/em&gt; open-ended RSE post to be advertised which is not attached to any particular research project. &lt;sup&gt;&lt;a href="http://rse.shef.ac.uk/blog/rse-career-paths-and-a-vacancy-in-the-rse-team/#open_ended_footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; The significance of this is that this role demonstrates that the university is bought into the RSE vision and strategy which has been developed at Sheffield. A large number of people have contributed to developing this strategy and I am extremely pleased to see it moving forward. The new position will be working within a &lt;a href="http://rse.shef.ac.uk/contact/team"&gt;group of RSEs&lt;/a&gt; which has grown significantly over the last two years (additional recruitment is planned shortly). Myself and the group look forward to welcoming a new candidate into the team. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://jobs.shef.ac.uk/sap/bc/webdynpro/sap/hrrcf_a_posting_apply?PARAM=cG9zdF9pbnN0X2d1aWQ9NUJCQzAwMEQ0ODI4MTVGQUUxMDAwMDAwQUMxRTg4NzgmY2FuZF90eXBlPUVYVA%3d%3d&amp;amp;sap-client=400&amp;amp;sap-language=EN&amp;amp;sap-accessibility=X&amp;amp;sap-ep-themeroot=%2fSAP%2fPUBLIC%2fBC%2fUR%2fuos#"&gt;Follow this link for the job advert&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.jobs.ac.uk/job/BNJ857/research-software-engineer-rse"&gt;jobs.ac.uk advert&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Informal questions relating to this post or any other matter can be directed to myself (Paul Richmond) via the RSE website &lt;a href="http://rse.shef.ac.uk/contact"&gt;contact&lt;/a&gt; details.&lt;/p&gt;
+&lt;p&gt;&lt;a name="open_ended_footnote"&gt;1&lt;/a&gt;: The University of Sheffield RSE strategy has enabled current RSE team members to transition into open-ended positions from fixed term contracts.&lt;/p&gt;&lt;/div&gt;</description><category>careers</category><category>jobs</category><guid>http://rse.shef.ac.uk/blog/rse-career-paths-and-a-vacancy-in-the-rse-team/</guid><pubDate>Fri, 12 Oct 2018 11:55:39 GMT</pubDate></item><item><title>Osteolytica Project Wrapup</title><link>http://rse.shef.ac.uk/blog/osteolytica-project-wrapup/</link><dc:creator>Twin Karmakharm</dc:creator><description>&lt;div&gt;&lt;p&gt;As the Osteolytica project undertaken by RSES comes to an end, it’s a good time to review the project.&lt;/p&gt;
+&lt;h3&gt;What is Osteolytica?&lt;/h3&gt;
+&lt;p&gt;Osteolytica is a software tool for osteolytic lesion analysis developed in collaboration with teams led by Dr. Andrew Chantry from Oncology and Dr. Paul Richmond from RSES. It specialises in the reconstruction and analysis of volumetric bone samples generated by murine myeloma studies and obtained from Micro CT scanners within a research environment.&lt;/p&gt;
+&lt;p&gt;The GPU (CUDA) is used to accelerate the reconstruction and analysis process, and additionally, for the rendering and visualization of the bone volumes with ray-tracing.&lt;/p&gt;
+&lt;p&gt;Compared to the previous approach which involves the manual counting of osteolytic lesions, Osteolytica offers significant improvements with respect to the accuracy and reproducibility as shown in this &lt;a href="https://doi.org/10.1016/j.bone.2015.10.004"&gt;published paper&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;The reconstruction process&lt;/h3&gt;
+&lt;p&gt;The goal of Osteolytica is to determine the surface area missing from the bone as a result of osteolytic lesions without needing to refer to prior samples. In order to do this, Osteolytica performs a bone surface reconstruction in two stages, expansion, and contraction.&lt;/p&gt;
+&lt;p&gt;For the expansion stage (&lt;strong&gt;Figure 1&lt;/strong&gt;), volumetric expansion is performed on the bone volume sample. This expansion closes the holes within the sample, generating a water-tight volume that also allows the empty areas inside and outside of the volume to be differentiated.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Expansion process" src="http://rse.shef.ac.uk/images/2018_09_17_osteolytica-project-wrapup/osteolytica-expansion.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; The expansion process shown in 2D. a) Bone volume is shown in black. b) The volume is expanded (red) until all the gaps are enclosed. c) Once the expansion is completed, the inside volume can be filled in and the contraction starts from the expansion border (blue line)&lt;/p&gt;
+&lt;p&gt;A contraction process is then performed (&lt;strong&gt;Figure 2&lt;/strong&gt;), starting from the outside of the expanded volume, to reduce the expanded volume and creating a crust that approximately fits the bone sample. Osteolytica also performs localised fitting of this crust surface by performing per-voxel localised contraction (&lt;strong&gt;Figure 3&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Contraction process" src="http://rse.shef.ac.uk/images/2018_09_17_osteolytica-project-wrapup/osteolytica-contraction.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; The contraction process shown in 2D. Contraction starts from the expansion border (blue line) and travels towards the centre of the volume. Deeper green shows higher contraction iteration.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Localised fitting" src="http://rse.shef.ac.uk/images/2018_09_17_osteolytica-project-wrapup/osteolytica-localisedfitting.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; Starting from the crust that forms when the contraction boundary meets bone voxels (green line), each voxel on the crust (green dot) is projected in to the volume. Each crust voxel searches a limited surrounding area to count the number of surrounding bone voxels and will place itself in a location where it finds the highest number of bone voxels in the surrounding.&lt;/p&gt;
+&lt;p&gt;The final result from these two processes is the original bone volume that has been wrapped within a watertight crust. Where the crust does not overlap a bone voxel, it is defined as a hole (&lt;strong&gt;Figure 4&lt;/strong&gt; red areas). We can then use this information to approximate the amount of missing surface area of the bone.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Reconstruction results" src="http://rse.shef.ac.uk/images/2018_09_17_osteolytica-project-wrapup/osteolytica-reconstructedvolumes.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 4:&lt;/strong&gt; Osteolytica applied to various types of bone. a, b &amp;amp; c)  The the original bone volumes. d, e &amp;amp; f) Reconstruction of the volumes. The reconstruction is shown in red.&lt;/p&gt;
+&lt;h3&gt;Handling High-Resolution Samples&lt;/h3&gt;
+&lt;p&gt;While mouse tibia were initially used to as the dataset for testing Osteolytica, the intention is to make the program work with high resolution scans of the entire body. Due to the exponential memory requirement for representing dense volumetric data which can easily exceed the size of a GPU’s memory, Osteolytica was changed to use unified managed CUDA memory. From Nvidia GPU’s Pascal architecture onwards, it allows memory to be allocated that is larger than the memory card as long as there is enough system memory. The process works by automatically fetching from system memory when the code running on the GPU requests it.&lt;/p&gt;
+&lt;p&gt;In order to keep texture memory used for visualising the volume interactively small enough to fit within the GPU memory, Osteolytica downscales bone samples to fit the size of a pre-specified maximum rendering volume.&lt;/p&gt;
+&lt;h3&gt;Time series scans from longitudinal studies&lt;/h3&gt;
+&lt;p&gt;The last new development in Osteolytica is to add an experimental feature to allow comparison of the same set of bone over time. This happens in longitudinal studies that tracks the progression of cancer in response to the administration of a new drug for example.&lt;/p&gt;
+&lt;p&gt;While theoretically it should be possible to compare the bone volumes over time period directly, there’s a problem where bone volumes in each scan do not align to each other exactly. The alignment problem was solved by using a local optimisation algorithm (&lt;a href="https://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#cobyla-constrained-optimization-by-linear-approximations"&gt;COBYLA provided in nlopt&lt;/a&gt;) in order to maximise the overlap between the two volumes in the time series. The initial result of this alignment process is shown in &lt;strong&gt;Figure 5&lt;/strong&gt; for two volumes scanned at week 0 and week 3. The white colour shows where the volumes overlap, blue and red colours represent the week 0 sample and week 3 samples respectively that did not overlap. &lt;strong&gt;Figure 5a&lt;/strong&gt; shows the two volumes before alignment and &lt;strong&gt;Figure 5b&lt;/strong&gt; shows the volumes after alignment. In this case it can be seen that there has been bone growth after the administering of drugs and that lesions are starting to be filled in.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Volume alignment" src="http://rse.shef.ac.uk/images/2018_09_17_osteolytica-project-wrapup/osteolytica-alignment.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; Overlapping week 0 and week 3 volumes. White shows overlap, blue shows week 0 and red is week 0 without overlap. a) Volumes before alignment. b) Volumes after alignment.&lt;/p&gt;
+&lt;h3&gt;Future work&lt;/h3&gt;
+&lt;p&gt;While the core development of Osteolytica is now complete, the clinical trial is just starting and will run for over a year. Afterwards, the resulting scans will then be processed through Osteolytica to measure the progress of treatment.&lt;/p&gt;
+&lt;p&gt;The next iteration of Osteolytica will investigate the use of deep learning to perform bone reconstruction with training dataset generated from a synthetic bone degradation model.&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/osteolytica-project-wrapup/</guid><pubDate>Thu, 04 Oct 2018 11:00:00 GMT</pubDate></item><item><title>Upcoming Deep Learning Workshop</title><link>http://rse.shef.ac.uk/blog/2018-10-23-dli-sheffield-news/</link><dc:creator>Twin Karmakharm</dc:creator><description>&lt;p&gt;We're hosting another &lt;strong&gt;Fundamentals of Deep Learning for Computer Vision&lt;/strong&gt; workshop on the &lt;strong&gt;23rd of October&lt;/strong&gt;! &lt;a href="http://rse.shef.ac.uk/training/deeplearning/2018-10-23-dli-sheffield"&gt;More details can be found here&lt;/a&gt;.&lt;/p&gt;</description><guid>http://rse.shef.ac.uk/blog/2018-10-23-dli-sheffield-news/</guid><pubDate>Wed, 03 Oct 2018 13:00:00 GMT</pubDate></item><item><title>Hacktoberfest 2018</title><link>http://rse.shef.ac.uk/blog/hacktoberfest-2018/</link><dc:creator>Anna Krystalli</dc:creator><description>&lt;div&gt;&lt;h3&gt;RSE Sheffield welcome you to Hacktoberfest 2018!&lt;/h3&gt;
+&lt;h5&gt;Starts 2nd Oct. &amp;amp; every tue evening.&lt;/h5&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://hacktoberfest.digitalocean.com/assets/logo-hacktoberfest-658b5aa2bd34e782d29c40bf6afbdff00f20fe1328efa6da17743878ba8db66f.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;a href="https://hacktoberfest.digitalocean.com/"&gt;&lt;strong&gt;Hacktoberfest&lt;/strong&gt;&lt;/a&gt; is back! a &lt;strong&gt;one month celebration of open source software&lt;/strong&gt;, all about encouraging meaningful contributions to the open source ecosystem, &lt;strong&gt;for beginners and veterans alike&lt;/strong&gt;.&lt;/h4&gt;
+&lt;p&gt;We had a great time last year, hosting hacktoberfest sessions as part of the &lt;a href="https://rse.shef.ac.uk/blog/sheffieldR-hacktoberfest/"&gt;Sheffield R Users group&lt;/a&gt; and &lt;a href="https://rse.shef.ac.uk/blog/codefirstgirls-meets-hacktoberfest/"&gt;Code First Girls&lt;/a&gt; so we're doing it again!&lt;/p&gt;
+&lt;p&gt;We're &lt;strong&gt;offering a range of sessions, open to anyone, in a friendly informal environment&lt;/strong&gt;, as a great opportunity to learn more about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;open source and the huge diversity of projects available for contribution.&lt;/li&gt;
+&lt;li&gt;how to find projects, tasks and ways to contribute.&lt;/li&gt;
+&lt;li&gt;version control through git and GitHub.&lt;/li&gt;
+&lt;li&gt;programming and software development.&lt;/li&gt;
+&lt;li&gt;effective collaboration online.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;Make five contributions to projects on GitHub during October and get a &lt;strong&gt;Hacktoberfest t-shirt!&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;Sessions&lt;/h3&gt;
+&lt;h4&gt;Introductory session&lt;/h4&gt;
+&lt;h5&gt;2nd Oct. 5.30- 7.30 pm, &lt;a href="https://goo.gl/maps/ZjcpEK2oY6D2"&gt;The Red Deer&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;We'll kick off with an &lt;strong&gt;introductory session on open source&lt;/strong&gt; on the &lt;strong&gt;2nd of October&lt;/strong&gt; at the &lt;a href="https://www.meetup.com/SheffieldR-Sheffield-R-Users-Group/events/254986012/"&gt;Sheffield R Users Group meetup&lt;/a&gt;. The focus of the session will be on &lt;strong&gt;using GitHub to explore and contribute to open source and is not limited to R users&lt;/strong&gt;. Also note that there is a huge variety of projects available, many not involving coding at all (ie collaborative writing projects, training material development). So feel free to attend if your just curious about open source in general. &lt;/p&gt;
+&lt;h4&gt;Hacky hour sessions&lt;/h4&gt;
+&lt;h5&gt;&lt;a href="https://goo.gl/maps/hs685HH7cwx"&gt;&lt;strong&gt;Room 3.15 (Meeting Room 1), the Diamond&lt;/strong&gt;&lt;/a&gt;, &lt;strong&gt;5:30 pm  to  8:30 pm&lt;/strong&gt;&lt;/h5&gt;
+&lt;h6&gt;The University of Sheffield, 32 Leavygreave Rd, S3 7RD&lt;/h6&gt;
+&lt;p&gt;For &lt;strong&gt;every following tuesday evening of October&lt;/strong&gt;, we've booked a &lt;strong&gt;room to explore Hacktoberfest projects together!&lt;/strong&gt; The room is booked on the following dates:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;09 October&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;16 October&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;23 October&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;30 October&lt;/strong&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(If you don't have a TUoS swipe card, please register &lt;a href="https://goo.gl/forms/7npNfDJoTkZJe21E2"&gt;here&lt;/a&gt; for a pass to the Diamond)&lt;/p&gt;
+&lt;p&gt;Come to as many sessions as you like, stay as long as you can, bring your friends! If anyone get's stuck there'll be others around to help. There'll also be &lt;strong&gt;at least one member of the RSE team at each session&lt;/strong&gt; to help with questions and demystifying any open source jargon. &lt;/p&gt;
+&lt;p&gt;By the end hopefully you'll have had an opportunity to learn more about collaboration, play around with something new and managed to contribute and get the t-shirt to prove it!&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;Hope to see you there!&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="" src="http://rse.shef.ac.uk/images/hacktoberfest_banner.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>event</category><guid>http://rse.shef.ac.uk/blog/hacktoberfest-2018/</guid><pubDate>Tue, 25 Sep 2018 08:09:22 GMT</pubDate></item><item><title>SSI Fellowship success for Sheffield</title><link>http://rse.shef.ac.uk/blog/SSI-2018/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;The &lt;a href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt;(SSI) is a cross-council funded group that supports the research software community in the UK. It has championed the role of the &lt;a href="https://rse.ac.uk/"&gt;Research Software Engineer&lt;/a&gt; and has led &lt;a href="https://www.software.ac.uk/blog/2017-04-10-state-nation-report-research-software-engineers-released"&gt;national&lt;/a&gt; and &lt;a href="https://rse.ac.uk/rse-international-leaders-meeting/"&gt;international initiatives&lt;/a&gt; in the field.&lt;/p&gt;
+&lt;p&gt;One of the most popular activities undertaken by the SSI is their &lt;a href="https://www.software.ac.uk/programmes-and-events/fellowship-programme"&gt;fellowship program&lt;/a&gt;. This competitive process provides an &lt;a href="https://www.software.ac.uk/about/fellows"&gt;annual cohort of fellows&lt;/a&gt; with £3,000 to spend over fifteen months on a project of their choice.
+Competition for these fellowships is fierce! Just like larger fellowships, applicants must get through a peer-reviewed application process that includes written proposals and selection days.&lt;/p&gt;
+&lt;p&gt;I am extremely happy to report that Sheffield has won, not just one, but &lt;strong&gt;three&lt;/strong&gt; SSI Fellowships this year. The only institution to match us was UCL, home of one of the first RSE group in the country.  Here's a brief statement from each Sheffield fellow explaining how they plan to use their funds:&lt;/p&gt;
+&lt;div style="background:#5F4B8B; display: inline-block; font-size:16px; padding: 1%;"&gt;
+
+  &lt;div style="float:left; margin-left: 1%; padding: 0.25% 0;"&gt;
+    &lt;img src="https://software.ac.uk/sites/default/files/inline-images/Tania-Allard.jpg" width="200px"&gt;
+  &lt;/div&gt;
+
+  &lt;font color="white"&gt;
+  &lt;strong&gt; Tania Allard &lt;/strong&gt;
+  &lt;br&gt; &lt;br&gt;
+  Nowadays, the majority of research relies on software to some degree. However, in many cases, there is little focus on developing scientific software using best development practices due to a number of reasons such as the lack of adequate mentoring and training, little understanding of the requirements of the scientific code, and software being undervalued or not considered as a primary research output. This has changed over time with the emergence of RSEs (Research Software Engineers) just like myself.  But certainly not every university or institute has an RSE team, neither every discipline is represented in the current RSE community. I plan to use this fellowship to develop an RSE winter school covering not only technical skills but also some of the craftsmanship and soft skills needed when developing a significant amount of scientific code. Also, this winter school will help to diversify the RSE pool by focusing on underrepresented groups within the community (e.g. gender, age, scientific disciplines, universities without RSEs) while disseminating
+  best software practices among a number of disciplines.
+  &lt;/font&gt;
+  &lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;div style="background:#BFC8E0; display: inline-block; font-size:16px; padding: 1% 0;
+padding-left: 1%;"&gt;
+
+  &lt;div style="float:right; margin-left:1%; padding: 0.25% 0; padding-bottom: 0.1%!important;"&gt;
+    &lt;img src="https://software.ac.uk/sites/default/files/inline-images/Becky-Arnold.jpg" width="200px"&gt;
+  &lt;/div&gt;
+  &lt;strong&gt; Becky Arnold &lt;/strong&gt;
+  &lt;br&gt; &lt;br&gt;
+  I'm planning use the fellowship funds to bring external speakers in to talk to the astrophysics group, with the goal of improving the style, efficiency and sustainability of our coding. As physicists, as I imagine in many fields, we are largely taught to code to get the things we need to be done completed as quickly as possible, with little regard for the quality of the code itself. We are taught how to code, but not how to code well. I want to give us the opportunity to improve in that. Also I hope to change the way we think about coding, from a disposable stepping stone used to further research as quickly as possible to a fundamental part of the science itself.
+
+  &lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;div style="background:#255498; display: inline-block; font-size:16px; padding: 1%;"&gt;
+
+  &lt;div style="float:left; margin-left:1%; padding: 0.25% 0;"&gt;
+    &lt;img src="https://software.ac.uk/sites/default/files/inline-images/Adam-Tomkins.png" width="200px"&gt;
+  &lt;/div&gt;
+
+  &lt;font color="white"&gt;
+  &lt;strong&gt;Adam Tomkins&lt;/strong&gt;
+  &lt;br&gt;&lt;br&gt;
+  I am part of the Fruit Fly Brain Observatory project, with the aim to open up neurological data to the community, in an accessible way. Part of the issue with open data sharing is the vast amount of custom storage and format solutions, used by different labs. With this fellowship, I will be holding training events for both biologists and computational modelers on how to use the latest open data standards, demonstrating how using open software can generate instant added-value to data, with a larger community of tools and platforms.
+  &lt;/font&gt;   
+
+  &lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;RSE at Sheffield&lt;/h3&gt;
+&lt;p&gt;When we set up the Sheffield RSE group, one of our aims was to help cultivate an environment at Sheffield where research software was valued. We do this by providing &lt;a href="https://rse.shef.ac.uk/training/"&gt;training events&lt;/a&gt;, &lt;a href="https://rse.shef.ac.uk/blog/linuistics_grant_2016/"&gt;writing grants with academics&lt;/a&gt;, &lt;a href="https://rse.shef.ac.uk/service/testimonials/"&gt;consulting with researchers to improve software&lt;/a&gt;, &lt;a href="https://rse.shef.ac.uk/blog/intel-R-iceberg/"&gt;improving the HPC environment&lt;/a&gt; and anything else we can think of.  Of course, correlation does not imply causation but we like to believe that we helped our new SSI Fellows in some way (&lt;a href="https://www.software.ac.uk/blog/2017-12-08-announcing-our-fellows-2018"&gt;the SSI agrees&lt;/a&gt;) and we are very happy to bask in their reflected glory.&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/SSI-2018/</guid><pubDate>Sat, 10 Feb 2018 17:47:32 GMT</pubDate></item></channel></rss>

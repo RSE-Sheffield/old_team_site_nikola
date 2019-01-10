@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts by Mike Croucher)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/authors/mike-croucher.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SSI Fellowship success for Sheffield</title><link>http://rse.shef.ac.uk/blog/SSI-2018/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;The &lt;a href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt;(SSI) is a cross-council funded group that supports the research software community in the UK. It has championed the role of the &lt;a href="https://rse.ac.uk/"&gt;Research Software Engineer&lt;/a&gt; and has led &lt;a href="https://www.software.ac.uk/blog/2017-04-10-state-nation-report-research-software-engineers-released"&gt;national&lt;/a&gt; and &lt;a href="https://rse.ac.uk/rse-international-leaders-meeting/"&gt;international initiatives&lt;/a&gt; in the field.&lt;/p&gt;
+&lt;p&gt;One of the most popular activities undertaken by the SSI is their &lt;a href="https://www.software.ac.uk/programmes-and-events/fellowship-programme"&gt;fellowship program&lt;/a&gt;. This competitive process provides an &lt;a href="https://www.software.ac.uk/about/fellows"&gt;annual cohort of fellows&lt;/a&gt; with £3,000 to spend over fifteen months on a project of their choice.
+Competition for these fellowships is fierce! Just like larger fellowships, applicants must get through a peer-reviewed application process that includes written proposals and selection days.&lt;/p&gt;
+&lt;p&gt;I am extremely happy to report that Sheffield has won, not just one, but &lt;strong&gt;three&lt;/strong&gt; SSI Fellowships this year. The only institution to match us was UCL, home of one of the first RSE group in the country.  Here's a brief statement from each Sheffield fellow explaining how they plan to use their funds:&lt;/p&gt;
+&lt;div style="background:#5F4B8B; display: inline-block; font-size:16px; padding: 1%;"&gt;
+
+  &lt;div style="float:left; margin-left: 1%; padding: 0.25% 0;"&gt;
+    &lt;img src="https://software.ac.uk/sites/default/files/inline-images/Tania-Allard.jpg" width="200px"&gt;
+  &lt;/div&gt;
+
+  &lt;font color="white"&gt;
+  &lt;strong&gt; Tania Allard &lt;/strong&gt;
+  &lt;br&gt; &lt;br&gt;
+  Nowadays, the majority of research relies on software to some degree. However, in many cases, there is little focus on developing scientific software using best development practices due to a number of reasons such as the lack of adequate mentoring and training, little understanding of the requirements of the scientific code, and software being undervalued or not considered as a primary research output. This has changed over time with the emergence of RSEs (Research Software Engineers) just like myself.  But certainly not every university or institute has an RSE team, neither every discipline is represented in the current RSE community. I plan to use this fellowship to develop an RSE winter school covering not only technical skills but also some of the craftsmanship and soft skills needed when developing a significant amount of scientific code. Also, this winter school will help to diversify the RSE pool by focusing on underrepresented groups within the community (e.g. gender, age, scientific disciplines, universities without RSEs) while disseminating
+  best software practices among a number of disciplines.
+  &lt;/font&gt;
+  &lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;div style="background:#BFC8E0; display: inline-block; font-size:16px; padding: 1% 0;
+padding-left: 1%;"&gt;
+
+  &lt;div style="float:right; margin-left:1%; padding: 0.25% 0; padding-bottom: 0.1%!important;"&gt;
+    &lt;img src="https://software.ac.uk/sites/default/files/inline-images/Becky-Arnold.jpg" width="200px"&gt;
+  &lt;/div&gt;
+  &lt;strong&gt; Becky Arnold &lt;/strong&gt;
+  &lt;br&gt; &lt;br&gt;
+  I'm planning use the fellowship funds to bring external speakers in to talk to the astrophysics group, with the goal of improving the style, efficiency and sustainability of our coding. As physicists, as I imagine in many fields, we are largely taught to code to get the things we need to be done completed as quickly as possible, with little regard for the quality of the code itself. We are taught how to code, but not how to code well. I want to give us the opportunity to improve in that. Also I hope to change the way we think about coding, from a disposable stepping stone used to further research as quickly as possible to a fundamental part of the science itself.
+
+  &lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;div style="background:#255498; display: inline-block; font-size:16px; padding: 1%;"&gt;
+
+  &lt;div style="float:left; margin-left:1%; padding: 0.25% 0;"&gt;
+    &lt;img src="https://software.ac.uk/sites/default/files/inline-images/Adam-Tomkins.png" width="200px"&gt;
+  &lt;/div&gt;
+
+  &lt;font color="white"&gt;
+  &lt;strong&gt;Adam Tomkins&lt;/strong&gt;
+  &lt;br&gt;&lt;br&gt;
+  I am part of the Fruit Fly Brain Observatory project, with the aim to open up neurological data to the community, in an accessible way. Part of the issue with open data sharing is the vast amount of custom storage and format solutions, used by different labs. With this fellowship, I will be holding training events for both biologists and computational modelers on how to use the latest open data standards, demonstrating how using open software can generate instant added-value to data, with a larger community of tools and platforms.
+  &lt;/font&gt;   
+
+  &lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;RSE at Sheffield&lt;/h3&gt;
+&lt;p&gt;When we set up the Sheffield RSE group, one of our aims was to help cultivate an environment at Sheffield where research software was valued. We do this by providing &lt;a href="https://rse.shef.ac.uk/training/"&gt;training events&lt;/a&gt;, &lt;a href="https://rse.shef.ac.uk/blog/linuistics_grant_2016/"&gt;writing grants with academics&lt;/a&gt;, &lt;a href="https://rse.shef.ac.uk/service/testimonials/"&gt;consulting with researchers to improve software&lt;/a&gt;, &lt;a href="https://rse.shef.ac.uk/blog/intel-R-iceberg/"&gt;improving the HPC environment&lt;/a&gt; and anything else we can think of.  Of course, correlation does not imply causation but we like to believe that we helped our new SSI Fellows in some way (&lt;a href="https://www.software.ac.uk/blog/2017-12-08-announcing-our-fellows-2018"&gt;the SSI agrees&lt;/a&gt;) and we are very happy to bask in their reflected glory.&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/SSI-2018/</guid><pubDate>Sat, 10 Feb 2018 17:47:32 GMT</pubDate></item><item><title>Iceberg vs ShARC</title><link>http://rse.shef.ac.uk/blog/iceberg-vs-sharc/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR Around 100 of Iceberg's nodes are ancient and weaker than a decent laptop. You may get better performance by switching to ShARC.  You'll get even better performance by investing in the &lt;a href="https://rse.shef.ac.uk/community/resources-and-equipment/"&gt;RSE project on ShARC&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Benchmarking different nodes on our HPC systems&lt;/h3&gt;
+&lt;p&gt;I have been benchmarking various nodes on Iceberg and ShARC using Matrix-Matrix multiplication.
+This operation is highly parallel and optimised these days and is also a vital operation in many scientific workflows.&lt;/p&gt;
+&lt;p&gt;The benchmark units are GigaFlops (Billion operations per second) and &lt;strong&gt;higher is better&lt;/strong&gt;
+Here are the results for maximum matrix sizes of 10000 by 10000, sorted worst to best&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/Sheffield_iceberg_12cores.ipynb"&gt;119 GigaFlops&lt;/a&gt; - Old Iceberg 'Westmere' Nodes (12 core X5650 CPUs )&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/MacBookPro2014.ipynb"&gt;169 Gigaflops&lt;/a&gt; - My 4 core Mid-2014 MacBook Pro&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/Sheffield_iceberg_16cores.ipynb"&gt;333 Gigaflops&lt;/a&gt; - New Iceberg 'Ivy Bridge' Nodes (16 core )&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/Sheffield_sharc_16cores.ipynb"&gt;458 Gigaflops&lt;/a&gt; - Standard ShARC node (16 cores)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/Sheffield_sharc_32cores.ipynb"&gt;802 Gigaflops&lt;/a&gt; - 32 core ShARC node (only available to &lt;a href="https://rse.shef.ac.uk/community/resources-and-equipment/"&gt;RSE queue contributors&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;According to the &lt;a href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/cluster_specs.html"&gt;Iceberg cluster specs&lt;/a&gt;, over half of Iceberg is made up of the old 'Westmere' nodes.  According to these benchmarks, these are almost &lt;strong&gt;4 times slower&lt;/strong&gt; than a standard node on ShARC.&lt;/p&gt;
+&lt;h3&gt;The RSE project - the fastest nodes available&lt;/h3&gt;
+&lt;p&gt;We in the RSE group have co-invested with our collaborators in additional hardware on ShARC to form a 'Premium queue'.  This hardware includes large memory nodes (&lt;strong&gt;768 Gigabytes per node&lt;/strong&gt; - 12 times the amount that's normally available), Advanced GPUs (&lt;a href="https://www.nvidia.com/en-us/data-center/dgx-1/"&gt;A DGX-1 server&lt;/a&gt;) and 'dense-core' nodes with 32 CPUs each.&lt;/p&gt;
+&lt;p&gt;These 32 core nodes are capable of &lt;a href="https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/Sheffield_sharc_32cores.ipynb"&gt;over 800 Gigaflops&lt;/a&gt; and so are 6.7 times faster than the old Iceberg nodes.  Furthermore, since they are only available to contributors, the queues will be shorter too!&lt;/p&gt;
+&lt;p&gt;Details of how to participate in the RSE-queue experiment on ShARC can be &lt;a href="https://rse.shef.ac.uk/community/resources-and-equipment/"&gt;found on our website&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;What if ShARC is slower than Iceberg?&lt;/h3&gt;
+&lt;p&gt;These benchmarks give reproducible evidence that ShARC can be significantly faster than Iceberg when well-optimised code is used.  We have heard some unconfirmed reports that code run on ShARC can be slower than code run on Iceberg.  If this is the case for you, please &lt;a href="https://rse.shef.ac.uk/contact/"&gt;get in touch with us&lt;/a&gt; and give details.&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/iceberg-vs-sharc/</guid><pubDate>Thu, 23 Nov 2017 13:04:27 GMT</pubDate></item><item><title>Spark and Scala on Sheffield HPC systems</title><link>http://rse.shef.ac.uk/blog/spark-scala-sheffield-hpc/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;As part of our support for a Large scale machine learning MSc course in Computer Science, the Sheffield RSE group put together a tutorial for how to use &lt;a href="http://spark.apache.org/"&gt;Spark&lt;/a&gt; and Scala on &lt;a href="http://docs.hpc.shef.ac.uk/en/latest/"&gt;Sheffields HPC systems&lt;/a&gt;.
+We are sharing with the rest of the community in case its useful to you &lt;a href="https://github.com/mikecroucher/Intro_to_HPC/blob/gh-pages/README.md"&gt;https://github.com/mikecroucher/Intro_to_HPC/blob/gh-pages/README.md&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;Its for people whove never used a HPC system before. By the time theyve finished, they are able to submit their own Spark jobs to the HPC cluster.
+If anyone is interested in us re-running this as a workshop (it takes around 2 hours) let us know.&lt;/p&gt;
+&lt;p&gt;Some notes on our current implementation of Spark on HPC:-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We are currently restricted to jobs that run on one node. This is because Sheffields HPC clusters are not traditional Hadoop/Spark clusters and so some level of integration is required between Sun Grid Engine and Spark. We've only managed to get as far as implementing this across single nodes at the moment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One way weve fudged this is to make sure that we provide our students with access to nodes with a LOT of memory  768 GB per node in fact, 12 times as much as you get on a normal node on ShARC or Iceberg. We are experimenting with allowing others access to our kit via a contribution based model. See &lt;a href="https://rse.shef.ac.uk/community/resources-and-equipment/"&gt;https://rse.shef.ac.uk/community/resources-and-equipment//&lt;/a&gt; for details.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/spark-scala-sheffield-hpc/</guid><pubDate>Mon, 08 May 2017 11:17:05 GMT</pubDate></item><item><title>Introduction to Modern Fortran</title><link>http://rse.shef.ac.uk/blog/ModernFortran2017/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;In February, the Research Software Engineering group hosted an ‘Introduction to Modern Fortran Course’ taught by EPSRC Research Software Engineering Fellow, &lt;a href="http://www.walkingrandomly.com/?p=6006"&gt;Ian Bush&lt;/a&gt;. The course material is available at &lt;a href="https://www.oerc.ox.ac.uk/introduction-modern-fortran-course-materials"&gt;https://www.oerc.ox.ac.uk/introduction-modern-fortran-course-materials&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;During the day, Ian recommended a bunch of books (below)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://rse.shef.ac.uk/images/fortran_books.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;We’ve been working with the University library and I’m happy to announce that all of these are now available to borrow. Search for them using the &lt;a href="https://find.shef.ac.uk/primo_library/libweb/action/search.do"&gt;University catalogue&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/ModernFortran2017/</guid><pubDate>Wed, 19 Apr 2017 10:12:51 GMT</pubDate></item><item><title>Determining MPI placement on the HPC clusters</title><link>http://rse.shef.ac.uk/blog/mpi_placement/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;Say you request a 16 slot MPI job on ShARC with 3GB per-process using a submission script like the one below:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;#Tell the scheduler that maximum runtime is 1 hour&lt;/span&gt;
+&lt;span class="c1"&gt;#$ -l h_rt=1:00:00&lt;/span&gt;
+&lt;span class="c1"&gt;#Request 16 slots&lt;/span&gt;
+&lt;span class="c1"&gt;#$ -pe mpi 16&lt;/span&gt;
+&lt;span class="c1"&gt;#Request 3 Gigabytes per slot&lt;/span&gt;
+&lt;span class="c1"&gt;#$ -l rmem=3G&lt;/span&gt;
+
+&lt;span class="c1"&gt;#Load gcc 4.9.4 and OpenMPI 2.0.1&lt;/span&gt;
+module load dev/gcc/4.9.4
+module load mpi/openmpi/2.0.1/gcc-4.9.4
+
+mpirun  ./MPI_hello_world
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The scheduler is free to decide where on the system your 16 slots get placed. You may have all 16 slots running on one node, one slot per node for 16 nodes or anything in between. The exact placement of your jobs may affect runtime.&lt;/p&gt;
+&lt;p&gt;We can find out where the scheculer placed your MPI processes using the &lt;code&gt;$PE_HOSTFILE&lt;/code&gt; environment variable. When your job starts running, this points to a file that contains placement information. We make use of it in a submission script as follows&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;#Tell the scheduler that maximum runtime is 1 hour&lt;/span&gt;
+&lt;span class="c1"&gt;#$ -l h_rt=1:00:00&lt;/span&gt;
+&lt;span class="c1"&gt;#Request 16 slots&lt;/span&gt;
+&lt;span class="c1"&gt;#$ -pe mpi 16&lt;/span&gt;
+&lt;span class="c1"&gt;#Request 3 Gigabytes per slot&lt;/span&gt;
+&lt;span class="c1"&gt;#$ -l rmem=3G&lt;/span&gt;
+
+&lt;span class="c1"&gt;#Load gcc 4.9.4 and OpenMPI 2.0.1&lt;/span&gt;
+module load dev/gcc/4.9.4
+module load mpi/openmpi/2.0.1/gcc-4.9.4
+
+&lt;span class="c1"&gt;#Put placement information into node_info.txt&lt;/span&gt;
+cat &lt;span class="nv"&gt;$PE_HOSTFILE&lt;/span&gt;  &amp;gt; node_info.txt
+
+mpirun  ./MPI_hello_world
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;You'll now get a file called &lt;code&gt;node_info.txt&lt;/code&gt; that contains information about which nodes your MPI slots were placed. For example&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sharc-node031.shef.ac.uk 1 shortint.q@sharc-node031.shef.ac.uk UNDEFINED
+sharc-node069.shef.ac.uk 1 shortint.q@sharc-node069.shef.ac.uk UNDEFINED
+sharc-node112.shef.ac.uk 1 shortint.q@sharc-node112.shef.ac.uk UNDEFINED
+sharc-node108.shef.ac.uk 1 shortint.q@sharc-node108.shef.ac.uk UNDEFINED
+sharc-node081.shef.ac.uk 1 shortint.q@sharc-node081.shef.ac.uk UNDEFINED
+sharc-node090.shef.ac.uk 2 shortint.q@sharc-node090.shef.ac.uk UNDEFINED
+sharc-node080.shef.ac.uk 2 shortint.q@sharc-node080.shef.ac.uk UNDEFINED
+sharc-node050.shef.ac.uk 3 shortint.q@sharc-node050.shef.ac.uk UNDEFINED
+sharc-node059.shef.ac.uk 4 shortint.q@sharc-node059.shef.ac.uk UNDEFINED
+&lt;/pre&gt;
+
+
+&lt;p&gt;In the above example, 4 slots were placed on node059, 3 slots on node 50, 2 slots on nodes 080 and 090 and one slot on the other listed nodes. &lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/mpi_placement/</guid><pubDate>Sat, 01 Apr 2017 16:03:00 GMT</pubDate></item><item><title>£1 million grant to shed light on how we learn languages</title><link>http://rse.shef.ac.uk/blog/linuistics_grant_2016/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;A £1 million grant to help researchers understand what speakers know about languages, in order to help make learning foreign languages easier, has been awarded to the University of Sheffield's Faculty of Arts and Humanities.  &lt;/p&gt;
+&lt;p&gt;Over five years, the Research Leadership Award from the Leverhulme Trust will allow experts to develop new, accurate ways of describing speakers’ linguistic knowledge, by using machine-learning techniques that mimic the way in which humans learn.&lt;/p&gt;
+&lt;p&gt;The patterns they find will be verified in laboratory settings and then tested on adult foreign language learners to see if such patterns can help them learn a foreign language in a way that resembles how they learned their mother tongue.&lt;/p&gt;
+&lt;p&gt;The aim is to lead a step-change in research on language and language learning by capturing the linguistic knowledge adult speakers build up when they are exposed to a language in natural settings. These insights will help with the development of strategic language teaching materials to transform the way in which we teach foreign languages.&lt;/p&gt;
+&lt;p&gt;The team will be led by Dr Dagmar Divjak from the University’s School of Languages and Cultures, in close collaboration with Dr Petar Milin, Department of Journalism Studies, and with Research Software Engineering support from Dr Mike Croucher, Department of Computer Science.&lt;/p&gt;
+&lt;p&gt;Sheffield's Research Software Engineering Group are collaborators on the project and will provide support in High Performance Computing, software engineering and data management. This will help ensure that all developed software is efficient, correct, citable, easy to use and openly available. The aim is to maximise research impact and reproducibility through the application of modern software engineering methodologies.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The out of our minds team" src="http://rse.shef.ac.uk/images/DSC03577.jpg"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>projects</category><guid>http://rse.shef.ac.uk/blog/linuistics_grant_2016/</guid><pubDate>Tue, 03 Jan 2017 15:22:11 GMT</pubDate></item><item><title>Accelerated versions of R for Iceberg</title><link>http://rse.shef.ac.uk/blog/intel-R-iceberg/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;To Long; Didn't Read -- Summary&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I've built a version of R on Iceberg that is faster than the standard version for various operations. Documentation is at &lt;a href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html"&gt;http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If it works more quickly for you, or if you have problems, please let us know by emailing &lt;a href="mailto:rse@sheffield.ac.uk"&gt;rse@sheffield.ac.uk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I took over building &lt;a href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html"&gt;R for Iceberg&lt;/a&gt;, Sheffield's High Performance Computing System, around a year ago and have been incrementally improving both the install and the documentation with every release. Something that's been bothering me for a while is the lack of optimisation. The standard Iceberg build uses an ancient version of the gcc compiler and (probably) unoptimised versions of &lt;a href="https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms"&gt;BLAS&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/LAPACK"&gt;LAPCK&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;BLAS and LAPACK are extremely important libraries -- they provide the code that programs such as R use for linear algebra: Matrix-Matrix multiplication, Cholesky decomposition, principle component analysis and so on. It's important to note that there are lots of implementations of BLAS and LAPACK: &lt;a href="http://math-atlas.sourceforge.net/"&gt;ATLAS&lt;/a&gt;, &lt;a href="http://www.openblas.net/"&gt;OpenBLAS&lt;/a&gt; and the &lt;a href="https://software.intel.com/en-us/mkl"&gt;Intel MKL&lt;/a&gt; are three well-known examples. Written in Fortran, the interfaces of all of these versions are identical, which means you can use them interchangeably, but the speed of the implementation can vary considerably.&lt;/p&gt;
+&lt;p&gt;The BLAS and LAPACK implementations on Iceberg are undocumented (before my time!) which means that we have no idea what we are dealing with. Perhaps they are optimised, perhaps not. I suspected 'not'.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Building R with the Intel Compiler and MKL&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Intel Compiler Suite often produces the fastest executables of all available compilers for any given piece of Fortran or C/C++ code. Additionally, the Intel MKL is probably the fastest implementation of BLAS and LAPACK available for Intel Hardware. As such, I've had &lt;strong&gt;Build R using Intel Compilers and MKL&lt;/strong&gt; on my to-do list for some time.&lt;/p&gt;
+&lt;p&gt;Following a recent visit to the University of Lancaster, where they've been doing this for a while, I finally bit the bullet and produced some build-scripts. Thanks to Lancaster's Mike Pacey for help with this!  There are two versions (links point to the exact commits that produced the builds used in this article):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/mikecroucher/HPC_Installers/blob/ea4a9f33b705a8cae01841d9c173278fcb486061/apps/R/3.3.1/sheffield/iceberg/intel_15/install_intel_r_sequential.sh"&gt;install_intel_r_sequential.sh&lt;/a&gt; - Linked to the sequential (i.e. single-core) version of Intel MKL.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mikecroucher/HPC_Installers/blob/ea4a9f33b705a8cae01841d9c173278fcb486061/apps/R/3.3.1/sheffield/iceberg/intel_15/install_intel_r_parallel.sh"&gt;install_intel_r_parallel.sh&lt;/a&gt; - Linked to the parallel version of Intel MKL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The benchmark code is available in the Sheffield HPC examples repo &lt;a href="https://github.com/mikecroucher/HPC_Examples/"&gt;https://github.com/mikecroucher/HPC_Examples/&lt;/a&gt;. The exact commit that produced these results is &lt;a href="https://github.com/mikecroucher/HPC_Examples/blob/35de11e7c47bc278b15a64fb77c5575b074e1a47/languages/R/linear_algebra/linear_algebra_bench.r"&gt;35de11e&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Testing&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It's no good having fast builds of R if they give the wrong results! To make sure that everything is OK, I ran R's installation test suite and everything passed. If you have an account on iceberg, you can see the output from the test suite at &lt;code&gt;/usr/local/packages6/apps/intel/15/R/sequential-3.3.1/install_logs/make_install_tests-R-3.3.1.log&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;It's important to note that although the tests passed, there &lt;strong&gt;are&lt;/strong&gt; differences in output between this build and the reference build that R's test suite is based on. This is due to a number of factors such as the fact that &lt;a href="http://www.walkingrandomly.com/?p=5380"&gt;Floating point addition is not associative&lt;/a&gt; and that the signs of eigenvectors are arbitrary and so on.&lt;/p&gt;
+&lt;p&gt;A discussion around these differences and how they relate to R can be found &lt;a href="http://r.789695.n4.nabble.com/quot-make-check-quot-fails-on-lapack-R-and-stats-Ex-R-td4698672.html"&gt;on nabble&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How fast is it?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;So is it worth it? I ran a benchmark called &lt;a href="https://github.com/mikecroucher/HPC_Examples/blob/35de11e7c47bc278b15a64fb77c5575b074e1a47/languages/R/linear_algebra/linear_algebra_bench.r#L19"&gt;linear_algebra_bench.r&lt;/a&gt; that implemented 5 tests&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MatMul - Multiplies two random 1000 x 5000 matrices together&lt;/li&gt;
+&lt;li&gt;Chol - Cholesky decomposition of a 5000 x 5000 random matrix&lt;/li&gt;
+&lt;li&gt;SVD - Singular Value Decompisition of a 10000 x 2000 random matrix&lt;/li&gt;
+&lt;li&gt;PCA - Principle component analysis of a 10000 x 2000 random matrix&lt;/li&gt;
+&lt;li&gt;LDA - A Linear Discriminant Analysis problem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Run time of these operations compared to Iceberg's standard install of R is shown in the table below.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Iceberg submission scripts for these can be found in the &lt;a href="https://github.com/mikecroucher/HPC_Examples"&gt;HPC Examples repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Execution time in seconds (Mean of 5 independent runs) &lt;/strong&gt;&lt;/p&gt;
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+&lt;/style&gt;
+
+&lt;table class="tg"&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-yw4l"&gt;&lt;/th&gt;
+    &lt;th class="tg-yw4l"&gt;MatMul&lt;/th&gt;
+    &lt;th class="tg-yw4l"&gt;Chol&lt;/th&gt;
+    &lt;th class="tg-yw4l"&gt;SVD&lt;/th&gt;
+    &lt;th class="tg-yw4l"&gt;PCA&lt;/th&gt;
+    &lt;th class="tg-yw4l"&gt;LDA&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Standard R&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;134.70&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;20.95&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;46.56&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;179.60&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;132.40&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Intel R with sequential MKL&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;12.19&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;2.24&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;9.13&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;24.58&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;31.32&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Intel R with parallel MKL (2 cores)&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;7.21&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;1.60&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;5.43&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;14.66&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;23.54&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Intel R with parallel MKL (4 cores)&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;3.24&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;1.17&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;3.34&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;7.87&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;20.63&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Intel R with parallel MKL (8 cores)&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;1.71&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;0.38&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;1.99&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;5.33&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;15.82&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Intel R with parallel MKL (16 cores)&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;0.96&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;0.28&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;1.60&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;4.05&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;13.65&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img alt="" src="http://rse.shef.ac.uk/images/matmul_r_intel.png"&gt;&lt;/p&gt;
+&lt;p&gt;Another way of viewing these results is to see the speed up compared to the standard install of R. &lt;strong&gt;Even on a single CPU core, the Intel builds are between 4 and 11 times faster than the standard builds&lt;/strong&gt;.  Making use of 16 cores takes this up to &lt;strong&gt;141 times faster in the case of Matrix-Matrix Multiplication&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Speed up compared to standard R&lt;/strong&gt;&lt;/p&gt;
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+&lt;/style&gt;
+
+&lt;table class="tg"&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-yw4l"&gt; &lt;/th&gt;
+    &lt;th class="tg-yw4l"&gt;MatMul&lt;/th&gt;
+    &lt;th class="tg-yw4l"&gt;Chol&lt;/th&gt;
+    &lt;th class="tg-yw4l"&gt;SVD&lt;/th&gt;
+    &lt;th class="tg-yw4l"&gt;PCA&lt;/th&gt;
+    &lt;th class="tg-yw4l"&gt;LDA&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Standard R&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;1&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;1&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;1&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;1&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;1&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Intel R with sequential MKL&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;11&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;9&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;5&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;7&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;4&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Intel R with parallel MKL (2 cores)&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;19&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;13&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;9&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;12&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;6&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Intel R with parallel MKL (4 cores)&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;42&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;18&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;14&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;23&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;6&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Intel R with parallel MKL (8 cores)&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;79&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;55&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;23&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;34&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;8&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-yw4l"&gt;Intel R with parallel MKL (16 cores)&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;141&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;75&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;29&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;44&lt;/td&gt;
+    &lt;td class="tg-yw4l"&gt;10&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Parallel environment&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The type of parallelisation in use here is &lt;a href="https://www.openmp.org/"&gt;OpenMP&lt;/a&gt;. As such, you need to use Iceberg's openmp environment.  That is, if you want 8 cores (say), add the following to your submission  script&lt;/p&gt;
+&lt;pre&gt;
+#$ -pe openmp 8
+export OMP_NUM_THREADS=8
+&lt;/pre&gt;
+
+&lt;p&gt;Using OpenMP limits the number of cores you can use per job to the number available on a single node. At the time of writing, this is 16.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How many cores: Finding the sweet spot&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Note that everything is fastest when using 16 cores! As such, it may be tempting to always use 16 cores for your jobs. This will almost always be a mistake.
+It may be that the aspect of your code that's accelerated by this build doesn't account for much of the runtime of your problem. As such, those 16 cores will sit idle most of the time -- wasting resources.  &lt;/p&gt;
+&lt;p&gt;You'll also spend a lot longer waiting in the queue for 16 cores than you will for 2 cores which may swap any speed gains.&lt;/p&gt;
+&lt;p&gt;You should always perform scaling experiments before deciding how many cores to use for your jobs. Consider the Linear Discriminant Analysis problem, for example. Using just one core, Intel build gives us a 4 times speed-up compared to the standard build. Moving to 8 cores only makes it twice as fast again. As such, if you had lots of these jobs to do, your throughput would be higher running lots of single core jobs compared to lots of 8 core jobs.&lt;/p&gt;
+&lt;p&gt;If matrix-matrix multiply dominates your runtime, on the other hand, it may well be worth using 16 cores.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Using this version of R for your own work&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As a user, there are a few things you need to be aware of with the Intel builds of R so I've created a separate documentation page for them.  This is currently at
+&lt;a href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/intel_r.html"&gt;http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/intel_r.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;My recommendation for using these builds is to work through the following procedure&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure that your code runs with Iceberg's standard version of R and produce a test result.&lt;/li&gt;
+&lt;li&gt;In the first instance, switch to the sequential version of the Intel R build. In the best case, this will just require changing the module. You may also need to install some of your packages since the Intel build has a separate packages directory to the standard build.&lt;/li&gt;
+&lt;li&gt;If you see speed-up &lt;strong&gt;and&lt;/strong&gt; the results are consistent with your test result, try the parallel version. Initially start with 2 cores and move upwards to find the sweet spot.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/intel-R-iceberg/</guid><pubDate>Mon, 12 Sep 2016 00:31:35 GMT</pubDate></item><item><title>NAG Fortran Compiler 6.1 released</title><link>http://rse.shef.ac.uk/blog/NAG_6_1/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;All members of the University are entitled to download and use the NAG Fortran Compiler under the terms of our site license.&lt;/p&gt;
+&lt;p&gt;Version 6.1 has just been released:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="NAG Fortran Compiler Screenshot" src="http://rse.shef.ac.uk/images/macFB2a.PNG"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Details at &lt;a href="https://www.nag.co.uk/nag-compiler"&gt;https://www.nag.co.uk/nag-compiler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download at &lt;a href="https://www.nag.co.uk/content/downloads-nag-fortran-compiler-versions"&gt;https://www.nag.co.uk/content/downloads-nag-fortran-compiler-versions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Obtain licenses from &lt;strong&gt;support@nag.co.uk&lt;/strong&gt; - Ensure that you email them from your @Sheffield.ac.uk email address&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/NAG_6_1/</guid><pubDate>Thu, 16 Jun 2016 13:50:28 GMT</pubDate></item><item><title>High Performance Computing with Maple, Part 1</title><link>http://rse.shef.ac.uk/blog/HPC-Maple-1/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;Many people who use &lt;a href="http://www.maplesoft.com/"&gt;Maple&lt;/a&gt; on Sheffield's High Performance Computing (HPC) cluster do so interactively. They connect to the system, start a graphical X-Windows session and use Maple in exactly the same way as they would use it on their laptop. Such usage does have some benefits: giving access to more CPU cores and memory than you'd get on even the most highly specified of laptops, for example.&lt;/p&gt;
+&lt;p&gt;Interactive usage on the HPC system also has problems. Thanks to &lt;a href="https://en.wikipedia.org/wiki/Latency_(engineering)"&gt;network latency&lt;/a&gt;, using a Graphical User Interface over an X-Windows connection can be a painful experience. Additionally, long calculations can tie up your computer for hours or days and if anything happens to the network connection during that time, you risk losing it all!&lt;/p&gt;
+&lt;p&gt;If you spend a long time waiting for your Maple calculations to run, it's probably time to think about moving to batch processing.&lt;/p&gt;
+&lt;h3&gt;Batch processing&lt;/h3&gt;
+&lt;p&gt;The idea behind batch processing is that you log in to the system, send your computation to a queue and then log out and get on with your life. The HPC system will process your computation when resources become available and email you when it's done. You can then log back in, transfer the results to your laptop and continue your analysis.&lt;/p&gt;
+&lt;p&gt;So, batch processing frees up your personal computer but it can also significantly increase your throughput. With batch processing, you can submit hundreds of computations to the queue simultaneously.  The system will automatically process as many of them as it can in parallel -- allowing you to make use of dozens of large computers at once.&lt;/p&gt;
+&lt;p&gt;Batch processing is powerful but it comes at a price and that price is complexity.&lt;/p&gt;
+&lt;h3&gt;Converting interactive worksheets to Maple language files&lt;/h3&gt;
+&lt;p&gt;You are probably used to interacting with Maple via richly formatted worksheets and documents. These have the file extension &lt;strong&gt;.mw&lt;/strong&gt; or &lt;strong&gt;.maple&lt;/strong&gt;. Unfortunately, it is not possible to run Maple worksheets in batch mode so it is necessary for us to convert them to &lt;strong&gt;maple language files&lt;/strong&gt; instead.&lt;/p&gt;
+&lt;p&gt;A &lt;a href="http://www.maplesoft.com/support/help/maple/view.aspx?path=Formats%2FMPL"&gt;Maple Language File&lt;/a&gt; has the extension &lt;strong&gt;.mpl&lt;/strong&gt; and is a pure text file. To convert a worksheet to a Maple Language File, open the worksheet and click on  &lt;strong&gt;File-&amp;gt;Export As-&amp;gt;Maple Input&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Convert to mpl" src="http://rse.shef.ac.uk/images/convert_to_mpl.png"&gt;&lt;/p&gt;
+&lt;h3&gt;An example&lt;/h3&gt;
+&lt;p&gt;Here is an example &lt;strong&gt;.maple&lt;/strong&gt; worksheet and the corresponding &lt;strong&gt;.mpl&lt;/strong&gt; Maple Language File, created using the conversion process detailed above. We also have a &lt;strong&gt;Job submission script&lt;/strong&gt; that will be explained later.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://rse.shef.ac.uk/maple/hpc1/series_example.maple"&gt;series_example.maple&lt;/a&gt; - Original Maple worksheet&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rse.shef.ac.uk/maple/hpc1/series_example.mpl"&gt;series_example.mpl&lt;/a&gt; - Maple Language File&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rse.shef.ac.uk/maple/hpc1/run_maple_job.sh"&gt;run_maple_job.sh&lt;/a&gt; - Job submission script&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you look at the &lt;strong&gt;.mpl&lt;/strong&gt; file in a text editor, you will see that it contains plain text versions of all the Maple input commands that were present in the original worksheet.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;myseries := series(sin(x), x = 0, 10);
+poly := convert(myseries, polynom);
+plot(poly, x = -2*Pi .. 2*Pi, y = -3 .. 3);
+&lt;/pre&gt;
+
+
+&lt;p&gt;This is the file that we can run on the HPC system in batch mode.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;job submission script&lt;/strong&gt; is a set of instructions to the HPC system's scheduler. It tells the system how much memory you want to use, what program you want to run and so on.  Here is its contents&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;!/bin/bash
+# Request 4 gigabytes of real memory (mem)
+# and 4 gigabytes of virtual memory (mem)
+#$ -l mem=4G -l rmem=4G
+
+#Make Maple 2015 available
+module load apps/binapps/maple/2015
+
+#Run Maple with the input file, **series_example.mpl**
+maple &amp;lt; series_example.mpl
+&lt;/pre&gt;
+
+
+&lt;p&gt;To run the example on the system:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transfer &lt;strong&gt;series_example.mpl&lt;/strong&gt; and &lt;strong&gt;run_maple_job.sh&lt;/strong&gt; to a directory on the HPC system. They both need to be in the same directory.&lt;/li&gt;
+&lt;li&gt;Log in to the system using a command line terminal and &lt;strong&gt;cd&lt;/strong&gt; to the directory containing the files.&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;ls&lt;/strong&gt; command to confirm you really are in the right directory. You should see something like this:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;[ab1test@testnode02 maple_example]$ ls
+
+run_maple_job.sh  series_example.maple  series_example.mpl
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Submit the job to the queue with the &lt;strong&gt;qsub&lt;/strong&gt; command&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;qsub run_maple_job.sh
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;You should see something like&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;[ab1test@testnode02 maple_example]$ qsub run_maple_job.sh
+
+Your job 1734126 ("run_maple_job.sh") has been submitted
+&lt;/pre&gt;
+
+
+&lt;p&gt;The job number will differ from the one above. It is automatically allocated by the system and uniquely identifies the job.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;At this point, you could log off the system and do something else if you wished but, since this is such a short job, it won't be long before the results appear. A few seconds to a minute under normal conditions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run the &lt;strong&gt;ls&lt;/strong&gt; command again to see the results files.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;[te1st@testnode02 maple_example]$ ls
+
+run_maple_job.sh  run_maple_job.sh.e1734126  run_maple_job.sh.o1734126  series_example.maple  series_example.mpl
+&lt;/pre&gt;
+
+
+&lt;p&gt;There are two new files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;run_maple_job.sh.e1734126 - contains any error messages. Hopefully empty here&lt;/li&gt;
+&lt;li&gt;run_maple_job.sh.o1734126 - Contains the results of your job&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The numbers at the end refer to the job number.&lt;/p&gt;
+&lt;p&gt;This completes your first batch submission using Maple.&lt;/p&gt;
+&lt;h3&gt;Issues with graphs in Maple batch mode&lt;/h3&gt;
+&lt;p&gt;The Maple worksheet we used in this example includes a plot command. This looks great in a Maple worksheet but looks very retro when performed in batch mode!&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; plot(poly, x = -2*Pi .. 2*Pi, y = -3 .. 3);
+
+                                      3+                                 H     
+                                       +                                 H     
+                                       +                                HH     
+                                      2+                                H      
+                                       +                                H      
+                                       +                               HH      
+                                       +                               H       
+                                      1+    HHHHHHHHHH                 H       
+           HHHHHHHH                    +  HHH         HHH             H        
+          HH      HHH                  +HHH             HH           HH        
+  --+-+-+-*+-+--+-+-**-+-+--+-+-+--+-+-**-+-+--+-+-+--+-+-**-+-+--+-+*-+-+-+--
+   -6    H     -4     HH   -2        H0*           2       HHH 4    HH     6   
+         H             HHH         HHH +                     HHHHHHHH          
+        H                 HHHHHHHHHH -1+                                       
+        H                              +                                       
+       HH                              +                                       
+       H                               +                                       
+       H                             -2+                                       
+       H                               +                                       
+      H                                +                                       
+      H                              -3+                                       
+&lt;/pre&gt;
+
+
+&lt;p&gt;You probably want to have something that looks a little nicer. The way to do this is to modify the Maple plot command so that it specifies an output file. For example, if we want to create a .gif file, our Maple Language File becomes&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;myseries := series(sin(x), x = 0, 10);
+poly := convert(myseries, polynom);
+
+plotsetup(gif,plotoutput="plot.gif"):
+plot(poly, x = -2*Pi .. 2*Pi, y = -3 .. 3);
+&lt;/pre&gt;
+
+
+&lt;p&gt;The &lt;strong&gt;plotsetup&lt;/strong&gt; command can output a number of file types.  See Maple's &lt;a href="http://www.maplesoft.com/support/help/maple/view.aspx?path=plotsetup"&gt;plotsetup documentation&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;A full batch example for you to try is available below&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://rse.shef.ac.uk/maple/hpc2/series_example_fixedplot.mpl"&gt;series_example_fixedplot.mpl&lt;/a&gt; - Maple Language File&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rse.shef.ac.uk/maple/hpc2/run_maple_job_2.sh"&gt;run_maple_job_2.sh&lt;/a&gt; - Job submission script&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The results of transferring these files to the system and submitting with &lt;strong&gt;qsub run_maple_job_2.sh&lt;/strong&gt; should include a file called &lt;strong&gt;plot.gif&lt;/strong&gt; that looks like this&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Maple plot" src="http://rse.shef.ac.uk/maple/hpc2/plot.gif"&gt;&lt;/p&gt;
+&lt;h3&gt;Future articles&lt;/h3&gt;
+&lt;p&gt;In future articles, we'll be looking at how to make use of Maple's parallel computing constructs long with more advanced scheduling tricks that allow us to run 100s of jobs simultaneously. &lt;/p&gt;
+&lt;h3&gt;Further reading&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html"&gt;General introduction to batch processing&lt;/a&gt; - From the Iceberg documentation&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/index.html"&gt;A list of scheduler commands&lt;/a&gt; - &lt;strong&gt;qsub&lt;/strong&gt; is just one example of a scheduler command. Here are a few more.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/HPC-Maple-1/</guid><pubDate>Thu, 26 May 2016 11:40:19 GMT</pubDate></item><item><title>9 steps for quality research software</title><link>http://rse.shef.ac.uk/blog/9_steps/</link><dc:creator>Mike Croucher</dc:creator><description>&lt;div&gt;&lt;p&gt;I attended the &lt;a class="reference external" href="http://www.software.ac.uk/"&gt;Software Sustainability Institute's&lt;/a&gt; &lt;a class="reference external" href="http://www.software.ac.uk/cw16"&gt;Collaborations Workshop&lt;/a&gt; last month. This annual workshop is one of the primary events in the Research Software Engineering calendar and I highly recommend going to one if you are involved in the development of research software in any way.&lt;/p&gt;
+&lt;p&gt;One of the things I worked on was a collaborative blog post called &lt;a class="reference external" href="http://www.software.ac.uk/blog/2016-04-05-9-steps-quality-research-software"&gt;9 steps for quality research software&lt;/a&gt;.  I also wrote an article about some of the work I do called &lt;a class="reference external" href="http://www.walkingrandomly.com/?p=5997"&gt;The accident and emergency of Research Software Engineering.&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/9_steps/</guid><pubDate>Mon, 18 Apr 2016 07:54:39 GMT</pubDate></item></channel></rss>

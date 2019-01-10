@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts by Will Furnass)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/authors/will-furnass.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>tmux: remote terminal management and multiplexing</title><link>http://rse.shef.ac.uk/blog/tmux-intro/</link><dc:creator>Will Furnass</dc:creator><description>&lt;div&gt;&lt;p&gt;Today we have a guide to 'terminal multiplexing' including
+suggestions on how to use it on computer clusters such as
+&lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/"&gt;ShARC and Iceberg&lt;/a&gt;.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;div class="section" id="have-you-ever"&gt;
+&lt;h2&gt;Have you ever?&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Started a process (such as a compilation or application install) over
+SSH only to realise that it's taking far longer than you expected and
+you need to shut down your laptop to go to a meeting, which you know
+will therefore &lt;strong&gt;kill both the SSH connection and your process&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;Been in a cafe with flakey wifi and had a remote process hang or
+possibly die due to an unstable SSH connection?&lt;/li&gt;
+&lt;li&gt;Accidentally closed a window with a SSH session running in it and
+really regretted it?&lt;/li&gt;
+&lt;li&gt;Wanted to be able to switch between multiple terminal sessions on a
+remote machine without having to establish a SSH connection per
+session?&lt;/li&gt;
+&lt;li&gt;Wanted to be able to have multiple terminals visible at once so you
+can say edit source code in one terminal whilst keeping compilation
+errors visible in another?&lt;/li&gt;
+&lt;li&gt;Wanted a nicer way to copy and paste between remote terminal
+sessions?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If the answer to any of these is "yes" then
+&lt;strong&gt;terminal multiplexing&lt;/strong&gt; may help!&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="Making remote Linux/Unix machines easier to administer/use!" src="http://rse.shef.ac.uk/images/tmux-intro/intro.png"&gt;
+&lt;/div&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;First, we need to delve a little deeper into some of the problems we are trying to solve.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="why-do-my-remote-processes-die-when-my-ssh-connection-dies-hangs"&gt;
+&lt;h2&gt;Why do my remote processes die when my SSH connection dies/hangs?&lt;/h2&gt;
+&lt;p&gt;(&lt;em&gt;Skip over this section if you want!&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;Every process
+(bar the &lt;tt class="docutils literal"&gt;systemd&lt;/tt&gt; process or &lt;tt class="docutils literal"&gt;init&lt;/tt&gt; process with a process ID of 1)
+has a parent process.
+If a process is sent a signal telling it to cleanly terminate
+(or &lt;a class="reference external" href="https://en.wikipedia.org/wiki/SIGHUP"&gt;'hang up'&lt;/a&gt;)
+then typically its child processes will be told to do the same.&lt;/p&gt;
+&lt;p&gt;When you SSH to a remote machine,
+the SSH service on that machine creates
+a shell for you within which you can run commands.&lt;/p&gt;
+&lt;p&gt;To illustrate, here I logged into a server and
+used the &lt;tt class="docutils literal"&gt;pstree&lt;/tt&gt; program to view the tree of
+child-parent relationships between processes.
+Notice in the excerpt shown below that the SSH service (&lt;tt class="docutils literal"&gt;sshd&lt;/tt&gt;) has
+&lt;em&gt;spawned&lt;/em&gt; a (bash) shell process for my SSH session,
+which in turn has spawned my &lt;tt class="docutils literal"&gt;pstree&lt;/tt&gt; process:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[will@acai ~]$ ssh sharc
+...
+[will@sharc-login1 ~]$ pstree -a
+systemd --switched-root --system --deserialize 21
+...
+  ├─sshd -D
+  │   └─sshd
+  │       └─sshd
+  │           └─bash
+  │               └─pstree -a
+...
+&lt;/pre&gt;
+&lt;p&gt;So if the SSH service decides that your connection has timed out then
+it will send a signal to &lt;tt class="docutils literal"&gt;bash&lt;/tt&gt; process were to die then
+any child processes started by that &lt;tt class="docutils literal"&gt;bash&lt;/tt&gt; process would also die.&lt;/p&gt;
+&lt;p&gt;If the remote servers you work with are
+primarily High-Performance Computing (HPC) clusters
+running scheduling software such as Grid Engine
+then you have a simple, robust way of ensuring that
+the sucess of your processes doesn't depend on
+the reliability of your connection to the clusters:
+&lt;strong&gt;submit your work to the scheduler as batch jobs&lt;/strong&gt;.
+There are many other benefits to submitting batch jobs over using interactive sessions
+when using such clusters but we won't go into those here.&lt;/p&gt;
+&lt;p&gt;However, what do you do when there is no HPC-style scheduling software availble?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;You could run batch jobs using much simpler schedulers such as
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/At_(Unix)"&gt;at&lt;/a&gt; for one-off tasks or
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Cron"&gt;cron&lt;/a&gt; or &lt;a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.timer.html"&gt;systemd
+Timers&lt;/a&gt;
+for periodic tasks.&lt;/li&gt;
+&lt;li&gt;You could prefix your command with
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Nohup"&gt;nohup&lt;/a&gt; (&lt;em&gt;no hang up&lt;/em&gt;) to
+ensure it continues running if the parent process tells it to &lt;em&gt;hang
+up&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Neither of these allow you to easily &lt;strong&gt;return to interactive sessions&lt;/strong&gt; though.
+For that we need terminal multiplexers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-brief-guide-to-the-tmux-terminal-multiplexer"&gt;
+&lt;h2&gt;A brief guide to the tmux Terminal Multiplexer&lt;/h2&gt;
+&lt;div class="section" id="detaching-and-reattaching-to-sessions"&gt;
+&lt;h3&gt;Detaching and reattaching to sessions&lt;/h3&gt;
+&lt;p&gt;Terminal Multiplexer programs like
+&lt;a class="reference external" href="https://www.gnu.org/software/screen/"&gt;GNU Screen&lt;/a&gt; and
+&lt;a class="reference external" href="https://tmux.github.io/"&gt;tmux&lt;/a&gt;
+solve this problem by:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Starting up a &lt;strong&gt;server process on-demand&lt;/strong&gt;, which then spawns a
+shell. The server process is configured not to respond when being
+told to &lt;em&gt;hang up&lt;/em&gt; so &lt;strong&gt;will persist&lt;/strong&gt; if is started over a SSH
+connection that subsequently hangs/dies.&lt;/li&gt;
+&lt;li&gt;Starting up a &lt;strong&gt;client process&lt;/strong&gt; that allows you to connect to that
+server and interact with the shell session it has started&lt;/li&gt;
+&lt;li&gt;Using key-bindings to stop the client process and &lt;strong&gt;detatch&lt;/strong&gt; from
+the server process.&lt;/li&gt;
+&lt;li&gt;Using command-line arguments to allow a client process to
+&lt;strong&gt;(re)connect to an existing server process&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="section" id="demo-1"&gt;
+&lt;h4&gt;Demo 1&lt;/h4&gt;
+&lt;p&gt;Here we look at demonstrating the above using &lt;strong&gt;tmux&lt;/strong&gt;.
+I recommend tmux over GNU Screen as
+the documentation is clearer and
+it makes fewer references to legacy infrastructure.
+Plus, it is easier to google for it!
+However, it may use more memory (true for older versions).&lt;/p&gt;
+&lt;p&gt;Let's create and attach to a new tmux session,
+start a long-running command in it then
+detach and reattach to the session:&lt;/p&gt;
+&lt;embed&gt;
+&lt;video controls&gt;
+  &lt;source src="http://rse.shef.ac.uk/images/tmux-intro/reattach.webm" type="video/webm"&gt;
+  Your browser does not support the video tag.
+&lt;/source&gt;&lt;/video&gt;
+&lt;/embed&gt;&lt;p&gt;Used keys:&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; d:&lt;/th&gt;&lt;td class="field-body"&gt;detatch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;where &lt;strong&gt;&amp;lt;prefix&amp;gt;&lt;/strong&gt; is &lt;strong&gt;Control&lt;/strong&gt; and &lt;strong&gt;b&lt;/strong&gt; by default.
+Here &lt;strong&gt;&amp;lt;prefix&amp;gt; d&lt;/strong&gt; means press &lt;strong&gt;Control&lt;/strong&gt; and &lt;strong&gt;b&lt;/strong&gt; then
+release that key combination before pressing &lt;strong&gt;d&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In this case we started tmux on the local machine.
+tmux is much more useful though when you
+start it on a remote machine &lt;strong&gt;after connecting via ssh&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="windows-like-tabs"&gt;
+&lt;h3&gt;Windows (like tabs)&lt;/h3&gt;
+&lt;p&gt;What else can we do with terminal multiplexers?
+Well, as the name implies,
+they can be used to view and control multiple virtual consoles from one session.&lt;/p&gt;
+&lt;p&gt;A given tmux session can have multiple windows,
+each of which can contain multiple panes,
+each of which is a virtual console!&lt;/p&gt;
+&lt;div class="section" id="demo-2"&gt;
+&lt;h4&gt;Demo 2&lt;/h4&gt;
+&lt;p&gt;Here's a demonstration of creating, renaming, switching and deleting tmux windows:&lt;/p&gt;
+&lt;embed&gt;
+&lt;video controls&gt;
+  &lt;source src="http://rse.shef.ac.uk/images/tmux-intro/windows.webm" type="video/webm"&gt;
+  Your browser does not support the video tag.
+&lt;/source&gt;&lt;/video&gt;
+&lt;/embed&gt;&lt;p&gt;Used keys:&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; ,:&lt;/th&gt;&lt;td class="field-body"&gt;rename a window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; c:&lt;/th&gt;&lt;td class="field-body"&gt;create a new window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; n:&lt;/th&gt;&lt;td class="field-body"&gt;switch to next window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; p:&lt;/th&gt;&lt;td class="field-body"&gt;switch to previous window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; x:&lt;/th&gt;&lt;td class="field-body"&gt;delete current window (actually deletes the current &lt;strong&gt;pane&lt;/strong&gt; in the window but will also delete the window if it contains only one pane)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dividing-up-windows-into-panes"&gt;
+&lt;h3&gt;Dividing up Windows into Panes&lt;/h3&gt;
+&lt;p&gt;Now let's look at creating, switching and deleting panes &lt;em&gt;within&lt;/em&gt; a window:&lt;/p&gt;
+&lt;embed&gt;
+&lt;video controls&gt;
+  &lt;source src="http://rse.shef.ac.uk/images/tmux-intro/panes.webm" type="video/webm"&gt;
+  Your browser does not support the video tag.
+&lt;/source&gt;&lt;/video&gt;
+&lt;/embed&gt;&lt;p&gt;Used keys:&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; %:&lt;/th&gt;&lt;td class="field-body"&gt;split the active window vertically&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; ":&lt;/th&gt;&lt;td class="field-body"&gt;split the active window horizontally&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name" colspan="2"&gt;&amp;lt;prefix&amp;gt; Up or Down or Left or Right:&lt;/th&gt;&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;td&gt; &lt;/td&gt;&lt;td class="field-body"&gt;switch to pane in that direction&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="scrolling-backwards"&gt;
+&lt;h3&gt;Scrolling backwards&lt;/h3&gt;
+&lt;p&gt;You can scroll back up through the terminal history of the current pane/window using:&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name" colspan="2"&gt;&amp;lt;prefix&amp;gt; Page Up:&lt;/th&gt;&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;td&gt; &lt;/td&gt;&lt;td class="field-body"&gt;scroll back through terminal history&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="copying-and-pasting"&gt;
+&lt;h3&gt;Copying and pasting&lt;/h3&gt;
+&lt;p&gt;If you have multiple panes side-by-side then attempt to copy text using the mouse, you'll copy lines of characters that span &lt;em&gt;all&lt;/em&gt; panes, which is almost certainly not going to be what you want.
+Instead you can&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; z:&lt;/th&gt;&lt;td class="field-body"&gt;toggle the maximisation of the current pane&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;then copy the text you want.&lt;/p&gt;
+&lt;p&gt;Alternively, if you want to copy and paste between tmux panes/windows you can&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; [:&lt;/th&gt;&lt;td class="field-body"&gt;enter copy mode&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;move the cursor using the arrow keys to where you want to start copying then&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;space:&lt;/th&gt;&lt;td class="field-body"&gt;(in copy mode) mark start of section to copy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;move the cursor keys to the end of the section you want to copy then&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;enter:&lt;/th&gt;&lt;td class="field-body"&gt;(in copy mode) mark end of section to copy and exit copy mode&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;You can then move to another pane/window and press&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name"&gt;
+&lt;col class="field-body"&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;&amp;lt;prefix&amp;gt; ]:&lt;/th&gt;&lt;td class="field-body"&gt;paste copied text&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I find this mechanism very useful.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="and-there-s-more"&gt;
+&lt;h3&gt;And there's more&lt;/h3&gt;
+&lt;p&gt;Things not covered in detail here include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The ability to &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/tmux#Configuration"&gt;customise much behaviour and all keybindings&lt;/a&gt;
+(here's &lt;a class="reference external" href="https://github.com/willfurnass/dotfiles/blob/master/tmux/.tmux.conf"&gt;my config file&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;The &lt;a class="reference external" href="https://github.com/tmux-plugins/tpm"&gt;tpm&lt;/a&gt; plugin system
+(including the awesome &lt;a class="reference external" href="https://github.com/Morantron/tmux-fingers"&gt;tmux fingers&lt;/a&gt; plugin for
+intelligently copying key info (e.g. IP addresses) from the output of standard Unix utilities).&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen"&gt;Sharing a session with another user&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="using-tmux-on-hpc-clusters"&gt;
+&lt;h2&gt;Using tmux on HPC clusters&lt;/h2&gt;
+&lt;p&gt;Terminal Multiplexers can be useful if doing &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html#interactive-sessions)"&gt;interactive work&lt;/a&gt;
+on a &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Supercomputer"&gt;HPC&lt;/a&gt; cluster such as the University of Sheffield clusters &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/"&gt;ShARC and Iceberg&lt;/a&gt;
+(assuming that you don't need a &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Graphical_user_interface"&gt;GUI&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;On ShARC and Iceberg can:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Start a tmux or GNU Screen session on a login node;&lt;/li&gt;
+&lt;li&gt;Start an interactive job using &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html"&gt;qrshx or qrsh&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Disconnect and reconnect from the tmux/Screen session (either deliberately or due an issue with the SSH connection to the cluster);&lt;/li&gt;
+&lt;li&gt;Create additional windows/panes on the login node for editing files, starting additional interactive jobs etc, watching log files.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Starting tmux on worker nodes is also useful if you want to have multiple windows/panes on a worker node &lt;em&gt;but&lt;/em&gt;
+less useful if you want to disconnect/reconnect from/to a session as if you run qrsh a second time you cannot
+guarantee that you will be give an interactive job on on the node you started the tmux session from.&lt;/p&gt;
+&lt;p&gt;However, note that you can have nested tmux sessions
+(with &lt;strong&gt;&amp;lt;prefix&amp;gt;&amp;lt;prefix&amp;gt; &amp;lt;key&amp;gt;&lt;/strong&gt; used to send tmux commands to the 'inner' tmux session).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: many clusters have multiple login nodes for redundancy,
+with only one being the default active login node at any given time.
+If the active login node requires maintenance then logged-in users may be booted off
+and long-running processes may be terminated
+(before the system administrator makes a 'standby' login node the currently active one).
+Under such circumstances your tmux/Screen session may be killed.&lt;/p&gt;
+&lt;div class="section" id="being-a-good-hpc-citizen"&gt;
+&lt;h3&gt;Being a good HPC citizen&lt;/h3&gt;
+&lt;p&gt;Your interactive job (on a cluster worker node) will be terminated by the cluster's &lt;em&gt;Grid Engine&lt;/em&gt; job scheduler after a fixed amount of time (the default is 8 hours)
+but your tmux/Screen session was started on a login node so is outside the control of the cluster and
+will keep running indefinitely unless you kill it.&lt;/p&gt;
+&lt;p&gt;Each tmux/Screen session requires memory on the login node (which is used by all users) so to be a good HPC citizen you should:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Kill your tmux/Screen session when no longer needed&lt;/strong&gt; (tmux/Screen will exit when you close all windows)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Only start as many tmux/Screen sessions on the login node as you need (ideally 1)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Exit your interactive Grid Engine job&lt;/strong&gt; (on a worker node) &lt;strong&gt;if no longer needed&lt;/strong&gt; as then others can make use of the resources you had been using on this node.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Tip&lt;/strong&gt;: with tmux you can ensure that you either reconnect to an existing session (with a given name) if it already exists &lt;em&gt;or&lt;/em&gt; create a new session using:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+tmux new-session -A -s mysession
+&lt;/pre&gt;
+&lt;p&gt;This should help avoid accidentally creating more than one tmux session.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;NB the recordings of terminal sessions shown were created using &lt;a class="reference external" href="http://0xcc.net/ttyrec/"&gt;ttyrec&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/icholy/ttygif"&gt;ttygif&lt;/a&gt;
+then converted to &lt;a class="reference external" href="https://www.webmproject.org/"&gt;.webm&lt;/a&gt; videos using &lt;a class="reference external" href="http://ffmpeg.org/"&gt;ffmpeg&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>terminals</category><category>tmux</category><guid>http://rse.shef.ac.uk/blog/tmux-intro/</guid><pubDate>Thu, 15 Jun 2017 11:53:04 GMT</pubDate></item><item><title>Software Carpentry and Data Carpentry at the University of Sheffield!</title><link>http://rse.shef.ac.uk/blog/soft-carp-at-tuos/</link><dc:creator>Will Furnass</dc:creator><description>&lt;div&gt;&lt;p&gt;The University of Sheffield is now a Software Carpentry Partner Organisation, allowing the Research Software Engineering and Library teams to start organising &lt;em&gt;Software Carpentry&lt;/em&gt; and &lt;em&gt;Data Carpentry&lt;/em&gt; workshops.  These are designed to help researchers develop the programming, automation and data management skills needed to support their research.  &lt;strong&gt;Workshop dates are to be announced shortly.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Edit&lt;/strong&gt;: &lt;/p&gt;
+&lt;p&gt;Our first Software Carpentry workshop is scheduled for &lt;a href="https://rse.shef.ac.uk/2017-08-16-sheffield/"&gt;16th and 17th August&lt;/a&gt;!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="Software Carpentry and Data Carpentry logos" src="http://rse.shef.ac.uk/images/sc-dc-logos.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Addressing the training needs of researchers with regards to programming&lt;/h3&gt;
+&lt;p&gt;As more researchers realise they can produce better quality research more quickly if
+they have some coding and data management skills under their belts
+universities will need to ensure that training in these areas is accessible to those that need it.&lt;/p&gt;
+&lt;p&gt;Academic institutions will most likely already have courses for teaching highly-specialist subjects
+(such as how to use the local &lt;a href="http://docs.hpc.shef.ac.uk/en/latest/"&gt;HPC cluster&lt;/a&gt;)
+but for the more generic aspects of research software development and data management
+there are several obvious choices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Develop and deliver bespoke materials;&lt;/li&gt;
+&lt;li&gt;Buy in to commercial training packages;&lt;/li&gt;
+&lt;li&gt;Point researchers towards free online resources;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, there is also a fourth option:
+team up with the &lt;a href="https://software-carpentry.org/"&gt;Software Carpentry&lt;/a&gt; (SC) and
+&lt;a href="https://datacarpentry.org/"&gt;Data Carpentry&lt;/a&gt; (DC) not-for-profit organisations
+to deliver on-site, interative workshops based on open-source materials that have been
+refined by a large community of SC and DC instructors.&lt;/p&gt;
+&lt;h3&gt;Software whatywhaty?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Software Carpentry&lt;/strong&gt; has developed &lt;a href="https://software-carpentry.org/lessons/"&gt;discipline-agnostic workshop material&lt;/a&gt; on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;programming with Python, R or MATLAB;&lt;/li&gt;
+&lt;li&gt;using databases and &lt;a href="https://en.wikipedia.org/wiki/SQL"&gt;SQL&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;the &lt;a href="https://en.wikipedia.org/wiki/Unix_shell"&gt;UNIX shell&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Version_control"&gt;version control&lt;/a&gt; with git or mercurial;&lt;/li&gt;
+&lt;li&gt;automation using &lt;a href="https://en.wikipedia.org/wiki/Make_(software)"&gt;Make&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://datacarpentry.org/lessons/"&gt;&lt;strong&gt;Data Carpentry&lt;/strong&gt; lessons&lt;/a&gt; look at data management and processing within the context of a specific domain (such as ecology or genomics), focussing on areas such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the command line;&lt;/li&gt;
+&lt;li&gt;data cleaning and filtering using &lt;a href="http://openrefine.org/"&gt;OpenRefine&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;data processing and visualisation with Python or R;&lt;/li&gt;
+&lt;li&gt;cloud computing&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Geographic_information_system"&gt;GIS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;What form do the workshops take?&lt;/h3&gt;
+&lt;p&gt;The Software and Data Carpentry organisations ask that accredited instructors delivering 'branded' workshops adopt a fairly progressive teaching style:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Workshops typically last two days and include four lessons (e.g. the unix shell, Python, version control and databases).&lt;/li&gt;
+&lt;li&gt;There's lots of &lt;em&gt;live coding&lt;/em&gt;: the instructor and students gather together in a room with laptops and a projector and all present go through a number of examples interactively.  Students use their own laptops to ensure that they're able to continue where they left off at the end of a workshop.  Instructors can and do make mistakes when doing live coding; students can then learn from these mistakes and may grow in confidence on learning that pros make mistakes too.&lt;/li&gt;
+&lt;li&gt;Instructors try to elicit responses from students and use quizes to gauge comprehension and keep students focussed.&lt;/li&gt;
+&lt;li&gt;Software Carpentry has a &lt;a href="https://software-carpentry.org/conduct/"&gt;code of conduct&lt;/a&gt; and tries to ensure that all lessons delivered under its banner are as &lt;a href="https://software-carpentry.org/blog/2017/02/inclusion.html"&gt;inclusive as possible&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;What's happening at the University?&lt;/h3&gt;
+&lt;p&gt;The University is now a Software Carpentry Partner Organisation so can run many workshops per year using the Software Carpentry and Data Carpentry branding.  We could run workshops without the branding but Software and Data Carpentry are now familiar names to researchers (and potentially employers) and by working closely with those two organisations we become part of a global network of instructors with which we can share ideas and materials.&lt;/p&gt;
+&lt;p&gt;The RSE team and Library collectively now have five accredited Software and Data Carpentry instructors: Mike Croucher received training some time ago and in March Tania Allard and I from the &lt;a href="https://rse.shef.ac.uk/contact/"&gt;RSE team&lt;/a&gt; plus &lt;a href="https://www.sheffield.ac.uk/library/libstaff/researchservices"&gt;Jez Cope and Beth Hellen&lt;/a&gt; from the Library's Research Services Unit participated in &lt;a href="https://steve-crouch.github.io/2017-03-16-oxford-ttt/"&gt;instructor training in Oxford&lt;/a&gt;.  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Software Carpentry Instructor Training session" src="http://rse.shef.ac.uk/images/soft-carp-instructor-training.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;The four of us spent two days learning about the SC/DC teaching style, what makes for an effective instructor and got to practise several aspects of workshop development and delivery.  I must thank the instructors on the training course (Mateuz Kuzak and Steve Crouch) plus &lt;a href="https://rroxford.github.io/"&gt;Reproducible Research Oxford&lt;/a&gt; for hosting and organising the event.&lt;/p&gt;
+&lt;p&gt;We are now planning our first Software Carpentry and Data Carpentry workshops.  These are to be held later in the summer.  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Keep an eye on this blog, the &lt;code&gt;RSE-group@sheffield.ac.uk&lt;/code&gt; mailing list and &lt;a href="https://twitter.com/rse_sheffield"&gt;@RSE_Sheffield&lt;/a&gt; for dates!&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</description><category>data carpentry</category><category>software carpentry</category><category>training</category><guid>http://rse.shef.ac.uk/blog/soft-carp-at-tuos/</guid><pubDate>Thu, 08 Jun 2017 12:00:00 GMT</pubDate></item><item><title>Job validation with Grid Engine: false negatives</title><link>http://rse.shef.ac.uk/blog/sge-job-validation-2/</link><dc:creator>Will Furnass</dc:creator><description>&lt;div&gt;&lt;p&gt;In &lt;a href="http://rse.shef.ac.uk/blog/sge-job-validation/"&gt;a previous post&lt;/a&gt;, 
+I noted that if you're not sure if a Sun Grid Engine (SGE) job can ever run on an &lt;a href="https://en.wikipedia.org/wiki/Supercomputer"&gt;HPC cluster&lt;/a&gt;
+you can perform 'dry-run' job validation:
+by passing &lt;code&gt;-w v&lt;/code&gt; as arguments to &lt;code&gt;qrsh&lt;/code&gt;/&lt;code&gt;qrshx&lt;/code&gt;/&lt;code&gt;qsh&lt;/code&gt;/&lt;code&gt;qalter&lt;/code&gt; you can ask the SGE scheduler software 
+if your job could ever run if the cluster were entirely empty of other jobs.&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    qsub -pe smp 2 -l rmem=10000G -w v myjob.sge
+&lt;/pre&gt;
+
+
+&lt;p&gt;would most likely tell you that your job could not be run in any of the cluster's job queues 
+(due to the size of the resource request).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;But beware:&lt;/strong&gt; 
+as mentioned in my earlier post 
+this his job validation mechanism sometimes results in &lt;em&gt;false negatives&lt;/em&gt; i.e. you are told that a job cannot run even though though in reality it can.&lt;br&gt;
+This is something that the HPC sysadmin team at the University of Leeds alerted us to.&lt;/p&gt;
+&lt;p&gt;Here's an example of a false positive (using our &lt;a href="http://docs.hpc.shef.ac.uk/en/latest/sharc/"&gt;ShARC&lt;/a&gt; cluster.&lt;br&gt;
+If you ask for a single-core interactive session with access to four GPUs then dry-run validation fails:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    [te1st@sharc-login1 ~]$ qrsh -l gpu=4 -w v
+    ...
+    verification: no suitable queues
+&lt;/pre&gt;
+
+
+&lt;p&gt;yet (without validation) the resource request can be satisfied:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    [te1st@sharc-login1 ~]$ qrsh -l gpu=4 
+    [te1st@sharc-node100 ~]$   # works!
+&lt;/pre&gt;
+
+
+&lt;p&gt;The &lt;strong&gt;reason for this&lt;/strong&gt; appears to be that the validation is performed 
+without running any &lt;a href="http://gridscheduler.sourceforge.net/htmlman/htmlman1/jsv.html"&gt;Job Submission Verifier&lt;/a&gt; (JSV) scripts.
+These scripts are run (typically on the SGE master machine) on every submitted job to 
+centrally modify or reject job requests post-submission.&lt;/p&gt;
+&lt;p&gt;On ShARC the main JSV script changes a job's &lt;a href="http://gridscheduler.sourceforge.net/htmlman/htmlman5/project.html?pathrev=V62u5_TAG"&gt;Project&lt;/a&gt; 
+from a generic one 
+to &lt;code&gt;gpu&lt;/code&gt; 
+if &lt;code&gt;x &amp;gt; 0&lt;/code&gt; GPUs have been requested using &lt;code&gt;-l gpu=x&lt;/code&gt;.
+The job can then be assigned to (GPU-equipped) nodes associated with that project.
+So, if the JSV is not run before job validation (using &lt;code&gt;-w v&lt;/code&gt;) then 
+validation of jobs that request GPUs will fail as 
+no nodes (more accurately &lt;em&gt;queue instances&lt;/em&gt;) will be found that can satisfy the resource request 
+given the (default) project of jobs.  &lt;/p&gt;
+&lt;p&gt;The workaround here is to explicitly request a Project (using e.g. &lt;code&gt;-P gpu&lt;/code&gt;) 
+when trying to validate a job using &lt;code&gt;-w v&lt;/code&gt; 
+i.e. partly duplicate the logic in the (bypassed) JSV,
+but this requires that you know have read and understood the JSV.&lt;br&gt;
+This is something that users may not want to do and adds complexity, 
+when the whole point of investigating job validation in the first place was to 
+find a simple way by which users could check if if their jobs could run on a given SGE cluster.&lt;/p&gt;
+&lt;p&gt;In summary, SGE's job validation mechanism is not a fool-proof option for users as 
+it does not take into consideration changes made to a job by Job Submission Verifier scripts post-submission.&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/sge-job-validation-2/</guid><pubDate>Wed, 19 Apr 2017 10:15:00 GMT</pubDate></item><item><title>Job validation with Grid Engine</title><link>http://rse.shef.ac.uk/blog/sge-job-validation/</link><dc:creator>Will Furnass</dc:creator><description>&lt;div&gt;&lt;p&gt;(&lt;strong&gt;Edit&lt;/strong&gt;: caveats are listed in a &lt;a href="http://rse.shef.ac.uk/blog/sge-job-validation-2/"&gt;more recent post&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Computer cluster job scheduling software is fantastic at managing resources 
+and permitting many jobs to run efficiently and simultaneously.&lt;br&gt;
+However, schedulers aren't always great at giving end-users feedback 
+when things go wrong.  &lt;/p&gt;
+&lt;p&gt;For example, on our ShARC cluster, which runs the (Son of) Grid Engine (SGE) scheduler, 
+if you request a longer run-time than is permitted by any of the cluster's job queue configurations 
+then your job will sit there queueing indefinitely until you or someone else deletes it.&lt;br&gt;
+For example, let's use &lt;a href="http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html#running-batch-jobs-on-iceberg"&gt;qsub&lt;/a&gt; 
+to submit a job where we ask for 1000 hours of run time and 4 GiB of RAM:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;will@mysofa ~&lt;span class="o"&gt;]&lt;/span&gt;$ ssh sharc
+...
+&lt;span class="o"&gt;[&lt;/span&gt;te1st@sharc-login1 ~&lt;span class="o"&gt;]&lt;/span&gt;$ qsub -l &lt;span class="nv"&gt;h_rt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1000&lt;/span&gt;:00:00 -l &lt;span class="nv"&gt;rmem&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;4G -m bea -M w.furnass@sheffield.ac.uk -N longtask myjobscript.sge
+
+Your job &lt;span class="m"&gt;236268&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"STDIN"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; has been submitted
+&lt;span class="o"&gt;[&lt;/span&gt;te1st@sharc-login1 ~&lt;span class="o"&gt;]&lt;/span&gt;$ qstat -u &lt;span class="nv"&gt;$USER&lt;/span&gt;
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+ &lt;span class="m"&gt;217834&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;.00000 longtask   te1st        qw    &lt;span class="m"&gt;03&lt;/span&gt;/20/2017 &lt;span class="m"&gt;10&lt;/span&gt;:48:39                                    &lt;span class="m"&gt;1&lt;/span&gt;        
+&lt;/pre&gt;
+
+
+&lt;p&gt;Job 217834 will now sit queuing forever.&lt;br&gt;
+Not only will you not be told why, 
+you won't be given &lt;em&gt;any&lt;/em&gt; notification that the job will not run.&lt;/p&gt;
+&lt;p&gt;In situations like this it can be useful to ask the scheduler to validate a job.&lt;br&gt;
+One way of doing this is to run '&lt;code&gt;qalter -w v &amp;lt;myjobid&amp;gt;&lt;/code&gt;' after job submission 
+if say you think that a job has now been queueing for longer 
+than previously-submitted jobs of a similar nature:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;[te1st@sharc-login1 ~]$ qalter -w v 217834
+Job 217834 (-l h_rt=3600000) cannot run in queue "flybrain.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "gpu.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "gen2reg.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "rse.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "gpu-vis.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "insigneo-polaris.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "interactive.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "shortint.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "all.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "evolgen.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "rse-training.q" because of cluster queue
+Job 217834 (-l h_rt=3600000) cannot run in queue "cstest.q" because of cluster queue
+verification: no suitable queues
+&lt;/pre&gt;
+
+
+&lt;p&gt;What this '&lt;code&gt;qalter -w v &amp;lt;myjobid&amp;gt;&lt;/code&gt;' command does is check to see whether the job could run 
+in any of the job queues on the cluster 
+if the cluster were free of other jobs. &lt;/p&gt;
+&lt;p&gt;The last line of output is key: 
+our job will never be run given the current cluster configuration.&lt;br&gt;
+Looking above that, we can see that it cannot run in any of the general-purpose job queues 
+(such as &lt;code&gt;all.q&lt;/code&gt;) and 
+there is specific mention of our 1000 hour (3600000s) run-time resource request.&lt;br&gt;
+We can therefore deduce that our run-time resource request wasn't satisfiable.&lt;/p&gt;
+&lt;h3&gt;Modifying a resource request post-submission&lt;/h3&gt;
+&lt;p&gt;Once we know that our job can't run we could then delete our job...&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;te1st@sharc-login1 ~&lt;span class="o"&gt;]&lt;/span&gt;$ qdel &lt;span class="m"&gt;217834&lt;/span&gt; 
+te1st has deleted job &lt;span class="m"&gt;217834&lt;/span&gt; 
+&lt;/pre&gt;
+
+
+&lt;p&gt;...then consult the cluster's documentation to discover the maximum possible run-time and resubmit using more sensible resource requests.  &lt;/p&gt;
+&lt;p&gt;Alternatively we can use &lt;strong&gt;qalter&lt;/strong&gt; to modify the resource requests associated with a queueing job:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;qalter -l &lt;span class="nv"&gt;h_rt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;96&lt;/span&gt;:00:00 -l &lt;span class="nv"&gt;rmem&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;4G &lt;span class="m"&gt;217834&lt;/span&gt; 
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: using &lt;code&gt;qalter&lt;/code&gt; in this fashion will change &lt;strong&gt;all&lt;/strong&gt; resource requests for the job so here we need to re-specify the &lt;code&gt;rmem&lt;/code&gt; request.&lt;/p&gt;
+&lt;h3&gt;Job validation at submission time&lt;/h3&gt;
+&lt;p&gt;You can also perform the same type of job validation &lt;strong&gt;at job submission time&lt;/strong&gt; using &lt;code&gt;-w v&lt;/code&gt; e.g.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;qsub -w v -l &lt;span class="m"&gt;1000&lt;/span&gt;:00:00 -l &lt;span class="nv"&gt;rmem&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;4G myjobscript.sge
+&lt;/pre&gt;
+
+
+&lt;p&gt;This won't actually submit your job; it just performs validation.&lt;/p&gt;
+&lt;h3&gt;Why is validation not performed by default?&lt;/h3&gt;
+&lt;p&gt;You may ask why such validation is not enabled by default for all jobs; 
+one reason for this is that it is believed it would place undue burden on the scheduler.&lt;/p&gt;
+&lt;p&gt;Another is that sometimes a validation attempt results in a false negative that can be difficult to automatically identify
+(&lt;strong&gt;edit&lt;/strong&gt;: see this &lt;a href="http://rse.shef.ac.uk/blog/sge-job-validation-2/"&gt;more recent post&lt;/a&gt; for details).&lt;/p&gt;
+&lt;h3&gt;Other types of resources&lt;/h3&gt;
+&lt;p&gt;If you repeat the experiment outlined above but 
+instead of requesting 1000 hours of runtime 
+you ask for 100 GPUs, 9999GB of RAM or 10000 cores 
+you'll observe the same behaviour: jobs that make requests unsatisfiable under the current cluster configuration can be submitted but will never run.&lt;/p&gt;
+&lt;p&gt;Again, job validation can help here but depending on the type of resource the validation error messages can be more or less cryptic.&lt;br&gt;
+For example, if you try to validate a 100000-'slot' (core) MPI job using &lt;code&gt;-w v&lt;/code&gt; you get the following:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;qsub -pe mpi 100000 -w v somejob.sge
+...
+Job 311838 cannot run in PE "mpi" because it only offers 0 slots
+&lt;/pre&gt;
+
+
+&lt;p&gt;This is rather misleading but the mention of 'slots' should prompt you to check the number of cores you've requested is sensible.&lt;/p&gt;
+&lt;h3&gt;'Poke' validation: consider the current cluster load&lt;/h3&gt;
+&lt;p&gt;Another type of validation is &lt;em&gt;poke&lt;/em&gt; validation, 
+which checks if a job could be run under the current cluster &lt;em&gt;load&lt;/em&gt; 
+i.e. with many of the cluster's resources already in use.&lt;br&gt;
+See &lt;code&gt;man qsub&lt;/code&gt; and search for &lt;code&gt;-w&lt;/code&gt; 
+for more information on the different types of validation.&lt;/p&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/sge-job-validation/</guid><pubDate>Mon, 20 Mar 2017 10:44:00 GMT</pubDate></item><item><title>Computational Mathematics with Jupyter workshop</title><link>http://rse.shef.ac.uk/blog/icms-2017/</link><dc:creator>Will Furnass</dc:creator><description>&lt;div&gt;&lt;p&gt;Back in mid-January three members of the University of Sheffield's Research Software Engineering Team
+(me, &lt;a class="reference external" href="https://rse.shef.ac.uk/contact/alumni//"&gt;Mike Croucher&lt;/a&gt; and &lt;a class="reference external" href="http://rse.shef.ac.uk/blog/tania_allard/"&gt;Tania Allard&lt;/a&gt;)
+spent a week at a &lt;a class="reference external" href="https://opendreamkit.org/meetings/2017-01-16-ICMS/"&gt;Computational Mathematics with Jupyter workshop&lt;/a&gt;, hosted at Edinburgh's &lt;a class="reference external" href="http://www.icms.org.uk/"&gt;International Centre for Mathematical Sciences&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This brought together the many members of the consortium working on the &lt;a class="reference external" href="https://opendreamkit.org/"&gt;OpenDreamKit&lt;/a&gt; Horizon 2020 European Research Infrastructure project.
+The overall aim of the project is broad (to further the open-source computational mathematics ecosystem)
+so it was unsurprising that the collective experience of the attendees was too.
+The attendees generally fell into one of the following four camps:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Researchers interested in solving &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Group_theory"&gt;Group Theory&lt;/a&gt; and &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Semigroup"&gt;Semigroup&lt;/a&gt; problems using the &lt;a class="reference external" href="https://www.gap-system.org/"&gt;GAP&lt;/a&gt; software,
+some of which were involved with developing a &lt;a class="reference external" href="http://jupyter.readthedocs.io/en/latest/projects/kernels.html"&gt;Jupyter kernel&lt;/a&gt; for GAP;&lt;/li&gt;
+&lt;li&gt;Others interested in the &lt;a class="reference external" href="http://www.sagemath.org/"&gt;SageMath&lt;/a&gt; computational mathematics ecosystem
+(which is particularly strong for computational algebra) and
+working on a Jupyter kernel for it;&lt;/li&gt;
+&lt;li&gt;Research Software Engineers working on interactive widgets, visualisation tools and workflow tools for &lt;a class="reference external" href="http://jupyter.readthedocs.io/"&gt;Jupyter&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;People with experience/interest in using computational mathematics tools for teaching purposes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="The attendees of the workshop" src="http://rse.shef.ac.uk/images/icms-2017-attendees.jpg"&gt;
+&lt;p class="caption"&gt;The attendees of the workshop.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The structure was different from conferences I'd attended previously:
+for each of the five days we listened and debated presentations in the morning then
+busied ourselves with &lt;a class="reference external" href="https://www.software.ac.uk/blog/2017-02-23-computational-mathematics-jupyter-sprint"&gt;code sprints&lt;/a&gt; in the afternoons.&lt;/p&gt;
+&lt;div class="section" id="correctness-sustainability-and-human-fallibility"&gt;
+&lt;h2&gt;Correctness, sustainability and human fallibility&lt;/h2&gt;
+&lt;p&gt;Our own Mike Croucher kicked things off by asking
+&lt;a class="reference external" href="http://mikecroucher.github.io/MLPM_talk/"&gt;Is your research software correct?&lt;/a&gt;
+in which he presented &lt;strong&gt;Croucher's Law&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+I can be an idiot and &lt;strong&gt;will&lt;/strong&gt; make mistakes.&lt;/blockquote&gt;
+&lt;p&gt;with the corollary that&lt;/p&gt;
+&lt;blockquote&gt;
+You are no different!&lt;/blockquote&gt;
+&lt;p&gt;He argued, convincingly, that in our research we therefore need to put in place safeguards
+to lessen the chance and impact of mistakes, and
+proposed the following as partial solutions:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Automate (aka learn to program)&lt;/li&gt;
+&lt;li&gt;Write code in a (very) high-level language&lt;/li&gt;
+&lt;li&gt;Get some training&lt;/li&gt;
+&lt;li&gt;Use version control&lt;/li&gt;
+&lt;li&gt;Get a code buddy (Maybe an &lt;a class="reference external" href="https://rse.shef.ac.uk/contact/"&gt;RSE&lt;/a&gt;!)&lt;/li&gt;
+&lt;li&gt;Share your code and data openly&lt;/li&gt;
+&lt;li&gt;Use literate computing technologies&lt;/li&gt;
+&lt;li&gt;Write tests&lt;/li&gt;
+&lt;li&gt;Cite code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.software.ac.uk/about/staff/person/raniere-silva"&gt;Raniere Silva&lt;/a&gt; from the &lt;a class="reference external" href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt; followed on with a complementary talk on how to make computational mathematics software more sustainable.  He commented that odd numerical bugs can easily creep in over time (e.g. differing floating point behaviour between Python 2 and 3) but that we can maintain confidence in software using version control, continuous integration, good documentation, tutorials, knowledge bases, instant messaging and by developing communities around the software we value.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://blogs.cs.st-andrews.ac.uk/alexk/"&gt;Alexander Konovalov&lt;/a&gt; then talked about a particular case of making research software more sustainable and portable: he's been using &lt;a class="reference external" href="https://www.docker.com/"&gt;Docker&lt;/a&gt; containers to run &lt;a class="reference external" href="https://www.gap-system.org/"&gt;GAP&lt;/a&gt;.  This lead into a discussion on whether Docker is a sensible solution for archiving/reproducing workflows: will it be around in ten years' time?  Those interested in that particular issue might benefit from attending the forthcoming &lt;a class="reference external" href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt; workshop on &lt;a class="reference external" href="https://www.software.ac.uk/c4rr"&gt;Docker Containers for Reproducible Research&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="jupyter-what-is-it-and-how-can-we-diff-merge-test-notebooks"&gt;
+&lt;h2&gt;Jupyter: what is it and how can we diff/merge/test Notebooks?&lt;/h2&gt;
+&lt;p&gt;We were then given what was pitched as a &lt;strong&gt;'general introduction' to Jupyter&lt;/strong&gt;
+but ended up covering much more ground than anticipated,
+largely due to the speaker being &lt;a class="reference external" href="https://twitter.com/takluyver"&gt;Thomas Kluyver&lt;/a&gt;, one of the core IPython developers
+(who happens to have gained his PhD from the University of Sheffield).
+Thomas talked about the most significant features
+(literate programming environments;
+the power and versatility of using the browser as a &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop"&gt;REPL&lt;/a&gt;;
+Jupyter's client-server architecture)
+but also touched upon
+&lt;strong&gt;various tools and platforms that have built on Jupyter&lt;/strong&gt; including:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://jupyterhub.readthedocs.io/en/latest/"&gt;JupyterHub&lt;/a&gt;: a multi-user hub which "spawns, manages, and proxies multiple instances of the single-user Jupyter Notebook server".  One of the University of Sheffield's deliverables for the OpenDreamKit project is to get this running on our own computer clusters so users dictate what resources (e.g. cores, memory, GPUs) they want when they start a single-user Notebook session;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/jupyter/tmpnb"&gt;tmpnb&lt;/a&gt;: a JupyterHub-like system for launching temporary single-user Notebook sessions in the cloud (which are each backed by a Docker container).  tmpnb powers &lt;a class="reference external" href="https://try.jupyter.org/"&gt;https://try.jupyter.org/&lt;/a&gt; (hosted by RackSpace), which allows people to briefly test out Jupyter without installing anything locally;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://mybinder.org/"&gt;binder&lt;/a&gt;: a tool for turning a GitHub repository into a collection of interactive Notebooks, configuring the required environment/dependencies using a Dockerfile, Python requirements.txt file or Conda environment file;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/"&gt;nbgrader&lt;/a&gt;: a tool for distributing coding and/or free text Notebook-based assignments then automatically or manually grading them.  This can integrate with JupyterHub;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://nbconvert.readthedocs.io/en/latest/"&gt;nbconvert&lt;/a&gt;: convert a Notebook to HTML/Markdown/PDF/scripts or a custom format (using a &lt;a class="reference external" href="http://jinja.pocoo.org/"&gt;Jinja2&lt;/a&gt; template).  It is used by &lt;a class="reference external" href="https://nbviewer.jupyter.org/"&gt;nbviewer.jupyter.org&lt;/a&gt; to create online static HTML views of Notebooks.  nbconvert is also used by GitHub for rendering Notebooks;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/takluyver/nbparameterise"&gt;nbparameterise&lt;/a&gt;:  Often you want design Notebooks to demonstrate/explore the impact of a small number of key variables.  This project of Thomas's allows such variables to be set in the first code cell then the entire Notebook can be run non-interactively and rendered to HTML;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/jupyterlab/jupyterlab"&gt;jupyterlab&lt;/a&gt;: This will be the next iteration of Jupyter's UI: rather than exclusively displaying a terminal, Notebook or file editor in the Jupyter interface, instead a multi-tab and multi-pane interface allows you to view and interact with several of these things at once.  It will therefore look and feel a bit more like Spyder/R Studio/MATLAB but this is no bad thing as all of those make good use of screen real estate provided by the wide monitors we all have these days.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="JupyterLab: the future of the Jupyter interface" src="http://rse.shef.ac.uk/images/jupyterlab.png"&gt;
+&lt;p class="caption"&gt;JupyterLab: the future of the Jupyter interface.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Given the enormity of the Jupyter ecosystem and how quickly it has grown
+it was great to hear from a core developer which related projects he thinks are the most significant and interesting!&lt;/p&gt;
+&lt;p&gt;Next up, Vidar Fauske gave &lt;a class="reference external" href="https://opendreamkit.org/meetings/2017-01-16-ICMS/talks/nbdime.pdf"&gt;this talk&lt;/a&gt; on &lt;a class="reference external" href="https://nbdime.readthedocs.io/en/latest/"&gt;nbdime&lt;/a&gt;, a new tool for &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Merge_(version_control)"&gt;merging&lt;/a&gt; and &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Diff_utility"&gt;diffing&lt;/a&gt; Jupyter Notebooks.
+The backstory is that for some time we've been recommending Jupyter to those wanting to start using Python or R in their research and we've also been telling everyone to use version control but the diffing and merging tools typically used with version control systems don't work well with Notebooks as they&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Operate on lines without consideration of whether a file has a nested structure (JSON in the case of Notebooks);&lt;/li&gt;
+&lt;li&gt;Base64-encoded binary objects in Notebooks are naively treated in just the same way as text;&lt;/li&gt;
+&lt;li&gt;No logic for omitting certain entities (execution counters; cell outputs) from version control (although the wonderful &lt;a class="reference external" href="https://github.com/kynan/nbstripout"&gt;nbstripout&lt;/a&gt; can handle both of these cases when triggered by a &lt;a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks"&gt;git hook&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ultimately visualising the differences between two Notebooks and merging Notebooks in sensible, useful ways really requires that the tools that perform these functions have some understanding of the structure and purpose of Notebooks: &lt;strong&gt;nbdime&lt;/strong&gt; has that awareness:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The major unit for merging/diffing is the &lt;strong&gt;cell&lt;/strong&gt;, the line.&lt;/li&gt;
+&lt;li&gt;Input cell merging is string merging whereas&lt;/li&gt;
+&lt;li&gt;Cell outputs are treated as atomic: they match or they don't.&lt;/li&gt;
+&lt;li&gt;Execution counts are sensibly ignored by default.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;nbdime provides a core library, plus command-line and browser interfaces for diffing and merging.&lt;/p&gt;
+&lt;p&gt;Overall, I'm massively excited about nbdime for facilitating much slicker Notebook-based version controlled workflows and hope it sees widespread adoption and promotion by the likes of &lt;a class="reference external" href="https://software-carpentry.org/lessons/"&gt;Software Carpentry&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="nbdime's nbdiff tool for viewing the differences between two Notebooks" src="http://rse.shef.ac.uk/images/nbdiff-example.png"&gt;
+&lt;p class="caption"&gt;nbdime's nbdiff tool for viewing the differences between two Notebooks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Hans Fangohr then introduced &lt;a class="reference external" href="https://github.com/computationalmodelling/nbval"&gt;nbval&lt;/a&gt;, a new tool for &lt;strong&gt;automating the valdation of Jupyter Notebooks&lt;/strong&gt;.  This could give researchers greater confidence in their workflows: &lt;strong&gt;does a demonstrative Notebook still give the same answers if re-run after making changes to the Notebook's environment (e.g. the package dependencies)?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;nbval, a &lt;a class="reference external" href="http://doc.pytest.org/en/latest/"&gt;pytest&lt;/a&gt; plug-in, works as follows: it creates a copy of a Notebook file, executes the copy in the current Python environment, saves the copy Notebook with its new cell outputs then compares the outputs of the two Notebooks.  There are some nice features to control the granularity of testing: flags can be set so certain cells are run but not tested; &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Regular_expression"&gt;regexes&lt;/a&gt; can be used to ignore oft-changing output strings (e.g. paths, timestamps, memory addresses).  Images and LaTeX can't be handled yet.&lt;/p&gt;
+&lt;p&gt;Again, I'm exited about this new tool: being able to package both workflow documentation and regression/ acceptance tests as Notebooks is a great idea.  Note that at present both nbdime and nbval include mechanisms for comparing Notebooks but are presently separate projects.  It will be interesting to see if there's any convergence in future.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="interactive-widgets-in-notebooks"&gt;
+&lt;h2&gt;Interactive widgets in Notebooks&lt;/h2&gt;
+&lt;p&gt;We were treated to two talks on the &lt;a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/"&gt;ipywidgets&lt;/a&gt; package, which provides &lt;strong&gt;Python and Javascript-backed widgets for interacting with Notebooks&lt;/strong&gt; e.g. sliders for assessing the impact of model parameters on trends in embedded &lt;a class="reference external" href="https://matplotlib.org/"&gt;matplotlib&lt;/a&gt; plots.&lt;/p&gt;
+&lt;p&gt;First, &lt;a class="reference external" href="https://github.com/jdemeyer"&gt;Jeroen Demeyer&lt;/a&gt; introduced us to the high-level &lt;tt class="docutils literal"&gt;interact&lt;/tt&gt; Python decorator function and &lt;tt class="docutils literal"&gt;interactive&lt;/tt&gt; class one can use to control function inputs using a HTML+Javascript widget.  He then went on to explain how one can manually reproduce the magic of these mechanisms: you instantiate some (typed) input widgets and output widgets, add them to an on-screen container then associate each input widget with a callback.&lt;/p&gt;
+&lt;p&gt;Next, &lt;a class="reference external" href="https://www.lpsm.paris//pageperso/corlay/"&gt;Sylvain Corlay&lt;/a&gt; talked about the ipywidgets ecosystem and the future direction of the project.  He mentioned several projects that have built on ipywidgets, all of which sound exciting but none of which I'd heard of before this!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/bloomberg/bqplot"&gt;bqplot&lt;/a&gt;: a &lt;a class="reference external" href="https://matplotlib.org/"&gt;matplotlib&lt;/a&gt; alternative that supports the same API, uses custom ipywidgets and behind the scenes uses &lt;a class="reference external" href="https://d3js.org/"&gt;d3.js&lt;/a&gt; for low-level drawing;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/jupyter-widgets/pythreejs"&gt;pythreejs&lt;/a&gt;: this exposes the API of the &lt;cite&gt;three.js&lt;/cite&gt; Javascript/WebGL 3D library to Python; this is a low-level API, not a Python plotting library.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/jupyter-widgets/ipyleaflet"&gt;ipyleaflet&lt;/a&gt;: a GIS plotting library that uses ipywidgets and the &lt;a class="reference external" href="https://leafletjs.com/"&gt;Leaflet&lt;/a&gt; Javascript library.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/jupyter-widgets/widget-cookiecutter"&gt;widget-cookiecutter&lt;/a&gt;: a template for creating custom ipywidgets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The current version of ipywidgets, released since the workshop, includes some interesting developments: much more of the code is now written in Javascript (actually Typescript) rather than Python so widgets state is maintained in JavaScript-land: widgets can therefore now be rendered and manipulated without a Jupyter kernel!  See &lt;a class="reference external" href="http://nbviewer.jupyter.org/github/ipython/ipywidgets/blob/master/docs/source/examples/Widget%20List.ipynb"&gt;this statically-rendered Notebook&lt;/a&gt; on GitHub as an example.  Another advantage of migrating the bulk of the code to Javascript is that the widgets should be usable with kernel languages other than Python such as R (once people have written language-specific ipywidgets backends).&lt;/p&gt;
+&lt;p&gt;Separate to ipywidgets, we were also introduced to &lt;a class="reference external" href="https://www.logilab.org/blogentry/8541176"&gt;SciviJS&lt;/a&gt;, a tool currently being developed by &lt;a class="reference external" href="https://twitter.com/Renou_Martin"&gt;Martin Renou&lt;/a&gt; at &lt;a class="reference external" href="https://www.logilab.org/"&gt;LogiLab&lt;/a&gt; for &lt;strong&gt;visualising 3D mesh-based geometries in a Juypter Notebook&lt;/strong&gt;.  It uses also uses &lt;a class="reference external" href="https://www.khronos.org/webgl/"&gt;WebGL&lt;/a&gt; / &lt;a class="reference external" href="https://threejs.org/"&gt;three.js&lt;/a&gt; for rendering so is rather performant.  I can see some ex-colleagues in civil engineering really liking this.  Check out the &lt;a class="reference external" href="https://demo.logilab.fr/SciviJS/"&gt;online demo&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="numbas-for-online-computer-aided-assessment-cas"&gt;
+&lt;h2&gt;Numbas for online computer-aided assessment (CAS)&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.numbas.org.uk/"&gt;Numbas&lt;/a&gt; is a open web-based system for formative and summative maths and science tests.  It is being developed by &lt;a class="reference external" href="http://somethingorotherwhatever.com/"&gt;Christian Lawson-Perfect&lt;/a&gt; from the University of Newcastle's &lt;a class="reference external" href="https://www.ncl.ac.uk/maths-physics/outreach/elearning/#overview"&gt;Maths and Stats E-Learning unit&lt;/a&gt;.  It's very different to teaching environments that use Jupyter (e.g. &lt;a class="reference external" href="https://cocalc.com/"&gt;SageMathCloud&lt;/a&gt;) as almost all the code is self-contained HTML+Javascript that is run on the client (for scalability and resilience) and it is for generating closed tests (rather than open mathematical exercises).  Looks very attractive and intuitive from the user's perspective!&lt;/p&gt;
+&lt;p&gt;Christian also mentioned &lt;a class="reference external" href="https://up-for-grabs.net/"&gt;Up For Grabs&lt;/a&gt;, a site of projects wanting help on simpler tasks.  He says it's a good and simple way of getting less experienced developers involved with open-source projects.  As a project maintainer you upload some blurb about your project and tell the site which GitHub Issue tag(s) indicate smaller tasks that are 'up for grabs'.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="case-studies-of-jupyter-usage"&gt;
+&lt;h2&gt;Case studies of Jupyter usage&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.southampton.ac.uk/~fangohr/"&gt;Hans Fangohr&lt;/a&gt; from the &lt;a class="reference external" href="http://cmg.soton.ac.uk/"&gt;University of Southampton&lt;/a&gt; reported on using Python and Jupyter to encapsulate multi-stage micro-magnetism modelling workflows:
+his team have been able to automate the generation of input files and processing of output files for/from old but robust modelling software (&lt;a class="reference external" href="https://math.nist.gov/oommf/"&gt;OOMMF&lt;/a&gt;);
+Jupyter then further masks away the complexities of running models.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.sheffield.ac.uk/physics/contacts/mark-quinn"&gt;Mark Quinn&lt;/a&gt; then talked about the impact that &lt;a class="reference external" href="https://cocalc.com/"&gt;SageMathCloud&lt;/a&gt;, an online teaching environment which uses Jupyter, has had on the teaching of physics, astronomy and coding at the University of Sheffield.  He's been working with Mike Croucher to develop SageMathCloud courses for the Physics department with the goal of introducing effective programming tuition early in undergraduate Physics degree programmes.  He's now quite a fan of the used coding environment (Jupyter) and SageMathCloud's courseware tools (chat facilities and mechanisms for setting and grading assignments) but has now been using it long enough to identify some challenges/issues too (e.g. students getting confused about the order of execution of cells; students opening many notebooks at once (each of which has a resource footprint).&lt;/p&gt;
+&lt;p&gt;Mark is involved with the Shepherd Group, who research the efficacy of teaching methods and are based in the same Physics department.  They've recently been studying the impact of using the Jupyter Notebook to undergraduate students who had and hadn't studied Physics at A-Level.  They tested students (at different levels of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Bloom%27s_taxonomy"&gt;Bloom's Taxonomy&lt;/a&gt;) before and after teaching and concluded that the Notebooks were suitable for aiding students, regardless of whether they had a Physics background.  Hopefully the &lt;a class="reference external" href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt; can lend their support to pedagogical studies of this nature in future.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="other-talks"&gt;
+&lt;h2&gt;Other talks&lt;/h2&gt;
+&lt;p&gt;I should note that there were also a number of other talks that focussed on the &lt;a class="reference external" href="https://www.gap-system.org/"&gt;GAP&lt;/a&gt; and &lt;a class="reference external" href="http://www.sagemath.org/"&gt;SageMath&lt;/a&gt; computational mathematics software packages:
+I've deliberately not mentioned them here
+so as not to expose my lack of understanding of group theory and semi-groups
+and also this post is long enough already!
+See the &lt;a class="reference external" href="https://opendreamkit.org/meetings/2017-01-16-ICMS/programme/"&gt;full programme&lt;/a&gt; for info on things I've neglected plus links to the presentations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="coding-sprints-inc-jupyter-interactions-gallery"&gt;
+&lt;h2&gt;Coding Sprints (inc. Jupyter Interactions gallery)&lt;/h2&gt;
+&lt;p&gt;After lunch on each of the five days of the workshop we worked on various coding sprints:
+some wrote a Jupyter kernel for GAP,
+others worked on SageMath,
+whilst me and a few others started work on &lt;a class="reference external" href="https://github.com/mikecroucher/jupyter-interactions"&gt;Jupyter Interactions&lt;/a&gt;.
+This sprint was suggested by Mike Croucher:
+he thought it would be nice to have a curated set of Notebooks that
+demonstrate how to use different &lt;a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/"&gt;ipywidgets&lt;/a&gt; to manipulate various mathematical objects.
+Several of us wrote Notebooks while
+&lt;a class="reference external" href="http://somethingorotherwhatever.com/"&gt;Christian Lawson-Perfect&lt;/a&gt; quickly put together a very nice &lt;a class="reference external" href="https://github.com/christianp/jupyter-interactions-site"&gt;gallery-generating front end&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="Jupyter Interactions Notebook gallery" src="http://rse.shef.ac.uk/images/jupyter-interactions.png"&gt;
+&lt;p class="caption"&gt;Jupyter Interactions Notebook gallery.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;See the &lt;a class="reference external" href="https://mikecroucher.github.io/jupyter-interactions/"&gt;end result here&lt;/a&gt;.
+Should you wish to submit your own Jupyter Interactions Notebook then
+please &lt;a class="reference external" href="https://github.com/mikecroucher/jupyter-interactions/pulls"&gt;submit a pull request&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="culture"&gt;
+&lt;h2&gt;Culture&lt;/h2&gt;
+&lt;p&gt;This was the first time I'd been to a conference where the emphasis was very much on sharing ideas and working together:
+the academic conferences I'd attended prior to this had previously had an air of competition about them.
+Looking forward to meeting up with the OpenDreamKit gang again!&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>conference</category><guid>http://rse.shef.ac.uk/blog/icms-2017/</guid><pubDate>Sun, 12 Mar 2017 22:00:00 GMT</pubDate></item><item><title>Will Furnass joins to work on Jupyter and Grid Engine integration</title><link>http://rse.shef.ac.uk/blog/willfurnass_intro/</link><dc:creator>Will Furnass</dc:creator><description>&lt;div&gt;&lt;img alt="Will Furnass" class="align-right" src="http://rse.shef.ac.uk/images/willfurnass.png"&gt;
+&lt;p&gt;The Research Software Engineering team at the University of Sheffield has gained a new member.
+I joined at the start of January and
+will primarily be working on &lt;a class="reference external" href="https://opendreamkit.org/"&gt;OpenDreamKit&lt;/a&gt;
+which is a &lt;a class="reference external" href="https://ec.europa.eu/programmes/horizon2020/"&gt;Horizon 2020&lt;/a&gt;
+European &lt;a class="reference external" href="https://ec.europa.eu/programmes/horizon2020/en/h2020-section/european-research-infrastructures-including-e-infrastructures"&gt;Research Infrastructure&lt;/a&gt; project
+with the aim of furthering the open-source computational mathematics ecosystem.&lt;/p&gt;
+&lt;p&gt;My contribution to this project is to extend work previously started at the University of Sheffield
+to allow researchers to more easily run interactive workflows on &lt;a class="reference external" href="https://en.wikipedia.org/wiki/High-performance_computing"&gt;High-Performance Computing&lt;/a&gt; clusters,
+specifically to make it easy, robust and intuitive to run &lt;a class="reference external" href="http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html"&gt;Jupyter Notebooks&lt;/a&gt; on
+clusters running job scheduling software from the &lt;a class="reference external" href="https://arc.liv.ac.uk/trac/SGE"&gt;Grid Engine&lt;/a&gt; family.&lt;/p&gt;
+&lt;p&gt;Jupyter Notebooks are &lt;strong&gt;runnable documents&lt;/strong&gt; containing code snippets
+that are viewed and manipulated from a web browser.
+They are an increasingly popular way of encapsulating, presenting and sharing a coding-oriented workflow.
+A Notebook comprises a column of cells, where each cell can contain:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;some code or&lt;/li&gt;
+&lt;li&gt;explanatory text (that can be formatted using &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Markdown"&gt;Markdown&lt;/a&gt;) and/or mathematical expressions (formatted using &lt;a class="reference external" href="https://www.mathjax.org/"&gt;MathJax&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When a code cell is executed by the user it can return anything renderable by a modern web browser:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a single value,&lt;/li&gt;
+&lt;li&gt;a table of data,&lt;/li&gt;
+&lt;li&gt;a figure or&lt;/li&gt;
+&lt;li&gt;a mathematical expression.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;img alt="/images/jupyter_notebook_example.png" src="http://rse.shef.ac.uk/images/jupyter_notebook_example.png"&gt;
+&lt;p&gt;The code cells of a Notebook can be (re)run in any order, so Notebooks are very useful for interactive exploration.&lt;/p&gt;
+&lt;p&gt;The structure of Jupyter is typically as follows:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[Notebook in browser] &amp;lt;---&amp;gt; [Jupyter server] &amp;lt;---&amp;gt; [Kernel]
+&lt;/pre&gt;
+&lt;p&gt;where the kernel is the part that executes code cells.  There are &lt;a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels"&gt;kernels for many different programming languages&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;The server and kernel can run on the same machine as the web browser
+but the architecture allows them to also run on remote machines.
+These remote systems could be:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a research group's central server,&lt;/li&gt;
+&lt;li&gt;a Jupyter-aware cloud service (e.g. &lt;a class="reference external" href="https://cocalc.com/settings"&gt;SageMathCloud&lt;/a&gt; or &lt;a class="reference external" href="https://notebooks.azure.com/"&gt;Azure Notebooks&lt;/a&gt;) or ...&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the HPC clusters operated by so many academic institutions&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is where my part of OpenDreamKit comes in.
+Computer clusters such as &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/index.html"&gt;Iceberg&lt;/a&gt; and &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/sharc/index.html"&gt;ShARC&lt;/a&gt; here at the University of Sheffield allow users to
+run computational jobs with more resources than typically available in researchers' own machines.
+Jobs can have parallel threads of execution running on up to sixteen cores per node
+and/or running over multiple nodes,
+jobs can use hundreds of MB of RAM and
+can make use of the latest generation of GPUs for things like
+accelerated &lt;a class="reference external" href="http://www.acrc.com/deep-learning/"&gt;deep learning workflows&lt;/a&gt;.
+However, the need to request resources, then submit and monitor jobs from the command-line can be a steep barrier to entry for some.
+Being able to easily run Jupyter Notebooks on our clusters and
+request the necessary resources for our interactive explorations via an intuitive web interface
+could help make HPC more accessible and useful to those without a strong understanding of Linux and the command-line.&lt;/p&gt;
+&lt;p&gt;We already have &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/hpc/jupyterhub.html"&gt;an instance of JupyterHub running&lt;/a&gt; to allow users to start Jupyter sessions on our &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/iceberg/index.html"&gt;Iceberg&lt;/a&gt; cluster
+thanks to the efforts of &lt;a class="reference external" href="http://stuartmumford.uk/"&gt;Stuart Mumford&lt;/a&gt;.
+I will be working on:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Upgrading this to use the latest version of JupyterHub;&lt;/li&gt;
+&lt;li&gt;Setting up JupyterHub on our new cluster (&lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/sharc/index.html"&gt;ShARC&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;Developing a mechanism for easily requesting resources (more RAM / CPU cores / GPUs) from the Grid Engine scheduler;&lt;/li&gt;
+&lt;li&gt;Making the JupyterHub and Grid Engine integration more robust.&lt;/li&gt;
+&lt;li&gt;Looking at how JupyterHub could be set up on HPC clusters at other institutions (possibly using different schedulers) for research/teaching.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'm rather excited about this new role.  One nice aspect to it is that I am now according to my contract officially a &lt;a class="reference external" href="https://rse.ac.uk/"&gt;Research Software Engineer&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dear Dr Furnass&lt;/p&gt;
+&lt;p&gt;Further to recent discussions, I am pleased to confirm the change in your appointment with the University of Sheffield.
+The details of your offer are provided below:&lt;/p&gt;
+&lt;p&gt;Appointment Details:
+You, Dr William Furnass, shall be employed by the University of Sheffield as a Research Software Engineer
+in the Department of Computer Science with effect from 1 January 2017.
+This position is offered on a fixed term basis.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This demonstrates that research institutions have started recognising &lt;a class="reference external" href="https://rse.ac.uk/who/"&gt;Research Software Engineering&lt;/a&gt; as an alternative career path in academia
+(something the &lt;a class="reference external" href="https://www.software.ac.uk/"&gt;Software Sustainability Institute&lt;/a&gt; have been pushing for for some time) and
+RSEs aren't simply post-doctoral researchers who happen to write software.&lt;/p&gt;
+&lt;p&gt;The path to this point has not been particularly direct:
+I have a &lt;a class="reference external" href="https://engineering.leeds.ac.uk/computing"&gt;computer scence degree&lt;/a&gt;,
+worked as a IT systems engineer in the film industry,
+have a PhD plus post-doc experience in &lt;a class="reference external" href="https://www.sheffield.ac.uk/civil/"&gt;water engineering&lt;/a&gt;
+(where I developed semi-physical and data-driven models of water quality in water distribution networks) and
+I have provided support to the users of the University of Sheffield's &lt;a class="reference external" href="http://docs.hpc.shef.ac.uk/"&gt;HPC clusters&lt;/a&gt;.
+In addition I taught or helped run RSE, water engineering and study skills workshops.&lt;/p&gt;
+&lt;p&gt;My interests include
+helping researchers optimise data analysis workflows (primarily using higher-level languages),
+providing training in RSE best practices and
+systems administration.
+You can contact me via:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Email: w.furnass (at) sheffield.ac.uk&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a class="reference external" href="https://twitter.com/willfurnass"&gt;@willfurnass&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>projects</category><guid>http://rse.shef.ac.uk/blog/willfurnass_intro/</guid><pubDate>Mon, 30 Jan 2017 10:56:00 GMT</pubDate></item></channel></rss>

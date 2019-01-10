@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tmux: remote terminal management and multiplexing | RSE at Sheffield</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://rse.shef.ac.uk/blog/tmux-intro/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Will Furnass">
+<link rel="prev" href="../soft-carp-at-tuos/" title="Software Carpentry and Data Carpentry at the University of Sheffield!" type="text/html">
+<link rel="next" href="../mozsprint-2017-at-the-university-of-sheffield/" title="Mozsprint 2017 at the University of Sheffield" type="text/html">
+<meta property="og:site_name" content="RSE at Sheffield">
+<meta property="og:title" content="tmux: remote terminal management and multiplexing">
+<meta property="og:url" content="http://rse.shef.ac.uk/blog/tmux-intro/">
+<meta property="og:description" content="Today we have a guide to 'terminal multiplexing' including
+suggestions on how to use it on computer clusters such as
+ShARC and Iceberg.
+
+
+Have you ever?
+
+Started a process (such as a compilation or ap">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-06-15T12:53:04+01:00">
+<meta property="article:tag" content="terminals">
+<meta property="article:tag" content="tmux">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="http://rse.shef.ac.uk/">
+
+            <span id="blog-title">RSE at Sheffield</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../blog" class="nav-link">Blog</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RSE Service</a>
+            <div class="dropdown-menu">
+                    <a href="../../service" class="dropdown-item">RSE Service Overview</a>
+                    <a href="../../service/provision" class="dropdown-item">Service Model Provision</a>
+                    <a href="../../service/activities" class="dropdown-item">What we do</a>
+                    <a href="../../service/testimonials" class="dropdown-item">Testimonials</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+            <div class="dropdown-menu">
+                    <a href="../../support/code-clinic" class="dropdown-item">Code Clinic</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Training</a>
+            <div class="dropdown-menu">
+                    <a href="../../training" class="dropdown-item">Overview</a>
+                    <a href="../../training/events" class="dropdown-item">Training Events</a>
+                    <a href="../../training/carpentry" class="dropdown-item">Software and Data Carpentry</a>
+                    <a href="../../training/deeplearning" class="dropdown-item">Deep Learning</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RSE Community</a>
+            <div class="dropdown-menu">
+                    <a href="../../community" class="dropdown-item">Overview</a>
+                    <a href="../../community/coffee-and-cake" class="dropdown-item">Coffee and Cake</a>
+                    <a href="../../community/seminars" class="dropdown-item">Seminar Series</a>
+                    <a href="../../community/resources-and-equipment" class="dropdown-item">Resources and Equipment</a>
+                    <a href="../../community/job-descriptions" class="dropdown-item">RSE Job Descriptions</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+            <div class="dropdown-menu">
+                    <a href="../../contact" class="dropdown-item">Contact Us</a>
+                    <a href="../../contact/team" class="dropdown-item">RSE Team</a>
+                    <a href="../../contact/alumni" class="dropdown-item">Alumni</a>
+            </div>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">tmux: remote terminal management and multiplexing</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    <a href="../../authors/will-furnass/">Will Furnass</a>
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2017-06-15T12:53:04+01:00" itemprop="datePublished" title="2017-06-15 12:53">2017-06-15 12:53</time></a>
+            </p>
+            
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Today we have a guide to 'terminal multiplexing' including
+suggestions on how to use it on computer clusters such as
+<a class="reference external" href="http://docs.hpc.shef.ac.uk/">ShARC and Iceberg</a>.</p>
+<hr class="docutils">
+<div class="section" id="have-you-ever">
+<h2>Have you ever?</h2>
+<ul class="simple">
+<li>Started a process (such as a compilation or application install) over
+SSH only to realise that it's taking far longer than you expected and
+you need to shut down your laptop to go to a meeting, which you know
+will therefore <strong>kill both the SSH connection and your process</strong>?</li>
+<li>Been in a cafe with flakey wifi and had a remote process hang or
+possibly die due to an unstable SSH connection?</li>
+<li>Accidentally closed a window with a SSH session running in it and
+really regretted it?</li>
+<li>Wanted to be able to switch between multiple terminal sessions on a
+remote machine without having to establish a SSH connection per
+session?</li>
+<li>Wanted to be able to have multiple terminals visible at once so you
+can say edit source code in one terminal whilst keeping compilation
+errors visible in another?</li>
+<li>Wanted a nicer way to copy and paste between remote terminal
+sessions?</li>
+</ul>
+<p>If the answer to any of these is "yes" then
+<strong>terminal multiplexing</strong> may help!</p>
+<div class="figure">
+<img alt="Making remote Linux/Unix machines easier to administer/use!" src="../../images/tmux-intro/intro.png">
+</div>
+<hr class="docutils">
+<p>First, we need to delve a little deeper into some of the problems we are trying to solve.</p>
+</div>
+<div class="section" id="why-do-my-remote-processes-die-when-my-ssh-connection-dies-hangs">
+<h2>Why do my remote processes die when my SSH connection dies/hangs?</h2>
+<p>(<em>Skip over this section if you want!</em>)</p>
+<p>Every process
+(bar the <tt class="docutils literal">systemd</tt> process or <tt class="docutils literal">init</tt> process with a process ID of 1)
+has a parent process.
+If a process is sent a signal telling it to cleanly terminate
+(or <a class="reference external" href="https://en.wikipedia.org/wiki/SIGHUP">'hang up'</a>)
+then typically its child processes will be told to do the same.</p>
+<p>When you SSH to a remote machine,
+the SSH service on that machine creates
+a shell for you within which you can run commands.</p>
+<p>To illustrate, here I logged into a server and
+used the <tt class="docutils literal">pstree</tt> program to view the tree of
+child-parent relationships between processes.
+Notice in the excerpt shown below that the SSH service (<tt class="docutils literal">sshd</tt>) has
+<em>spawned</em> a (bash) shell process for my SSH session,
+which in turn has spawned my <tt class="docutils literal">pstree</tt> process:</p>
+<pre class="literal-block">
+[will@acai ~]$ ssh sharc
+...
+[will@sharc-login1 ~]$ pstree -a
+systemd --switched-root --system --deserialize 21
+...
+  ├─sshd -D
+  │   └─sshd
+  │       └─sshd
+  │           └─bash
+  │               └─pstree -a
+...
+</pre>
+<p>So if the SSH service decides that your connection has timed out then
+it will send a signal to <tt class="docutils literal">bash</tt> process were to die then
+any child processes started by that <tt class="docutils literal">bash</tt> process would also die.</p>
+<p>If the remote servers you work with are
+primarily High-Performance Computing (HPC) clusters
+running scheduling software such as Grid Engine
+then you have a simple, robust way of ensuring that
+the sucess of your processes doesn't depend on
+the reliability of your connection to the clusters:
+<strong>submit your work to the scheduler as batch jobs</strong>.
+There are many other benefits to submitting batch jobs over using interactive sessions
+when using such clusters but we won't go into those here.</p>
+<p>However, what do you do when there is no HPC-style scheduling software availble?</p>
+<ul class="simple">
+<li>You could run batch jobs using much simpler schedulers such as
+<a class="reference external" href="https://en.wikipedia.org/wiki/At_(Unix)">at</a> for one-off tasks or
+<a class="reference external" href="https://en.wikipedia.org/wiki/Cron">cron</a> or <a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.timer.html">systemd
+Timers</a>
+for periodic tasks.</li>
+<li>You could prefix your command with
+<a class="reference external" href="https://en.wikipedia.org/wiki/Nohup">nohup</a> (<em>no hang up</em>) to
+ensure it continues running if the parent process tells it to <em>hang
+up</em>.</li>
+</ul>
+<p>Neither of these allow you to easily <strong>return to interactive sessions</strong> though.
+For that we need terminal multiplexers.</p>
+</div>
+<div class="section" id="a-brief-guide-to-the-tmux-terminal-multiplexer">
+<h2>A brief guide to the tmux Terminal Multiplexer</h2>
+<div class="section" id="detaching-and-reattaching-to-sessions">
+<h3>Detaching and reattaching to sessions</h3>
+<p>Terminal Multiplexer programs like
+<a class="reference external" href="https://www.gnu.org/software/screen/">GNU Screen</a> and
+<a class="reference external" href="https://tmux.github.io/">tmux</a>
+solve this problem by:</p>
+<ol class="arabic simple">
+<li>Starting up a <strong>server process on-demand</strong>, which then spawns a
+shell. The server process is configured not to respond when being
+told to <em>hang up</em> so <strong>will persist</strong> if is started over a SSH
+connection that subsequently hangs/dies.</li>
+<li>Starting up a <strong>client process</strong> that allows you to connect to that
+server and interact with the shell session it has started</li>
+<li>Using key-bindings to stop the client process and <strong>detatch</strong> from
+the server process.</li>
+<li>Using command-line arguments to allow a client process to
+<strong>(re)connect to an existing server process</strong>
+</li>
+</ol>
+<div class="section" id="demo-1">
+<h4>Demo 1</h4>
+<p>Here we look at demonstrating the above using <strong>tmux</strong>.
+I recommend tmux over GNU Screen as
+the documentation is clearer and
+it makes fewer references to legacy infrastructure.
+Plus, it is easier to google for it!
+However, it may use more memory (true for older versions).</p>
+<p>Let's create and attach to a new tmux session,
+start a long-running command in it then
+detach and reattach to the session:</p>
+<embed><video controls><source src="../../images/tmux-intro/reattach.webm" type="video/webm">
+  Your browser does not support the video tag.
+</source></video></embed><p>Used keys:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top"><tr class="field">
+<th class="field-name">&lt;prefix&gt; d:</th>
+<td class="field-body">detatch</td>
+</tr></tbody>
+</table>
+<p>where <strong>&lt;prefix&gt;</strong> is <strong>Control</strong> and <strong>b</strong> by default.
+Here <strong>&lt;prefix&gt; d</strong> means press <strong>Control</strong> and <strong>b</strong> then
+release that key combination before pressing <strong>d</strong>.</p>
+<p>In this case we started tmux on the local machine.
+tmux is much more useful though when you
+start it on a remote machine <strong>after connecting via ssh</strong>.</p>
+</div>
+</div>
+<div class="section" id="windows-like-tabs">
+<h3>Windows (like tabs)</h3>
+<p>What else can we do with terminal multiplexers?
+Well, as the name implies,
+they can be used to view and control multiple virtual consoles from one session.</p>
+<p>A given tmux session can have multiple windows,
+each of which can contain multiple panes,
+each of which is a virtual console!</p>
+<div class="section" id="demo-2">
+<h4>Demo 2</h4>
+<p>Here's a demonstration of creating, renaming, switching and deleting tmux windows:</p>
+<embed><video controls><source src="../../images/tmux-intro/windows.webm" type="video/webm">
+  Your browser does not support the video tag.
+</source></video></embed><p>Used keys:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field">
+<th class="field-name">&lt;prefix&gt; ,:</th>
+<td class="field-body">rename a window</td>
+</tr>
+<tr class="field">
+<th class="field-name">&lt;prefix&gt; c:</th>
+<td class="field-body">create a new window</td>
+</tr>
+<tr class="field">
+<th class="field-name">&lt;prefix&gt; n:</th>
+<td class="field-body">switch to next window</td>
+</tr>
+<tr class="field">
+<th class="field-name">&lt;prefix&gt; p:</th>
+<td class="field-body">switch to previous window</td>
+</tr>
+<tr class="field">
+<th class="field-name">&lt;prefix&gt; x:</th>
+<td class="field-body">delete current window (actually deletes the current <strong>pane</strong> in the window but will also delete the window if it contains only one pane)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="dividing-up-windows-into-panes">
+<h3>Dividing up Windows into Panes</h3>
+<p>Now let's look at creating, switching and deleting panes <em>within</em> a window:</p>
+<embed><video controls><source src="../../images/tmux-intro/panes.webm" type="video/webm">
+  Your browser does not support the video tag.
+</source></video></embed><p>Used keys:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field">
+<th class="field-name">&lt;prefix&gt; %:</th>
+<td class="field-body">split the active window vertically</td>
+</tr>
+<tr class="field">
+<th class="field-name">&lt;prefix&gt; ":</th>
+<td class="field-body">split the active window horizontally</td>
+</tr>
+<tr class="field"><th class="field-name" colspan="2">&lt;prefix&gt; Up or Down or Left or Right:</th></tr>
+<tr class="field">
+<td> </td>
+<td class="field-body">switch to pane in that direction</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scrolling-backwards">
+<h3>Scrolling backwards</h3>
+<p>You can scroll back up through the terminal history of the current pane/window using:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field"><th class="field-name" colspan="2">&lt;prefix&gt; Page Up:</th></tr>
+<tr class="field">
+<td> </td>
+<td class="field-body">scroll back through terminal history</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="copying-and-pasting">
+<h3>Copying and pasting</h3>
+<p>If you have multiple panes side-by-side then attempt to copy text using the mouse, you'll copy lines of characters that span <em>all</em> panes, which is almost certainly not going to be what you want.
+Instead you can</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top"><tr class="field">
+<th class="field-name">&lt;prefix&gt; z:</th>
+<td class="field-body">toggle the maximisation of the current pane</td>
+</tr></tbody>
+</table>
+<p>then copy the text you want.</p>
+<p>Alternively, if you want to copy and paste between tmux panes/windows you can</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top"><tr class="field">
+<th class="field-name">&lt;prefix&gt; [:</th>
+<td class="field-body">enter copy mode</td>
+</tr></tbody>
+</table>
+<p>move the cursor using the arrow keys to where you want to start copying then</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top"><tr class="field">
+<th class="field-name">space:</th>
+<td class="field-body">(in copy mode) mark start of section to copy</td>
+</tr></tbody>
+</table>
+<p>move the cursor keys to the end of the section you want to copy then</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top"><tr class="field">
+<th class="field-name">enter:</th>
+<td class="field-body">(in copy mode) mark end of section to copy and exit copy mode</td>
+</tr></tbody>
+</table>
+<p>You can then move to another pane/window and press</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top"><tr class="field">
+<th class="field-name">&lt;prefix&gt; ]:</th>
+<td class="field-body">paste copied text</td>
+</tr></tbody>
+</table>
+<p>I find this mechanism very useful.</p>
+</div>
+<div class="section" id="and-there-s-more">
+<h3>And there's more</h3>
+<p>Things not covered in detail here include:</p>
+<ul class="simple">
+<li>The ability to <a class="reference external" href="https://wiki.archlinux.org/index.php/tmux#Configuration">customise much behaviour and all keybindings</a>
+(here's <a class="reference external" href="https://github.com/willfurnass/dotfiles/blob/master/tmux/.tmux.conf">my config file</a>)</li>
+<li>The <a class="reference external" href="https://github.com/tmux-plugins/tpm">tpm</a> plugin system
+(including the awesome <a class="reference external" href="https://github.com/Morantron/tmux-fingers">tmux fingers</a> plugin for
+intelligently copying key info (e.g. IP addresses) from the output of standard Unix utilities).</li>
+<li><a class="reference external" href="https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen">Sharing a session with another user</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="using-tmux-on-hpc-clusters">
+<h2>Using tmux on HPC clusters</h2>
+<p>Terminal Multiplexers can be useful if doing <a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html#interactive-sessions)">interactive work</a>
+on a <a class="reference external" href="https://en.wikipedia.org/wiki/Supercomputer">HPC</a> cluster such as the University of Sheffield clusters <a class="reference external" href="http://docs.hpc.shef.ac.uk/">ShARC and Iceberg</a>
+(assuming that you don't need a <a class="reference external" href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI</a>).</p>
+<p>On ShARC and Iceberg can:</p>
+<ol class="arabic simple">
+<li>Start a tmux or GNU Screen session on a login node;</li>
+<li>Start an interactive job using <a class="reference external" href="http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html">qrshx or qrsh</a>;</li>
+<li>Disconnect and reconnect from the tmux/Screen session (either deliberately or due an issue with the SSH connection to the cluster);</li>
+<li>Create additional windows/panes on the login node for editing files, starting additional interactive jobs etc, watching log files.</li>
+</ol>
+<p>Starting tmux on worker nodes is also useful if you want to have multiple windows/panes on a worker node <em>but</em>
+less useful if you want to disconnect/reconnect from/to a session as if you run qrsh a second time you cannot
+guarantee that you will be give an interactive job on on the node you started the tmux session from.</p>
+<p>However, note that you can have nested tmux sessions
+(with <strong>&lt;prefix&gt;&lt;prefix&gt; &lt;key&gt;</strong> used to send tmux commands to the 'inner' tmux session).</p>
+<p><strong>Warning</strong>: many clusters have multiple login nodes for redundancy,
+with only one being the default active login node at any given time.
+If the active login node requires maintenance then logged-in users may be booted off
+and long-running processes may be terminated
+(before the system administrator makes a 'standby' login node the currently active one).
+Under such circumstances your tmux/Screen session may be killed.</p>
+<div class="section" id="being-a-good-hpc-citizen">
+<h3>Being a good HPC citizen</h3>
+<p>Your interactive job (on a cluster worker node) will be terminated by the cluster's <em>Grid Engine</em> job scheduler after a fixed amount of time (the default is 8 hours)
+but your tmux/Screen session was started on a login node so is outside the control of the cluster and
+will keep running indefinitely unless you kill it.</p>
+<p>Each tmux/Screen session requires memory on the login node (which is used by all users) so to be a good HPC citizen you should:</p>
+<ul class="simple">
+<li>
+<strong>Kill your tmux/Screen session when no longer needed</strong> (tmux/Screen will exit when you close all windows)</li>
+<li><strong>Only start as many tmux/Screen sessions on the login node as you need (ideally 1)</strong></li>
+<li>
+<strong>Exit your interactive Grid Engine job</strong> (on a worker node) <strong>if no longer needed</strong> as then others can make use of the resources you had been using on this node.</li>
+</ul>
+<p><strong>Tip</strong>: with tmux you can ensure that you either reconnect to an existing session (with a given name) if it already exists <em>or</em> create a new session using:</p>
+<pre class="literal-block">
+tmux new-session -A -s mysession
+</pre>
+<p>This should help avoid accidentally creating more than one tmux session.</p>
+<hr class="docutils">
+<p>NB the recordings of terminal sessions shown were created using <a class="reference external" href="http://0xcc.net/ttyrec/">ttyrec</a> and <a class="reference external" href="https://github.com/icholy/ttygif">ttygif</a>
+then converted to <a class="reference external" href="https://www.webmproject.org/">.webm</a> videos using <a class="reference external" href="http://ffmpeg.org/">ffmpeg</a>.</p>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/terminals/" rel="tag">terminals</a></li>
+            <li><a class="tag p-category" href="../../categories/tmux/" rel="tag">tmux</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../soft-carp-at-tuos/" rel="prev" title="Software Carpentry and Data Carpentry at the University of Sheffield!">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../mozsprint-2017-at-the-university-of-sheffield/" rel="next" title="Mozsprint 2017 at the University of Sheffield">Next post</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2019         <a href="mailto:rse@sheffield.ac.uk">RSE Sheffield</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

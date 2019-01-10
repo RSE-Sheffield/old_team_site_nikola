@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fun with strace | RSE at Sheffield</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://rse.shef.ac.uk/blog/fun-with-strace/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="David Jones">
+<link rel="prev" href="../RSE_gpu_role_2016/" title="We're hiring - RSE Position on Massive Scale Complex Systems Simulation with Accelerated Computing" type="text/html">
+<link rel="next" href="../HPC-Maple-1/" title="High Performance Computing with Maple, Part 1" type="text/html">
+<meta property="og:site_name" content="RSE at Sheffield">
+<meta property="og:title" content="Fun with strace">
+<meta property="og:url" content="http://rse.shef.ac.uk/blog/fun-with-strace/">
+<meta property="og:description" content="How I solved a mystery with strace and bash
+So I'm dabbling with iceberg, The University of Sheffield's HPC, and
+I finally get round to putting my .profile on there.
+And I remember that I don't like
+t">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-05-23T10:26:51+01:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="http://rse.shef.ac.uk/">
+
+            <span id="blog-title">RSE at Sheffield</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../blog" class="nav-link">Blog</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RSE Service</a>
+            <div class="dropdown-menu">
+                    <a href="../../service" class="dropdown-item">RSE Service Overview</a>
+                    <a href="../../service/provision" class="dropdown-item">Service Model Provision</a>
+                    <a href="../../service/activities" class="dropdown-item">What we do</a>
+                    <a href="../../service/testimonials" class="dropdown-item">Testimonials</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+            <div class="dropdown-menu">
+                    <a href="../../support/code-clinic" class="dropdown-item">Code Clinic</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Training</a>
+            <div class="dropdown-menu">
+                    <a href="../../training" class="dropdown-item">Overview</a>
+                    <a href="../../training/events" class="dropdown-item">Training Events</a>
+                    <a href="../../training/carpentry" class="dropdown-item">Software and Data Carpentry</a>
+                    <a href="../../training/deeplearning" class="dropdown-item">Deep Learning</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RSE Community</a>
+            <div class="dropdown-menu">
+                    <a href="../../community" class="dropdown-item">Overview</a>
+                    <a href="../../community/coffee-and-cake" class="dropdown-item">Coffee and Cake</a>
+                    <a href="../../community/seminars" class="dropdown-item">Seminar Series</a>
+                    <a href="../../community/resources-and-equipment" class="dropdown-item">Resources and Equipment</a>
+                    <a href="../../community/job-descriptions" class="dropdown-item">RSE Job Descriptions</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+            <div class="dropdown-menu">
+                    <a href="../../contact" class="dropdown-item">Contact Us</a>
+                    <a href="../../contact/team" class="dropdown-item">RSE Team</a>
+                    <a href="../../contact/alumni" class="dropdown-item">Alumni</a>
+            </div>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Fun with strace</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    <a href="../../authors/david-jones/">David Jones</a>
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2016-05-23T10:26:51+01:00" itemprop="datePublished" title="2016-05-23 10:26">2016-05-23 10:26</time></a>
+            </p>
+            
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h3>How I solved a mystery with strace and bash</h3>
+<p>So I'm dabbling with <code>iceberg</code>, The University of Sheffield's HPC, and
+I finally get round to putting my <a href="https://github.com/drj11/dot"><code>.profile</code></a> on there.
+And I remember that I don't like
+the way <code>less</code> clears the screen when I've finished reading a <code>man</code> page.</p>
+<p>I need to set my <code>LESS</code> environment variable to <code>-X</code>.
+So I <a href="https://github.com/drj11/dot/commit/7d097ba875e2cca186b8d659d3510c2af5c8df1b">add that to my <code>.profile</code></a>.
+I do <code>exec bash -l</code> to emulate logging back in.</p>
+<p>Doesn't work.
+Still clears screen when reading man pages.
+Turns out <code>LESS</code> isn't set.
+What is going wrong with my <code>.profile</code>?</p>
+<p>I'm becoming a fan of <code>strace</code> for this sort of debugging.</p>
+<p>Have a look at this. When I run this command:</p>
+<pre class="code literal-block"><span></span>strace -e signal= -e open bash -l -c 'echo SCRIPT GOT HERE'
+</pre>
+
+
+<p>I get this output (long and boring, skip and come back to the
+bits I refer to):</p>
+<pre class="code literal-block"><span></span>open("/etc/ld.so.cache", O_RDONLY)      = 3
+open("/lib64/libtinfo.so.5", O_RDONLY)  = 3
+open("/lib64/libdl.so.2", O_RDONLY)     = 3
+open("/lib64/libc.so.6", O_RDONLY)      = 3
+open("/dev/tty", O_RDWR|O_NONBLOCK)     = 3
+open("/usr/lib/locale/locale-archive", O_RDONLY) = 3
+open("/proc/meminfo", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/gconv/gconv-modules.cache", O_RDONLY) = 3
+open("/etc/profile", O_RDONLY)          = 3
+open("/etc/profile.d/", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/colorls.sh", O_RDONLY) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/cvs.sh", O_RDONLY) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/ge.sh", O_RDONLY)  = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/glib2.sh", O_RDONLY) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/lang.sh", O_RDONLY) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/less.sh", O_RDONLY) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/modules.sh", O_RDONLY) = 3
+open("/usr/share/Modules/init/bash", O_RDONLY) = 3
+open("/usr/share/Modules/init/bash_completion", O_RDONLY) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/qt.sh", O_RDONLY)  = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/set-bmc-url.sh", O_RDONLY) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/shef-login.sh", O_RDONLY) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/udisks-bash-completion.sh", O_RDONLY) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/vim.sh", O_RDONLY) = 3
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/usr/share/locale/locale.alias", O_RDONLY) = 3
+open("/usr/share/locale/en_GB.UTF-8/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en_GB.utf8/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en_GB/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en.UTF-8/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en.utf8/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+open("/etc/profile.d/which2.sh", O_RDONLY) = 3
+open("/home/md1xdrj/.bash_profile", O_RDONLY) = 3
+open("/home/md1xdrj/.bashrc", O_RDONLY) = 3
+open("/etc/bashrc", O_RDONLY)           = 3
+open("/etc/profile.d/modules.sh", O_RDONLY) = 3
+open("/usr/share/Modules/init/bash", O_RDONLY) = 3
+open("/usr/share/Modules/init/bash_completion", O_RDONLY) = 3
+SCRIPT GOT HERE
++++ exited with 0 +++
+</pre>
+
+
+<p><code>strace</code> runs a command and <em>traces</em> the <em>system calls</em>
+(so I suppose <code>strace</code> is short for <strong>S</strong>ystem <strong>Trace</strong>).
+I'm running the command line <code>bash -l -c 'echo SCRIPT GOT HERE'</code> under <code>strace</code>.
+<code>bash -l</code> is a <em>login</em> shell, so it should source my <code>.profile</code>.</p>
+<p>First thing to notice about running things with <code>strace</code> is that you get lots of output.
+And that's after I've used two options to reduce the ammount of output.
+The <code>-e open</code> option to <code>strace</code> restricts it so that it only shows <code>open()</code> system calls;
+normally it will show all system calls, which is <em>way</em> more output.
+The <code>-e signal=</code> option to <code>strace</code> means that it won't show any signals, without it you see all signals.
+Most programs don't see many signals,
+but in this case there are a fair number of child process management signals
+that are not particularly interesting.</p>
+<p>The first few files are related to C runtimes and dynamic linking (<code>/etc/ld.so.cache</code>, <code>/lib64/libc.so.6</code>, and so on).
+Then we get <code>/etc/profile</code>. Aha!
+<code>bash</code> is reading the system wide profile file.
+Which it turns out causes it to reading the bag of little profile scripts kept in <code>/etc/profile.d/</code> (most of which are specific to the Sheffield HPC).</p>
+<p>(I've no idea what the obsession with opening <code>/dev/null</code> in between every script is by the way; some crazy <code>bash</code> thing. whatever)</p>
+<p>Then, eventually, near the bottom, we see bash opening <code>/home/md1xdrj/.bash_profile</code>.
+And this is the culprit.
+I'm like "wait, WAT!?", "I have a <code>.bash_profile</code>?"</p>
+<p>It turns out that, yes, I do have a <code>.bash_profile</code>.
+I wasn't expecting that (it wasn't created by me).
+A quick perusal of <code>man bash</code>[*1] reveals that
+if <code>~/.bash_profile</code> exists then it will be sourced and <code>.profile</code> will not.</p>
+<p>So I remove my <code>~/.bash_profile</code> and life is good again.</p>
+<h3>Reflection</h3>
+<p><code>strace</code> is a great tool and well worth exploring a little bit
+(fun fact: you can attach to already running processes with <code>strace -p</code>).
+So in this case I could've read the manual and inspected the file system to see what files <code>bash</code> would source,
+but <code>strace</code> is more direct.
+The manual might be out of date, misunderstood, or just plain wrong.
+But <code>strace</code> cannot lie, it shows me what system calls a tool is actually making.</p>
+<p>The Truth.</p>
+<p>Of course The Truth that <code>strace</code> provides is really just <em>a</em> truth.
+There is a whole world of complexity that <code>strace</code> hides from us.
+Most obviously, we don't get to see all the instructions
+that get executed in between the system calls.
+We probably don't want to.
+<code>strace</code> is serving up an abstraction, and that's a useful Truth
+to deal with.</p>
+<h3>Fanzine!</h3>
+<p>If you liked this, then you should check out this <a href="https://jvns.ca/blog/2015/04/14/strace-zine/">strace
+fanzine</a>.
+I cannot recommend it enough.
+It's enthusiastic, witty, fun to read, and you will learn
+something about <code>strace</code> and system calls (I did!).</p>
+<h3>Footnotes</h3>
+<ol>
+<li>
+<p>This is what I call "a joke". Everyone should read <code>man bash</code>, but it is like Joyce's Ulysses: better read the Cliffs Notes[*2].</p>
+</li>
+<li>
+<p>There are no Cliffs Notes for <code>bash</code>.</p>
+</li>
+</ol>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../RSE_gpu_role_2016/" rel="prev" title="We're hiring - RSE Position on Massive Scale Complex Systems Simulation with Accelerated Computing">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../HPC-Maple-1/" rel="next" title="High Performance Computing with Maple, Part 1">Next post</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2019         <a href="mailto:rse@sheffield.ac.uk">RSE Sheffield</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

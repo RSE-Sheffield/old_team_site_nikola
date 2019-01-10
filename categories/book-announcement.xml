@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts about Book announcement)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/categories/book-announcement.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Book: First steps in Scientific Programming</title><link>http://rse.shef.ac.uk/blog/first_steps_in_scientific_programming/</link><dc:creator>Patricio F. Ortiz</dc:creator><description>&lt;div style="background:#fcfcef; display: inline-block; font-size:16px; padding: 1%;"&gt;
+
+  &lt;div style="float:left; margin-left: 1%; padding: 0.25% 0;"&gt;
+    &lt;img src="http://rse.shef.ac.uk/images/firstSteps.jpg" width="200px"&gt;
+  &lt;/div&gt;
+
+
+I have just published this book in electronic and print formats (
+&lt;a href="https://itunes.apple.com/us/book/first-steps-in-scientific-programming/id1348035265?ls=1&amp;amp;mt=11"&gt;iBooks&lt;/a&gt;
+and
+
+&lt;a href="https://www.amazon.co.uk/First-Steps-Scientific-Programming-Patricio-ebook/dp/B079V9TN7Z/ref=sr_1_1?ie=UTF8&amp;amp;qid=1522938372&amp;amp;sr=8-1&amp;amp;keywords=first+steps+in+scientific+programming"&gt;
+Amazon&lt;/a&gt;).
+
+This work aims at providing science and engineering students/post-docs
+a series of concepts found in real-life scientific projects, including
+concepts of programming, code testing, internal representation,
+rounding errors, tricks of the trade, advice on best practice to
+store data for long-term usage  as well as a broad introduction to the
+Unix environment which they will find when coding for HPC and cloud
+computing. I do not focus on any individual language but the elements
+common to all of them. I cover the value of designing the code
+carefully, planning for future use and scalability, either using
+flowcharts or just "generic code". I give an overview of the tools
+available to tackle different problems.  Sections as diverse as
+working with existing code and working with time are covered.  This
+book is intended to ease the learning curve for those starting, not
+for the seasoned scientific programmer.
+
+&lt;a href="http://rse.shef.ac.uk/images/firstSteps4.pdf"&gt;
+Click here for a more detailed description including a table of contents.
+&lt;/a&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;strong&gt;Patricio F. Ortiz&lt;/strong&gt; is an RSE based on the 
+
+&lt;a href="https://www.sheffield.ac.uk/acse"&gt;Department
+of Automatic Control and Systems Engineering, The University of
+Sheffield&lt;/a&gt;, mostly involved with the design and implementation of
+the architecture for the
+&lt;a href="http://urbanflows.org.uk/"&gt;Urban Flows Observatory
+project&lt;/a&gt;.  Its objective is to monitor a number of variables in a urban
+environment, from whether variables, air pollution to behaviour of
+construction materials. Its data can potentially be correlated with data
+dealing with human activities and human health issues, and it could involve several disciplines
+in the long run. The &lt;b&gt;Urban Flows Observatory&lt;/b&gt; is mostly financed by EPSRC
+and UKCRIC. Sheffield is one of a handful of cities involved in this
+nationwide effort.
+
+  
+  &lt;/div&gt;
+
+</description><category>Book announcement</category><guid>http://rse.shef.ac.uk/blog/first_steps_in_scientific_programming/</guid><pubDate>Wed, 04 Apr 2018 20:59:50 GMT</pubDate></item></channel></rss>

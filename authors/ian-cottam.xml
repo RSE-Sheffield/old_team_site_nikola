@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSE at Sheffield (Posts by Ian Cottam)</title><link>http://rse.shef.ac.uk/</link><description></description><atom:link href="http://rse.shef.ac.uk/authors/ian-cottam.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 10:58:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Windows 10 to support Linux binaries</title><link>http://rse.shef.ac.uk/blog/linux-in-windows10-announce/</link><dc:creator>Ian Cottam</dc:creator><description>&lt;div&gt;&lt;p&gt;The big news from Microsoft is that, from this summer, Windows 10 will
+support user-mode programs from the popular Ubuntu Linux distribution.&lt;/p&gt;
+&lt;p&gt;By "user-mode" we mean non-kernel things or, in other words, anything you
+can type into a Bash shell command window. This is complete binary
+compatibility: you can, for example, apt-get your favourite Linux tool or
+just copy it over from an Ubuntu Linux system and it will run (assuming
+you have any libraries it needs).&lt;/p&gt;
+&lt;p&gt;The underlying technology is a new Windows' service that dynamically maps
+Linux system calls to Windows ones, whilst maintaining the Linux
+semantics.&lt;/p&gt;
+&lt;p&gt;This is a big step for several reasons; here are just some:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;researchers who currently dual boot their laptops/desktops may not need
+to&lt;/li&gt;
+&lt;li&gt;researchers who run either Linux or Windows in a virtual machine may not
+need to&lt;/li&gt;
+&lt;li&gt;staff and students who buy expensive MacBooks mainly for its Unix
+sub-system could buy a cheaper Windows 10 based laptop&lt;/li&gt;
+&lt;li&gt;as Windows 10 will be binary compatible with Linux it could be said to
+have an advantage over Apple Macs which use the BSD version of Unix (as
+BSD has numerous, small but sometimes annoying, differences to the tools found on
+Linux)&lt;/li&gt;
+&lt;li&gt;it makes the path from developing on a laptop to a high-performance
+computing cluster much more straightforward (i.e. basically the same Linux
+toolset all the way)&lt;/li&gt;
+&lt;li&gt;new researchers attending software/data carpentry courses - to learn the
+basics of good software engineering - will no longer have to work in a
+system alien to their day-to-day computing environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'm sure you can think of others.&lt;/p&gt;
+&lt;p&gt;The devil is always in the details, but from reports to-date this is good news for researchers.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mike Croucher, one of Sheffield's RSE Fellows, writes about the announcement on his blog: &lt;a href="http://www.walkingrandomly.com/?p=6011"&gt;http://www.walkingrandomly.com/?p=6011&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lots more detail from Microsoft's Scott Hanselman &lt;a href="https://www.hanselman.com/blog/DevelopersCanRunBashShellAndUsermodeUbuntuLinuxBinariesOnWindows10.aspx"&gt;https://www.hanselman.com/blog/DevelopersCanRunBashShellAndUsermodeUbuntuLinuxBinariesOnWindows10.aspx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>http://rse.shef.ac.uk/blog/linux-in-windows10-announce/</guid><pubDate>Wed, 06 Apr 2016 10:25:37 GMT</pubDate></item></channel></rss>
