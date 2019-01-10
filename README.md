@@ -10,13 +10,22 @@ Read on to learn how you can contribute to this site and about how the site is b
 
 ## Installation on macOS / Linux using conda
 
-First install conda; then:
+First clone this repo and `cd` into its directory.
+
+[Install conda](https://conda.io/docs/user-guide/install/index.html)
+(we recommending doing a regular install of Miniconda).
+Then:
 
 ```bash
-conda create -n nikola python=3.6
-source activate nikola
+conda create --name rse-blog python=3.6
+source activate rse-blog
 pip install --upgrade -r "requirements.txt"
 ```
+
+Note that the `python=3.6` above will work even if
+you don't think you have Python 3 installed.
+`conda` creates an environment and installs Python 3 into it
+from its own packages.
 
 On macOS you [may also need to](http://stackoverflow.com/questions/23172384/lxml-runtime-error-reason-incompatible-library-version-etree-so-requires-vers<Paste>) add the following to your `~/.bashrc`:
 
@@ -27,6 +36,8 @@ export DYLD_LIBRARY_PATH=${HOME}/anaconda/envs/nikola/lib/
 ## Installation on macOS / Linux using venv
 
 An alternative approach is to forgo using conda and install into a [venv](https://docs.python.org/3/library/venv.html) (a different type of Python virtual environment).
+
+First clone this repo and `cd` into its directory.
 
 ```bash
 sudo apt-get install python3-venv  # or the macOS equivalent
@@ -43,6 +54,8 @@ pip install --upgrade -r "requirements.txt"
 ## Writing a blog post
 
 Install Nikola
+(the above installation will have installed Nikola into
+either a conda or a virtualenv environment).
 
 Fork this repo, clone it to your machine and enter the directory.
 
